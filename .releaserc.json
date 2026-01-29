@@ -1,0 +1,65 @@
+{
+  "branches": [
+    "main",
+    {
+      "name": "beta",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "releaseRules": [
+          {
+            "breaking": true,
+            "release": "major"
+          },
+          {
+            "type": "feat",
+            "release": "patch"
+          },
+          {
+            "type": "fix",
+            "release": "patch"
+          },
+          {
+            "type": "perf",
+            "release": "patch"
+          },
+          {
+            "type": "refactor",
+            "release": "patch"
+          },
+          {
+            "type": "chore",
+            "release": false
+          },
+          {
+            "type": "docs",
+            "release": false
+          },
+          {
+            "type": "test",
+            "release": false
+          }
+        ]
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true,
+        "provenance": true
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "successComment": "Issue was resolved by [#${nextRelease.gitHead.slice(0, 7)}](https://github.com/poe-platform/ai-sdk-provider-poe/commit/${nextRelease.gitHead})\n\nUpdate via `npm install ai-sdk-provider-poe@${nextRelease.version}`",
+        "successCommentCondition": "<% return !issue.pull_request; %>"
+      }
+    ]
+  ]
+}
