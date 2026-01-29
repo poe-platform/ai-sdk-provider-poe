@@ -1,0 +1,96 @@
+{
+  "key": "v1-responses-gpt-4o-mini-ad7e717edf71",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c5c829bbd15dcf3-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Thu, 29 Jan 2026 23:29:11 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=VvAMQR85VwZmcPJU64X5ibA1w_5gGAXgMtPUQUxoGxM-1769729351-1.0.1.1-VvlZ1gMlQXxsvXZPuyKLgvWu5.kZkzsjh1hcGR1dybENDlm8PTNVeNGBJb9DBcZL4A2UgS5rn5ueXxeOKyM03Ab_1sqdgtzyhWAfUlspFN4; path=/; expires=Thu, 29-Jan-26 23:59:11 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",ad60f7b4796bcae4639a9381a09dce16,10.0.2.6,10626,68.185.245.236,,38329560684,1,1769729351.597,0.574,,.,0,0,0.000,0.574,-,0,0,1672,1058,529,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk4N2ZiYTZlZjgzOTY4NDAxNjk3YmVkNDcyMDIwODFhMGFmZDA2ZWY2MDJmNjlkYzU=",
+      "created_at": 1769729351,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "metadata": {},
+      "model": "gpt-4o-mini-2024-07-18",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_0987fba6ef83968401697bed477b4481a09cf6d012067629ad",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Hello, how are you?",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "max_output_tokens": 4096,
+      "previous_response_id": null,
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "text_tokens": null
+        },
+        "output_tokens": 7,
+        "output_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": null
+        },
+        "total_tokens": 21,
+        "cost": null
+      },
+      "user": null,
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1769729351,
+      "frequency_penalty": 0,
+      "max_tool_calls": null,
+      "presence_penalty": 0,
+      "prompt_cache_key": null,
+      "prompt_cache_retention": null,
+      "safety_identifier": null,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}
