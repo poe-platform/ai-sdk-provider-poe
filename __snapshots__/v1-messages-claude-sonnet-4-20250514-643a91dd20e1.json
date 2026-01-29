@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-sonnet-4-20250514-643a91dd20e1",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-01-29T23:29:10Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c5c82936efbdcf3-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 29 Jan 2026 23:29:10 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=2TEhxOUdFd2Wejd5.KWRnIk5_ydhcE6gyF5__xhXwtE-1769729350-1.0.1.1-WoX0CH0blIE9TEqoKOp9jJpejtUauPpypG6kSv5Z2yzXl1AVxUG5x6DJTbwh7_momo.dlh2_f.aSzyWUEd39WyuVGjlAjSCilLKanSlpeTU; path=/; expires=Thu, 29-Jan-26 23:59:10 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",d927890ca5da7629141b73670e25ec90,10.0.2.6,58466,68.185.245.236,,38329550624,1,1769729350.914,1.204,,.,0,0,0.000,1.203,-,0,0,341,867,433,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-sonnet-4-20250514",
+      "id": "req_poe_19ba701ab8424c978a79103f83265026",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hello there friend."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 15,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 7
+      }
+    }
+  }
+}
