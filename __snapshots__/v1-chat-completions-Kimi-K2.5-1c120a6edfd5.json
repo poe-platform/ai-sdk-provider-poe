@@ -7,24 +7,24 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5d8209dc3310d5-ORD",
+      "cf-ray": "9c5da58f9e101477-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 30 Jan 2026 02:23:34 GMT",
-      "openai-processing-ms": "1468",
+      "date": "Fri, 30 Jan 2026 02:47:49 GMT",
+      "openai-processing-ms": "1231",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=7nWrK5IzyYz_fB8gC26QLSj8DGWZysAjzTUs6qGTok0-1769739814-1.0.1.1-ig75wK2M58MLFEvmL.Zrz_ayMr1n.kudnGTpalyiduPcyPO9PCjPoctXrbKea9H1EUqTLwC5DNO7loV2bE25HVQK4GhCrBYQT8olm3iGh58; path=/; expires=Fri, 30-Jan-26 02:53:34 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=k8x3lBpeytu9dGJXvfVvCqneNNgVtbGt48gSbq89tpI-1769741269-1.0.1.1-bkzoHbGwixCyHyhHksruLfhyuwZxhQ0FjHDf.vzv0Ebc6WMMWOfDB_Ia_.vCQ0sfQ_E4iNMBnVGEJfug_4OzF9Eupbiqa1hRJhQIqUdsDmk; path=/; expires=Fri, 30-Jan-26 03:17:49 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",d48e74820982cb4b835a9260ca6dccd0,10.0.20.209,21394,68.185.245.236,,38400657559,1,1769739814.913,1.471,,.,0,0,0.000,1.471,-,0,0,356,471,235,10,34729,,,,,,-,",
-      "x-request-id": "req-5b1eec6e5a1a559f1b68d112"
+      "x-q-stat": ",a18772e0581a08ac5b9f0fc107617bc7,10.0.2.6,33716,68.185.245.236,,38356246671,1,1769741269.685,1.234,,.,0,0,0.000,1.234,-,0,0,785,903,451,10,34729,,,,,,-,",
+      "x-request-id": "req-bb23fc77c0e005cd1f3b1545"
     },
     "body": {
-      "id": "chatcmpl-d0436cdd9098b0ffeb2d71bf",
+      "id": "chatcmpl-d7a9d05c5c4465005b7d23e9",
       "object": "chat.completion",
-      "created": 1769739814,
+      "created": 1769741269,
       "model": "Kimi-K2.5",
       "choices": [
         {

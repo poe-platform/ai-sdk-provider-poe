@@ -7,39 +7,39 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5d8b184d694783-ORD",
+      "cf-ray": "9c5da5981fa11477-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 30 Jan 2026 02:29:53 GMT",
-      "openai-processing-ms": "8711",
+      "date": "Fri, 30 Jan 2026 02:48:01 GMT",
+      "openai-processing-ms": "11900",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=Q1IwpQ90CA_Nau9f0dx6Zn3FrtnwjZq5cfttuanLD9I-1769740193-1.0.1.1-.eHOfl2YS.zEhKbhfyYpd28F1VoVymWvdtILtXQDIWaQhYw0alAUElCL8Dbp1.whRBbmGOxH5R8oR35Lyx5Uyz8NmjH4Bn4YxFWEMy3X.Ec; path=/; expires=Fri, 30-Jan-26 02:59:53 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=X7FyFG_v.4ZVUX3CL1OZhdSk6bcXWf.H_qsJ5ccs8BI-1769741281-1.0.1.1-JxLX_rAKVVfdGt94JMbDyCHPFH_WhrLIL2Eb.YtcaXe_3C7qCbFdOHtmMpImUPw4odHGjNHKRn79OCiagtuHMBX94.dLVFxeXRZZt1qgK5k; path=/; expires=Fri, 30-Jan-26 03:18:01 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",9c32f36d9a0b0c88b45e6c8753857822,10.0.20.209,17526,68.185.245.236,,38403677223,1,1769740193.097,8.714,,.,0,0,0.000,8.714,-,0,0,2342,246,123,10,34729,,,,,,-,",
-      "x-request-id": "req-2a2b23eb198d0254d7ec7210"
+      "x-q-stat": ",f245c7e6a87d6f6a4d9c9d36c4485a41,10.0.2.6,52338,68.185.245.236,,13500411102,1,1769741281.698,11.903,,.,0,0,0.001,11.903,-,0,0,2968,996,498,10,34729,,,,,,-,",
+      "x-request-id": "req-cd91ae112a8a0fec7a5fc641"
     },
     "body": {
-      "id": "chatcmpl-c3c8ffc67b63542dccba2d35",
+      "id": "chatcmpl-b8a95760aa97360a1265eebf",
       "object": "chat.completion",
-      "created": 1769740193,
+      "created": 1769741281,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "# High-Protein Chicken, Broccoli & Sweet Potato Power Bowl\n\n## Macros per serving (serves 4)\n| Protein | Carbs | Fat | Calories |\n|---------|-------|-----|----------|\n| 42g | 38g | 14g | 430 |\n\n---\n\n## Ingredients\n\n**Protein & Base**\n- 1.5 lbs (680g) boneless, skinless chicken breast\n- 2 large sweet potatoes (~1.5 lbs), cubed\n- 4 cups broccoli florets\n\n**Flavor Boosters**\n- 2 tbsp olive oil\n- 3 cloves garlic, minced\n- 1 tbsp smoked paprika\n- 1 tsp cumin\n- 1/2 tsp cayenne (optional)\n- Salt & black pepper\n\n**Finishing Touch**\n- 2 tbsp hemp seeds or chopped almonds (+3g protein/serving)\n- Lemon wedges\n\n---\n\n## Instructions\n\n### 1. Roast the Sweet Potatoes\nPreheat oven to 425°F (220°C). Toss cubed sweet potatoes with 1 tbsp oil, paprika, cumin, salt, and pepper. Spread on a baking sheet and roast **20 minutes**.\n\n### 2. Add the Broccoli\nToss broccoli with remaining oil and garlic. Add to the same pan with sweet potatoes. Roast **another 15 minutes** until edges caramelize.\n\n### 3. Sear the Chicken\nWhile vegetables roast, pound chicken to even thickness. Season generously. Sear in a hot skillet **6-7 minutes per side** until internal temp reaches 165°F (74°C). Rest 5 minutes, then slice.\n\n### 4. Assemble\nDivide vegetables and chicken among bowls. Top with hemp seeds and a squeeze of lemon.\n\n---\n\n## Pro Tips for Extra Protein\n- **Marinate chicken** in Greek yogurt + spices overnight (+5g protein)\n- **Swap broccoli** for edamame (+8g protein)\n- **Add a fried egg** on top (+6g protein)\n\n*Meal prep friendly: keeps 4 days refrigerated*"
+            "content": "Here's a **One-Pan Honey Mustard Chicken with Roasted Broccoli and Sweet Potatoes** — balanced macros, minimal cleanup, and great for meal prep.\n\n---\n\n## Ingredients (Serves 4)\n\n| Ingredient | Amount |\n|------------|--------|\n| Chicken breast (boneless, skinless) | 1.5 lbs (680g) |\n| Sweet potatoes, cubed (1-inch) | 2 large (~600g) |\n| Broccoli florets | 4 cups (~400g) |\n| Olive oil | 3 tbsp |\n| Dijon mustard | 3 tbsp |\n| Honey | 2 tbsp |\n| Garlic, minced | 4 cloves |\n| Smoked paprika | 1 tsp |\n| Salt and black pepper | To taste |\n| Lemon juice | 1 tbsp (optional finish) |\n\n---\n\n## Instructions\n\n### 1. Prep & Marinate\n- Whisk together **Dijon mustard, honey, 2 tbsp olive oil, garlic, paprika, salt, and pepper**\n- Toss **chicken** in half the marinade; reserve the rest\n- Let sit 15 minutes (or overnight)\n\n### 2. Roast Sweet Potatoes\n- Preheat oven to **425°F (220°C)**\n- Toss sweet potato cubes with **1 tbsp olive oil**, salt, and pepper\n- Spread on a large sheet pan; roast **15 minutes** (they take longest)\n\n### 3. Add Chicken & Broccoli\n- Push potatoes to one side; add **chicken** in center\n- Toss broccoli with reserved marinade; add to pan\n- Roast **20–25 minutes more** until chicken reaches **165°F (74°C)** and broccoli edges char\n\n### 4. Finish\n- Rest chicken 5 minutes, slice, and drizzle with lemon juice\n\n---\n\n## Nutrition Per Serving\n\n| Macro | Amount |\n|-------|--------|\n| **Calories** | ~485 kcal |\n| **Protein** | **42g** |\n| **Carbohydrates** | 45g |\n| **Fiber** | 8g |\n| **Fat** | 14g |\n\n---\n\n## Why This Works\n\n| Component | Benefit |\n|-----------|---------|\n| **Chicken** | Complete protein, leucine-rich for muscle synthesis |\n| **Sweet potatoes** | Complex carbs, beta-carotene, sustained energy |\n| **Broccoli** | Sulforaphane, vitamin C, volume for satiety |\n| **Honey mustard glaze** | Flavor without heavy cream or butter |\n\n---\n\n## Variations\n\n- **Lower carb:** Reduce sweet potato, add more broccoli or cauliflower\n- **Dairy-free creamy:** Add 2 tbsp tahini to the marinade\n- **Spicy:** Add ½ tsp cayenne or chili flakes\n\nWant this adapted for slow cooker, air fryer, or a specific calorie target?"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 429,
+        "completion_tokens": 597,
         "prompt_tokens": 23,
-        "total_tokens": 452,
+        "total_tokens": 620,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }
