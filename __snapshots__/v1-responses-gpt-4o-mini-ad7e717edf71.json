@@ -6,20 +6,20 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5c829bbd15dcf3-ORD",
+      "cf-ray": "9c62887e4ba1e14e-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 29 Jan 2026 23:29:11 GMT",
+      "date": "Fri, 30 Jan 2026 17:01:47 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=VvAMQR85VwZmcPJU64X5ibA1w_5gGAXgMtPUQUxoGxM-1769729351-1.0.1.1-VvlZ1gMlQXxsvXZPuyKLgvWu5.kZkzsjh1hcGR1dybENDlm8PTNVeNGBJb9DBcZL4A2UgS5rn5ueXxeOKyM03Ab_1sqdgtzyhWAfUlspFN4; path=/; expires=Thu, 29-Jan-26 23:59:11 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=Ma2Cz4_OcQp7XY5t58V0x3azf7DIXeoMAmJuoYCs6ng-1769792507-1.0.1.1-0eIzRNcXzygu9.WaF2PuwF7QxfvuqCaqfBGzC2mafafNhVXVLckQNBH4gvkOYeVrAQ.9EJwZXoCOKCHA3VlkDeFpn9SD7r4iWc6mSeZL6Zg; path=/; expires=Fri, 30-Jan-26 17:31:47 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",ad60f7b4796bcae4639a9381a09dce16,10.0.2.6,10626,68.185.245.236,,38329560684,1,1769729351.597,0.574,,.,0,0,0.000,0.574,-,0,0,1672,1058,529,10,34729,,,,,,-,"
+      "x-q-stat": ",313f5317d3d8fa79d0432a1b0d627fb3,10.0.2.6,28908,68.185.245.236,,38846339638,1,1769792507.253,0.612,,.,0,0,0.000,0.612,-,0,0,1672,873,436,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk4N2ZiYTZlZjgzOTY4NDAxNjk3YmVkNDcyMDIwODFhMGFmZDA2ZWY2MDJmNjlkYzU=",
-      "created_at": 1769729351,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGUyODM1YTY1ZDVhMTlhYzAxNjk3Y2UzZmFjNWE4ODE5MTlhMTY3ZDUzYTJlNmRmNzA=",
+      "created_at": 1769792506,
       "error": null,
       "incomplete_details": null,
       "instructions": null,
@@ -28,7 +28,7 @@
       "object": "response",
       "output": [
         {
-          "id": "msg_0987fba6ef83968401697bed477b4481a09cf6d012067629ad",
+          "id": "msg_0e2835a65d5a19ac01697ce3fb1f508191baa1454639b93323",
           "content": [
             {
               "annotations": [],
@@ -47,7 +47,7 @@
       "tool_choice": "auto",
       "tools": [],
       "top_p": 1,
-      "max_output_tokens": 4096,
+      "max_output_tokens": null,
       "previous_response_id": null,
       "reasoning": {
         "effort": null,
@@ -82,7 +82,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1769729351,
+      "completed_at": 1769792507,
       "frequency_penalty": 0,
       "max_tool_calls": null,
       "presence_penalty": 0,

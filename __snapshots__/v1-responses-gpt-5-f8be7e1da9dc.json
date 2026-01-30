@@ -1,0 +1,155 @@
+{
+  "key": "v1-responses-gpt-5-f8be7e1da9dc",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c6288b68a8de14e-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 30 Jan 2026 17:02:13 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=dO2zYeOOPEEx5TGUs7el0iTHUhtJMBpvagpc0YUCc0I-1769792533-1.0.1.1-TuIWEvvTcgzgltbBnmmc0Jn5XV9ZBFmH3gdbWjVUGFVpXadNfR9wp81EIgwGXNX9tlICwmc3dsYk6ae_ueaUHs.FJVKjhBji5xVxP0QZa3U; path=/; expires=Fri, 30-Jan-26 17:32:13 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",113048f3842c302f40b72a0f36c154c0,10.0.2.6,14552,68.185.245.236,,38776775194,1,1769792533.675,18.044,,.,0,0,0.000,18.044,-,0,0,3416,868,434,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDYzNjA2NjA1M2RjMjkyZTAxNjk3Y2U0MDNjMTA4ODE5MDk3MGFjNDU5ZWVhYTNiZTU=",
+      "created_at": 1769792515,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "metadata": {},
+      "model": "gpt-5-2025-08-07",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_0636066053dc292e01697ce404238c81908f8828bccc4cdeef",
+          "summary": [],
+          "type": "reasoning",
+          "content": null,
+          "encrypted_content": null,
+          "status": null
+        },
+        {
+          "id": "msg_0636066053dc292e01697ce41334d8819087db04dd03b18ec7",
+          "content": [
+            {
+              "annotations": [],
+              "text": "{\"recipe\":{\"name\":\"Simple Scrambled Eggs\",\"ingredients\":[{\"name\":\"Large eggs\",\"amount\":\"2 to 3\"},{\"name\":\"Butter\",\"amount\":\"1 tablespoon\"},{\"name\":\"Milk or cream (optional)\",\"amount\":\"1 tablespoon\"},{\"name\":\"Salt\",\"amount\":\"Pinch\"},{\"name\":\"Black pepper\",\"amount\":\"Pinch\"}],\"steps\":[\"Crack the eggs into a bowl. Add the salt, pepper, and milk or cream if using; whisk until smooth and slightly frothy.\",\"Heat a nonstick skillet over medium-low heat. Add the butter and let it melt, tilting the pan to coat.\",\"Pour in the eggs and let them sit for 5–10 seconds until the edges just begin to set.\",\"Using a rubber spatula, gently push the eggs from the edges toward the center, forming soft curds. Continue slowly, letting uncooked egg flow into the pan between strokes.\",\"When the eggs are mostly set but still glossy and slightly runny, remove the pan from the heat; the residual heat will finish cooking.\",\"Taste and adjust seasoning. Serve immediately.\"]}}",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "max_output_tokens": null,
+      "previous_response_id": null,
+      "reasoning": {
+        "effort": "medium",
+        "summary": null
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "json_schema",
+          "description": null,
+          "name": "response",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "recipe": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "ingredients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "amount": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "amount"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "steps": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "name",
+                  "ingredients",
+                  "steps"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "recipe"
+            ],
+            "additionalProperties": false
+          },
+          "strict": true
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 86,
+        "input_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "text_tokens": null
+        },
+        "output_tokens": 994,
+        "output_tokens_details": {
+          "reasoning_tokens": 704,
+          "text_tokens": null
+        },
+        "total_tokens": 1080,
+        "cost": null
+      },
+      "user": null,
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1769792533,
+      "frequency_penalty": 0,
+      "max_tool_calls": null,
+      "presence_penalty": 0,
+      "prompt_cache_key": null,
+      "prompt_cache_retention": null,
+      "safety_identifier": null,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

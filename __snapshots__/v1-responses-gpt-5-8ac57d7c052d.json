@@ -1,0 +1,135 @@
+{
+  "key": "v1-responses-gpt-5-8ac57d7c052d",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c6288adee24e14e-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 30 Jan 2026 17:01:55 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=LsSQiZOlGp1NlJEv7pkEAeOd7hJzp1DDLpyOXUUw9UU-1769792515-1.0.1.1-2dIVBNLT93cNwqg67e8W.mSh1riH6pN5IBCXyJv2f1QtAyrc2J3egRjAWsKObRfnDpJXTM4fqSmsALApwq7ek62QI7oHPlyzj2PztqTY6BI; path=/; expires=Fri, 30-Jan-26 17:31:55 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",a536214ab0ad9d34b6a1e345d70c5e84,10.0.2.6,33360,68.185.245.236,,38846407688,1,1769792515.528,1.278,,.,0,0,0.000,1.278,-,0,0,213,850,425,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDVlMjhkY2U1NGI2ZTIxYTAxNjk3Y2U0MDI2MWE0ODE5NmE5OTBiYmMxYjE1Njk4OTE=",
+      "created_at": 1769792514,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "metadata": {},
+      "model": "gpt-5-2025-08-07",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_05e28dce54b6e21a01697ce402bdd88196b389088bd41270c6",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Here’s what I found:\n\n- San Francisco weather: 65°F, foggy\n- New York weather: 45°F, cloudy\n- 15 × 7 = 105",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [
+        {
+          "name": "getWeather",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false
+          },
+          "strict": true,
+          "type": "function",
+          "description": "Get the current weather for a location"
+        },
+        {
+          "name": "calculate",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "expression": {
+                "type": "string",
+                "description": "The math expression to evaluate"
+              }
+            },
+            "required": [
+              "expression"
+            ],
+            "additionalProperties": false
+          },
+          "strict": true,
+          "type": "function",
+          "description": "Perform a mathematical calculation"
+        }
+      ],
+      "top_p": 1,
+      "max_output_tokens": null,
+      "previous_response_id": null,
+      "reasoning": {
+        "effort": "medium",
+        "summary": null
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 219,
+        "input_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "text_tokens": null
+        },
+        "output_tokens": 42,
+        "output_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": null
+        },
+        "total_tokens": 261,
+        "cost": null
+      },
+      "user": null,
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1769792515,
+      "frequency_penalty": 0,
+      "max_tool_calls": null,
+      "presence_penalty": 0,
+      "prompt_cache_key": null,
+      "prompt_cache_retention": null,
+      "safety_identifier": null,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}
