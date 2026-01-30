@@ -7,31 +7,31 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5d8b0249c04783-ORD",
+      "cf-ray": "9c5da5825d601477-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 30 Jan 2026 02:29:42 GMT",
-      "openai-processing-ms": "1770",
+      "date": "Fri, 30 Jan 2026 02:47:48 GMT",
+      "openai-processing-ms": "2007",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=72ar.KvUjVuVzpwLPiumjN1rI.cZz7p3EncKTXOA6Uk-1769740182-1.0.1.1-S0nwyO14v31MyiRqiMByIzS.lYE265sFZUtZZpaUb1iZCRTAFXZprSAYQGT837l_rnr_K0U1dXl.tyryVD72s6XfZBrfo.yVaBvmt0Vs_JE; path=/; expires=Fri, 30-Jan-26 02:59:42 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=kpaRTKJFeo4RpIKpQRMJ_n9GEiBheWMiZL3t4BqG6K0-1769741268-1.0.1.1-tL88pcH2i8z1twjUuRpoNBtmUK8rQfdoomsDsGP61qkAICSI7adV7FQAortX8w6h50ShZdR6b6WqXoQxpe0pq_tcLXDC9pFnFb.IEb2BPj0; path=/; expires=Fri, 30-Jan-26 03:17:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",09fd6f5f8e993421730cedcd54eda563,10.0.2.6,5466,68.185.245.236,,38347202918,1,1769740182.647,1.773,,.,0,0,0.001,1.773,-,0,0,935,927,463,10,34729,,,,,,-,",
-      "x-request-id": "req-9665b446d09eebb94aa3e458"
+      "x-q-stat": ",9836013e3b32bbb6b18fc0607cf7dbdb,10.0.2.6,9310,68.185.245.236,,38425782355,1,1769741268.337,2.010,,.,0,0,0.000,2.009,-,0,0,943,845,422,10,34729,,,,,,-,",
+      "x-request-id": "req-2a8f24a496b96e7a762b8b91"
     },
     "body": {
-      "id": "chatcmpl-7a6271a3d20b5a005a6c535f",
+      "id": "chatcmpl-6ca3d2a8f4c0bf3b56c31766",
       "object": "chat.completion",
-      "created": 1769740182,
+      "created": 1769741268,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "I'll get the weather for San Francisco using the getWeather tool.",
+            "content": "I'll get the current weather for San Francisco using the getWeather tool.",
             "tool_calls": [
               {
                 "id": "getWeather:0",
@@ -47,9 +47,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 32,
+        "completion_tokens": 33,
         "prompt_tokens": 71,
-        "total_tokens": 103,
+        "total_tokens": 104,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }
