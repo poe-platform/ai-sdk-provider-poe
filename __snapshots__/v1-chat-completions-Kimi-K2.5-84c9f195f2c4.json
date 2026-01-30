@@ -1,0 +1,48 @@
+{
+  "key": "v1-chat-completions-Kimi-K2.5-84c9f195f2c4",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c5d8b184d694783-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Fri, 30 Jan 2026 02:29:53 GMT",
+      "openai-processing-ms": "8711",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Q1IwpQ90CA_Nau9f0dx6Zn3FrtnwjZq5cfttuanLD9I-1769740193-1.0.1.1-.eHOfl2YS.zEhKbhfyYpd28F1VoVymWvdtILtXQDIWaQhYw0alAUElCL8Dbp1.whRBbmGOxH5R8oR35Lyx5Uyz8NmjH4Bn4YxFWEMy3X.Ec; path=/; expires=Fri, 30-Jan-26 02:59:53 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",9c32f36d9a0b0c88b45e6c8753857822,10.0.20.209,17526,68.185.245.236,,38403677223,1,1769740193.097,8.714,,.,0,0,0.000,8.714,-,0,0,2342,246,123,10,34729,,,,,,-,",
+      "x-request-id": "req-2a2b23eb198d0254d7ec7210"
+    },
+    "body": {
+      "id": "chatcmpl-c3c8ffc67b63542dccba2d35",
+      "object": "chat.completion",
+      "created": 1769740193,
+      "model": "Kimi-K2.5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "# High-Protein Chicken, Broccoli & Sweet Potato Power Bowl\n\n## Macros per serving (serves 4)\n| Protein | Carbs | Fat | Calories |\n|---------|-------|-----|----------|\n| 42g | 38g | 14g | 430 |\n\n---\n\n## Ingredients\n\n**Protein & Base**\n- 1.5 lbs (680g) boneless, skinless chicken breast\n- 2 large sweet potatoes (~1.5 lbs), cubed\n- 4 cups broccoli florets\n\n**Flavor Boosters**\n- 2 tbsp olive oil\n- 3 cloves garlic, minced\n- 1 tbsp smoked paprika\n- 1 tsp cumin\n- 1/2 tsp cayenne (optional)\n- Salt & black pepper\n\n**Finishing Touch**\n- 2 tbsp hemp seeds or chopped almonds (+3g protein/serving)\n- Lemon wedges\n\n---\n\n## Instructions\n\n### 1. Roast the Sweet Potatoes\nPreheat oven to 425°F (220°C). Toss cubed sweet potatoes with 1 tbsp oil, paprika, cumin, salt, and pepper. Spread on a baking sheet and roast **20 minutes**.\n\n### 2. Add the Broccoli\nToss broccoli with remaining oil and garlic. Add to the same pan with sweet potatoes. Roast **another 15 minutes** until edges caramelize.\n\n### 3. Sear the Chicken\nWhile vegetables roast, pound chicken to even thickness. Season generously. Sear in a hot skillet **6-7 minutes per side** until internal temp reaches 165°F (74°C). Rest 5 minutes, then slice.\n\n### 4. Assemble\nDivide vegetables and chicken among bowls. Top with hemp seeds and a squeeze of lemon.\n\n---\n\n## Pro Tips for Extra Protein\n- **Marinate chicken** in Greek yogurt + spices overnight (+5g protein)\n- **Swap broccoli** for edamame (+8g protein)\n- **Add a fried egg** on top (+6g protein)\n\n*Meal prep friendly: keeps 4 days refrigerated*"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 429,
+        "prompt_tokens": 23,
+        "total_tokens": 452,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

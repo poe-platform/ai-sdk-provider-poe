@@ -39,6 +39,13 @@ describe("createPoe", () => {
     expect(model.modelId).toBe("my-model");
   });
 
+  it("routes models without / to chat completions with full name", () => {
+    const poe = createPoe();
+    const model = poe("Kimi-K2.5");
+    expect(model.provider).toBe("openai.chat");
+    expect(model.modelId).toBe("Kimi-K2.5");
+  });
+
   it("uses custom baseURL", () => {
     const poe = createPoe({ baseURL: "https://custom.api.com/v1" });
     const model = poe("anthropic/claude-sonnet-4-20250514");

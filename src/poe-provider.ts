@@ -53,6 +53,10 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
   };
 
   const languageModel = (modelId: string): LanguageModelV1 => {
+    if (!modelId.includes("/")) {
+      return getOpenAIProvider()(modelId);
+    }
+
     const [provider, ...modelParts] = modelId.split("/");
     const model = modelParts.join("/");
 
