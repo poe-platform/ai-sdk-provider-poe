@@ -1,6 +1,6 @@
 {
   "name": "ai-sdk-provider-poe",
-  "version": "0.1.0",
+  "version": "0.0.0-dev",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -35,5 +35,9 @@
     "tsx": "^4.0.0",
     "typescript": "^5.0.0",
     "vitest": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poe-platform/ai-sdk-provider-poe.git"
   }
 }
