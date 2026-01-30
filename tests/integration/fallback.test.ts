@@ -4,6 +4,7 @@ import { createPoe } from "../../src/poe-provider.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 
 const poe = createPoe({
+  apiKey: "test-key",
   fetch: getSnapshotFetch(),
 });
 
