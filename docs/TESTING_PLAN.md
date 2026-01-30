@@ -11,7 +11,6 @@ Integration tests use a custom `fetch` that records/replays HTTP responses:
 
 ```typescript
 const poe = createPoe({
-  apiKey: "test-key",
   fetch: getSnapshotFetch(),
 });
 ```
