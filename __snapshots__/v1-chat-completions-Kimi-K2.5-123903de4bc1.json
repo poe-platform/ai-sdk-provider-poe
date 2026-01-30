@@ -1,0 +1,48 @@
+{
+  "key": "v1-chat-completions-Kimi-K2.5-123903de4bc1",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c5d8b0e2dd04783-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Fri, 30 Jan 2026 02:29:44 GMT",
+      "openai-processing-ms": "1473",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=XDYVqwqM9aiaAkVY1q.dTFFmToFFq2NaR3mB29rnPgg-1769740184-1.0.1.1-DoC19.pxPtVWz5LnMIjvX.zwk0H5ktwk8N2.3B2qWbA5_JF9mzbn5aIq3mCSXVYFDevWqHEiYNQpZlU0FHptPpNxRaoOFkWqkMdmuziMpgc; path=/; expires=Fri, 30-Jan-26 02:59:44 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",9e09afa8fe656885feef34f7f061d52a,10.0.20.209,15882,68.185.245.236,,38403664128,1,1769740184.250,1.476,,.,0,0,0.001,1.476,-,0,0,785,315,157,10,34729,,,,,,-,",
+      "x-request-id": "req-0c977cec0b7baef20eed9803"
+    },
+    "body": {
+      "id": "chatcmpl-c7fa5c6a7dade40bee1273f6",
+      "object": "chat.completion",
+      "created": 1769740184,
+      "model": "Kimi-K2.5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The weather in San Francisco is currently **72°F and sunny**."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 122,
+        "total_tokens": 138,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}
