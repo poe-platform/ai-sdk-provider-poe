@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-20241022-5c178d594ef5",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-02T17:45:22Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c7b80766e3fdd93-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Mon, 02 Feb 2026 17:45:24 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=NkxHopecmyEh38Db9eRdKnBmCFBxsQ5xcvTKKpNl.E0-1770054324-1.0.1.1-rc0bSyDIH5o9G7Yo_JSleGttx.fuL6o17vnnIR_SsgGpNkm1DNvoUq7RWC9uVYNDazzOKnJsyykdaG2NUHyGDGZcq8uPNiV0kAN2oKQJP4s; path=/; expires=Mon, 02-Feb-26 18:15:24 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",4e31aa8dc704ab1ba2aa5bc2e2b08d13,10.0.2.6,58028,68.185.245.236,,40928245372,1,1770054324.070,2.373,,.,0,0,0.001,2.373,-,0,0,987,949,474,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_fc72c0ce4b6c42589f1f277bd23210ed",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on monoclinic and triclinic crystal systems and their unique structural properties through advanced geometric and symmetry analysis techniques."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 4487,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4487,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 48
+      }
+    }
+  }
+}

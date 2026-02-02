@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-opus-4-5-20250514-09f97c2b17b7",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-02T17:45:05Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c7b8008be9bdd93-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Mon, 02 Feb 2026 17:45:07 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=lGBfcu_XQqUmYjdzHGjZzUgwLbwUWkYluhdiGLE.zgw-1770054307-1.0.1.1-XC8JzXr2OSbreXRSKMLxbEaBO8.HgsujeoCGX27LhYNyiXr0oLhKO8lo_ZLuW9g9pdCyGMUHEPPQaHviesmFj0S.qnd0_rPvS5b1l.u9Pg4; path=/; expires=Mon, 02-Feb-26 18:15:07 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",974fdaf8c241cb35a1dbf0b63e5f7663,10.0.2.6,8634,68.185.245.236,,40915127517,1,1770054307.349,3.189,,.,0,0,0.001,3.189,-,0,0,1029,1005,502,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_a0671da2eaf441688c5b713ebee81496",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and analyzing their symmetry properties through glide plane reflections, screw axis rotations, and tensor analysis of anisotropic properties."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 4487,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4487,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 63
+      }
+    }
+  }
+}
