@@ -90,7 +90,7 @@ async function readSnapshotEntries(snapshotDir: string): Promise<FetchSnapshot[]
     try {
       const raw = await fs.readFile(path, "utf8");
       const parsed = JSON.parse(raw) as FetchSnapshot;
-      if (parsed && typeof parsed.key === "string" && parsed.request) {
+      if (parsed && typeof parsed.key === "string") {
         entries.push(parsed);
       }
     } catch (error) {
