@@ -23,13 +23,13 @@
     "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^1.0.0",
-    "@ai-sdk/openai": "^1.0.0",
-    "@ai-sdk/provider": "^1.0.0",
-    "@ai-sdk/provider-utils": "^2.0.0"
+    "@ai-sdk/anthropic": "^3.0.35",
+    "@ai-sdk/openai": "^3.0.25",
+    "@ai-sdk/provider": "^3.0.7",
+    "@ai-sdk/provider-utils": "^4.0.13"
   },
   "devDependencies": {
-    "ai": "^4.0.0",
+    "ai": "^6.0.68",
     "commander": "^12.0.0",
     "dotenv": "^17.2.3",
     "tsx": "^4.0.0",

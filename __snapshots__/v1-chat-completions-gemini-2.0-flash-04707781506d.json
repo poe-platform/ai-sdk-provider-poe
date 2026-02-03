@@ -1,5 +1,5 @@
 {
-  "key": "v1-chat-completions-gemini-2.0-flash-2ace053720cc",
+  "key": "v1-chat-completions-gemini-2.0-flash-04707781506d",
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +7,24 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5c829ff966dcf3-ORD",
+      "cf-ray": "9c836a206e64619f-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 29 Jan 2026 23:29:12 GMT",
-      "openai-processing-ms": "741",
+      "date": "Tue, 03 Feb 2026 16:48:14 GMT",
+      "openai-processing-ms": "1164",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=zexL_f3dbNl1H0D4qgtOjpRpLCazXeb5_GwkK18zrL4-1769729352-1.0.1.1-0ug721hkO5V_4JQ4A7iCk7vmAOwlx3bDV_U4xrIlsDWPeRSkEqiK84fd6AHio5DkJG8eTYF5ppWM9hWteUgQtepoT9TxTwirZOgAX2JcGjc; path=/; expires=Thu, 29-Jan-26 23:59:12 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=im4Bdg7vlSwz5IJy9fMzXr5QpssoI.5tFjFYSqHMtxo-1770137294-1.0.1.1-P54GZ0eCFmgQdmag1mNEfShvrHqiXpqit3eUuSD_MDbJiBF9.6jGNRnijS9iyPuqB7vZgfi0H0wUjzgOdhtPUl276fIGraNOXejKqaxZVs4; path=/; expires=Tue, 03-Feb-26 17:18:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",6043a8e9da3abae12f45434fb9cfeaa0,10.0.2.6,56772,68.185.245.236,,38316511692,1,1769729352.454,0.746,,.,0,0,0.000,0.746,-,0,0,735,1138,569,10,34729,,,,,,-,",
-      "x-request-id": "req-981f32bcb36d38b9f4c88e5c"
+      "x-q-stat": ",0fc51c448bbacdf67250900abe6ef36e,10.0.20.182,8744,68.185.245.236,,41596106120,1,1770137294.059,1.167,,.,0,0,0.000,1.167,-,0,0,356,276,138,10,34729,,,,,,-,",
+      "x-request-id": "req-ddc53b45cea8f9ddd9016349"
     },
     "body": {
-      "id": "chatcmpl-a5676ee45ad1cec331d2ec84",
+      "id": "chatcmpl-27b8a75dc149d41a4ff1626f",
       "object": "chat.completion",
-      "created": 1769729352,
+      "created": 1770137294,
       "model": "gemini-2.0-flash",
       "choices": [
         {

@@ -1,4 +1,4 @@
-import type { LanguageModelV1 } from "@ai-sdk/provider";
+import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
@@ -11,8 +11,8 @@ export interface PoeProviderSettings {
 }
 
 export interface PoeProvider {
-  (modelId: string): LanguageModelV1;
-  languageModel(modelId: string): LanguageModelV1;
+  (modelId: string): LanguageModelV3;
+  languageModel(modelId: string): LanguageModelV3;
 }
 
 export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
@@ -52,21 +52,18 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
     return openaiProvider;
   };
 
-  const languageModel = (modelId: string): LanguageModelV1 => {
-    if (!modelId.includes("/")) {
-      return getOpenAIProvider()(modelId);
-    }
-
-    const [provider, ...modelParts] = modelId.split("/");
-    const model = modelParts.join("/");
+  const languageModel = (modelId: string): LanguageModelV3 => {
+    const [prefix, ...rest] = modelId.split("/");
+    const [provider, model] = rest.length ? [prefix, rest.join("/")] : [null, prefix];
 
     switch (provider) {
       case "anthropic":
         return getAnthropicProvider()(model);
       case "openai":
+      // case "google":
         return getOpenAIProvider().responses(model);
       default:
-        return getOpenAIProvider()(model);
+        return getOpenAIProvider().chat(model);
     }
   };
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { generateText, type CoreMessage } from "ai";
+import { generateText, type ModelMessage } from "ai";
 import { createPoe } from "../../src/poe-provider.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 import { SYSTEM_PROMPT_LARGE, USER_MESSAGES } from "../fixtures/prompt-caching.js";
@@ -11,7 +11,7 @@ const poe = createPoe({
 async function testCaching(modelId: string) {
   const model = poe(modelId);
   const results = [];
-  const conversationHistory: CoreMessage[] = [];
+  const conversationHistory: ModelMessage[] = [];
 
   for (let i = 0; i < 3; i++) {
     conversationHistory.push({
@@ -27,7 +27,7 @@ async function testCaching(modelId: string) {
       ],
     });
 
-    const messages: CoreMessage[] = [
+    const messages: ModelMessage[] = [
       {
         role: "system",
         content: SYSTEM_PROMPT_LARGE,
@@ -56,7 +56,7 @@ async function testCaching(modelId: string) {
   const [first, second, third] = results;
 
   // First call: should write to cache
-  expect(first.usage.promptTokens).toBeGreaterThan(0);
+  expect(first.usage.inputTokens).toBeGreaterThan(0);
 
   // Extract cache metrics from response metadata
   const firstMeta = first.providerMetadata?.anthropic as Record<string, number> | undefined;

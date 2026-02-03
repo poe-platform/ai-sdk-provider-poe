@@ -6,41 +6,35 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c6288b68a8de14e-STL",
+      "cf-ray": "9c83814c386761be-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 30 Jan 2026 17:02:13 GMT",
+      "date": "Tue, 03 Feb 2026 17:04:17 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=dO2zYeOOPEEx5TGUs7el0iTHUhtJMBpvagpc0YUCc0I-1769792533-1.0.1.1-TuIWEvvTcgzgltbBnmmc0Jn5XV9ZBFmH3gdbWjVUGFVpXadNfR9wp81EIgwGXNX9tlICwmc3dsYk6ae_ueaUHs.FJVKjhBji5xVxP0QZa3U; path=/; expires=Fri, 30-Jan-26 17:32:13 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=9wGiKRsx8qaJnjsyzLvAv_.rJ7l3JUHS7ewakzTWCEw-1770138257-1.0.1.1-yfLD.k3dWPhn2R.jdZ9U_egutlIdAQpJTkflhp3dZAS4FU5GQT9smwDTkT3AYD92yJzAf7gy7dtMtSHQeqEwUZEIhCA4vt2vCgAmbc_ozMw; path=/; expires=Tue, 03-Feb-26 17:34:17 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",113048f3842c302f40b72a0f36c154c0,10.0.2.6,14552,68.185.245.236,,38776775194,1,1769792533.675,18.044,,.,0,0,0.000,18.044,-,0,0,3416,868,434,10,34729,,,,,,-,"
+      "x-q-stat": ",b2b8e690b39107eff3ff6aadbf6a848f,10.0.20.182,44810,68.185.245.236,,41604514703,1,1770138257.036,15.047,,.,0,0,0.000,15.046,-,0,0,213,283,141,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDYzNjA2NjA1M2RjMjkyZTAxNjk3Y2U0MDNjMTA4ODE5MDk3MGFjNDU5ZWVhYTNiZTU=",
-      "created_at": 1769792515,
-      "error": null,
-      "incomplete_details": null,
-      "instructions": null,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDM2YzQzZTAyMmQ3YzYxNTAxNjk4MjJhODIyMmY4ODE5NDk0OGRiZWU4MDFjYWI5Mzk=",
+      "created_at": 1770138242,
       "metadata": {},
       "model": "gpt-5-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_0636066053dc292e01697ce404238c81908f8828bccc4cdeef",
+          "id": "rs_036c43e022d7c6150169822a825ac4819489e85d44c15c6a9a",
           "summary": [],
-          "type": "reasoning",
-          "content": null,
-          "encrypted_content": null,
-          "status": null
+          "type": "reasoning"
         },
         {
-          "id": "msg_0636066053dc292e01697ce41334d8819087db04dd03b18ec7",
+          "id": "msg_036c43e022d7c6150169822a8b814c81948f8f9141dda5d839",
           "content": [
             {
               "annotations": [],
-              "text": "{\"recipe\":{\"name\":\"Simple Scrambled Eggs\",\"ingredients\":[{\"name\":\"Large eggs\",\"amount\":\"2 to 3\"},{\"name\":\"Butter\",\"amount\":\"1 tablespoon\"},{\"name\":\"Milk or cream (optional)\",\"amount\":\"1 tablespoon\"},{\"name\":\"Salt\",\"amount\":\"Pinch\"},{\"name\":\"Black pepper\",\"amount\":\"Pinch\"}],\"steps\":[\"Crack the eggs into a bowl. Add the salt, pepper, and milk or cream if using; whisk until smooth and slightly frothy.\",\"Heat a nonstick skillet over medium-low heat. Add the butter and let it melt, tilting the pan to coat.\",\"Pour in the eggs and let them sit for 5–10 seconds until the edges just begin to set.\",\"Using a rubber spatula, gently push the eggs from the edges toward the center, forming soft curds. Continue slowly, letting uncooked egg flow into the pan between strokes.\",\"When the eggs are mostly set but still glossy and slightly runny, remove the pan from the heat; the residual heat will finish cooking.\",\"Taste and adjust seasoning. Serve immediately.\"]}}",
+              "text": "{\"recipe\":{\"name\":\"Simple Scrambled Eggs\",\"ingredients\":[{\"name\":\"large eggs\",\"amount\":\"2\"},{\"name\":\"butter\",\"amount\":\"1 tablespoon\"},{\"name\":\"milk or cream (optional)\",\"amount\":\"1 tablespoon\"},{\"name\":\"salt\",\"amount\":\"pinch\"},{\"name\":\"black pepper\",\"amount\":\"to taste\"}],\"steps\":[\"Crack the eggs into a bowl. Add milk or cream (if using), salt, and pepper.\",\"Whisk until the mixture is smooth and slightly frothy.\",\"Heat a nonstick skillet over medium-low heat and melt the butter.\",\"Pour in the eggs and let them sit for a few seconds until they start to set at the edges.\",\"Gently push the eggs from the edges toward the center with a spatula, forming soft curds. Repeat, moving around the pan.\",\"Cook until just set and slightly glossy; remove from heat to avoid overcooking.\",\"Serve immediately.\"]}}",
               "type": "output_text",
               "logprobs": []
             }
@@ -55,17 +49,13 @@
       "tool_choice": "auto",
       "tools": [],
       "top_p": 1,
-      "max_output_tokens": null,
-      "previous_response_id": null,
       "reasoning": {
-        "effort": "medium",
-        "summary": null
+        "effort": "medium"
       },
       "status": "completed",
       "text": {
         "format": {
           "type": "json_schema",
-          "description": null,
           "name": "response",
           "schema": {
             "type": "object",
@@ -123,31 +113,22 @@
       "usage": {
         "input_tokens": 86,
         "input_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0,
-          "text_tokens": null
+          "cached_tokens": 0
         },
-        "output_tokens": 994,
+        "output_tokens": 663,
         "output_tokens_details": {
-          "reasoning_tokens": 704,
-          "text_tokens": null
+          "reasoning_tokens": 448
         },
-        "total_tokens": 1080,
-        "cost": null
+        "total_tokens": 749
       },
-      "user": null,
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1769792533,
+      "completed_at": 1770138256,
       "frequency_penalty": 0,
-      "max_tool_calls": null,
       "presence_penalty": 0,
-      "prompt_cache_key": null,
-      "prompt_cache_retention": null,
-      "safety_identifier": null,
       "service_tier": "default",
       "top_logprobs": 0
     }

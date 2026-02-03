@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-Kimi-K2.5-3efd393d2388",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8381133ea81466-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 17:03:56 GMT",
+      "openai-processing-ms": "3505",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=E1xp82171WUKGGK8UEpcYPTONxpM4AawhNBeIlLxQjA-1770138236-1.0.1.1-tOxu3SURvel1TEnOGLolNYjGk.l0eZpTvHhep8.p__ceixPeVsdmQkCNNSJ2NFYKyj56CgpDp3JeFxgx_zk4SGRoicSamwPQxCrzh3T4eyA; path=/; expires=Tue, 03-Feb-26 17:33:56 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",7113d976f9ebd5e5d9a839b168fd72c3,10.0.2.6,45518,68.185.245.236,,41591683790,1,1770138236.377,3.508,,.,0,0,0.001,3.509,-,0,0,887,1062,531,10,34729,,,,,,-,",
+      "x-request-id": "req-e2009f0d5540fb78211df6c8"
+    },
+    "body": {
+      "id": "chatcmpl-2ff4eb3ba192f63dc4d0ad01",
+      "object": "chat.completion",
+      "created": 1770138236,
+      "model": "Kimi-K2.5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello there, friend."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 16,
+        "total_tokens": 22,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  }
+}

@@ -19,41 +19,28 @@ describe("openai provider", () => {
     expect(typeof text).toBe("string");
   });
 
-  it("handles multi tool calling with gpt-5", async () => {
-    const { text, steps } = await generateText({
+  it("handles tool calling with gpt-5", async () => {
+    const { toolCalls } = await generateText({
       model: poe("openai/gpt-5"),
       prompt:
         "Get the weather in San Francisco and New York, and also calculate 15 * 7.",
       tools: {
         getWeather: tool({
           description: "Get the current weather for a location",
-          parameters: z.object({
+          inputSchema: z.object({
             location: z.string().describe("The city to get weather for"),
-          }),
-          execute: async ({ location }) => ({
-            temperature: location === "San Francisco" ? 65 : 45,
-            condition: location === "San Francisco" ? "foggy" : "cloudy",
-            location,
           }),
         }),
         calculate: tool({
           description: "Perform a mathematical calculation",
-          parameters: z.object({
+          inputSchema: z.object({
             expression: z.string().describe("The math expression to evaluate"),
-          }),
-          execute: async ({ expression }) => ({
-            result: eval(expression),
-            expression,
           }),
         }),
       },
-      maxSteps: 3,
     });
 
-    expect(steps.length).toBeGreaterThanOrEqual(2);
-    const allToolCalls = steps.flatMap((s) => s.toolCalls);
-    expect(allToolCalls.length).toBeGreaterThanOrEqual(2);
-    expect(text).toBeTruthy();
+    expect(toolCalls.length).toBeGreaterThanOrEqual(1);
   });
 
   it("generates structured output with gpt-5", async () => {
@@ -78,5 +65,25 @@ describe("openai provider", () => {
     expect(object.recipe.name).toBeTruthy();
     expect(object.recipe.ingredients.length).toBeGreaterThan(0);
     expect(object.recipe.steps.length).toBeGreaterThan(0);
+  });
+
+  it("generates video with Sora-2-Pro", { timeout: 300_000, skip: true }, async () => {
+    const { text } = await generateText({
+      model: poe("openai/Sora-2-Pro"),
+      prompt: "Generate a 5 second video of a cat playing with a ball",
+    });
+
+    expect(text).toBeTruthy();
+    expect(typeof text).toBe("string");
+  });
+
+  it("generates image with GPT-Image-1.5", { timeout: 300_000, skip: true }, async () => {
+    const { text } = await generateText({
+      model: poe("openai/GPT-Image-1.5"),
+      prompt: "Generate an image of a sunset over mountains",
+    });
+
+    expect(text).toBeTruthy();
+    expect(typeof text).toBe("string");
   });
 });

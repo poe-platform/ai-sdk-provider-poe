@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-Kimi-K2.5-cf4ec1325c18",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c83813979fb1466-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 17:04:14 GMT",
+      "openai-processing-ms": "15866",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=VsKyALXb.QaIHuwZBZ1j24Jjq.axhV4m55M2qqIIXCo-1770138254-1.0.1.1-jN38Eax75pRU7CBDvxZYAH.m7gihd6J8pHZms.HPBuCgRWrSfNfKHKaqd0F0AeZBiyC7xAD20fQ.EtwZxEOyKctDxZHv1NeHO5HY_HA2QA8; path=/; expires=Tue, 03-Feb-26 17:34:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",d5f9d001a6ae858f2a5df925786d4074,10.0.2.6,24898,68.185.245.236,,41535703777,1,1770138254.854,15.869,,.,0,0,0.000,15.869,-,0,0,2223,933,466,10,34729,,,,,,-,",
+      "x-request-id": "req-561e6bdf967931cef2939b39"
+    },
+    "body": {
+      "id": "chatcmpl-aaeeb551c091b22fa7c69541",
+      "object": "chat.completion",
+      "created": 1770138254,
+      "model": "Kimi-K2.5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "# High-Protein Chicken, Broccoli & Sweet Potato Bowl\n\n## Macros (per serving)\n- **Protein:** 42g\n- **Carbs:** 38g\n- **Fat:** 14g\n- **Calories:** ~450\n\n---\n\n## Ingredients (2 servings)\n\n| Component | Amount |\n|-----------|--------|\n| Chicken breast | 12 oz (340g) |\n| Sweet potatoes | 2 medium (400g) |\n| Broccoli florets | 3 cups (270g) |\n| Olive oil | 2 tbsp |\n| Garlic | 4 cloves |\n| Lemon juice | 1 tbsp |\n| Smoked paprika | 1 tsp |\n| Salt & pepper | To taste |\n\n---\n\n## Instructions\n\n### 1. Roast the Sweet Potatoes\n- Preheat oven to **425°F (220°C)**\n- Cube sweet potatoes into ½-inch pieces\n- Toss with 1 tbsp olive oil, paprika, salt, pepper\n- Roast **25–30 minutes** until caramelized\n\n### 2. Sear the Chicken\n- Pound chicken to even thickness\n- Season with salt, pepper, half the garlic\n- Sear in remaining oil **6–7 min/side** until 165°F internal\n- Rest 5 minutes, then slice\n\n### 3. Sauté the Broccoli\n- Steam or sauté with remaining garlic **4–5 minutes**\n- Keep bright green with slight crunch\n- Finish with lemon juice\n\n---\n\n## Assembly Tips\n\n- **Boost protein:** Add 2 tbsp hemp seeds (+6g protein)\n- **Meal prep:** Stores 4 days refrigerated\n- **Flavor upgrade:** Tahini drizzle or hot sauce\n\nWant a sheet-pan version for easier cleanup?"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 364,
+        "prompt_tokens": 25,
+        "total_tokens": 389,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  }
+}

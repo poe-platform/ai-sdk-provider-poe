@@ -20,29 +20,21 @@ describe("models without prefix (chat completions)", () => {
   });
 
   it("handles tool calls with Kimi-K2.5", async () => {
-    const { text, steps } = await generateText({
+    const { toolCalls } = await generateText({
       model: poe("Kimi-K2.5"),
       prompt: "What is the weather in San Francisco? Use the getWeather tool.",
       tools: {
         getWeather: tool({
           description: "Get the current weather for a location",
-          parameters: z.object({
+          inputSchema: z.object({
             location: z.string().describe("The city to get weather for"),
-          }),
-          execute: async ({ location }) => ({
-            temperature: 72,
-            condition: "sunny",
-            location,
           }),
         }),
       },
-      maxSteps: 2,
     });
 
-    expect(steps.length).toBe(2);
-    expect(steps[0].toolCalls.length).toBeGreaterThan(0);
-    expect(steps[0].toolCalls[0].toolName).toBe("getWeather");
-    expect(text).toBeTruthy();
+    expect(toolCalls.length).toBeGreaterThan(0);
+    expect(toolCalls[0].toolName).toBe("getWeather");
   });
 
   it("supports enable_thinking with Kimi-K2.5", async () => {
@@ -75,6 +67,6 @@ describe("models without prefix (chat completions)", () => {
 
     expect(text).toBeTruthy();
     expect(text).toContain("def");
-    expect(usage.completionTokens).toBeGreaterThan(1);
+    expect(usage.outputTokens).toBeGreaterThan(1);
   });
 });

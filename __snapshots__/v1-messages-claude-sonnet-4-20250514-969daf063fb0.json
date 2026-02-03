@@ -1,5 +1,5 @@
 {
-  "key": "v1-messages-claude-sonnet-4-20250514-fb0cf9086389",
+  "key": "v1-messages-claude-sonnet-4-20250514-969daf063fb0",
   "response": {
     "status": 200,
     "headers": {
@@ -7,22 +7,22 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-02T17:45:14Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:25Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c7b80443f78dd93-STL",
+      "cf-ray": "9c836a661ac14b21-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Mon, 02 Feb 2026 17:45:16 GMT",
+      "date": "Tue, 03 Feb 2026 16:48:27 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=FELKsvz6ilQLInoWmaJhte7.J8N9iYIoDyizT_uiC4M-1770054316-1.0.1.1-oU55aDsIwRhWTrXhIqDlaAkOVdLATqJaZdEM1jJWl2hVzV_iTolEOO7MhpS6v4mcoQescZkjN5asfZwCe4vIHuxxjrutPJ1TYajDHnj6J0o; path=/; expires=Mon, 02-Feb-26 18:15:16 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=c5CjdsFDt.LARhQ3HiMy3dMQ5nRkzGR0.iK6mhp2OlQ-1770137307-1.0.1.1-AMgnvaXvJu9gy0MjviEYrqp2OLxmndzJ8ts_ExfDqeL_rksJqvu7_tYaNQpEUU.t14CyWRT5lCGc7EZc7pYBIDLIgILtclVW0MVljk8h.p0; path=/; expires=Tue, 03-Feb-26 17:18:27 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",3f2d74179a85769ee0be022e391048ea,10.0.2.6,16914,68.185.245.236,,40928169950,1,1770054316.092,2.429,,.,0,0,0.000,2.428,-,0,0,341,915,457,10,34729,,,,,,-,"
+      "x-q-stat": ",fa86d2ff718ddf6e901e2c75f72c1b6d,10.0.2.6,48628,68.185.245.236,,16670958888,1,1770137307.172,3.136,,.,0,0,0.001,3.137,-,0,0,1076,823,411,10,34729,,,,,,-,"
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_629693a0f7f9469ca60f931044a9beb5",
+      "id": "req_poe_51a870bb18124a4ab30105a947040a32",
       "type": "message",
       "role": "assistant",
       "content": [
@@ -41,7 +41,8 @@
           "ephemeral_5m_input_tokens": 4487,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 66
+        "output_tokens": 66,
+        "service_tier": "standard"
       }
     }
   }

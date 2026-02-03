@@ -1,5 +1,5 @@
 {
-  "key": "v1-messages-claude-haiku-3-5-20241022-5c178d594ef5",
+  "key": "v1-messages-claude-haiku-3-5-20241022-8ae68562640a",
   "response": {
     "status": 200,
     "headers": {
@@ -7,28 +7,28 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-02T17:45:22Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:34Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c7b80766e3fdd93-STL",
+      "cf-ray": "9c836a9f0ee34b21-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Mon, 02 Feb 2026 17:45:24 GMT",
+      "date": "Tue, 03 Feb 2026 16:48:35 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=NkxHopecmyEh38Db9eRdKnBmCFBxsQ5xcvTKKpNl.E0-1770054324-1.0.1.1-rc0bSyDIH5o9G7Yo_JSleGttx.fuL6o17vnnIR_SsgGpNkm1DNvoUq7RWC9uVYNDazzOKnJsyykdaG2NUHyGDGZcq8uPNiV0kAN2oKQJP4s; path=/; expires=Mon, 02-Feb-26 18:15:24 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=R.2EOF3nM3jQcay3kJs33AyMXstosK0kEVy1TuJjobc-1770137315-1.0.1.1-JvIMISFLqwgnH9WM2FDSmGZOJF6haulUjMEoQeHI8YGDYkl8YvqGaaWQzLjj53yrl4LfKq.6eblAf.hFC9B8TK7gMQFXHsLbYLL5qQZnV44; path=/; expires=Tue, 03-Feb-26 17:18:35 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",4e31aa8dc704ab1ba2aa5bc2e2b08d13,10.0.2.6,58028,68.185.245.236,,40928245372,1,1770054324.070,2.373,,.,0,0,0.001,2.373,-,0,0,987,949,474,10,34729,,,,,,-,"
+      "x-q-stat": ",cdb04966b3cd26ecfbddf11a3d2729f4,10.0.20.182,63306,68.185.245.236,,41527520361,1,1770137315.487,2.337,,.,0,0,0.001,2.336,-,0,0,994,235,117,10,34729,,,,,,-,"
     },
     "body": {
       "model": "claude-3-5-haiku-20241022",
-      "id": "req_poe_fc72c0ce4b6c42589f1f277bd23210ed",
+      "id": "req_poe_56c8935389d545c680d257de1280e189",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on monoclinic and triclinic crystal systems and their unique structural properties through advanced geometric and symmetry analysis techniques."
+          "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on the analysis of monoclinic and triclinic crystal systems through advanced techniques involving point group symmetry operations and tensor analysis."
         }
       ],
       "stop_reason": "end_turn",
@@ -41,7 +41,7 @@
           "ephemeral_5m_input_tokens": 4487,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 48
+        "output_tokens": 50
       }
     }
   }

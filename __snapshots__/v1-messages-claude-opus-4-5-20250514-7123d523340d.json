@@ -1,0 +1,49 @@
+{
+  "key": "v1-messages-claude-opus-4-5-20250514-7123d523340d",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:21Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c836a4f98394b21-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 16:48:23 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=MBC3.w3gje9U_05lWzlZTFl.YyjjJL25T5jV_JFQS_Y-1770137303-1.0.1.1-3I8WZxrTS2IvioIrjAwjhRcgwPTGXQUZ_TXsOprHr5dvp6APFyv5h_uTLN1k9ItPujN6bp00Rrycqqh_p6S_JHK52SBfz674pVjFf5Tjc78; path=/; expires=Tue, 03-Feb-26 17:18:23 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",b810a6dbf64d7b6bd9d529081a5bbdb0,10.0.2.6,64142,68.185.245.236,,41596173456,1,1770137303.889,3.437,,.,0,0,0.000,3.437,-,0,0,1066,921,460,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_c9478344c2f544b4b1c7dc4be0c02d64",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quantum archaeometry applies principles of quantum mechanics to archaeological dating and artifact analysis, utilizing techniques such as muon tomography, quantum dot fluorescence spectroscopy, and nitrogen-vacancy center magnetometry to detect trace isotopes and buried metallic artifacts non-invasively."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 75,
+        "cache_read_input_tokens": 4566,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 75,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 58,
+        "service_tier": "standard"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "key": "v1-messages-claude-sonnet-4-20250514-643a91dd20e1",
+  "key": "v1-messages-claude-sonnet-4-20250514-d095e5b22f2e",
   "response": {
     "status": 200,
     "headers": {
@@ -7,28 +7,28 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-01-29T23:29:10Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:13Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5c82936efbdcf3-ORD",
+      "cf-ray": "9c836a204e1f183a-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 29 Jan 2026 23:29:10 GMT",
+      "date": "Tue, 03 Feb 2026 16:48:14 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=2TEhxOUdFd2Wejd5.KWRnIk5_ydhcE6gyF5__xhXwtE-1769729350-1.0.1.1-WoX0CH0blIE9TEqoKOp9jJpejtUauPpypG6kSv5Z2yzXl1AVxUG5x6DJTbwh7_momo.dlh2_f.aSzyWUEd39WyuVGjlAjSCilLKanSlpeTU; path=/; expires=Thu, 29-Jan-26 23:59:10 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=ANzeSiiFipCq7Njo_cr2zXrqwJtInv3Ff2KGhnMdsjg-1770137294-1.0.1.1-ZIrA0JYiQrj6OodboRCnNaf8PZOZsNTEv1abmQieTHRKHqnbbC5ZxS26OdgVJUFQ71wfooR9_n.1OEsb3hP._FiE8TlGij9ZBGpAHQ6sSuE; path=/; expires=Tue, 03-Feb-26 17:18:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",d927890ca5da7629141b73670e25ec90,10.0.2.6,58466,68.185.245.236,,38329550624,1,1769729350.914,1.204,,.,0,0,0.000,1.203,-,0,0,341,867,433,10,34729,,,,,,-,"
+      "x-q-stat": ",e51f0aa660c4cf647b1c3fdf9e6ecaca,10.0.2.6,20012,68.185.245.236,,41596105966,1,1770137294.891,2.015,,.,0,0,0.001,2.015,-,0,0,341,928,464,10,34729,,,,,,-,"
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_19ba701ab8424c978a79103f83265026",
+      "id": "req_poe_dbd1945eb40e4a9c932f1f822a5a0d83",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Hello there friend."
+          "text": "Hello there friend!"
         }
       ],
       "stop_reason": "end_turn",
@@ -41,7 +41,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 7
+        "output_tokens": 7,
+        "service_tier": "standard"
       }
     }
   }

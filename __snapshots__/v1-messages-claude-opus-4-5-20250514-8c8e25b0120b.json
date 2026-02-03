@@ -1,0 +1,49 @@
+{
+  "key": "v1-messages-claude-opus-4-5-20250514-8c8e25b0120b",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:17Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c836a397da94b21-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 16:48:20 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=DFprQ78bYQ40ugGblsUEQbtH7v0Kwtsg4KMVLpaoP5k-1770137300-1.0.1.1-7pBYOg67IRscsqfN8xmmrZIK1f7In9BDabEvJ5WYMJP3QPxGJT1gUfM0.u_K_Fmo4sawQ5pf6Wjx1OmehB6Onk8XoQ0qrTAWAJu0M3qSGdc; path=/; expires=Tue, 03-Feb-26 17:18:20 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",22e56d66adec6c460096d0efc86bf06f,10.0.20.182,44930,68.185.245.236,,16670893319,1,1770137300.324,3.427,,.,0,0,0.000,3.427,-,0,0,341,117,58,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_822ae40ad5b54ee2b2814edaa9d5e80b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems, incorporating Boltzmann transport coefficients and modified Navier-Stokes approximations for rarefied gas regimes where continuum assumptions break down."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 79,
+        "cache_read_input_tokens": 4487,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 79,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 61,
+        "service_tier": "standard"
+      }
+    }
+  }
+}

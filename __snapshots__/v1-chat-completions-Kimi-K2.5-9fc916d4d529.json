@@ -1,5 +1,5 @@
 {
-  "key": "v1-chat-completions-Kimi-K2.5-0a7d4f28ca02",
+  "key": "v1-chat-completions-Kimi-K2.5-9fc916d4d529",
   "response": {
     "status": 200,
     "headers": {
@@ -7,34 +7,34 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c5da5825d601477-ORD",
+      "cf-ray": "9c83812a38fb1466-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 30 Jan 2026 02:47:48 GMT",
-      "openai-processing-ms": "2007",
+      "date": "Tue, 03 Feb 2026 17:03:58 GMT",
+      "openai-processing-ms": "2323",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=kpaRTKJFeo4RpIKpQRMJ_n9GEiBheWMiZL3t4BqG6K0-1769741268-1.0.1.1-tL88pcH2i8z1twjUuRpoNBtmUK8rQfdoomsDsGP61qkAICSI7adV7FQAortX8w6h50ShZdR6b6WqXoQxpe0pq_tcLXDC9pFnFb.IEb2BPj0; path=/; expires=Fri, 30-Jan-26 03:17:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=iCXZhsFjCec_N9xKMcbPVYemaroWgC49h7Gt6pi8TsA-1770138238-1.0.1.1-kGFaqoVBMxf0tjLO7944GWnRGrClQ_xLQvlDDirN6a5tejWrpRxSSjfBh_Q.OD1J96i3lFNrwLFgTxchNB8TlOPip9NbkgZ2UupCIGLHnmM; path=/; expires=Tue, 03-Feb-26 17:33:58 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",9836013e3b32bbb6b18fc0607cf7dbdb,10.0.2.6,9310,68.185.245.236,,38425782355,1,1769741268.337,2.010,,.,0,0,0.000,2.009,-,0,0,943,845,422,10,34729,,,,,,-,",
-      "x-request-id": "req-2a8f24a496b96e7a762b8b91"
+      "x-q-stat": ",a5d6f3aaa7d44ff35e9df1e2d120bd53,10.0.2.6,42532,68.185.245.236,,41604466336,1,1770138238.865,2.326,,.,0,0,0.000,2.326,-,0,0,356,933,466,10,34729,,,,,,-,",
+      "x-request-id": "req-e01b02af91fbec1d759534a5"
     },
     "body": {
-      "id": "chatcmpl-6ca3d2a8f4c0bf3b56c31766",
+      "id": "chatcmpl-5466a825164f31c029d98bdf",
       "object": "chat.completion",
-      "created": 1769741268,
+      "created": 1770138238,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "I'll get the current weather for San Francisco using the getWeather tool.",
+            "content": " I'll check the weather in San Francisco for you using the getWeather tool.  ",
             "tool_calls": [
               {
-                "id": "getWeather:0",
+                "id": "functions.getWeather:0",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -48,8 +48,8 @@
       ],
       "usage": {
         "completion_tokens": 33,
-        "prompt_tokens": 71,
-        "total_tokens": 104,
+        "prompt_tokens": 95,
+        "total_tokens": 128,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

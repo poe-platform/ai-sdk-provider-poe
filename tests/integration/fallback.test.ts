@@ -10,7 +10,7 @@ const poe = createPoe({
 describe("fallback provider (chat completions)", () => {
   it("generates text with gemini-2.0-flash", async () => {
     const { text } = await generateText({
-      model: poe("google/gemini-2.0-flash"),
+      model: poe("custom/gemini-2.0-flash"),
       prompt: "Say hello in exactly 3 words",
     });
 

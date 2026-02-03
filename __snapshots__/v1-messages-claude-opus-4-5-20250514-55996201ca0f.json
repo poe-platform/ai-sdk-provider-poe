@@ -1,0 +1,49 @@
+{
+  "key": "v1-messages-claude-opus-4-5-20250514-55996201ca0f",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "498",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:13Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c836a20bd164b21-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 16:48:16 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Vi6b6bvsHgzfmgkLFixNodgF0m7tWWkfSbisv1ffI3U-1770137296-1.0.1.1-OOOj5ff5fwV2TpdzcnkNArlc4Itx9n21RLzdcP_F8ZnGI8loIloUtirmlBWyNh07J_mJhvn3UrOyp2sT5Lxby8teA5cpXXroYpG7aDopjYY; path=/; expires=Tue, 03-Feb-26 17:18:16 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",ec0867aa45df1076ea2e3d543ff3f6da,10.0.2.6,63532,68.185.245.236,,41583363880,1,1770137296.321,3.381,,.,0,0,0.000,3.381,-,0,0,341,909,454,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_7ff3a1e7852f461eadaed97d80cd0f1d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and analyzing their symmetry properties through glide plane reflections, screw axis rotations, and tensor analysis of anisotropic characteristics."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 4487,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4487,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 63,
+        "service_tier": "standard"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-20241022-948c4b839e72",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:38Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c836abbee7b4b21-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 16:48:39 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=0sL_70zgblptI.lNI_tU2xr8WeeTB_4KHYCQNhA5W6U-1770137319-1.0.1.1-SiFAiA7n2DY9ID1X91i8Qtg3Dz3rQa8xj8mMBAzHUzU1A.YM.Lqoxa0bRAiOhi382R4uB.kxnG1zl97qxxi7xOnmRuJsdHpeBOFbq0V5.FE; path=/; expires=Tue, 03-Feb-26 17:18:39 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",662b9afb0bfe29fd357722b800a8e296,10.0.2.6,9278,68.185.245.236,,16671084187,1,1770137319.762,1.975,,.,0,0,0.000,1.974,-,0,0,1046,867,433,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_363f9ddd368d4c2e8048af562b25bec7",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Quantum archaeometry is an interdisciplinary field that applies quantum mechanical principles and advanced sensing technologies to archaeological dating, artifact analysis, and non-invasive imaging of historical artifacts, utilizing techniques such as muon tomography and quantum dot fluorescence spectroscopy."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 76,
+        "cache_read_input_tokens": 4553,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 76,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 56
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-20241022-45d71814d477",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-03T16:48:36Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c836aae4a474b21-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Tue, 03 Feb 2026 16:48:37 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Qkk2Pvs_ZVhwNS_gj_4fyADtfHPWWdA.wz4C0VZvXlk-1770137317-1.0.1.1-Kc4THXcc4oVKoesqYzfyI5bQsAEP56So1O6EBe.Mkcgn64L6KYepOA62GBCOxBQWguO2Y3ipydnmT8FyYfZfRN3k5U_zwd0ZSl45NwrN0fY; path=/; expires=Tue, 03-Feb-26 17:18:37 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",704aca7b764702f43b9090665665a58a,10.0.2.6,14202,68.185.245.236,,41527542477,1,1770137317.652,2.065,,.,0,0,0.001,2.065,-,0,0,1025,994,497,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_2c7595119a3d4518b9f6ad87450675d4",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems, incorporating Boltzmann transport coefficients and modified Navier-Stokes approximations to analyze rarefied gas regimes and hypersonic flow behaviors."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 66,
+        "cache_read_input_tokens": 4487,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 66,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 62
+      }
+    }
+  }
+}
