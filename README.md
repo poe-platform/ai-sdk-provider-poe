@@ -32,6 +32,8 @@ const { text } = await generateText({
 
 ## Model Routing
 
+For a full list of available models, visit [poe.com/api/models](https://poe.com/api/models) or see the [API endpoint](https://api.poe.com/v1/models).
+
 Models are specified as `provider/model-id`. The provider prefix determines which API endpoint handles the request:
 
 | Prefix | Route | API Endpoint |
