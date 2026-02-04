@@ -31,17 +31,23 @@ export interface SnapshotFetch {
   (input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
   getAccessedKeys(): Set<string>;
   persistAccessedKeys(): Promise<void>;
+  setModeOverride(mode: SnapshotMode): void;
+  clearModeOverride(): void;
+  setMissOverride(behavior: SnapshotMissBehavior): void;
+  clearMissOverride(): void;
+  clearAllOverrides(): void;
 }
 
 export function createSnapshotFetch(options: SnapshotFetchOptions): SnapshotFetch {
   const accessedKeys = new Set<string>();
+  let modeOverride: SnapshotMode | undefined;
+  let missOverride: SnapshotMissBehavior | undefined;
 
   const snapshotFetch = async (
     input: RequestInfo | URL,
     init?: RequestInit
   ): Promise<Response> => {
     const url = input.toString();
-    const method = init?.method ?? "GET";
     const body = init?.body ? JSON.parse(init.body as string) : null;
     const isStreaming = body?.stream === true;
 
@@ -50,11 +56,12 @@ export function createSnapshotFetch(options: SnapshotFetchOptions): SnapshotFetc
 
     accessedKeys.add(key);
 
-    if (options.mode === "record") {
+    if ((modeOverride ?? options.mode) === "record") {
       return recordSnapshot(input, init, snapshotPath, key, options, isStreaming);
     }
 
-    return playbackSnapshot(input, init, snapshotPath, key, options, isStreaming);
+    const effectiveOptions = missOverride ? { ...options, onMiss: missOverride } : options;
+    return playbackSnapshot(input, init, snapshotPath, key, effectiveOptions, isStreaming);
   };
 
   snapshotFetch.getAccessedKeys = () => accessedKeys;
@@ -75,6 +82,12 @@ export function createSnapshotFetch(options: SnapshotFetchOptions): SnapshotFetc
     await fs.mkdir(options.snapshotDir, { recursive: true });
     await fs.writeFile(outputPath, JSON.stringify(Array.from(merged), null, 2));
   };
+
+  snapshotFetch.setModeOverride = (mode: SnapshotMode) => { modeOverride = mode; };
+  snapshotFetch.clearModeOverride = () => { modeOverride = undefined; };
+  snapshotFetch.setMissOverride = (behavior: SnapshotMissBehavior) => { missOverride = behavior; };
+  snapshotFetch.clearMissOverride = () => { missOverride = undefined; };
+  snapshotFetch.clearAllOverrides = () => { modeOverride = undefined; missOverride = undefined; };
 
   return snapshotFetch;
 }
