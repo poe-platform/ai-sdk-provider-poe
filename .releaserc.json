@@ -1,11 +1,5 @@
 {
-  "branches": [
-    "main",
-    {
-      "name": "beta",
-      "prerelease": true
-    }
-  ],
+  "branches": ["main"],
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -48,10 +42,10 @@
     ],
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/npm",
+      "@semantic-release/exec",
       {
-        "npmPublish": true,
-        "provenance": true
+        "prepareCmd": "npm run build",
+        "publishCmd": "npx tsx scripts/publish-release-stages.ts ${nextRelease.version}"
       }
     ],
     [

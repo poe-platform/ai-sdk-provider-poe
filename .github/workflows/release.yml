@@ -3,16 +3,36 @@ on:
   push:
     branches:
       - main
-      - beta
 permissions:
   contents: write
   issues: write
   pull-requests: write
   id-token: write
 jobs:
-  release-beta:
+  test:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/beta'
+    strategy:
+      matrix:
+        release-stage: [stable, beta, alpha]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm clean-install
+      - run: npm run build
+      - name: Test (${{ matrix.release-stage }})
+        run: |
+          if [ "${{ matrix.release-stage }}" = "stable" ]; then
+            npm test
+          else
+            npm run test:${{ matrix.release-stage }}
+          fi
+  release:
+    needs: test
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,29 +44,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm clean-install
       - run: npm audit signatures
-      - run: npm test
-      - run: npm run build
-      - name: Release Beta
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
-  release-stable:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - run: git fetch --tags --force
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
-      - run: npm clean-install
-      - run: npm audit signatures
-      - run: npm test
-      - run: npm run build
-      - name: Release Stable
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
