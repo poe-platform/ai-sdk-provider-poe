@@ -1,0 +1,61 @@
+{
+  "key": "v1-responses-Nano-Banana-8db6b6934a26",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c87473e2fc811fd-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 04:03:27 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=2m4KSNdiwntVQbO18jo4Ll5YjKfaclddm8OJtLAMdUM-1770177807-1.0.1.1-c67A.g9YY6z6KmkFwlycTGo_q5ZL93h6h9a6NdJDQqbvP7E01bJusZTanaM913iZ6RkhPGkf__7kigIN.nn0YqpyKrbuyerfSDiY2ddJMEA; path=/; expires=Wed, 04-Feb-26 04:33:27 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",5e65bfedfe7fec4b2b96c399465835ab,10.0.2.6,46530,68.185.245.236,,41916212273,1,1770177807.699,0.609,,.,0,0,0.000,0.608,-,0,0,937,1001,500,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOkQ4V0NhWjNmRHNpTGw3b1B2ci1Eb0FJ",
+      "created_at": 1770177807,
+      "metadata": {},
+      "model": "gemini-2.5-flash-image",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "message",
+          "id": "D8WCaZ3fDsiLl7oPvr-DoAI",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Hello there!",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "reasoning": {},
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 7,
+        "input_tokens_details": {
+          "text_tokens": 7
+        },
+        "output_tokens": 3,
+        "output_tokens_details": {
+          "text_tokens": 3
+        },
+        "total_tokens": 10
+      }
+    }
+  }
+}

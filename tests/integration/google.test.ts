@@ -3,14 +3,12 @@ import { generateText } from "ai";
 import { createPoe } from "../../src/poe-provider.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 
-const poe = createPoe({
-  fetch: getSnapshotFetch(),
-});
+const makePoe = () => createPoe({ fetch: getSnapshotFetch() });
 
 describe("google provider (responses)", () => {
-  it.skip("generates text with Nano-Banana", async () => {
+  it("generates text with Nano-Banana", { timeout: 300_000, tags: ["stage:alpha"] }, async () => {
     const { text } = await generateText({
-      model: poe("google/Nano-Banana"),
+      model: makePoe()("google/Nano-Banana"),
       prompt: "Say hello in exactly 3 words",
     });
 
@@ -20,9 +18,9 @@ describe("google provider (responses)", () => {
 
   // Image generation returns as a provider-executed tool result, not in `files`.
   // The base64 image data is in toolResults[0].output.result
-  it("generates image with Nano-Banana", { timeout: 300_000, skip: true }, async () => {
+  it("generates image with Nano-Banana", { timeout: 300_000, tags: ["stage:alpha" ] }, async () => {
     const { toolResults } = await generateText({
-      model: poe("google/Nano-Banana"),
+      model: makePoe()("google/Nano-Banana"),
       prompt: "Generate an image of a cute cat",
     });
 
@@ -32,9 +30,9 @@ describe("google provider (responses)", () => {
     expect((toolResults[0].output as { result: string }).result).toBeTruthy();
   });
 
-  it("generates image with Nano-Banana-Pro", { timeout: 300_000, skip: true }, async () => {
+  it("generates image with Nano-Banana-Pro", { timeout: 300_000, tags: ["stage:alpha"], skip: true }, async () => {
     const { toolResults } = await generateText({
-      model: poe("google/Nano-Banana-Pro"),
+      model: makePoe()("google/Nano-Banana-Pro"),
       prompt: "Generate an image of a sunset over mountains",
     });
 

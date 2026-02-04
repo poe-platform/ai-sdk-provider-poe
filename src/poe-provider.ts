@@ -2,6 +2,7 @@ import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
+import { isAlphaStage } from "./release-stage.js";
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -60,8 +61,9 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
       case "anthropic":
         return getAnthropicProvider()(model);
       case "openai":
-      // case "google":
         return getOpenAIProvider().responses(model);
+      case "google":
+        if (isAlphaStage()) return getOpenAIProvider().responses(model);
       default:
         return getOpenAIProvider().chat(model);
     }
