@@ -67,7 +67,7 @@ describe("openai provider", () => {
     expect(object.recipe.steps.length).toBeGreaterThan(0);
   });
 
-  it("generates video with Sora-2-Pro", { timeout: 300_000, skip: true }, async () => {
+  it("generates video with Sora-2-Pro", { skip: true, timeout: 300_000 }, async () => {
     const { text } = await generateText({
       model: poe("openai/Sora-2-Pro"),
       prompt: "Generate a 5 second video of a cat playing with a ball",
@@ -77,7 +77,7 @@ describe("openai provider", () => {
     expect(typeof text).toBe("string");
   });
 
-  it("generates image with GPT-Image-1.5", { timeout: 300_000, skip: true }, async () => {
+  it("generates image with GPT-Image-1.5", { skip: true, timeout: 300_000 }, async () => {
     const { text } = await generateText({
       model: poe("openai/GPT-Image-1.5"),
       prompt: "Generate an image of a sunset over mountains",

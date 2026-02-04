@@ -1,0 +1,12 @@
+{
+  "key": "v1-responses-override-test-4450945e7be3",
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "text/plain;charset=UTF-8"
+    },
+    "body": {
+      "ok": true
+    }
+  }
+}
