@@ -1,0 +1,86 @@
+{
+  "key": "v1-responses-gpt-5.2-pro-231c20479e94",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d12debe5c6189-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 20:56:36 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=_MDpQhfkbGeY1Gvs6Vk6AjN_Xt_nB7suRmyIDG_fkY8-1770238596-1.0.1.1-gY7Zc6k5zd3c4Vp6ndErU4Xr7JRuVboosfc7Q_uuA7Alt83vkoKCusvulPg7hEzW1RjKvLLuuMWS9b7TY6wbk2g8skcC8ryhHEis5Y80g6E; path=/; expires=Wed, 04-Feb-26 21:26:36 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",74ccf76cdea585970115a834c978d1c6,10.0.20.182,25474,68.185.245.236,,42409913837,1,1770238596.887,20.412,,.,0,0,0.000,20.412,-,0,0,213,245,122,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDlkZTEwNzc4ZTE2NjQ5YTAxNjk4M2IyNzA5OGRjODE5ZmFhMGVhNTNjNjRhNGFlNzA=",
+      "created_at": 1770238576,
+      "metadata": {},
+      "model": "gpt-5.2-pro-2025-12-11",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_09de10778e16649a016983b284b73c819fa26aeaadf4de7a6c",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_09de10778e16649a016983b284b844819f8e8b016bab6247a7",
+          "content": [
+            {
+              "annotations": [],
+              "text": "It depends on what you mean by “Tokyo”:\n\n- **Tokyo Metropolis (Tokyo-to; the prefecture-level jurisdiction):** about **14.1 million** people (recent mid‑2020s estimate; varies slightly month to month).\n- **Tokyo’s 23 special wards (the urban core often thought of as “Tokyo city”):** about **9.7 million**.\n- **Greater Tokyo metropolitan area (Tokyo–Yokohama–Chiba–Saitama region):** about **37 million** (largest metro area in the world by many measures).\n\nIf you tell me which definition you want (metropolis vs 23 wards vs metro area), I can give the most appropriate figure and the typical source for it.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 0.98,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 300,
+        "output_tokens_details": {
+          "reasoning_tokens": 142
+        },
+        "total_tokens": 314
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770238596,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

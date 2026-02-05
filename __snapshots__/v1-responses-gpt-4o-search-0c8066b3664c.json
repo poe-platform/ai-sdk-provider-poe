@@ -1,0 +1,27 @@
+{
+  "key": "v1-responses-gpt-4o-search-0c8066b3664c",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8c547f2c2261fd-ORD",
+      "connection": "keep-alive",
+      "content-length": "151",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 18:46:18 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=WPxdR8RJrhjc_3JWno8EVEhx8vEbu12CAgslSxvchU4-1770230778-1.0.1.1-sMuQOheiy.E3AJBx4Q1_VC1SgG.el10DY0ZDYT7CE14Rq5MysIO6.LJHcNc1zDCtzt1MLzaIB3jcFgqD2clN43zSScu0Si8NwiFLpBBPSho; path=/; expires=Wed, 04-Feb-26 19:16:18 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",d093c45ee78886e1c2d824e39b1cef18,10.0.20.182,27942,68.185.245.236,,42337349187,1,1770230778.796,0.019,,.,0,0,0.001,0.019,-,0,0,372,346,173,10,34729,,,,,,-,"
+    },
+    "body": {
+      "error": {
+        "message": "Model does not support responses method.",
+        "type": "invalid_request_error",
+        "error_id": "73e744b1-cced-4505-b337-dfe23e4d7183"
+      }
+    }
+  }
+}

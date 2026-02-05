@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-sora-2-pro-af64e624aa10",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dc3c3af7561ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 22:59:07 GMT",
+      "openai-processing-ms": "125329",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=zgsfCxQq74TToJ9lnarbwgVZPbceamqiCbhjt_JmmPQ-1770245947-1.0.1.1-XPgKcjKJYwvpdmeH4L2VlqkU7pHGK.0tgfIo15sxux7tDWFIRC.WtHLzN4nGEUEPCWsLbLPRpTELdVg1uo2Mbu8dyDKqWnm2kPouyNBoTDk; path=/; expires=Wed, 04-Feb-26 23:29:07 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",149fff34e0996517718a8761a7a733c4,10.0.20.182,11142,68.185.245.236,,17540942214,1,1770245947.399,125.332,,.,0,0,0.000,125.332,-,0,0,754,83,41,10,34729,,,,,,-,",
+      "x-request-id": "req-d3ec625b739d5ea5fa3d6227"
+    },
+    "body": {
+      "id": "chatcmpl-46c1da64b2a595b65d1e3676",
+      "object": "chat.completion",
+      "created": 1770245947,
+      "model": "sora-2-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "https://pfst.cf2.poecdn.net/base/video/69237cd6c2951ff9a2e35c742babe65ba6b6cd78389e76660dd733c8bbd1bc5c"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 0,
+        "total_tokens": 7
+      }
+    }
+  }
+}

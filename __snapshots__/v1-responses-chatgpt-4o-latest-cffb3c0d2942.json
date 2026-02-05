@@ -1,0 +1,79 @@
+{
+  "key": "v1-responses-chatgpt-4o-latest-cffb3c0d2942",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dbeee793161ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 22:53:44 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=lFw5GwX.csXSlYr0DoDHHOF7IzvHjgeIjmhGQkWXAuI-1770245624-1.0.1.1-3sO4EIghMaKBo_dPGcvF8_wz5OnB.KiiprOwBxgBaFONqGg2s30Kz3.eZ1LkAHZtgBXUJuSnzUIpEtwLZBnZYxn.OEM1SEGJfdnd_QO.UUs; path=/; expires=Wed, 04-Feb-26 23:23:44 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",3ffe6edfdfba6fab59007ccb518a3b45,10.0.20.182,26842,68.185.245.236,,42395874073,1,1770245624.575,0.474,,.,0,0,0.000,0.474,-,0,0,213,131,65,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGViNTk5MGQzMGY3OTE0YjAxNjk4M2NkZjgzZGQ0ODE5MzlkY2UwNzYyOGNmMjc0ZWM=",
+      "created_at": 1770245624,
+      "metadata": {},
+      "model": "chatgpt-4o-latest",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_0eb5990d30f7914b016983cdf876188193b9e11cbdab132d34",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Hello there, friend.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {},
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 6,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 20
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770245624,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

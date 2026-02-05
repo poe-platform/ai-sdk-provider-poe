@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-gpt-image-1.5-1259f19683f2",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d24b15c621464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 21:09:03 GMT",
+      "openai-processing-ms": "36836",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=AGu4Zs6LGIFPbkP_lksEIGdUftvWKwza0FDPkjnR6nU-1770239343-1.0.1.1-iZTYQSI_ZdYFFyk4WjwdmANM6bNY0qVnFRn0HgicCqmQm4MmkDP1fqURa.5mM8Xna8PP0h0CN.r3MGuCKisCklFUt8TCr.sy2WWWopA8U1o; path=/; expires=Wed, 04-Feb-26 21:39:03 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",e4cbb6964c3a71621dcf4dcf08df36e0,10.0.20.182,42646,68.185.245.236,,17490693685,1,1770239343.315,36.839,,.,0,0,0.000,36.839,-,0,0,946,77,38,10,34729,,,,,,-,",
+      "x-request-id": "req-377695d13de967d45b8c442b"
+    },
+    "body": {
+      "id": "chatcmpl-1f03acbb6d1b24cfb1f47b16",
+      "object": "chat.completion",
+      "created": 1770239343,
+      "model": "gpt-image-1.5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Generate an image of a sunset over mountains.png](https://pfst.cf2.poecdn.net/base/image/35ac606308919da62245ac90913aff2b21776b590d6ed4de019b31dc653a7cca?w=1024&h=1024)\n\nhttps://pfst.cf2.poecdn.net/base/image/35ac606308919da62245ac90913aff2b21776b590d6ed4de019b31dc653a7cca?w=1024&h=1024"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 66,
+        "total_tokens": 74
+      }
+    }
+  }
+}

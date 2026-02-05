@@ -1,0 +1,27 @@
+{
+  "key": "v1-responses-o4-mini-deep-research-d627dd51e022",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8c542b2eeb61fd-ORD",
+      "connection": "keep-alive",
+      "content-length": "208",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 18:46:05 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=bbXd_IKCNDbg_kNhqFMM9QGwohDzJs6Fkns93qZEO2o-1770230765-1.0.1.1-mn0qYOHDqQ5.gGVKrM6EgmfcRSohUU1hmMzC_5gCXI2oGVZ8hcU.Sktc5pfZbR3AH8m8MmA1.mB16v5EDLplldB1alrlW.GBFCwqKiGtHZE; path=/; expires=Wed, 04-Feb-26 19:16:05 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",c225c76a7fd3de61da589bcbc306c7eb,10.0.20.182,9834,68.185.245.236,,42349733680,1,1770230765.607,0.266,,.,0,0,0.001,0.267,-,0,0,429,244,122,10,34729,,,,,,-,"
+    },
+    "body": {
+      "error": {
+        "message": "Deep research models require at least one of 'web_search_preview', 'mcp', or 'file_search' tools.",
+        "type": "invalid_request_error",
+        "error_id": "c9bf7d91-7d23-4df1-bbbd-2160d19cb224"
+      }
+    }
+  }
+}

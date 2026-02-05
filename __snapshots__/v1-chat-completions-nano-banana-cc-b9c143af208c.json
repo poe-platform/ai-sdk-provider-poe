@@ -1,0 +1,48 @@
+{
+  "key": "v1-chat-completions-nano-banana-cc-b9c143af208c",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dff8eaa0b1464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:37:53 GMT",
+      "openai-processing-ms": "1783",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=oq6OOu6EMAsu3emiPezv.TWgGRs9w_1NlaivNEQ6pC8-1770248273-1.0.1.1-3ZBJGh_i5uJxvOXmdhzq.VPLrLQZqA8aksYbyZpKQHaBTUh___crtxqVEmlkFG3ho4Rms6AeZrWTwW8IbqrcIllmyn3jJ60mZZNTpqOyNAA; path=/; expires=Thu, 05-Feb-26 00:07:53 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",81876904e2f9749c8a1aa9574d43fb22,10.0.20.182,6616,68.185.245.236,,42416782895,1,1770248272.994,1.827,,.,0,0,0.000,1.827,-,0,0,794,264,132,10,34729,,,,,,-,",
+      "x-request-id": "req-f659119c34ec14d5c92535d2"
+    },
+    "body": {
+      "id": "chatcmpl-92aac05e84c3abdf525ccf89",
+      "object": "chat.completion",
+      "created": 1770248272,
+      "model": "nano-banana-cc",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "I need to know the date for which you want the weather in San Francisco."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 13,
+        "total_tokens": 29,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "key": "v1-responses-nano-banana-pro-67097f019907",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dff327d381464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 23:37:46 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=rDrj0g4E2Ua3EoWaL9USCRGCSAIdomAfrGVeUo.hlJ0-1770248266-1.0.1.1-grCe3L_7N1Edi5sQ2fLHcti91xBYtHthl0isHR7h3MykRYwrjfdj.bCw7OWpq9PhbS.PrREFTy1t4d9CnR1LtXj4bzxP3yIGu2w7ARpaieQ; path=/; expires=Thu, 05-Feb-26 00:07:46 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",3749b503b2934faa5b5f93f20926419e,10.0.20.182,5268,68.185.245.236,,42472455066,1,1770248266.929,10.511,,.,0,0,0.001,10.512,-,0,0,2335,230,115,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlFOaURhZXVZSmNDVXNid1Bqc0RqdVFF",
+      "created_at": 1770248256,
+      "metadata": {},
+      "model": "gemini-3-pro-image-preview",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_-7174634029212129495",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "**Formulating the Greeting**\n\nI'm focusing on the prompt's constraints. I've broken down the request into its core elements: a greeting, and a three-word limit. Now I'm working to formulate several options.\n\n\n**Narrowing Down Options**\n\nI'm evaluating my choices. I eliminated \"I say hello\" because it's too literal and lacks the natural flow of a greeting. \"Well hello there\" is good, but \"Hello to you\" feels better. It's concise. I am confident it is the best, most direct fit for the prompt.\n\n\n**Finalizing the Selection**\n\nI'm making a final decision. I've considered several options, like \"Hello to you,\" \"Well hello there,\" and \"I say hello.\" Now, I'm focusing on the prompt's implied intent: a simple, common greeting. I believe the best choice is \"Well hello there.\" It's a standard, three-word phrase that serves the purpose effectively.\n\n\n**Evaluating Simplest Approach**\n\nI'm now revisiting my initial choices. The goal is a straightforward, three-word greeting. I'm focusing on \"Well hello there\" versus \"Hello to you\". Evaluating my choices. The former is a common phrase. The latter feels more direct. I am leaning toward \"Hello to you.\"\n\n\n",
+              "annotations": []
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "id": "QNiDaeuYJcCUsbwPjsDjuQE",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Hello to you.",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "reasoning": {},
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 7,
+        "input_tokens_details": {
+          "text_tokens": 7
+        },
+        "output_tokens": 657,
+        "output_tokens_details": {
+          "reasoning_tokens": 653,
+          "text_tokens": 4
+        },
+        "total_tokens": 664
+      }
+    }
+  }
+}

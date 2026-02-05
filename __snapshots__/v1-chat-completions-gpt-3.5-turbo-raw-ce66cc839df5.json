@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-gpt-3.5-turbo-raw-ce66cc839df5",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dbf46cdae61ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 22:53:59 GMT",
+      "openai-processing-ms": "947",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=8yqMOuLDzTkGNnx5oX2s92VY7xhDgmgOXPtYkRo76rE-1770245639-1.0.1.1-d6gkE4yq0cYoiHvpAj9jWz7nGHF2y_98cf62cjrqeZJnpPSpES.1WF6vvBbPlk28S0tzO.1qSnDeVug.zqHD8UQXgrKQ537MFHrlnBLxv.E; path=/; expires=Wed, 04-Feb-26 23:23:59 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",4c7543fc80f255578722a8e9137e44cd,10.0.20.182,55444,68.185.245.236,,42464358465,1,1770245639.199,0.976,,.,0,0,0.000,0.975,-,0,0,826,268,134,10,34729,,,,,,-,",
+      "x-request-id": "req-ca26c96ed8dc2730761920f3"
+    },
+    "body": {
+      "id": "chatcmpl-c7bb6d978c1bea966cb99274",
+      "object": "chat.completion",
+      "created": 1770245639,
+      "model": "gpt-3.5-turbo-raw",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "call_jQkkAoPxKLIwSDZMUiGHRuPK",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
+      }
+    }
+  }
+}

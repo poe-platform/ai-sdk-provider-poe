@@ -1,0 +1,31 @@
+{
+  "key": "v1-chat-completions-gpt-4-classic-0314-5d58c31b734c",
+  "response": {
+    "status": 404,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d24946ea51464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 21:08:22 GMT",
+      "openai-processing-ms": "390",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=jnkFy8EO05D3_l6YXo.nh6osiClL0oodCKUuNx3oLRo-1770239302-1.0.1.1-uquyEOBRrHJCRWhZhdBZIUiWaqRPmikj4YPd2CwpZ6TzuxwaEdk6DnYM34gKVTgMALq3m3HMeylXhNPpGN3D.8.F._0dHp70xATXuRLhY6M; path=/; expires=Wed, 04-Feb-26 21:38:22 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",999d51f1c93f21956ce7f13d8baed84f,10.0.20.182,41356,68.185.245.236,,42347170872,1,1770239302.250,0.393,,.,0,0,0.000,0.393,-,0,0,592,61,30,10,34729,,,,,,-,",
+      "x-request-id": "req-20425556d95ca149cf045c65"
+    },
+    "body": {
+      "error": {
+        "message": "tools is not supported in this model. For a list of supported models, refer to https://platform.openai.com/docs/guides/function-calling#models-supporting-function-calling.",
+        "type": "invalid_request_error"
+      }
+    }
+  }
+}

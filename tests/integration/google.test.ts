@@ -1,44 +1,50 @@
 import { describe, it, expect } from "vitest";
-import { generateText } from "ai";
+import { generateText, tool } from "ai";
+import { z } from "zod";
 import { createPoe } from "../../src/poe-provider.js";
+import { GOOGLE_MODELS } from "../../src/google-models.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 
-const makePoe = () => createPoe({ fetch: getSnapshotFetch() });
+const poe = createPoe({
+  fetch: getSnapshotFetch(),
+});
 
-describe("google provider (responses)", () => {
-  it("generates text with Nano-Banana", { timeout: 300_000, tags: ["stage:alpha"] }, async () => {
-    const { text } = await generateText({
-      model: makePoe()("google/Nano-Banana"),
-      prompt: "Say hello in exactly 3 words",
+describe("google provider", () => {
+  for (const [name, def] of Object.entries(GOOGLE_MODELS)) {
+    describe(name, () => {
+      const run = def.skip ? it.skip : it;
+      const opts = {
+        ...(def.timeout && { timeout: def.timeout }),
+        ...(def.tags && { tags: def.tags }),
+      };
+
+      run(`generates text with ${name}`, opts, async () => {
+        const { text } = await generateText({
+          model: poe(`google/${name}`),
+          prompt: "Say hello in exactly 3 words",
+        });
+        expect(text).toBeTruthy();
+      });
+
+      if (def.tools !== false) {
+        run(`handles tool calling with ${name}`, opts, async () => {
+          const { toolCalls } = await generateText({
+            model: poe(`google/${name}`),
+            prompt:
+              "What is the weather in San Francisco? Use the getWeather tool.",
+            tools: {
+              getWeather: tool({
+                description: "Get the current weather for a location",
+                inputSchema: z.object({
+                  location: z.string().describe("The city to get weather for"),
+                }),
+              }),
+            },
+          });
+          expect(toolCalls.length).toBeGreaterThan(0);
+          expect(toolCalls[0].toolName).toBe("getWeather");
+        });
+      }
     });
-
-    expect(text).toBeTruthy();
-    expect(typeof text).toBe("string");
-  });
-
-  // Image generation returns as a provider-executed tool result, not in `files`.
-  // The base64 image data is in toolResults[0].output.result
-  it("generates image with Nano-Banana", { timeout: 300_000, tags: ["stage:alpha" ] }, async () => {
-    const { toolResults } = await generateText({
-      model: makePoe()("google/Nano-Banana"),
-      prompt: "Generate an image of a cute cat",
-    });
-
-    expect(toolResults).toBeDefined();
-    expect(toolResults.length).toBeGreaterThan(0);
-    expect(toolResults[0].toolName).toBe("image_generation");
-    expect((toolResults[0].output as { result: string }).result).toBeTruthy();
-  });
-
-  it("generates image with Nano-Banana-Pro", { timeout: 300_000, tags: ["stage:alpha"], skip: true }, async () => {
-    const { toolResults } = await generateText({
-      model: makePoe()("google/Nano-Banana-Pro"),
-      prompt: "Generate an image of a sunset over mountains",
-    });
-
-    expect(toolResults).toBeDefined();
-    expect(toolResults.length).toBeGreaterThan(0);
-    expect(toolResults[0].toolName).toBe("image_generation");
-    expect((toolResults[0].output as { result: string }).result).toBeTruthy();
-  });
+  }
 });

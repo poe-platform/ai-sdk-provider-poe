@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-imagen-3-34d7f11b6af6",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0c3fdfbd0558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:46:36 GMT",
+      "openai-processing-ms": "5859",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=lfE7WRAGdmUi3MRpKYe.vwnoGhZDZ5droKHFXllQMzY-1770248796-1.0.1.1-EBWw6CaSwoVvBQVP_6heGfqVuYeTzqr_4nCuvKYU4W2.v.nzV6JKw_fOdJ5D8fTC_y6FoAy8FhQQFnVdzF.IlFiziBYH3aErhJdbIaQqBLs; path=/; expires=Thu, 05-Feb-26 00:16:36 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",5e99a80c1392bec2e7f4a9e3b78c5ed1,10.0.20.182,56202,68.185.245.236,,42489050566,1,1770248796.904,5.862,,.,0,0,0.000,5.862,-,0,0,930,180,90,10,34729,,,,,,-,",
+      "x-request-id": "req-0d477b0bc6617b39941da352"
+    },
+    "body": {
+      "id": "chatcmpl-1d75c88b963ba384e36b53bd",
+      "object": "chat.completion",
+      "created": 1770248796,
+      "model": "imagen-3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/01dccffb01b80dad5b7899673a6f24fea6718c19ea0279c7d0a2472f28b69d15?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/01dccffb01b80dad5b7899673a6f24fea6718c19ea0279c7d0a2472f28b69d15?w=1024&h=1024"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 73,
+        "total_tokens": 80
+      }
+    }
+  }
+}

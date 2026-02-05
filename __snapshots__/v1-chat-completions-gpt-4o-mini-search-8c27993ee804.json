@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-gpt-4o-mini-search-8c27993ee804",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dbf067ec861ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 22:53:49 GMT",
+      "openai-processing-ms": "1741",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=IxrFccCu4tAUSgdlAVsb5MvsHSPAZAOQxVQWJOVsuyI-1770245629-1.0.1.1-VgtAvEgFz_SNT9J1DqxAaK18VnlxOXxqnIX.dUmC4_pFwpOJ1NIb6G2X8LoLKq2Q7zDZI9vXy5hYp5Z3fHI_uu_gzJ8MCjUdORp2GdPoDY4; path=/; expires=Wed, 04-Feb-26 23:23:49 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",bd451ccbd5a5655cdc941c5c64f2ddad,10.0.20.182,10618,68.185.245.236,,42451706020,1,1770245629.711,1.767,,.,0,0,0.000,1.767,-,0,0,899,213,106,10,34729,,,,,,-,",
+      "x-request-id": "req-5fc2e7e9bf45c1e029798371"
+    },
+    "body": {
+      "id": "chatcmpl-d862744bf03e58977a32a549",
+      "object": "chat.completion",
+      "created": 1770245629,
+      "model": "gpt-4o-mini-search",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "\"Hello, how are you?\" "
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 8,
+        "prompt_tokens": 7,
+        "total_tokens": 15,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  }
+}

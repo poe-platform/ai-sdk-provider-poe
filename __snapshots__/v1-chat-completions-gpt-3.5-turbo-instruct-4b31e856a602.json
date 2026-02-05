@@ -1,0 +1,48 @@
+{
+  "key": "v1-chat-completions-gpt-3.5-turbo-instruct-4b31e856a602",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d24adcfac1464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 21:08:26 GMT",
+      "openai-processing-ms": "440",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Qo5KqpaEPP6OXLU9QiW8eSvZEbq5nwWCemR7SddSVA0-1770239306-1.0.1.1-vlpV8wlKOI3MdzralKeTcohUebuYVHXQOxsAhAD7Hm19RN9nODvcXT4D2R0FJquDxlEmRWf1ReYYfXRKeYPMNWIVO2lqIN0GhFIRoj8Zpv0; path=/; expires=Wed, 04-Feb-26 21:38:26 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",1d743be5df70fba32fcc30dd65de2ea5,10.0.20.182,20794,68.185.245.236,,42403016704,1,1770239306.388,0.443,,.,0,0,0.000,0.443,-,0,0,859,261,130,10,34729,,,,,,-,",
+      "x-request-id": "req-9924f26003ebd1be1cb51804"
+    },
+    "body": {
+      "id": "chatcmpl-0124f432bca525df5272e66e",
+      "object": "chat.completion",
+      "created": 1770239306,
+      "model": "gpt-3.5-turbo-instruct",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The current weather in San Francisco is cloudy with a temperature of 59 degrees Fahrenheit. There is a chance of rain later today."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 26,
+        "prompt_tokens": 19,
+        "total_tokens": 45,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

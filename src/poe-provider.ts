@@ -2,7 +2,14 @@ import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
-import { isAlphaStage } from "./release-stage.js";
+import { OPENAI_MODELS } from "./openai-models.js";
+import { GOOGLE_MODELS } from "./google-models.js";
+
+const chatOnly = (models: Record<string, { route?: "chat" }>) =>
+  new Set(Object.entries(models).filter(([, m]) => m.route === "chat").map(([n]) => n));
+
+const OPENAI_CHAT_ONLY = chatOnly(OPENAI_MODELS);
+const GOOGLE_CHAT_ONLY = chatOnly(GOOGLE_MODELS);
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -61,9 +68,11 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
       case "anthropic":
         return getAnthropicProvider()(model);
       case "openai":
+        if (OPENAI_CHAT_ONLY.has(model)) return getOpenAIProvider().chat(model);
         return getOpenAIProvider().responses(model);
       case "google":
-        if (isAlphaStage()) return getOpenAIProvider().responses(model);
+        if (GOOGLE_CHAT_ONLY.has(model)) return getOpenAIProvider().chat(model);
+        return getOpenAIProvider().responses(model);
       default:
         return getOpenAIProvider().chat(model);
     }

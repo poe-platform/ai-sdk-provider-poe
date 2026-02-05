@@ -1,0 +1,70 @@
+{
+  "key": "v1-chat-completions-gemini-3-pro-816d76f29a1f",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0b028efe0558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:45:44 GMT",
+      "openai-processing-ms": "3939",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=8CZRdsN8Q_eODaJAWVDAmJSPjACrsbpLa6zpJ_cbMOQ-1770248744-1.0.1.1-fUncbWZz6icbLWa0fl1GKLgVVLLTBhF.VWQV5Ugt7l5PR8i1cNA38aGIs2hSB0AUzHP022UOMACkBPCm6tmdVPet2k7LsQaP0eu1AWTqm6E; path=/; expires=Thu, 05-Feb-26 00:15:44 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",e66da44a1ee61a24bd13fc84090dc88e,10.0.20.182,24204,68.185.245.236,,42476112640,1,1770248744.242,3.942,,.,0,0,0.000,3.942,-,0,0,357,206,103,10,34729,,,,,,-,",
+      "x-request-id": "req-432a175ccf37c2d10008149f"
+    },
+    "body": {
+      "id": "chatcmpl-55b1d1af2ab6fcc2882c5512",
+      "object": "chat.completion",
+      "created": 1770248744,
+      "model": "gemini-3-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "reasoning_content": "**Processing the User's Query**\n\nI'm focused on the user's weather request. I've pinpointed the need for the `getWeather` tool and identified \"San Francisco\" as the location parameter. My plan is to execute `getWeather` with the appropriate location.\n\n\n**Determining Actionable Steps**\n\nI've clarified the user's intent to retrieve San Francisco's weather. My next step involves calling the `getWeather` tool. I've formulated the exact call: `getWeather` with `location='San Francisco'`. I'm poised to execute this now.\n\n\n",
+            "reasoning": "**Processing the User's Query**\n\nI'm focused on the user's weather request. I've pinpointed the need for the `getWeather` tool and identified \"San Francisco\" as the location parameter. My plan is to execute `getWeather` with the appropriate location.\n\n\n**Determining Actionable Steps**\n\nI've clarified the user's intent to retrieve San Francisco's weather. My next step involves calling the `getWeather` tool. I've formulated the exact call: `getWeather` with `location='San Francisco'`. I'm poised to execute this now.\n\n\n",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_r8KDFqjOJcjDfkbWFNh5",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                },
+                "extra_content": {
+                  "google": {
+                    "thought_signature": "CiQBjz1rX9+pnG5oUlUDOz6pD6DOfqAPVRrIATwg22t2XTQXvmMKaQGPPWtf50AFnvKGidUIcXLEJwkfqk31zaH5KSRRKgLILxZB2tmw6Ltl4XEj8JdTB0fd8cKOSYYsx83gTM67HlagLVm5C17c7KkP9fUzmDflR7teg9VnCJ/dtZLGvY5MwJHojVBcGb+WfgpnAY89a19NiFBMiSxHwUqyTeAjeA0mZEl9lEnc1ofgX4KHsIshWoZkbkJV1lYxMooztJ8UJnFSxIFiCLKCGfuoecfo/d1MN/tG9cidkzkx+zNuSHflpy3kvOlvnp7mFJ99RyzhwtkQDgqoAQGPPWtffRZXEXCX+kYSkw5YUqetAjq1UODyiBAwuIXA0tfYwI0xXECxm6PkQHM76nNVGmVDJu50ZH8/Wj8jZFPzzBzhe84MNhPsQTIuCYR/IVu88AnFFZ8qxbGCop4TBzglRcn3ceurfPm0HgRloaB7DBfgJ5utN4Ml8MgmqtYJ0eZ645BUedxGX2r7FI8G5Tx/SovSEXpwyDsw5ODXgFceNWd71BeD3wpqAY89a1/1NvaLbo81Ilg0xhlEB+yAhzv9+2MIABHFUq/pCQ4rvwfQoa2DneIV4GMtqDm9vW+jFM3Y+4xFoEhpJU4n+LpPXkBC6a3oGtnTKTVrAhN2QOCQdM9QMYi2370FvCZc+8iHObSJ9w=="
+                  }
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 99,
+        "prompt_tokens": 32,
+        "total_tokens": 131,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 90,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

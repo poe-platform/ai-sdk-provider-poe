@@ -1,0 +1,81 @@
+{
+  "key": "v1-responses-gpt-5.1-576141ecc058",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8db66e7b7261ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 22:47:57 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=zGPjPmfiZKn2kgFDyLxNIyRveRqzvIXVTYio5bPMcek-1770245277-1.0.1.1-mzTI5EkcwOodyW6.7iKMYmWw5OqQi4OGUn8KntHlHloByhl1RtC0JFeJXUMgPwXrOMK_Ysb3gJ5S2wVdvXABOMwCQO2fKJfkyMyDDVQ6MUA; path=/; expires=Wed, 04-Feb-26 23:17:57 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",809ee55ca66cafbf67b661c91960f788,10.0.20.182,1448,68.185.245.236,,42461477478,1,1770245276.991,1.050,,.,0,0,0.001,1.050,-,0,0,1331,229,114,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGNmZDk5YzAyNzI1Mjg5ZjAxNjk4M2NjOWMxYTJjODE5NGE0MDk4ODgxY2U4YzJjNzg=",
+      "created_at": 1770245276,
+      "metadata": {},
+      "model": "gpt-5.1-2025-11-13",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_0cfd99c02725289f016983cc9ca7c08194acc96e706b255418",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Hello there, friend",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "none"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 13,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 14,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 27
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770245276,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

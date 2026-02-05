@@ -1,0 +1,48 @@
+{
+  "key": "v1-chat-completions-nano-banana-cc-6c2cdb1ad186",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0a837c420558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:45:20 GMT",
+      "openai-processing-ms": "990",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=i5on7miY9HdKvPPdgJhxRI0tpviafiHacoo6fDS9tgc-1770248720-1.0.1.1-mxVVWeGf8nxOierOsRCoACXpxuW8Rsug.3wpXz6A_ssIFlFmMBWfs.CQccLw4juWtTXYMNCCcQBphlRrQSmEK0qpxpMA18lcIvuliPB8Nuo; path=/; expires=Thu, 05-Feb-26 00:15:20 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",e3da908f90f561651b3c0e127a98e604,10.0.20.182,35280,68.185.245.236,,42475956576,1,1770248720.942,0.993,,.,0,0,0.000,0.993,-,0,0,731,245,122,10,34729,,,,,,-,",
+      "x-request-id": "req-610b7a058c684d88e09e7edb"
+    },
+    "body": {
+      "id": "chatcmpl-6ee3ac8f94ef8755d0067d76",
+      "object": "chat.completion",
+      "created": 1770248720,
+      "model": "nano-banana-cc",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello there!"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 3,
+        "prompt_tokens": 7,
+        "total_tokens": 10,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

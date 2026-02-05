@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-dall-e-3-901125554031",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dc1bb7d9a61ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 22:55:54 GMT",
+      "openai-processing-ms": "15159",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=REgeXz36ktAsmXaeyddJRq1jwL2sUE30qtRgrrpgkV0-1770245754-1.0.1.1-Ab90LMn.7G1kNTj9jfqXra9DZS5Yecm9dLd.2O6pN9coEOMd0hSxTOgUtfDd2U_3xH_f7qML42kYbK7hnOAAsfxUaNizI6.KH4uq.ytnOo0; path=/; expires=Wed, 04-Feb-26 23:25:54 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",159a17fbe8511118b6f01c19c82aeae1,10.0.20.182,54054,68.185.245.236,,42396781907,1,1770245753.994,15.162,,.,0,0,0.000,15.162,-,0,0,1602,88,44,10,34729,,,,,,-,",
+      "x-request-id": "req-be26cb496e7ab38d9fbec8fe"
+    },
+    "body": {
+      "id": "chatcmpl-dde513b64238cbadd8bf5782",
+      "object": "chat.completion",
+      "created": 1770245753,
+      "model": "dall-e-3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Say hello in exactly 3 words](https://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-TzX50WuPENlyaCojT7hMptfA.png?st=2026-02-04T21%3A55%3A53Z&se=2026-02-04T23%3A55%3A53Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-04T22%3A55%3A53Z&ske=2026-02-05T22%3A55%3A53Z&sks=b&skv=2026-02-06&sig=I2ONXIYsIO1iq9nEUjM8yhtPNUb8e4cp5DPMXMM9zeA%3D)\n\nhttps://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-TzX50WuPENlyaCojT7hMptfA.png?st=2026-02-04T21%3A55%3A53Z&se=2026-02-04T23%3A55%3A53Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-04T22%3A55%3A53Z&ske=2026-02-05T22%3A55%3A53Z&sks=b&skv=2026-02-06&sig=I2ONXIYsIO1iq9nEUjM8yhtPNUb8e4cp5DPMXMM9zeA%3D"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 277,
+        "total_tokens": 284
+      }
+    }
+  }
+}

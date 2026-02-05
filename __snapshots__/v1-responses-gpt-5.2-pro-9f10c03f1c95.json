@@ -1,0 +1,81 @@
+{
+  "key": "v1-responses-gpt-5.2-pro-9f10c03f1c95",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8db5ca9d5861ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 22:47:38 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=V1hoOl8zvZ.yi4wI7UyIxNGo9_SiPGf1YnmmTQjhujo-1770245258-1.0.1.1-XQHEBxqkrqGACiqf9gD3rM_Rfvh01JW27dhujDkUythIFOqHnM0oHq5iTrFkPD8BH1Afsf6QV8sME342S7PRq3Pkq5zK5l8LaKBWWMBn4bc; path=/; expires=Wed, 04-Feb-26 23:17:38 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",d8b7581ccd2c3c4c861dd6c0863083a4,10.0.20.182,19824,68.185.245.236,,42461272796,1,1770245258.858,9.137,,.,0,0,0.000,9.136,-,0,0,213,244,122,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDY4YWYyZTg0MjZkM2Q1MTAxNjk4M2NjODFkN2Q4ODFhMDg1NjQzNjdhNjhjMzAzOWE=",
+      "created_at": 1770245249,
+      "metadata": {},
+      "model": "gpt-5.2-pro-2025-12-11",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_068af2e8426d3d51016983cc8aa86c81a0b2aede1d5c079534",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Hello there, friend.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 0.98,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 13,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 9,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 22
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770245258,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

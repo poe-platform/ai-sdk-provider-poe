@@ -33,6 +33,20 @@ describe("createPoe", () => {
     expect(model.modelId).toBe("gemini-pro");
   });
 
+  it("routes openai/ multimedia models to chat completions", () => {
+    const poe = createPoe();
+    const model = poe("openai/gpt-image-1.5");
+    expect(model.provider).toBe("openai.chat");
+    expect(model.modelId).toBe("gpt-image-1.5");
+  });
+
+  it("routes openai/ completions-only models to chat completions", () => {
+    const poe = createPoe();
+    const model = poe("openai/gpt-4-turbo");
+    expect(model.provider).toBe("openai.chat");
+    expect(model.modelId).toBe("gpt-4-turbo");
+  });
+
   it("strips prefix for default fallback route", () => {
     const poe = createPoe();
     const model = poe("custom/my-model");

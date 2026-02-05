@@ -1,0 +1,86 @@
+{
+  "key": "v1-responses-o1-pro-17bb722394a5",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d21877bef1464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 21:07:55 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=5K8vxhESCtUdYRTwbknipgyRa3rsfmaTZsy0H42w4jE-1770239275-1.0.1.1-Cbnv83CVB28jnnxOrr7ocK3LV5ee_9g.4dOTIor9FS2MWJ6ZLzqLztkc9GwJgPu1g37mNQ6UmxPN0N8H6jxAXONIZYYy9DrKyhgcRR_Sti4; path=/; expires=Wed, 04-Feb-26 21:37:55 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",92d3b6d6354cd9d611cc1f35eb0f5bac,10.0.20.182,49794,68.185.245.236,,42346209591,1,1770239275.547,98.642,,.,0,0,0.000,98.642,-,0,0,2193,82,41,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDE5YjM5NWFlMjI3NTE1MDAxNjk4M2I0YzkwYTc4ODFhMWEyZDVkYzczOTZmZjllNDg=",
+      "created_at": 1770239177,
+      "metadata": {},
+      "model": "o1-pro-2025-03-19",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_019b395ae2275150016983b52b101881a1836bd04039761bda",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_019b395ae2275150016983b52b110881a18eab6736f2d50fe5",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Tokyo is administered as a metropolitan prefecture rather than a single “city,” and its population can be counted in two main ways:\n\n• Tokyo Metropolis (the 23 special wards plus other municipalities): This area has roughly 14 million residents, according to recent Tokyo Metropolitan Government data (2022–2023 estimates).  \n• Greater Tokyo Area (expanding into nearby prefectures like Kanagawa, Saitama, and Chiba): When including these surrounding regions, the total population reaches about 37 million, making it the world’s most populous metropolitan area.\n\nExact figures may vary slightly by source and update cycle, but Tokyo’s core population generally remains around 14 million, while the broader region exceeds 30 million.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 1170,
+        "output_tokens_details": {
+          "reasoning_tokens": 1024
+        },
+        "total_tokens": 1184
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770239275,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

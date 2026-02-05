@@ -1,0 +1,58 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-flash-lite-21d62e408782",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0ba2bbe00558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:46:06 GMT",
+      "openai-processing-ms": "498",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=aNEXOKXsu2fct99V4j3FxdIsaFTqxrxyEoK.rFnxQgk-1770248766-1.0.1.1-3DQHQnazw1ThC.X4fi6KnVhqx3QF9ncsAra_jOhrKtkNeeAYxAJWIuz1R8S9cUHKx2IpIwdylB3e_eWja_q2pWIX7sLCMOUJaWEfIOd.L10; path=/; expires=Thu, 05-Feb-26 00:16:06 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",b15d1a21123e0bd56af3c76548a4d6a5,10.0.20.182,29810,68.185.245.236,,42476306721,1,1770248766.403,0.501,,.,0,0,0.001,0.501,-,0,0,355,245,122,10,34729,,,,,,-,",
+      "x-request-id": "req-d176829393112ad8aeab9456"
+    },
+    "body": {
+      "id": "chatcmpl-7263113e73d2aaaac2dcaf32",
+      "object": "chat.completion",
+      "created": 1770248766,
+      "model": "gemini-2.5-flash-lite",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_v9Eo25dRYnhWa8KZcfu5",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 9,
+        "prompt_tokens": 32,
+        "total_tokens": 41,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

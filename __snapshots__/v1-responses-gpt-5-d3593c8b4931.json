@@ -6,51 +6,51 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8381190d1d61be-ORD",
+      "cf-ray": "9c8d14613c5a6189-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Tue, 03 Feb 2026 17:04:01 GMT",
+      "date": "Wed, 04 Feb 2026 20:57:24 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=65alZc5fNodyq36PEXYYvnVHUNpCPfhFa9wFsTw8XMM-1770138241-1.0.1.1-YwPYfWEKFGfU.m92IaFg9lxEswGgcOCbqMaNP8wgTBSC61v.XzVey3mV5Wlkz6Dfkl0_TrpA3UaBB8GYB0qD58RACpNRWdefu301VhJVRgs; path=/; expires=Tue, 03-Feb-26 17:34:01 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=H7CaHgeQ1P_3Q8kPGNFcUCChqAd.5nST4PXkPrq.gmc-1770238644-1.0.1.1-gY0K0lqYC3BZy_XcWO1B1P_CDb4FDeDfJAqUxKAAzZz_bH944u6Ta7BR6nzeOU.uRPHox_qQWnmVIBfm9woqoZyWS1a9qM8U04WaCBpClRk; path=/; expires=Wed, 04-Feb-26 21:27:24 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",7ddf3f1ed898c590b725ec647efc4e40,10.0.2.6,21304,68.185.245.236,,41535657287,1,1770138241.846,8.052,,.,0,0,0.001,8.052,-,0,0,2481,858,429,10,34729,,,,,,-,"
+      "x-q-stat": ",3e8a6fedd37946ebd4498d4828026002,10.0.20.182,32686,68.185.245.236,,42342032408,1,1770238644.909,6.595,,.,0,0,0.001,6.595,-,0,0,2481,90,45,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDIzYTQ1ZTQ1MzBhZWZkZDAxNjk4MjJhN2I4YTQ0ODE5ZGI5YmJlNTZjMGM3MTA2NTk=",
-      "created_at": 1770138235,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM4YmQzMGU1MGYwNjM0MDAxNjk4M2IyYWU3ZDkwODE5NzgzOTllZTE5Y2IzMjEzNzA=",
+      "created_at": 1770238638,
       "metadata": {},
       "model": "gpt-5-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_023a45e4530aefdd0169822a7bde08819d9150b8d8b3b57a68",
+          "id": "rs_0c8bd30e50f06340016983b2aed6c4819780421fd9d25658c5",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_QBcNXooMm8TZL53nEajOhtpT",
+          "call_id": "call_dQh6IjJHlNeWvWjAzbEafkg4",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_023a45e4530aefdd0169822a81ac28819da339bab5611d4d26",
+          "id": "fc_0c8bd30e50f06340016983b2b4bd408197a38c6bbf9c9c79a3",
           "status": "completed"
         },
         {
           "arguments": "{\"location\":\"New York\"}",
-          "call_id": "call_zfFALXrplFLF92QIuRoCWnq1",
+          "call_id": "call_bFqXqasBNykxcj1fhk6h4V1p",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_023a45e4530aefdd0169822a81ac38819da0483f85ee335952",
+          "id": "fc_0c8bd30e50f06340016983b2b4bd508197b365a53176c33630",
           "status": "completed"
         },
         {
           "arguments": "{\"expression\":\"15 * 7\"}",
-          "call_id": "call_LeZBTde6g1SR3rI1TayKxwkq",
+          "call_id": "call_4lJnIEVwZqOEmzyCM4VaedyP",
           "name": "calculate",
           "type": "function_call",
-          "id": "fc_023a45e4530aefdd0169822a81ac3c819d87f2d8eebfd6aebb",
+          "id": "fc_0c8bd30e50f06340016983b2b4bd588197a560efb80d149063",
           "status": "completed"
         }
       ],
@@ -114,18 +114,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 280,
+        "output_tokens": 364,
         "output_tokens_details": {
-          "reasoning_tokens": 192
+          "reasoning_tokens": 256
         },
-        "total_tokens": 376
+        "total_tokens": 460
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770138241,
+      "completed_at": 1770238644,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

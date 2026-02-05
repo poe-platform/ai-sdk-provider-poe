@@ -1,0 +1,53 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-pro-65b8bc3be6db",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0b394dd60558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:45:58 GMT",
+      "openai-processing-ms": "9877",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Y5qqGNeGZPeYcVUcFICyiZS9WVhnGkrc3IMP9ZS3Jpg-1770248758-1.0.1.1-9YFIX8deglJI9fZV5v6rRJDBftsVvAQ7_kBa9UjlUvqnJKyOEFKyI1Mt89nbhFeMg2eFPTXgRiYi.4NuOX76HtuDHIiNzt1KgaoCCCRvKUI; path=/; expires=Thu, 05-Feb-26 00:15:58 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",35edef9635adff2d507073348fe5a2f6,10.0.20.182,48688,68.185.245.236,,42420395601,1,1770248758.909,9.880,,.,0,0,0.000,9.880,-,0,0,356,110,55,10,34729,,,,,,-,",
+      "x-request-id": "req-090b52a02079bb0a85655596"
+    },
+    "body": {
+      "id": "chatcmpl-bda7a0c56fecfbe48635bf67",
+      "object": "chat.completion",
+      "created": 1770248758,
+      "model": "gemini-2.5-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "How are you?"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 1010,
+        "prompt_tokens": 7,
+        "total_tokens": 1017,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 1006,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

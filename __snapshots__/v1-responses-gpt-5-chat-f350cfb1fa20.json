@@ -1,0 +1,79 @@
+{
+  "key": "v1-responses-gpt-5-chat-f350cfb1fa20",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d1cd818f81464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 21:03:06 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=avFahkT37m3g7ueJJZyWADgaue1yj04_mCsF80C2qJk-1770238986-1.0.1.1-I2MFgLiDESl_TyaEDaOcpj9la_UuIBGMX8JgEjOfHvc_gba0KcjOiXBaWoKRTx7I4EHOoUqbyD9fkZnv0n3_dAmi9UuA5tugxX_nFS4l1V8; path=/; expires=Wed, 04-Feb-26 21:33:06 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",567026010e0b4000edfea63acb52d260,10.0.20.182,8564,68.185.245.236,,42400531194,1,1770238986.449,1.455,,.,0,0,0.000,1.455,-,0,0,1967,236,118,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDcxYzFkMWU3OWE5Nzk4MDAxNjk4M2I0MDkxZjI0ODFhM2FjZTUyMWIzODQ0NzhkYTM=",
+      "created_at": 1770238985,
+      "metadata": {},
+      "model": "gpt-5-chat-latest",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_071c1d1e79a97980016983b40955e481a39f2c73db34da90e2",
+          "content": [
+            {
+              "annotations": [],
+              "text": "As of the most recent estimates in 2024, **Tokyo’s population depends on how you define the city area**:\n\n- **Tokyo Metropolis (Tokyo-to)** — the official administrative area that includes Tokyo’s 23 wards plus suburban cities and villages — has a population of around **14 million people**.  \n- **Greater Tokyo Area** — which includes surrounding prefectures such as Kanagawa, Saitama, and Chiba — has about **37 to 38 million people**, making it the **most populous metropolitan area in the world**.\n\nFor the most up-to-date statistics, you can check data from Japan’s **Statistics Bureau** or **Tokyo Metropolitan Government**.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {},
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 15,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 139,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 154
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770238986,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

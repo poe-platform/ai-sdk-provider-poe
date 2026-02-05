@@ -1,0 +1,61 @@
+{
+  "key": "v1-responses-nano-banana-0dd1ea2d68f8",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0a7dea130558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 23:45:19 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=4opMrj6vtBBc8qbG_.LN9bq1SsL24R6CU6XpC2yfErs-1770248719-1.0.1.1-in2N0sFhsfA9W1P6wfMtANOtRQ9dAXgaywyedwWQcHowNY9lHNKwSrnBkh.9uYbuACI4ycIfRGR8nNlTcnMNdEX6ClJHwtjZS4DrnqXS4iQ; path=/; expires=Thu, 05-Feb-26 00:15:19 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",1560a908c9a056aa93d1ecc8f4ecb8c2,10.0.20.182,34322,68.185.245.236,,42488506145,1,1770248719.825,0.776,,.,0,0,0.000,0.776,-,0,0,212,231,115,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOkQ5cURhYXVTRE1IV3Nid1Bub2FTdVFV",
+      "created_at": 1770248719,
+      "metadata": {},
+      "model": "gemini-2.5-flash-image",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "message",
+          "id": "D9qDaauSDMHWsbwPnoaSuQU",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Hello there! \n",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "reasoning": {},
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 7,
+        "input_tokens_details": {
+          "text_tokens": 7
+        },
+        "output_tokens": 5,
+        "output_tokens_details": {
+          "text_tokens": 5
+        },
+        "total_tokens": 12
+      }
+    }
+  }
+}

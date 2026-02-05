@@ -23,7 +23,11 @@
     "snapshots:list": "tsx scripts/snapshots.ts list",
     "snapshots:list:stale": "tsx scripts/snapshots.ts list:stale",
     "snapshots:delete": "tsx scripts/snapshots.ts delete",
-    "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale"
+    "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale",
+    "verify-model": "tsx scripts/verify-model.ts",
+    "verify-model:stable": "RELEASE_STAGE=stable tsx scripts/verify-model.ts",
+    "verify-model:beta": "RELEASE_STAGE=beta tsx scripts/verify-model.ts",
+    "verify-model:alpha": "RELEASE_STAGE=alpha tsx scripts/verify-model.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.35",

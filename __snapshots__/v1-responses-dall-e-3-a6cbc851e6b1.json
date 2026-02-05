@@ -1,0 +1,27 @@
+{
+  "key": "v1-responses-dall-e-3-a6cbc851e6b1",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8cf4fa1bfa2041-ORD",
+      "connection": "keep-alive",
+      "content-length": "151",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 20:35:52 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=ley5yGa7yjjRzd.yqSzjOJUfecbN9n5K4BXNJXu3IV0-1770237352-1.0.1.1-xIcfZlVdLmjPLUPca6bklFRJg5skfLCrH8VBQpzXkeqBW6ke9ZN5FaWgZrAcTu6rnypHgkCkov318FWr7QPK7llpc1l7YDbe5rUGb2uU1cM; path=/; expires=Wed, 04-Feb-26 21:05:52 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",80f2be5aeb608768a9b027831c2a85fa,10.0.20.182,36740,68.185.245.236,,17475601526,1,1770237352.069,0.020,,.,0,0,0.000,0.019,-,0,0,221,66,33,10,34729,,,,,,-,"
+    },
+    "body": {
+      "error": {
+        "message": "Model does not support responses method.",
+        "type": "invalid_request_error",
+        "error_id": "c679010f-eefc-4273-851f-c7ef4ca58696"
+      }
+    }
+  }
+}

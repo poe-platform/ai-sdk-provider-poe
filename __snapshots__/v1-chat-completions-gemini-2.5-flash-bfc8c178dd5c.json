@@ -1,0 +1,53 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-flash-bfc8c178dd5c",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0b899c170558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:46:04 GMT",
+      "openai-processing-ms": "2228",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=nLOEoJ7nDr6pyIkHcmUneF65ZJsMW2Fs1PL64zEkbCs-1770248764-1.0.1.1-QxgtxcVhYxWq0ZWplcdVWKx82MblfvwCqUqaowWrnCgcONxFCsOADHZWhuDLyTV91QMg4LzyWbdtg8alLKkfRJFAsq_waILj2mhMw3rkuoM; path=/; expires=Thu, 05-Feb-26 00:16:04 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",57518779445850d2b8c6deca734ecb88,10.0.20.182,51716,68.185.245.236,,17563971927,1,1770248764.114,2.232,,.,0,0,0.000,2.231,-,0,0,857,256,128,10,34729,,,,,,-,",
+      "x-request-id": "req-aec2e255f8469b2a85ae8dc6"
+    },
+    "body": {
+      "id": "chatcmpl-69a241007fb24f1d066f6661",
+      "object": "chat.completion",
+      "created": 1770248764,
+      "model": "gemini-2.5-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Well hello there."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 280,
+        "prompt_tokens": 7,
+        "total_tokens": 287,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 276,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

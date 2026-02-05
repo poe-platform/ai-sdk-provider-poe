@@ -1,0 +1,55 @@
+{
+  "key": "v1-chat-completions-gemini-3-pro-652649dca95f",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0ae99dc60558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:45:40 GMT",
+      "openai-processing-ms": "3879",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=MlPIEDOYeHQu7t4bDJ5NAKBAlX.PbltuN6dpzW6eotY-1770248740-1.0.1.1-FxoQdlcei36SFp7qOPcBB8NT1WqGT4Kr03DUXYb8R5ddTqkvYQJisjCy4A9W9JIIN8PkM3hBSW7sbmTmxTNW.knMF7C_1EEgYIi3KNpo9c8; path=/; expires=Thu, 05-Feb-26 00:15:40 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",4d30b5bcd8df754ac8fb196bbb21637c,10.0.20.182,25658,68.185.245.236,,42420299558,1,1770248740.160,3.882,,.,0,0,0.000,3.882,-,0,0,2277,83,41,10,34729,,,,,,-,",
+      "x-request-id": "req-22dfdd575e90fc36344d5d4d"
+    },
+    "body": {
+      "id": "chatcmpl-792aced6aef27c06d3e06187",
+      "object": "chat.completion",
+      "created": 1770248740,
+      "model": "gemini-3-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Well, hello there.",
+            "reasoning_content": "**Examining Constraints Meticulously**\n\nMy focus has shifted to dissecting the request's core demands, specifically the word count limit. I'm actively evaluating potential greetings. \"Hello to you\" seems promising, meeting the criteria. I'll need to scrutinize other options to ensure the most appropriate greeting is chosen.\n\n\n**Assessing Phrase Viability**\n\nI am now focusing on the suitability of the greeting \"Hello to you\". I am considering the implications of using \"Hello everyone here,\" weighing its specificity. The classic appeal of \"Well, hello there\" is being evaluated in terms of its formality. Ultimately, I'm trying to arrive at the most fitting option.\n\n\n",
+            "reasoning": "**Examining Constraints Meticulously**\n\nMy focus has shifted to dissecting the request's core demands, specifically the word count limit. I'm actively evaluating potential greetings. \"Hello to you\" seems promising, meeting the criteria. I'll need to scrutinize other options to ensure the most appropriate greeting is chosen.\n\n\n**Assessing Phrase Viability**\n\nI am now focusing on the suitability of the greeting \"Hello to you\". I am considering the implications of using \"Hello everyone here,\" weighing its specificity. The classic appeal of \"Well, hello there\" is being evaluated in terms of its formality. Ultimately, I'm trying to arrive at the most fitting option.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 127,
+        "prompt_tokens": 7,
+        "total_tokens": 134,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 122,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "key": "v1-responses-gpt-5.1-codex-max-fec83adcadae",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8db6a80e3361ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 22:48:05 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=5QqiZFZG.5mVevf8QWMbcnPr4QJ3JsiIZCwvxtJkJiQ-1770245285-1.0.1.1-sfYxsOr8b0fqC9wJNHXYt6sNI7tFx7BvT1Duqqp9pWc8HqD_cx4fwmVaA39VixeO5HO8SXV.7E9.8DYCXcrEFNrahXkFpQT8C9pubr.hm1Q; path=/; expires=Wed, 04-Feb-26 23:18:05 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",dd669ef4e060f8fc5a3ec9fe9e30e648,10.0.20.182,51412,68.185.245.236,,42393176907,1,1770245285.931,0.780,,.,0,0,0.000,0.780,-,0,0,1731,82,41,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDI5ODBlZmRiYmIwZmY4NDAxNjk4M2NjYTU0NmQ4ODE5Zjg3M2E2ZWEzMjFmNzE0ZmM=",
+      "created_at": 1770245285,
+      "metadata": {},
+      "model": "gpt-5.1-codex-max",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_02980efdbbb0ff84016983cca57e78819fbe56f466b9c9b371",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "arguments": "{\"location\":\"San Francisco\"}",
+          "call_id": "call_IjgzFkYha8mAufduRi60ykrw",
+          "name": "getWeather",
+          "type": "function_call",
+          "id": "fc_02980efdbbb0ff84016983cca5c404819f970ae94a3fc095e2",
+          "status": "completed"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [
+        {
+          "name": "getWeather",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false
+          },
+          "strict": true,
+          "type": "function",
+          "description": "Get the current weather for a location"
+        }
+      ],
+      "top_p": 0.985,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 66,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 49,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 115
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770245285,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

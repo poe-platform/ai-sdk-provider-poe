@@ -1,0 +1,55 @@
+{
+  "key": "v1-chat-completions-nano-banana-pro-cc-897c3cd7ec40",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dfff11c5d1464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:38:11 GMT",
+      "openai-processing-ms": "4447",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=uBDehasPjeSevP5g.6tF8VqSqXgswb8xCalPvSSs1pg-1770248291-1.0.1.1-cB1DYH1dTI9wSErPsmDaK8plhm3e8JgpWT.QHnfj.IxCB_1SLaupKr_1pJ.GFML2CpXGQ97qb8zuC8Jy1m_miu_54AvMHtv7XQv5VvrAKGc; path=/; expires=Thu, 05-Feb-26 00:08:11 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",a9db9f7ca37fab08769d1b7607aeec08,10.0.20.182,51356,68.185.245.236,,42472688140,1,1770248291.386,4.450,,.,0,0,0.001,4.451,-,0,0,2191,335,167,10,34729,,,,,,-,",
+      "x-request-id": "req-90910692e42e74fc47af215d"
+    },
+    "body": {
+      "id": "chatcmpl-44ec309b418c23f770342703",
+      "object": "chat.completion",
+      "created": 1770248291,
+      "model": "nano-banana-pro-cc",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "My response to your message was blocked for potentially violating safety policies. I apologize for any inconvenience.",
+            "reasoning_content": "**Examining Available Tools**\n\nI'm verifying that the tool definitions contain the `getWeather` tool. The task is to retrieve the weather, and thankfully the tool is available. I see that it accepts a `location` argument. The next step is to formulate the request, including the location, so that the tool can execute successfully.\n\n\n**Analyzing the User Input**\n\nI see the user requested the weather in San Francisco and wants me to use the `getWeather` tool. I've confirmed that the tool is available. The next thing to do is pass the argument to the tool and extract the result.\n\n\n",
+            "reasoning": "**Examining Available Tools**\n\nI'm verifying that the tool definitions contain the `getWeather` tool. The task is to retrieve the weather, and thankfully the tool is available. I see that it accepts a `location` argument. The next step is to formulate the request, including the location, so that the tool can execute successfully.\n\n\n**Analyzing the User Input**\n\nI see the user requested the weather in San Francisco and wants me to use the `getWeather` tool. I've confirmed that the tool is available. The next thing to do is pass the argument to the tool and extract the result.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 116,
+        "prompt_tokens": 13,
+        "total_tokens": 129,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 111,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

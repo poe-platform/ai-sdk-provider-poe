@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-gpt-3.5-turbo-af15b7d5a8b8",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dbf3d5dbc61ed-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 22:53:57 GMT",
+      "openai-processing-ms": "586",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=TmuoOWdIEYRW4OXKrdEwBjU66wqmx8rPQo2z4_ifBSs-1770245637-1.0.1.1-urtCIiWt3cVPbLZATQ0ejLKNQzjv3GLuN..R9fxkBlE9tH8jhpM2lQu0bn1rbaeo0hsVwNMrvLTmgZdryDa.IJX8eQdoG3GFMwH2YdMkFVk; path=/; expires=Wed, 04-Feb-26 23:23:57 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",dd4a0ff1059b0579946e72b8da7e7400,10.0.20.182,54602,68.185.245.236,,42464346536,1,1770245637.339,0.612,,.,0,0,0.000,0.611,-,0,0,822,273,136,10,34729,,,,,,-,",
+      "x-request-id": "req-8b3b62722dd9c9ad7bb0510f"
+    },
+    "body": {
+      "id": "chatcmpl-1818d5fba8b832541fffeaf8",
+      "object": "chat.completion",
+      "created": 1770245637,
+      "model": "gpt-3.5-turbo",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "call_nHpUQvcEDaO0lUmm1yVj7HXP",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
+      }
+    }
+  }
+}

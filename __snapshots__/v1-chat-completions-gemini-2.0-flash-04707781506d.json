@@ -7,39 +7,39 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c836a206e64619f-ORD",
+      "cf-ray": "9c8e0ba688c20558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Tue, 03 Feb 2026 16:48:14 GMT",
-      "openai-processing-ms": "1164",
+      "date": "Wed, 04 Feb 2026 23:46:07 GMT",
+      "openai-processing-ms": "584",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=im4Bdg7vlSwz5IJy9fMzXr5QpssoI.5tFjFYSqHMtxo-1770137294-1.0.1.1-P54GZ0eCFmgQdmag1mNEfShvrHqiXpqit3eUuSD_MDbJiBF9.6jGNRnijS9iyPuqB7vZgfi0H0wUjzgOdhtPUl276fIGraNOXejKqaxZVs4; path=/; expires=Tue, 03-Feb-26 17:18:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=VyIrenOKfcbCzzpVZcAdpptEYlDZR4f2i4TMW5kKRh8-1770248767-1.0.1.1-bwgwz16tjkkY1NbK95iWAdaEgalIQHkrk3hZQivl4dM3fHOXZyyWGzty5fpeObZP8UPtEzzvtKAPQ3SH1pWuyuWAPTBxjFqdXkvQO3b_Jaw; path=/; expires=Thu, 05-Feb-26 00:16:07 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",0fc51c448bbacdf67250900abe6ef36e,10.0.20.182,8744,68.185.245.236,,41596106120,1,1770137294.059,1.167,,.,0,0,0.000,1.167,-,0,0,356,276,138,10,34729,,,,,,-,",
-      "x-request-id": "req-ddc53b45cea8f9ddd9016349"
+      "x-q-stat": ",709be148dfe7ecff218ed6ed574eb234,10.0.20.182,20998,68.185.245.236,,42420526958,1,1770248767.115,0.610,,.,0,0,0.000,0.610,-,0,0,355,143,71,10,34729,,,,,,-,",
+      "x-request-id": "req-2437dfea0c3200a69c03ef77"
     },
     "body": {
-      "id": "chatcmpl-27b8a75dc149d41a4ff1626f",
+      "id": "chatcmpl-0caec2259a5ea852fcd47bab",
       "object": "chat.completion",
-      "created": 1770137294,
+      "created": 1770248767,
       "model": "gemini-2.0-flash",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there!\n"
+            "content": "How do you do?\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
+        "completion_tokens": 6,
         "prompt_tokens": 7,
-        "total_tokens": 11,
+        "total_tokens": 13,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

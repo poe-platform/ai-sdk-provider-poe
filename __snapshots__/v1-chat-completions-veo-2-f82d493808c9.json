@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-veo-2-f82d493808c9",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e12aa18d40558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:51:32 GMT",
+      "openai-processing-ms": "39118",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=UvOrUNEyfAhGztPogoTyV3zVUN6dUuPI87DxK1T005Y-1770249092-1.0.1.1-O_0ea2YYegg.63Ks0Wh4VtLXgCJRhfI_07Avn9guBZ6Qbm1shhPtupcYyjOXyXYws.CFLFsOJGjixdQl3hmHTHRHr868giXwv8hRejbmoLc; path=/; expires=Thu, 05-Feb-26 00:21:32 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",eb9c37b88767d62e41d321d8afb10439,10.0.20.182,17500,68.185.245.236,,42478510714,1,1770249092.935,39.121,,.,0,0,0.000,39.121,-,0,0,748,201,100,10,34729,,,,,,-,",
+      "x-request-id": "req-3b58c50900105e8d949a7a12"
+    },
+    "body": {
+      "id": "chatcmpl-6d7a7546a099d5dfbfd46022",
+      "object": "chat.completion",
+      "created": 1770249092,
+      "model": "veo-2",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "https://pfst.cf2.poecdn.net/base/video/435320d49bbcbbcf5e571d633c21d6b21005a3d06f219cf9c6906377ef9582bb"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 0,
+        "total_tokens": 7
+      }
+    }
+  }
+}

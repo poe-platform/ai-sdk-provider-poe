@@ -1,0 +1,27 @@
+{
+  "key": "v1-responses-gpt-image-1-85785ba5b1d0",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8cf4f78b332041-ORD",
+      "connection": "keep-alive",
+      "content-length": "159",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 20:35:51 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=TB9dicGM7xO4PLnxGrwEwXs6kSbfprITD7ee3C0Ptag-1770237351-1.0.1.1-yLE1MtaAR5l9pH.1zpxsciNVlCCUNHvXVtzdOoqaiYg_AvzYrkk1gMV3gDTYtkTbuMKN_8KtF8NMmP1xIqIlWWH9qtyzPdZfqOrgUs86tdI; path=/; expires=Wed, 04-Feb-26 21:05:51 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",fdd01eb695a249a4520771d56905b485,10.0.20.182,43538,68.185.245.236,,42387956832,1,1770237351.748,0.110,,.,0,0,0.001,0.110,-,0,0,380,354,177,10,34729,,,,,,-,"
+    },
+    "body": {
+      "error": {
+        "message": "Token unit price not found for entity: 1:5860961",
+        "type": "invalid_request_error",
+        "error_id": "85058583-a039-4e63-beb3-79efc5a19a2f"
+      }
+    }
+  }
+}

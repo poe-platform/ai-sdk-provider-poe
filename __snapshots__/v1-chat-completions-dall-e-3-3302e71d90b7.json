@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-dall-e-3-3302e71d90b7",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8d27d969be1464-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 21:10:50 GMT",
+      "openai-processing-ms": "14083",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=vQYWeWuchLak5z4PT4ypMHZrfOz4IDMbnIImtRkwT5Y-1770239450-1.0.1.1-N9SPXZihuFyl7fMpdWb7w3iGcNtzAHFkyQ6BHWAso1J2Ic4ljvDoIiftZZowr4n_9qoYtqVoBV3dMeWaZXf27kb0buf81Da22Qop5BNPjuc; path=/; expires=Wed, 04-Feb-26 21:40:50 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",08f0406fbc79923c6df59ef0930b35a6,10.0.20.182,50598,68.185.245.236,,17491706569,1,1770239450.063,14.086,,.,0,0,0.000,14.085,-,0,0,358,128,64,10,34729,,,,,,-,",
+      "x-request-id": "req-7e906a8c893dd717dc8fa6a4"
+    },
+    "body": {
+      "id": "chatcmpl-15fa36316c049fd43b0bd016",
+      "object": "chat.completion",
+      "created": 1770239450,
+      "model": "dall-e-3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Generate an image of a sunset over mountains](https://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-kmPprqy80j5SXjZqRHik6NMF.png?st=2026-02-04T20%3A10%3A49Z&se=2026-02-04T22%3A10%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-04T19%3A44%3A09Z&ske=2026-02-05T19%3A44%3A09Z&sks=b&skv=2024-08-04&sig=o05U8yrZkeZsH%2Bq/9uNkvrTZxsbPo3FKBCwk//WAPoM%3D)\n\nhttps://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-kmPprqy80j5SXjZqRHik6NMF.png?st=2026-02-04T20%3A10%3A49Z&se=2026-02-04T22%3A10%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-04T19%3A44%3A09Z&ske=2026-02-05T19%3A44%3A09Z&sks=b&skv=2024-08-04&sig=o05U8yrZkeZsH%2Bq/9uNkvrTZxsbPo3FKBCwk//WAPoM%3D"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 276,
+        "total_tokens": 284
+      }
+    }
+  }
+}

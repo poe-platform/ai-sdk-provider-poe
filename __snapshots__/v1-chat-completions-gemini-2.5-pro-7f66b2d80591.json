@@ -1,0 +1,68 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-pro-7f66b2d80591",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0b77bbd40558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:46:01 GMT",
+      "openai-processing-ms": "2750",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=dSnj12en_u_r82FbtalVT6D32qh.dZABDpgH4HLYCcw-1770248761-1.0.1.1-1dOua583GKJgi9cL2vdOiZUpXoMiYE2LtMq.ArCLyhlBdmrJW1bvkwRtdSV11rUNGCOdKNnAupBb4NyY0i_DruyA1JmEP.vJVo38Ujg2TQk; path=/; expires=Thu, 05-Feb-26 00:16:01 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",2349244f9ad76df428db2d54d77490a5,10.0.20.182,3988,68.185.245.236,,42420471281,1,1770248761.770,2.753,,.,0,0,0.000,2.753,-,0,0,357,81,40,10,34729,,,,,,-,",
+      "x-request-id": "req-fda5c420cc676608f8ab9b06"
+    },
+    "body": {
+      "id": "chatcmpl-a812a447bac45e3c43e2beba",
+      "object": "chat.completion",
+      "created": 1770248761,
+      "model": "gemini-2.5-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_yExgm4nJiIO796MDhXJD",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                },
+                "extra_content": {
+                  "google": {
+                    "thought_signature": "CiQBjz1rX8jompPcVs9GScL5x6gqs8mxdJViDbUObLRg9Sl5RsEKfgGPPWtfwekAvwTHIiNkuI7NCK7iU72KWp09CjVKt7/+0b0B57K0I6+viEZIwjw1s1GGZr7MUpkCedB7cl/d0RJDa1vcBrjHgSmgjuyn5In/J7JLak8CixYPE8n1E2/1OAsFe/FYPfX/U28cBmL2LC29Gth/wIVhng4t4DiTsgpeAY89a1+oInmvTUjedTPMhFvNPKDyh1ybyKp58DVNhGu7n8P6QS7+O3iGO3z/4nvXomyVlS/FwEaldmOGagC+jRK5kiBaPRKCxDDO8db7CRI2NaioyHEVMk+yZciqdQrPAQGPPWtf2uRBG/BkYnpCsH3bbpowuBfPeKfD8HCQq92Qartdlvcv74AA+LXeRuPVyzNhTxC8lZJR7/Mi8l6OZ+cuZ+Zkrio0gVqSixWb+y1D9O+fiW8y8XtP2yewdh4EsN/EhkoCFBaTE1Vm4EFP0/fUpXjzQTU3HpiactUF2Ik9p1FuZPADLGebf/YC9ziJW4Yz8eruVBYQEtnpiUl/VNE+nnV7tvGdGeixCN6+2KkrnxpBEmtXD8F1LPg22gdWmC+c0YuxIa7JHwj8eALEZgqdAQGPPWtfWi2WImCM1M12h0GvopV0oecUeibDdq5+6nwIEXtARiY0F6StqjqYUQjJdD4axrdkwbueO/K9cPanmCwf/XWw0kiS+NRwhdB59uaLNZtQNIY7/nQ5Xp9BVxuN7xCIRrJbXuwh8mP0mbAW8dI9v1IDLwP+hDSFT36X/Db8wCWOrFIH5PDiO+goPjSXYv/zxDmi0hNJ7fIW3Y4K5QEBjz1rX/M4AJpIc6en8yYDYaeCRBhKM0IwK9/6n8/Qkl+iOLykRbwqjphTfXKpVSXnObDX4y+M/AFJEwqYVIOSCiW2xZDJk3r6hdYQpCBei5GyydkaoQnlDi1As2pdpqDSFXvICAXOyCtRw5qVnZVWOjol4urgSfgiyFYF0Pg+yoJgzb68MJjNgJ4ZhsYiag/48I+triIGoRfAR9Hb3CrQtuLehqQSJHbl2nP1X+RMfEK8hxRDCeo+t4jvOa/Y1m6YYNjoqSwlxkN5JXurou7f3MhgHnvzkAqWUSH64yXP7fFajOG0CmMBjz1rX8dvCeeQSuZWxZuo/TykmPFSCK4U84IpDaazFzShtR0TQawq9KrbP/1V73goTxWe+Hs18zFKfo1oEmqPtoGv1B/9Zq7E5bB14aKZCZW33PxFdO60sWADZHVXrqgCDC8="
+                  }
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 171,
+        "prompt_tokens": 32,
+        "total_tokens": 203,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 166,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

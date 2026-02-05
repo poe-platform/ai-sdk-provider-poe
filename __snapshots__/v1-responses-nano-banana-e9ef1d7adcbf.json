@@ -1,0 +1,27 @@
+{
+  "key": "v1-responses-nano-banana-e9ef1d7adcbf",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8dff2ef8941464-STL",
+      "connection": "keep-alive",
+      "content-length": "277",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Wed, 04 Feb 2026 23:37:36 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=E4Nf8oUZ2y.MAxtz7XP64d7I_iRrwZ7NFXJ3k2Fdnck-1770248256-1.0.1.1-.JZIAcCqJN_bOwYqNdU050Y2agVzZ7pq5Gy_3RDrR8Mw37vaMPQKQMLsmSFJ.0tGKg4tP6HO4cHHXJTuoPxKmM43jqz98_C7nNPIyONTeVs; path=/; expires=Thu, 05-Feb-26 00:07:36 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",b9738f84d935828f5d5c10af38ce1579,10.0.20.182,32046,68.185.245.236,,42485007718,1,1770248256.325,0.467,,.,0,0,0.001,0.467,-,0,0,221,260,130,10,34729,,,,,,-,"
+    },
+    "body": {
+      "error": {
+        "message": "Unable to submit request because the model does not support function calling. Learn more: https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini",
+        "type": "invalid_request_error",
+        "error_id": "08994d20-4f1b-4fc2-a168-f29062831967"
+      }
+    }
+  }
+}

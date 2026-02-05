@@ -1,0 +1,63 @@
+{
+  "key": "v1-chat-completions-gemini-3-flash-7c2fb55e2b88",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0b307af90558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:45:48 GMT",
+      "openai-processing-ms": "1317",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=opk_wKVCDWlRR4YJ11PUiVK7srCGyA8oamsUmLv4f6Q-1770248748-1.0.1.1-i3p6hF7doMV3GBssLT5FHP7p3Ic9HanO.x5tGvxX7FyU1kyfnyHGmmXM3CNkJ3D_vd11oczv03voGufRCDhu12y0t.TMykEJgDTJ48tgKlg; path=/; expires=Thu, 05-Feb-26 00:15:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",1bea9bfda30310ba7be76f7d000e0e4b,10.0.20.182,14518,68.185.245.236,,42476169759,1,1770248748.932,1.320,,.,0,0,0.000,1.319,-,0,0,1001,203,101,10,34729,,,,,,-,",
+      "x-request-id": "req-d844fb1fb49c766263bdfc10"
+    },
+    "body": {
+      "id": "chatcmpl-5670c1ca08f7745f89d84a6b",
+      "object": "chat.completion",
+      "created": 1770248748,
+      "model": "gemini-3-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_Hc76S7wvyk1OT6X9HvpW",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                },
+                "extra_content": {
+                  "google": {
+                    "thought_signature": "CiEBjz1rX+9bSZrMl+M+UlD3JYcvxLc2JADTpaZkpU7jVkE="
+                  }
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 9,
+        "prompt_tokens": 32,
+        "total_tokens": 41,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

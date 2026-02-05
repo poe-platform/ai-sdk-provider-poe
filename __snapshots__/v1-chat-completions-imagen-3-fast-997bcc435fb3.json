@@ -1,0 +1,46 @@
+{
+  "key": "v1-chat-completions-imagen-3-fast-997bcc435fb3",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c8e0c651bf00558-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Wed, 04 Feb 2026 23:46:41 GMT",
+      "openai-processing-ms": "4674",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=WGmQur1YAc3Ps1_iVr_igJNptNmSdxiEoUdHc_1YWuI-1770248801-1.0.1.1-zfknTvDOQSNn2_GLnvN591QNx77ZQQKAkZCsafpGiNQ7PvSkVN_LMHU4yXTQfncW6fOGaZP.tJa8A6xV1IEYZfDfAjPWG59eL5iz8Mlgt88; path=/; expires=Thu, 05-Feb-26 00:16:41 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",8a270a04368df0fa269fe8677b7d9bfa,10.0.20.182,4494,68.185.245.236,,42489095897,1,1770248801.674,4.677,,.,0,0,0.001,4.677,-,0,0,356,242,121,10,34729,,,,,,-,",
+      "x-request-id": "req-af1f788cd81a3bea82e274af"
+    },
+    "body": {
+      "id": "chatcmpl-7171153325fe7c615e76565b",
+      "object": "chat.completion",
+      "created": 1770248801,
+      "model": "imagen-3-fast",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/04b94d0c85b7753cfbf212247480a8990543dcc101e5028b9ae8f7d2cab6cbfd?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/04b94d0c85b7753cfbf212247480a8990543dcc101e5028b9ae8f7d2cab6cbfd?w=1024&h=1024"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 72,
+        "total_tokens": 79
+      }
+    }
+  }
+}
