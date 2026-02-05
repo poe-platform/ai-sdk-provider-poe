@@ -4,6 +4,7 @@ import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
 import { OPENAI_MODELS } from "./openai-models.js";
 import { GOOGLE_MODELS } from "./google-models.js";
+import { isAlphaStage } from "./release-stage.js";
 
 const chatOnly = (models: Record<string, { route?: "chat" }>) =>
   new Set(Object.entries(models).filter(([, m]) => m.route === "chat").map(([n]) => n));
@@ -72,7 +73,8 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
         return getOpenAIProvider().responses(model);
       case "google":
         if (GOOGLE_CHAT_ONLY.has(model)) return getOpenAIProvider().chat(model);
-        return getOpenAIProvider().responses(model);
+        if (isAlphaStage()) return getOpenAIProvider().responses(model);
+        return getOpenAIProvider().chat(model);
       default:
         return getOpenAIProvider().chat(model);
     }
