@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gpt-4-classic-0314-faf4d74b12aa",
+  "test": {
+    "name": "generates text with gpt-4-classic-0314",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-4-classic-0314",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +22,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbf314b1461ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 22:53:55 GMT",
-      "openai-processing-ms": "1035",
+      "openai-processing-ms": "625",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=MG8m53KJupW0FltV2L3bM5uAQ_dXzCDTzHmNKZsHivw-1770245635-1.0.1.1-JUN6kdn5Fxet8oAqKInPnQJfarW9.fPWyRkY6AGC3gSkh2SRv6kfpBQy8Rk1mj5mvEBlCsKAdJMgxRNR7a_2i6svRhv0Lp2Cg3dBun7URtM; path=/; expires=Wed, 04-Feb-26 23:23:55 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",ebe71500b33b07ba70740ee4a4e95bc5,10.0.20.182,46432,68.185.245.236,,42451758932,1,1770245635.847,1.060,,.,0,0,0.000,1.060,-,0,0,889,307,153,10,34729,,,,,,-,",
-      "x-request-id": "req-1e564991598ac591b325c570"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-184a8f6670f96d3fb3fb4579",
+      "id": "chatcmpl-6a2d70c4f03b9e0f30ec80cf",
       "object": "chat.completion",
-      "created": 1770245635,
+      "created": 1770393167,
       "model": "gpt-4-classic-0314",
       "choices": [
         {

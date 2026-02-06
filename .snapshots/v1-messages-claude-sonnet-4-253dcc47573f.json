@@ -1,5 +1,26 @@
 {
   "key": "v1-messages-claude-sonnet-4-253dcc47573f",
+  "test": {
+    "name": "generates text",
+    "file": "tests/integration/anthropic.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4",
+      "max_tokens": 4096,
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,22 +28,18 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:36Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:44Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c94839ecdc6d8ab-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 05 Feb 2026 18:36:37 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=.KGz0DYWSMmaI7uvbL..MIdJAGjCcOECG4_nR85hVKI-1770316597-1.0.1.1-JWCJ5QSxg1pzRCasd7a8Up6FV1l.97eT.jlpiOdLs920ssB2G.39HfISVv1d818H_xSVR6UMX01RFi8LlLyd7srlpgUDIcNM575cUKt9XnI; path=/; expires=Thu, 05-Feb-26 19:06:37 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",1a54db7dfe412afadb62d73592a6b342,10.0.20.182,9098,68.185.245.236,,43033462429,1,1770316597.020,1.984,,.,0,0,0.000,1.985,-,0,0,341,217,108,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_9e2982e395c24452ba5648d8d334a515",
+      "id": "req_poe_b7cb46cc18f747a894c13750a4025773",
       "type": "message",
       "role": "assistant",
       "content": [

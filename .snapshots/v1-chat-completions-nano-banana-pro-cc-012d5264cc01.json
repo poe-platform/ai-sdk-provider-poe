@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-nano-banana-pro-cc-012d5264cc01",
+  "test": {
+    "name": "generates text with nano-banana-pro-cc",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "nano-banana-pro-cc",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,45 +22,40 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0a8a795b0558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:45:36 GMT",
-      "openai-processing-ms": "15129",
+      "openai-processing-ms": "8087",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=UNq17TSLLKgQyycBfBROdxk9vuxntbZfG7Dsixb6IEM-1770248736-1.0.1.1-XupvTdfZLQpxPMipDkHz54tmzDX.GF1r6lyfcKU_5uoLST9VxowqRVkqyQxiN5EY40P7bZdCk.oqdU8K1.VQE_qX5kDQuHO0DXhCGkcQ47A; path=/; expires=Thu, 05-Feb-26 00:15:36 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",e74062ead698695fc3ad340403f4ad2d,10.0.20.182,47026,68.185.245.236,,42420183308,1,1770248736.190,15.131,,.,0,0,0.000,15.131,-,0,0,358,72,36,10,34729,,,,,,-,",
-      "x-request-id": "req-2ff6ba4661b086395a2252ce"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-7ecc62928eb9eabd2a03ffb4",
+      "id": "chatcmpl-30e6f96eb48d64d9d9070af8",
       "object": "chat.completion",
-      "created": 1770248736,
+      "created": 1770392803,
       "model": "nano-banana-pro-cc",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Well hello there.",
-            "reasoning_content": "**Composing a Response**\n\nI'm presently focusing on crafting a succinct greeting. I considered several options, but the initial attempts fell short. The target is a three-word phrase; I've hit upon a viable option and will try it.\n\n\n**Defining the Core Greeting**\n\nI'm now narrowing down the options. The aim is a simple, effective greeting. While initial ideas like \"Good morning all\" are serviceable, they are time-dependent, and therefore not ideal. I'm leaning toward a more flexible option; the possibilities are getting fewer.\n\n\n**Selecting a Final Greeting**\n\nI'm now comparing candidates. \"Well hello there\" and \"Hello to you\" are strong possibilities. My decision now hinges on the tone of each phrase. I'll test them in context next.\n\n\n**Revisiting Greeting Options**\n\nI'm now back to the drawing board. I'm considering various options, now including \"How are you?\". My focus is to select the most straightforward and adaptable three-word greeting. I'm still trying to find the best option.\n\n\n**Analyzing Greeting Choices**\n\nI am now comparing \"Well hello there\" and \"Good morning all.\" I am still working to comply with the three-word constraint. I'm also considering the context in which the greeting might be used.\n\n\n",
-            "reasoning": "**Composing a Response**\n\nI'm presently focusing on crafting a succinct greeting. I considered several options, but the initial attempts fell short. The target is a three-word phrase; I've hit upon a viable option and will try it.\n\n\n**Defining the Core Greeting**\n\nI'm now narrowing down the options. The aim is a simple, effective greeting. While initial ideas like \"Good morning all\" are serviceable, they are time-dependent, and therefore not ideal. I'm leaning toward a more flexible option; the possibilities are getting fewer.\n\n\n**Selecting a Final Greeting**\n\nI'm now comparing candidates. \"Well hello there\" and \"Hello to you\" are strong possibilities. My decision now hinges on the tone of each phrase. I'll test them in context next.\n\n\n**Revisiting Greeting Options**\n\nI'm now back to the drawing board. I'm considering various options, now including \"How are you?\". My focus is to select the most straightforward and adaptable three-word greeting. I'm still trying to find the best option.\n\n\n**Analyzing Greeting Choices**\n\nI am now comparing \"Well hello there\" and \"Good morning all.\" I am still working to comply with the three-word constraint. I'm also considering the context in which the greeting might be used.\n\n\n"
+            "content": "Hello to you.",
+            "reasoning_content": "**Examining Greeting Phrases**\n\nI'm currently focused on the challenge of constructing a three-word greeting. I've broken down the request into its core elements: delivering a greeting and adhering to the word count constraint. The brainstorming phase has begun, and I'm actively exploring various phrasing options.\n\n\n**Choosing Three-Word Greetings**\n\nNow, I'm refining the greeting choices. I've narrowed down the options and am comparing the suitability of \"Hello to you\" versus alternatives like \"How are you?\" I am weighing directness and neutrality as key factors. I'm also considering the potential context for these greetings to determine the best fit for various scenarios.\n\n\n**Choosing a Greeting**\n\nI've examined several options and have decided on \"Hello to you.\" I evaluated various greetings, including their potential drawbacks and strengths, and selected the most suitable one. I favored greetings that were direct, fitting the request's core purpose.\n\n\n",
+            "reasoning": "**Examining Greeting Phrases**\n\nI'm currently focused on the challenge of constructing a three-word greeting. I've broken down the request into its core elements: delivering a greeting and adhering to the word count constraint. The brainstorming phase has begun, and I'm actively exploring various phrasing options.\n\n\n**Choosing Three-Word Greetings**\n\nNow, I'm refining the greeting choices. I've narrowed down the options and am comparing the suitability of \"Hello to you\" versus alternatives like \"How are you?\" I am weighing directness and neutrality as key factors. I'm also considering the potential context for these greetings to determine the best fit for various scenarios.\n\n\n**Choosing a Greeting**\n\nI've examined several options and have decided on \"Hello to you.\" I evaluated various greetings, including their potential drawbacks and strengths, and selected the most suitable one. I favored greetings that were direct, fitting the request's core purpose.\n\n\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 1091,
+        "completion_tokens": 564,
         "prompt_tokens": 7,
-        "total_tokens": 1098,
+        "total_tokens": 571,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 1087,
+          "reasoning_tokens": 560,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": null

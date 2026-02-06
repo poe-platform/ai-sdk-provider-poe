@@ -1,36 +1,52 @@
 {
   "key": "v1-responses-gpt-5.1-codex-max-97af817b2b54",
+  "test": {
+    "name": "generates text with gpt-5.1-codex-max",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.1-codex-max",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9487741ca31832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:39:14 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=2dgCPq1bJcUwt4NQRIWnODF.QCNphrOJcacbHRM4EJc-1770316754-1.0.1.1-X60YKsR4uLgo6q5lAMbmtlzYFiEYFzSUdrCFbLVYXfnFUABCv2Q9CL1KPam5I10eYuBcisT.4ax9kkm8TYFGSQSkXnWoMDYIVibAV3gKl5Q; path=/; expires=Thu, 05-Feb-26 19:09:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",2e06b1ad292c6545ecbd6013292abb42,10.0.20.182,5496,68.185.245.236,,18109878623,1,1770316753.988,1.953,,.,0,0,0.000,1.954,-,0,0,1435,74,37,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGZhM2ZhN2JlNDMyMThmMjAxNjk4NGUzZDA0MTk4ODE5NTk4M2U1NTYyMGM1YzE0Mjg=",
-      "created_at": 1770316752,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDEwNGQ4YzQzYjUyZDVlNDAxNjk4NjBjZmZiNzE0ODE5N2EwMzZhYTQyYjEzODlmYzg=",
+      "created_at": 1770392831,
       "metadata": {},
       "model": "gpt-5.1-codex-max",
       "object": "response",
       "output": [
         {
-          "id": "rs_0fa3fa7be43218f2016984e3d097588195b209205be3d6fa78",
+          "id": "rs_0104d8c43b52d5e40169860d0013388197a13cebc986e02f07",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0fa3fa7be43218f2016984e3d1bfcc8195a31de9ca4e083385",
+          "id": "msg_0104d8c43b52d5e40169860d17e9d48197a5efb5e88d046e57",
           "content": [
             {
               "annotations": [],
@@ -65,18 +81,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 150,
+        "output_tokens": 557,
         "output_tokens_details": {
-          "reasoning_tokens": 128
+          "reasoning_tokens": 512
         },
-        "total_tokens": 163
+        "total_tokens": 570
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316753,
+      "completed_at": 1770392857,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

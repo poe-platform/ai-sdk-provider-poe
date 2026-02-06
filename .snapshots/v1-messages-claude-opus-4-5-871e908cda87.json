@@ -1,5 +1,30 @@
 {
   "key": "v1-messages-claude-opus-4-5-871e908cda87",
+  "test": {
+    "name": "uses extended thinking with anthropic/claude-opus-4-5",
+    "file": "tests/integration/anthropic.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4-5",
+      "max_tokens": 64000,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,29 +32,25 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:45Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:54Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9483d70fbcd8ab-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 05 Feb 2026 18:36:46 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=t3x.taXrxWmPfhLLbiBF8HaLU8.a.yIiuZvf54Louzk-1770316606-1.0.1.1-MI1HQjQbwBSE3jhJ7CVkbycjHOCI2LjWk0WaEebnj1Y98LQrplK.FwA5ChPuNdyQ0wQQ2PJrieduDNBec9abHVlWiR0ys4yq2tvhvd0Oulg; path=/; expires=Thu, 05-Feb-26 19:06:46 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",77af2b1133315edaa5b99ada755b9bfe,10.0.20.182,59464,68.185.245.236,,42965260705,1,1770316606.329,2.290,,.,0,0,0.000,2.290,-,0,0,1236,91,45,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
       "model": "claude-opus-4-5-20251101",
-      "id": "req_poe_22d475e95d36424aa6e7d58cdc0835d6",
+      "id": "req_poe_38cc43cac3d34567ad316a5ce85c1b3e",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
-          "thinking": "The user is asking for a simple multiplication: 7 * 8.\n\n7 * 8 = 56",
-          "signature": "EuoBCkYICxgCKkCPNiUN6emL6ljdwGb5AhDztbXeFw09nV73khmbw0v+Mv+1Pz9IPakdnEBDvPluvp2sLuXx6CweYH6bsstp4WJ6Egw5HCOHzpLDtL2BLYMaDPsgmHOxlrSQY3RxyCIwU9veF1zdr6BzcH5Kt09LJJ55XJhPPgnNfwF2juxHruz0IP2K61KFodr6nWSzYG8fKlLXlHs8kGWQqE50FR831ZlkimGaBYm17Kzzsmvg2mhSODRXTq8eR87XHD20fk/bBA7QsU0fr/gUN3+AtdjXNkiLBLYLmH81T47UXpw6g3bnKbmAGAE="
+          "thinking": "This is a simple multiplication question. 7 * 8 = 56.",
+          "signature": "Et0BCkYICxgCKkCZZAKoS0YhRXG6HrVqMVkN787m+NjrL1I5fUCPyBadc3jCcnFsEsa7TwGE84aZetkrtUQGLxAxS75USpnomMl3EgzXnuVOHq12p4J7btoaDF0AIppA2ASVUbVi8iIwE0xBwtL/M/uWYwHISkStN+CW3aZQPokLdnXwpxyxaw+m31W1HL8jCpIV2RUindHXKkVZnuJjmJO+y9iSRKCz3zPe6XtPDSUAaLEkhcnt9KchyBQ7r1LCigCu9w8uDrvscJVJ+BVTJrax+VNxRlUAIsY4L7TYgEkYAQ=="
         },
         {
           "type": "text",
@@ -46,7 +67,7 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 46,
+        "output_tokens": 38,
         "service_tier": "standard",
         "inference_geo": "not_available"
       }

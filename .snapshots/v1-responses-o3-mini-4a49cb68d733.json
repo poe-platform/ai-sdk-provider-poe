@@ -1,36 +1,52 @@
 {
   "key": "v1-responses-o3-mini-4a49cb68d733",
+  "test": {
+    "name": "uses reasoning with o3-mini",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "o3-mini",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c96b00eed97b0fc-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Fri, 06 Feb 2026 00:56:28 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=Sa4ck3lDH6bT6hpJRQ70MMA3fe95HKbjxk_CAT7PYMs-1770339388-1.0.1.1-8e1zlJlW3LS5dj1a4gAwucbZkeiU82AY_LmM1Ha15ZoAUDXOD6zKgtgl4XOmCsRLpTB35_ScACSlbhFG8yKVKVdlZvCh2qki5wU6nYTVa4o; path=/; expires=Fri, 06-Feb-26 01:26:28 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",9286105cd6bac143afd10313cc4da087,10.0.20.182,46114,68.185.245.236,,18283197676,1,1770339388.740,2.002,,.,0,0,0.000,2.002,-,0,0,1444,94,47,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDU3YjZkMGNjZDEyMjBhODAxNjk4NTNjM2FlOGQ0ODE5Mzg4OGY2NGYxMmU2MGIwZTg=",
-      "created_at": 1770339386,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGJlNjYxNTFiYjliMWViODAxNjk4NjBkZGQxY2E4ODFhMjhkOWQwM2I4YTNjOGU3OTM=",
+      "created_at": 1770393053,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_057b6d0ccd1220a80169853c3c32f4819382eadacf7b123274",
+          "id": "rs_0be66151bb9b1eb80169860dde763081a2b7a00b3e07d86ffa",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_057b6d0ccd1220a80169853c3c70348193b39e46c09cdba9aa",
+          "id": "msg_0be66151bb9b1eb80169860ddebbb081a2bbc0e82cb9796a7c",
           "content": [
             {
               "annotations": [],
@@ -76,7 +92,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770339388,
+      "completed_at": 1770393054,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

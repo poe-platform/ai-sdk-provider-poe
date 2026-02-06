@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gemini-2.5-flash-lite-bb6fce65960b",
+  "test": {
+    "name": "generates text with gemini-2.5-flash-lite",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-flash-lite",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,39 +22,34 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0b9dbc210558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:46:05 GMT",
-      "openai-processing-ms": "688",
+      "openai-processing-ms": "511",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=8O2vYn60LcQNiKR2agjZL0hpyZ3eckSLmB2sjAv_E30-1770248765-1.0.1.1-6gIBT4iE8s49.BFTEjzI3LTWtl_KhgXQ5m8j1OeceaDytbQFqrT31FqtNbgP.1WQwJUunuW14vz6KD6QK_4Kx7E_MDPVYoJ3SRi_SAShdJA; path=/; expires=Thu, 05-Feb-26 00:16:05 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",c6719b8fe7073836f0a0753b73c1cb01,10.0.20.182,29354,68.185.245.236,,42476300983,1,1770248765.803,0.705,,.,0,0,0.000,0.705,-,0,0,745,223,111,10,34729,,,,,,-,",
-      "x-request-id": "req-136d06e39756822a9823e5c8"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-ff1d272d2e70ae9d8e8738b7",
+      "id": "chatcmpl-497654f68e592d0c22dc0106",
       "object": "chat.completion",
-      "created": 1770248765,
+      "created": 1770392950,
       "model": "gemini-2.5-flash-lite",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there friend."
+            "content": "Hello there friend"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
+        "completion_tokens": 3,
         "prompt_tokens": 7,
-        "total_tokens": 11,
+        "total_tokens": 10,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

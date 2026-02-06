@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gemini-3-flash-0fdc6e3ed0c2",
+  "test": {
+    "name": "generates text with gemini-3-flash",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,45 +22,40 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0b1c0acb0558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:45:47 GMT",
-      "openai-processing-ms": "3183",
+      "openai-processing-ms": "4359",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=ZlAWivzgcWEY7quWFPK.8OcppC5faGOwz2d0STz.pBk-1770248747-1.0.1.1-J8ZJDmBeNHBSi0GmEZFgIKFXEQFob92FzcCYmmtbBtcUQ072klGAkaqcnYfKTMfVl_XP5Lp9tYQF8ihYX1uIRIjb._mtDmFKAMmp3miK2D8; path=/; expires=Thu, 05-Feb-26 00:15:47 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",ac983ca90e6d01f096ba551f0fbbbbcd,10.0.20.182,12532,68.185.245.236,,42476144065,1,1770248747.532,3.186,,.,0,0,0.000,3.185,-,0,0,2076,188,94,10,34729,,,,,,-,",
-      "x-request-id": "req-68886de8fd0fc042353f6157"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-00078286bf6404fa942a8ac6",
+      "id": "chatcmpl-31be5cfae67ffa596cef3286",
       "object": "chat.completion",
-      "created": 1770248747,
+      "created": 1770392934,
       "model": "gemini-3-flash",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello to you.",
-            "reasoning_content": "**Generating greetings concisely**\n\nI've been exploring different ways to say hello, each limited to three words. I've got a variety of options now, from the friendly \"Hello there friend\" to the more formal \"Greetings to you.\" I'm aiming for concise yet engaging greetings.\n\n\n**Revising Greeting Options**\n\nI've streamlined the greetings again. \"Hello to you\" has a certain simplicity I appreciate. \"Hello there, friend\" is warm, and \"Greetings to you\" provides a formal alternative. I've double-checked my word count. The possibilities are beginning to feel complete.\n\n\n",
-            "reasoning": "**Generating greetings concisely**\n\nI've been exploring different ways to say hello, each limited to three words. I've got a variety of options now, from the friendly \"Hello there friend\" to the more formal \"Greetings to you.\" I'm aiming for concise yet engaging greetings.\n\n\n**Revising Greeting Options**\n\nI've streamlined the greetings again. \"Hello to you\" has a certain simplicity I appreciate. \"Hello there, friend\" is warm, and \"Greetings to you\" provides a formal alternative. I've double-checked my word count. The possibilities are beginning to feel complete.\n\n\n"
+            "content": "Hello there, friend.",
+            "reasoning_content": "**Evaluating Short Greetings**\n\nI've been working on concise greetings. \"Hello there friend\" and \"Greetings to you\" seem solid. \"Hello, how are?\" works, though it's a little clumsy. Now I'm trying to refine the greeting further.\n\n\n**Testing Phrase Brevity**\n\nI'm checking out various three-word greetings. \"Hi, how's it?\" feels right. \"Hello, world today\" isn't bad either. I like \"Hello, dear user.\" and also the initial examples. I'm focusing on the component words.\n\n\n",
+            "reasoning": "**Evaluating Short Greetings**\n\nI've been working on concise greetings. \"Hello there friend\" and \"Greetings to you\" seem solid. \"Hello, how are?\" works, though it's a little clumsy. Now I'm trying to refine the greeting further.\n\n\n**Testing Phrase Brevity**\n\nI'm checking out various three-word greetings. \"Hi, how's it?\" feels right. \"Hello, world today\" isn't bad either. I like \"Hello, dear user.\" and also the initial examples. I'm focusing on the component words.\n\n\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 174,
+        "completion_tokens": 173,
         "prompt_tokens": 7,
-        "total_tokens": 181,
+        "total_tokens": 180,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 170,
+          "reasoning_tokens": 168,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": null

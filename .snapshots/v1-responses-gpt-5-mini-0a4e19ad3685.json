@@ -1,40 +1,78 @@
 {
   "key": "v1-responses-gpt-5-mini-0a4e19ad3685",
+  "test": {
+    "name": "handles tool calling with gpt-5-mini",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5-mini",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "What is the weather in San Francisco? Use the getWeather tool."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "getWeather",
+          "description": "Get the current weather for a location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dba99fb0f61ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:50:48 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=J8UFrmnvXEiL5BhgSvkLaOej87kIGBtjrCXn_pETVto-1770245448-1.0.1.1-C2WveRJ4m86dc18gWzMgw.YG4yA1dLWNxobhpB_cC432fQV5884RgP9RFZP.Hxv_lj4LThAB23TQCDPfK8OmDAsD8g0b8zJYsHLE6zTPLLI; path=/; expires=Wed, 04-Feb-26 23:20:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",cc96fa989be0aa63472ce981aeb15e50,10.0.20.182,2224,68.185.245.236,,17537955789,1,1770245448.795,2.047,,.,0,0,0.000,2.047,-,0,0,1734,254,127,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDkzOTIwOWM5NmM5YTI4MzAxNjk4M2NkNDZlZDI4ODE5ZTg4YWNmMDJlM2FmZDJmZjU=",
-      "created_at": 1770245446,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDRiMjhjMDZhMmZhZTBhYzAxNjk4NjBkOGZmMWY0ODE5ZDgwZWQzZjBiYzA2MjhjZDg=",
+      "created_at": 1770392975,
       "metadata": {},
       "model": "gpt-5-mini-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_0939209c96c9a283016983cd473a14819ea7f54c6b0841931a",
+          "id": "rs_04b28c06a2fae0ac0169860d903220819d8653d68c461e07b9",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_MI0tJFQNdt0xtUQFSAFKQf5f",
+          "call_id": "call_veC1kohIWJe5BdwqAOQT3iCI",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0939209c96c9a283016983cd485d98819eaba75e440c7c1376",
+          "id": "fc_04b28c06a2fae0ac0169860d9228dc819d847e8e71ae352972",
           "status": "completed"
         }
       ],
@@ -79,18 +117,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 87,
+        "output_tokens": 88,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 153
+        "total_tokens": 154
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245448,
+      "completed_at": 1770392979,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

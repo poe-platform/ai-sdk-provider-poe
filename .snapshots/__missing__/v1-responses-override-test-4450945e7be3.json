@@ -1,5 +1,14 @@
 {
   "key": "v1-responses-override-test-4450945e7be3",
+  "test": {
+    "name": "setModeOverride switches playback to record",
+    "file": "tests/unit/snapshot-missing-error.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "override-test"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {

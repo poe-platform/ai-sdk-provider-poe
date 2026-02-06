@@ -1,5 +1,49 @@
 {
   "key": "v1-messages-claude-sonnet-4-7dc5e7874c24",
+  "test": {
+    "name": "handles tool calls",
+    "file": "tests/integration/anthropic.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4",
+      "max_tokens": 4096,
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is the weather in San Francisco? Use the getWeather tool."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "getWeather",
+          "description": "Get the current weather for a location",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      ],
+      "tool_choice": {
+        "type": "auto"
+      }
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,32 +51,28 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:38Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:45Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9483ac0faad8ab-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 05 Feb 2026 18:36:39 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=67ebIUDYOPweeur2LlMQ8W1t1oE9pFlrKrxxotq.fkI-1770316599-1.0.1.1-vg2xI.IQpR4zJPHMEmNfINlnC0klwDypp6wt67tgGN_mTZKueQO_i8IE19Mxv5L2IJunMmuM2EiAmDsJ5othYv3JG01mdv7Ush_RUJCBWl8; path=/; expires=Thu, 05-Feb-26 19:06:39 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",3f2ab41a38edf844bef2aef7d7ebb7ce,10.0.20.182,56542,68.185.245.236,,43020855565,1,1770316599.016,1.847,,.,0,0,0.000,1.847,-,0,0,990,242,121,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_477c57941bce44acb3eec74556e98334",
+      "id": "req_poe_a9d7ffa969d4440eb678d72c0970853e",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "I'll get the current weather information for San Francisco using the getWeather tool."
+          "text": "I'll get the current weather for San Francisco using the getWeather tool."
         },
         {
           "type": "tool_use",
-          "id": "toolu_01C7MpFLo43YKmBNmfuhak67",
+          "id": "toolu_0148hX3RRfBQi3CpZn5by7NA",
           "name": "getWeather",
           "input": {
             "location": "San Francisco"
@@ -49,7 +89,7 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 72,
+        "output_tokens": 71,
         "service_tier": "standard",
         "inference_geo": "not_available"
       }

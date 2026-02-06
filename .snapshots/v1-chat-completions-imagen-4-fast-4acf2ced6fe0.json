@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-imagen-4-fast-4acf2ced6fe0",
+  "test": {
+    "name": "generates text with imagen-4-fast",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "imagen-4-fast",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,39 +22,34 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0c1d1d670558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:46:30 GMT",
-      "openai-processing-ms": "5416",
+      "openai-processing-ms": "3911",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=ma8X73gHMwnCwwCUxoExQhMnGZ0URsE5vkSLJFk..U8-1770248790-1.0.1.1-8RCMl3yhNt6NqKbD0K3iFmuZLxt5oYLEFQAjfHu9v_BGelvz5VP0hNUV6TeWLhFBg8pWUnIVRXo69JrP5_2_Cf4yxMW9dK8A6i_BE2qC.Ok; path=/; expires=Thu, 05-Feb-26 00:16:30 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",28bec561cc8dcbf38cdddfb98832d5f4,10.0.20.182,59792,68.185.245.236,,17564149784,1,1770248790.940,5.451,,.,0,0,0.001,5.451,-,0,0,935,74,37,10,34729,,,,,,-,",
-      "x-request-id": "req-946eca36530f78f409e73e6b"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-818d588b9f9d9cef87584351",
+      "id": "chatcmpl-62ccacf8d70cffe17adefa7e",
       "object": "chat.completion",
-      "created": 1770248790,
+      "created": 1770392974,
       "model": "imagen-4-fast",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/137778e5239a10e5c8e86fad1deb53f99d3864be694798c2454177495604aa8e?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/137778e5239a10e5c8e86fad1deb53f99d3864be694798c2454177495604aa8e?w=1024&h=1024"
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/3fe6361f20354a233a0ab4fc60a9d8a5f2a3c4de100abd279e2060b50421cac0?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/3fe6361f20354a233a0ab4fc60a9d8a5f2a3c4de100abd279e2060b50421cac0?w=1024&h=1024"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 70,
-        "total_tokens": 77
+        "completion_tokens": 75,
+        "total_tokens": 82
       }
     }
   }

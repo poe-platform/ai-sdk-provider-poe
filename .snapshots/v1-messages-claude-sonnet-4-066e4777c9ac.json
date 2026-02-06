@@ -1,5 +1,30 @@
 {
   "key": "v1-messages-claude-sonnet-4-066e4777c9ac",
+  "test": {
+    "name": "uses extended thinking with anthropic/claude-sonnet-4",
+    "file": "tests/integration/anthropic.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,33 +32,29 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:47Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:56Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9483e648fbd8ab-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Thu, 05 Feb 2026 18:36:48 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=kaqowhEOwmr2ysx6HCkYF1tWh08A1DqnFuKbplkczEg-1770316608-1.0.1.1-npoiVnDdmOE4dq1_buGe0_8lrr2iDS7J_yDRjXxIcguJAxMPz2BX2lwL7MBe3mhLicni5OcgD2TKuSJaMi1LyzInFSQvkkDDBstS8Zz6_i4; path=/; expires=Thu, 05-Feb-26 19:06:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",731f540d6394214d30e73bfdfeddfe02,10.0.20.182,58404,68.185.245.236,,18108698307,1,1770316608.389,1.927,,.,0,0,0.001,1.927,-,0,0,341,115,57,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_475fba5078a34d979b7873409d1ae848",
+      "id": "req_poe_01b649f3b06f4602910184034281564e",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
           "thinking": "This is a simple multiplication problem. 7 * 8 = 56.",
-          "signature": "EtwBCkYICxgCKkBf/RQgNORdrt2GODwXJkQL1GXfF4MIqMaReULMgnYqSypg8WYg8BP9eZl9dB5FboTNG9zzYU3eVvT4Uh3jYu68Egz1GnYqvtbH3DWLhyIaDK/LUW5JD+fjo9Md2SIwS9DmUkfHxFG4i93xXTq8wanUS7uoSsNmdFXpjk3Y0torTci4+JwtH86tk0zAjL5gKkRWoIlCJJO1WHHbxVm7uFnTZVN4yTrA+wZV2qKunGVTqGQzdd6IGjdgK+KxiY3/p5ri0DlRJ/GKqWJERzWONk8PUHkE3hgB"
+          "signature": "EtwBCkYICxgCKkBf/RQgNORdrt2GODwXJkQL1GXfF4MIqMaReULMgnYqSypg8WYg8BP9eZl9dB5FboTNG9zzYU3eVvT4Uh3jYu68EgzGGKjmVH7BqScVU9QaDF/Y7ze1wfjdx/btGSIwMIcP2x01sID0H/V+CM7ireLfTK+ifbOhO2Gr+DnSZizoMLGJ9Y0wXdVBw/+NQ3o1KkSV6BKA8JGgl/2fcsSFvCWdAOgXbrlgbVZGLQ4307rnZnXpRHTFMdoZNQvIeGamqyAgR58bDdbjzgXBUcuTfThjpPC3WxgB"
         },
         {
           "type": "text",
-          "text": "7 * 8 = 56"
+          "text": "7 × 8 = 56"
         }
       ],
       "stop_reason": "end_turn",

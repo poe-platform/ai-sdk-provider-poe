@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-veo-3.1-fast-5d68049a46a5",
+  "test": {
+    "name": "generates text with veo-3.1-fast",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "veo-3.1-fast",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,31 +22,26 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0e328cdc0558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:48:49 GMT",
-      "openai-processing-ms": "58920",
+      "openai-processing-ms": "82637",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=jHhKeOcHVkTyaANHcGpTfaCfrjjyeu2k5Siopz0GM6k-1770248929-1.0.1.1-Yosm7jEmrP8n4yVkX6cJrdR3eshA1HuvcDenHkjN9aledDESiww7PssIPywreJ8dNqo.i7uYZ72izj1n82U2m_.SilZIK2mpK.4xVcF7ZA8; path=/; expires=Thu, 05-Feb-26 00:18:49 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",93d8aa40a5684f23d0e82c32cb564dd4,10.0.20.182,1746,68.185.245.236,,42421317128,1,1770248929.770,58.923,,.,0,0,0.000,58.923,-,0,0,755,65,32,10,34729,,,,,,-,",
-      "x-request-id": "req-f2141a066739b2a6ea605734"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-07a85910708adb3eaaec4b67",
+      "id": "chatcmpl-4ecc6ac8977947aa3c39b972",
       "object": "chat.completion",
-      "created": 1770248929,
+      "created": 1770393143,
       "model": "veo-3.1-fast",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/video/9daf5e1a639fcf4e94da1eff848732cb303dab22b3de4085da3f885055a9c556"
+            "content": "https://pfst.cf2.poecdn.net/base/video/b1fec6ef9d1c6d42a743b10b2206b520e507e9c7cd1cfba9e99dbc3f5b74f2e6"
           },
           "finish_reason": "stop"
         }

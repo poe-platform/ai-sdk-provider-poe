@@ -1,5 +1,5 @@
 {
-  "key": "v1-messages-claude-sonnet-4-20250514-5e21586931e4",
+  "key": "v1-messages-claude-sonnet-4-20250514-994770a6f476",
   "test": {
     "name": "caches tokens on repeated calls with claude-sonnet-4",
     "file": "tests/integration/anthropic-caching.test.ts"
@@ -50,6 +50,27 @@
               }
             }
           ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems that incorporates Boltzmann transport coefficients with modified Navier-Stokes equations for rarefied gas regimes, utilizing parameters like Knudsen numbers and Chapman-Enskog expansions."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is quantum archaeometry? Answer in one sentence.",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
         }
       ]
     }
@@ -61,7 +82,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:48Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:52Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -72,26 +93,26 @@
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_3d4f536211bf49daa58f258f14adae68",
+      "id": "req_poe_4f28a0c6a66b4f14810f44cecf75d68c",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems that incorporates Boltzmann transport coefficients with modified Navier-Stokes equations for rarefied gas regimes, utilizing parameters like Knudsen numbers and Chapman-Enskog expansions."
+          "text": "Quantum archaeometry applies principles of quantum mechanics to archaeological dating and artifact analysis through techniques like muon tomography for non-invasive structural imaging, quantum dot fluorescence spectroscopy for pigment identification, and nitrogen-vacancy centers in diamond for magnetometry detection of buried metallic artifacts."
         }
       ],
       "stop_reason": "end_turn",
       "stop_sequence": null,
       "usage": {
         "input_tokens": 3,
-        "cache_creation_input_tokens": 82,
-        "cache_read_input_tokens": 4487,
+        "cache_creation_input_tokens": 86,
+        "cache_read_input_tokens": 4569,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 82,
+          "ephemeral_5m_input_tokens": 86,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 72,
+        "output_tokens": 62,
         "service_tier": "standard",
         "inference_geo": "not_available"
       }

@@ -1,45 +1,39 @@
 {
   "key": "v1-chat-completions-lyria-8cce0953f433",
+  "test": {
+    "name": "generates text with lyria",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "lyria",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
-    "status": 200,
+    "status": 400,
     "headers": {
       "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e139f4eed0558-ORD",
       "connection": "keep-alive",
-      "content-encoding": "br",
-      "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:51:56 GMT",
-      "openai-processing-ms": "23011",
+      "content-length": "146",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "24433",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=3ZuuHBJFIIS5URNoPnWvqmOhhRt_i7zDgDMz7u3UnaI-1770249116-1.0.1.1-SNtZW6jLkRBhmYg78DoCd36clxA04mTmjHqLN5fEy298gm_hWEUkYaTCI1LwkzY1Te.1DKNZQgxR5R61YOCe2k4wSi_fINLGtRNtl4oOZSE; path=/; expires=Thu, 05-Feb-26 00:21:56 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
-      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",6c8058d73737af8eb2bc7b605f453171,10.0.20.182,59954,68.185.245.236,,42478813089,1,1770249116.051,23.014,,.,0,0,0.001,23.014,-,0,0,748,210,105,10,34729,,,,,,-,",
-      "x-request-id": "req-39bba4b9e89928550f4c17dd"
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
     },
     "body": {
-      "id": "chatcmpl-9e1f8575af1953bc548a6e12",
-      "object": "chat.completion",
-      "created": 1770249116,
-      "model": "lyria",
-      "choices": [
-        {
-          "index": 0,
-          "message": {
-            "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/audio/84b4c1d68b94d97cd7cd34fee6b3000a101b36bb915d2e865024b22d0197f72f"
-          },
-          "finish_reason": "stop"
-        }
-      ],
-      "usage": {
-        "prompt_tokens": 7,
-        "completion_tokens": 0,
-        "total_tokens": 7
+      "error": {
+        "message": "Request failed... Invalid generation request. Please try again with a different prompt.",
+        "type": "invalid_request_error"
       }
     }
   }

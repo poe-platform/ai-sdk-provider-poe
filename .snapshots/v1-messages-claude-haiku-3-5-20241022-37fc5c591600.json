@@ -1,13 +1,13 @@
 {
-  "key": "v1-messages-claude-sonnet-4-20250514-5e21586931e4",
+  "key": "v1-messages-claude-haiku-3-5-20241022-37fc5c591600",
   "test": {
-    "name": "caches tokens on repeated calls with claude-sonnet-4",
+    "name": "caches tokens on repeated calls with claude-haiku-3-5",
     "file": "tests/integration/anthropic-caching.test.ts"
   },
   "request": {
     "body": {
-      "model": "claude-sonnet-4-20250514",
-      "max_tokens": 64000,
+      "model": "claude-haiku-3-5-20241022",
+      "max_tokens": 4096,
       "system": [
         {
           "type": "text",
@@ -35,7 +35,7 @@
           "content": [
             {
               "type": "text",
-              "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, particularly focusing on monoclinic and triclinic crystal systems where practitioners analyze glide plane reflections and screw axis rotations to characterize the asymmetric unit using tensor analysis for anisotropic properties."
+              "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, particularly focusing on monoclinic and triclinic crystal systems, using advanced techniques like tensor analysis and point group symmetry operations to characterize the asymmetric structural properties of crystals."
             }
           ]
         },
@@ -45,6 +45,27 @@
             {
               "type": "text",
               "text": "What is pneumatic differential calculus? Answer in one sentence.",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems, incorporating Boltzmann transport coefficients and Navier-Stokes approximations to analyze rarefied gas regimes and hypersonic flow behaviors."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is quantum archaeometry? Answer in one sentence.",
               "cache_control": {
                 "type": "ephemeral"
               }
@@ -61,7 +82,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:48Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:47:00Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -71,29 +92,27 @@
       "transfer-encoding": "chunked"
     },
     "body": {
-      "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_3d4f536211bf49daa58f258f14adae68",
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_1e6839a9760e43f483e52fac05a0a897",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems that incorporates Boltzmann transport coefficients with modified Navier-Stokes equations for rarefied gas regimes, utilizing parameters like Knudsen numbers and Chapman-Enskog expansions."
+          "text": "Quantum archaeometry applies principles of quantum mechanics to archaeological dating and artifact analysis, utilizing techniques like muon tomography, quantum dot fluorescence spectroscopy, and entanglement-enhanced sensitivity measurements to non-invasively examine and date ancient materials."
         }
       ],
       "stop_reason": "end_turn",
       "stop_sequence": null,
       "usage": {
         "input_tokens": 3,
-        "cache_creation_input_tokens": 82,
-        "cache_read_input_tokens": 4487,
+        "cache_creation_input_tokens": 75,
+        "cache_read_input_tokens": 4563,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 82,
+          "ephemeral_5m_input_tokens": 75,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 72,
-        "service_tier": "standard",
-        "inference_geo": "not_available"
+        "output_tokens": 54
       }
     }
   }

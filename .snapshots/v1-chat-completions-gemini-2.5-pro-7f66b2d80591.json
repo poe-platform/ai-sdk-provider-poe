@@ -1,5 +1,44 @@
 {
   "key": "v1-chat-completions-gemini-2.5-pro-7f66b2d80591",
+  "test": {
+    "name": "handles tool calling with gemini-2.5-pro",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +46,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0b77bbd40558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:46:01 GMT",
-      "openai-processing-ms": "2750",
+      "openai-processing-ms": "2506",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=dSnj12en_u_r82FbtalVT6D32qh.dZABDpgH4HLYCcw-1770248761-1.0.1.1-1dOua583GKJgi9cL2vdOiZUpXoMiYE2LtMq.ArCLyhlBdmrJW1bvkwRtdSV11rUNGCOdKNnAupBb4NyY0i_DruyA1JmEP.vJVo38Ujg2TQk; path=/; expires=Thu, 05-Feb-26 00:16:01 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",2349244f9ad76df428db2d54d77490a5,10.0.20.182,3988,68.185.245.236,,42420471281,1,1770248761.770,2.753,,.,0,0,0.000,2.753,-,0,0,357,81,40,10,34729,,,,,,-,",
-      "x-request-id": "req-fda5c420cc676608f8ab9b06"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-a812a447bac45e3c43e2beba",
+      "id": "chatcmpl-8d38d3d55b09caee1b910999",
       "object": "chat.completion",
-      "created": 1770248761,
+      "created": 1770392946,
       "model": "gemini-2.5-pro",
       "choices": [
         {
@@ -34,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "tool_getWeather_yExgm4nJiIO796MDhXJD",
+                "id": "tool_getWeather_RzdVSGyrrvFhFEg8uRNq",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -42,7 +76,7 @@
                 },
                 "extra_content": {
                   "google": {
-                    "thought_signature": "CiQBjz1rX8jompPcVs9GScL5x6gqs8mxdJViDbUObLRg9Sl5RsEKfgGPPWtfwekAvwTHIiNkuI7NCK7iU72KWp09CjVKt7/+0b0B57K0I6+viEZIwjw1s1GGZr7MUpkCedB7cl/d0RJDa1vcBrjHgSmgjuyn5In/J7JLak8CixYPE8n1E2/1OAsFe/FYPfX/U28cBmL2LC29Gth/wIVhng4t4DiTsgpeAY89a1+oInmvTUjedTPMhFvNPKDyh1ybyKp58DVNhGu7n8P6QS7+O3iGO3z/4nvXomyVlS/FwEaldmOGagC+jRK5kiBaPRKCxDDO8db7CRI2NaioyHEVMk+yZciqdQrPAQGPPWtf2uRBG/BkYnpCsH3bbpowuBfPeKfD8HCQq92Qartdlvcv74AA+LXeRuPVyzNhTxC8lZJR7/Mi8l6OZ+cuZ+Zkrio0gVqSixWb+y1D9O+fiW8y8XtP2yewdh4EsN/EhkoCFBaTE1Vm4EFP0/fUpXjzQTU3HpiactUF2Ik9p1FuZPADLGebf/YC9ziJW4Yz8eruVBYQEtnpiUl/VNE+nnV7tvGdGeixCN6+2KkrnxpBEmtXD8F1LPg22gdWmC+c0YuxIa7JHwj8eALEZgqdAQGPPWtfWi2WImCM1M12h0GvopV0oecUeibDdq5+6nwIEXtARiY0F6StqjqYUQjJdD4axrdkwbueO/K9cPanmCwf/XWw0kiS+NRwhdB59uaLNZtQNIY7/nQ5Xp9BVxuN7xCIRrJbXuwh8mP0mbAW8dI9v1IDLwP+hDSFT36X/Db8wCWOrFIH5PDiO+goPjSXYv/zxDmi0hNJ7fIW3Y4K5QEBjz1rX/M4AJpIc6en8yYDYaeCRBhKM0IwK9/6n8/Qkl+iOLykRbwqjphTfXKpVSXnObDX4y+M/AFJEwqYVIOSCiW2xZDJk3r6hdYQpCBei5GyydkaoQnlDi1As2pdpqDSFXvICAXOyCtRw5qVnZVWOjol4urgSfgiyFYF0Pg+yoJgzb68MJjNgJ4ZhsYiag/48I+triIGoRfAR9Hb3CrQtuLehqQSJHbl2nP1X+RMfEK8hxRDCeo+t4jvOa/Y1m6YYNjoqSwlxkN5JXurou7f3MhgHnvzkAqWUSH64yXP7fFajOG0CmMBjz1rX8dvCeeQSuZWxZuo/TykmPFSCK4U84IpDaazFzShtR0TQawq9KrbP/1V73goTxWe+Hs18zFKfo1oEmqPtoGv1B/9Zq7E5bB14aKZCZW33PxFdO60sWADZHVXrqgCDC8="
+                    "thought_signature": "CiQBjz1rXw8Z9eyouUOAZsopSXjZVco7TDyxDjFmtIhY+iuexAAKfgGPPWtfeI1Z+5HTYNrpZbYPUWT/K8f7Ufclu6FAPVJBHsbXw8nTKipazCwJWM96B4WHGB3xaqYwQoK3qiUG5s1rzMSLQ19mUja3UQm7GVQuxNh+rjekxGIhf2qa7FxfKwsV0Rg0Txyp7cbkkNPyyvPNyln15/elaYwDWxWPOQpeAY89a19dAYWLherPiIeQNBl9/50l0wjttbOwN86/p+1yos4MYQLdMnf7GMriCytTchuX4R2Hr669ycv5mqGJ55Ok2y9JtYMDIqGjvsiaN//mhae1B7PKHzxVGC6IugrKAQGPPWtfwgxWB4WiKz8qsJyt4W/LQCbG+jGggVM29pYH6a0HeFrAh3/k09UnPQhqpmnrZ2Ni97dUvd659K2Tk5/s15G8tKS7x2a0iLvI+vphdpsT+uLRKdW8JQDr9P2SUFQ2R1f6LmXM+gWaa8oFa3sm7HxQZX3rG8bznw24/Z3jsrLjDecHCvNBE6cwjPxhautM4+/ZNbCrXGqToBUG7QS+Ks27OZHZ0WlMdoM3y4sWdSd4SEU3/rr2f32tXLYbR5N+4SKI9fM794kKoQEBjz1rX9PIAIIif0FuBWDUBU2zB6dPL2lQrK82Xarw7XQlLtDspp7Aj9TGhe5AQG8+LhbkQ++na4IWOh0QLomBZ60gNIVppQ6KxAnI3YioAicOSMvtZfWUjdsDg+krBCeiTUsZXmU0RXSHOaSp980+IfMQUCWoTDIIvP6plnfo+ZmFd4UFr1Yy30siDKUxJF0MsP0K/VrEWbL/q2ri0zBJQgqHAQGPPWtfam2JxfpMSZumeLfItBGfklznx5QcA9eUa8TaJqEVSuZ4rhUEvgBYD4pX0GT1xVuLiQBoYnKNjzVMKODFqXcsAlpm9GDSSs5BtJzDoPRsQGDkHM8XUQko2uuxwkDGP0DMK9J57iyYVL5cq/qrqwjjq+xgMjdIrovGmaKikS7s2PwsrQ=="
                   }
                 }
               }
@@ -52,13 +86,13 @@
         }
       ],
       "usage": {
-        "completion_tokens": 171,
+        "completion_tokens": 132,
         "prompt_tokens": 32,
-        "total_tokens": 203,
+        "total_tokens": 164,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 166,
+          "reasoning_tokens": 127,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": null

@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gemini-2.0-flash-lite-28ed7b5f75a7",
+  "test": {
+    "name": "generates text with gemini-2.0-flash-lite",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.0-flash-lite",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +22,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0baf9e9b0558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:46:08 GMT",
-      "openai-processing-ms": "559",
+      "openai-processing-ms": "851",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=MgesJlZMDrv6fAQw8UezRr0aoVd6vtHtzvP09vWmBNg-1770248768-1.0.1.1-ec7Z8mR7yUqZ72Q810oH57yR43NrrViM8_T0zP33Ez0evnkTcmFJ68PrpCri.kNbwPhcypAjvZ2zb4RVDK1Z0fG4oidz73WTWTCUz1NjPT4; path=/; expires=Thu, 05-Feb-26 00:16:08 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",475423d11b5792c27d2df450af3dbeb1,10.0.20.182,21948,68.185.245.236,,42420537266,1,1770248768.516,0.562,,.,0,0,0.001,0.562,-,0,0,355,66,33,10,34729,,,,,,-,",
-      "x-request-id": "req-a16fe2909b0c97ff69628028"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-3014c4ca3453743a59b68a12",
+      "id": "chatcmpl-175001eba7a38c74807596a0",
       "object": "chat.completion",
-      "created": 1770248768,
+      "created": 1770392953,
       "model": "gemini-2.0-flash-lite",
       "choices": [
         {

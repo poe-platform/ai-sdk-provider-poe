@@ -1,5 +1,30 @@
 {
   "key": "v1-messages-claude-opus-4-6-bf4e0a926a7e",
+  "test": {
+    "name": "uses extended thinking with anthropic/claude-opus-4-6",
+    "file": "tests/integration/anthropic.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4-6",
+      "max_tokens": 128000,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,29 +32,25 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T00:57:23Z",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:52Z",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c96b16e2949dd93-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 06 Feb 2026 00:57:24 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=Xvk9ipWQ4mcicijexGa1hY3ZKNSN11loIrnXN4G3Jj4-1770339444-1.0.1.1-sjBVV1nxBq2_QW4dxb7QxYhZ70czCWGiocLfU.5pMcwQjxVA8817ZQndMHKYUJsL71p6IgqDV2UMrwTAL8WeCTdOsQAvUv4sjJI5dFVvH_A; path=/; expires=Fri, 06-Feb-26 01:27:24 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",6536225f4cb371f8548f96a42c4d6a5b,10.0.20.182,33212,68.185.245.236,,43195823353,1,1770339444.700,1.763,,.,0,0,0.000,1.763,-,0,0,341,223,111,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
       "model": "claude-opus-4-6",
-      "id": "req_poe_5952ddb1fe254221a297526df07ea9b1",
+      "id": "req_poe_2dbad9ff94c945839a8909fe9a59e76c",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
           "thinking": "56",
-          "signature": "EqoBCkYICxgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxEgwBvtrRMe5VqKisGZoaDHFLidSsu4U17jfAgyIwzw5Q24RT9oQLWIHAUtJrmebRncrVnIHL3F2UsdrMAUaQfp9aMtT+ZAL9wBE0AafdKhLlyPXJLf9xcHXBCo4i0eRIZYEYAQ=="
+          "signature": "EqoBCkYICxgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxEgwgCMHrPTr4jJCI6m0aDMxQaqMXB6d/ovatRyIwrhqsRibniUm2jYbH20gu2GYYiJUupilTRx16RgMcovhqw9pXH1L5kEUUdGUdU/UoKhL9VcZINWsNYF6Na11PfR4kXtMYAQ=="
         },
         {
           "type": "text",

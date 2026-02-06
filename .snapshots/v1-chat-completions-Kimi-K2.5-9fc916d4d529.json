@@ -1,5 +1,44 @@
 {
   "key": "v1-chat-completions-Kimi-K2.5-9fc916d4d529",
+  "test": {
+    "name": "handles tool calls with Kimi-K2.5",
+    "file": "tests/integration/other.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "Kimi-K2.5",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,34 +46,29 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c83812a38fb1466-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Tue, 03 Feb 2026 17:03:58 GMT",
-      "openai-processing-ms": "2323",
+      "openai-processing-ms": "3918",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=iCXZhsFjCec_N9xKMcbPVYemaroWgC49h7Gt6pi8TsA-1770138238-1.0.1.1-kGFaqoVBMxf0tjLO7944GWnRGrClQ_xLQvlDDirN6a5tejWrpRxSSjfBh_Q.OD1J96i3lFNrwLFgTxchNB8TlOPip9NbkgZ2UupCIGLHnmM; path=/; expires=Tue, 03-Feb-26 17:33:58 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",a5d6f3aaa7d44ff35e9df1e2d120bd53,10.0.2.6,42532,68.185.245.236,,41604466336,1,1770138238.865,2.326,,.,0,0,0.000,2.326,-,0,0,356,933,466,10,34729,,,,,,-,",
-      "x-request-id": "req-e01b02af91fbec1d759534a5"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5466a825164f31c029d98bdf",
+      "id": "chatcmpl-db6c34b047d2ce9ef1982d8e",
       "object": "chat.completion",
-      "created": 1770138238,
+      "created": 1770392799,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": " I'll check the weather in San Francisco for you using the getWeather tool.  ",
+            "content": "I'll get the weather for San Francisco using the getWeather tool.",
             "tool_calls": [
               {
-                "id": "functions.getWeather:0",
+                "id": "getWeather:0",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -47,9 +81,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 33,
-        "prompt_tokens": 95,
-        "total_tokens": 128,
+        "completion_tokens": 32,
+        "prompt_tokens": 71,
+        "total_tokens": 103,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

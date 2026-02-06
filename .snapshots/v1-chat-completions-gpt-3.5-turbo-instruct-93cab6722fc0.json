@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gpt-3.5-turbo-instruct-93cab6722fc0",
+  "test": {
+    "name": "generates text with gpt-3.5-turbo-instruct",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-3.5-turbo-instruct",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,39 +22,34 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbf4d8b3b61ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 22:54:00 GMT",
-      "openai-processing-ms": "634",
+      "openai-processing-ms": "330",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=R7LDWGTTrPxpupDJG3m6kDAIvuBrTzG8EJpCMC9CXtU-1770245640-1.0.1.1-l.6zWsL5HBY5hj7qb.caXL_G0J66Nxn2.U7d9PRmUmBbSrgLNR1zWQUBrTpah2lVMpE1sAXi0lWZr1EnUBSyOnCWwQM2aPnImYRyriFYjqc; path=/; expires=Wed, 04-Feb-26 23:24:00 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",84be015686e3d3a4e647c73a1f198351,10.0.20.182,56164,68.185.245.236,,42464367100,1,1770245640.192,0.886,,.,0,0,0.000,0.887,-,0,0,738,224,112,10,34729,,,,,,-,",
-      "x-request-id": "req-df34b90b28f8cb092e9de9bf"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-546f6e0b56880a721c5ae384",
+      "id": "chatcmpl-10650e77917e6399cddba2f4",
       "object": "chat.completion",
-      "created": 1770245640,
+      "created": 1770393171,
       "model": "gpt-3.5-turbo-instruct",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": " Hi there!"
+            "content": "\nGreetings, human!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 3,
+        "completion_tokens": 5,
         "prompt_tokens": 13,
-        "total_tokens": 16,
+        "total_tokens": 18,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

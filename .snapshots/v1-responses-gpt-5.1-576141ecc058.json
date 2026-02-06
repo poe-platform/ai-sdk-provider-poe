@@ -1,35 +1,51 @@
 {
   "key": "v1-responses-gpt-5.1-576141ecc058",
+  "test": {
+    "name": "generates text with gpt-5.1",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.1",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c94874569001832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:39:05 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=JmJ_Ly82MrN9jVZIKkKQyXyuwF5A640QoIu5xA07xJA-1770316745-1.0.1.1-.8zABKOrIIVMsO9LDByHj87tPQYR_UjPdjXXgcP4NfayJgTwi1TYo.GeNfZrMJnIEuCVYJlcB4ITDswxCF7A9qO8Kux.WvjBjNT63IhoksA; path=/; expires=Thu, 05-Feb-26 19:09:05 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",e48e32aded7699398a3036a1281d72af,10.0.20.182,22170,68.185.245.236,,43034671308,1,1770316745.346,0.768,,.,0,0,0.000,0.767,-,0,0,213,247,123,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDQwMDVmMGNlMDY4MWNmNTAxNjk4NGUzYzhiNmUwODE5ZTgyMThhMjQyM2Q2MjQ5OTM=",
-      "created_at": 1770316744,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGMxOGU5Y2IzMjRiMjZmNTAxNjk4NjBjZjcwODAwODE5MGJmNjZkNmU2YWFlZWRhYTc=",
+      "created_at": 1770392823,
       "metadata": {},
       "model": "gpt-5.1-2025-11-13",
       "object": "response",
       "output": [
         {
-          "id": "msg_04005f0ce0681cf5016984e3c91bdc819ebbd8cb9101abbff3",
+          "id": "msg_0c18e9cb324b26f50169860cf780e88190a132153b401c8ba4",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend",
+              "text": "Hello there friend",
               "type": "output_text",
               "logprobs": []
             }
@@ -60,18 +76,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 14,
+        "output_tokens": 13,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 27
+        "total_tokens": 26
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316745,
+      "completed_at": 1770392823,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

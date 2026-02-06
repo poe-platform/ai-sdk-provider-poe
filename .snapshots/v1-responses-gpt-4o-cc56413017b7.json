@@ -1,35 +1,51 @@
 {
   "key": "v1-responses-gpt-4o-cc56413017b7",
+  "test": {
+    "name": "generates text with gpt-4o",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-4o",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbecd5c5661ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:53:39 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=xfJ0IjliHk0VbuqzRQE0XbD37ZPWU1RLLkYh71zAFis-1770245619-1.0.1.1-B8FVuW7R5FFxCE.NJvQKBcUWWhl2GTqLZ8k1ifuljtdqBACnHH8Tm25XUFeOGOdGI6FQFFAwYZt86nCRWBMFf8QdlZYuyA3W18F3N2oADQI; path=/; expires=Wed, 04-Feb-26 23:23:39 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",8566e33bbaacd425324d719594736225,10.0.20.182,17962,68.185.245.236,,17539327154,1,1770245619.500,0.698,,.,0,0,0.000,0.698,-,0,0,1311,78,39,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDM3ZjU4ZmJjMWRiMDY1OTAxNjk4M2NkZjMwMWY4ODE5NTk2YjVkYjFhYmZiMDFiMzg=",
-      "created_at": 1770245619,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDMxNDU4ZDMzMGE0ZjMxYTAxNjk4NjBlM2Q4OWI0ODE5NGE0NDhlNTU4YzI3YjQxYTY=",
+      "created_at": 1770393149,
       "metadata": {},
       "model": "gpt-4o-2024-11-20",
       "object": "response",
       "output": [
         {
-          "id": "msg_037f58fbc1db0659016983cdf33b088195ae32f6ede4879f89",
+          "id": "msg_031458d330a4f31a0169860e3e26e08194a675daa55b431dc4",
           "content": [
             {
               "annotations": [],
-              "text": "Hello, howdy, hi!",
+              "text": "Hello, my friend!",
               "type": "output_text",
               "logprobs": []
             }
@@ -58,18 +74,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 8,
+        "output_tokens": 6,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 22
+        "total_tokens": 20
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245619,
+      "completed_at": 1770393150,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

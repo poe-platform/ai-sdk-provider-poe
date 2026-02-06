@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gemini-3-pro-4984d0d34ccd",
+  "test": {
+    "name": "supports thinking_level and web_search with gemini-3-pro",
+    "file": "tests/integration/other.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a Python function where given an int array, it returns the length of the longest strictly increasing subsequence. Give the naive solution and an optimal solution."
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,45 +22,40 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c83819fadcf1466-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Tue, 03 Feb 2026 17:04:29 GMT",
-      "openai-processing-ms": "13794",
+      "openai-processing-ms": "16310",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=wrZ_lPVgQVTh7AcKBieOtqv1Rv8s48pEP9hKplaabJo-1770138269-1.0.1.1-VAP53lw36vKdbtJbKPjypmp2SfFfHZ.Drl2X0yiOd5YOldx1jzTSqopnv5NQbf1kAwoa13ZNUa38Ltmb55_8rUdnZS7gsDa.0yry4jdLOfA; path=/; expires=Tue, 03-Feb-26 17:34:29 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",585c74681a67be55573bb6f3ac728809,10.0.2.6,50998,68.185.245.236,,16679371151,1,1770138269.131,13.797,,.,0,0,0.000,13.797,-,0,0,6061,862,431,10,34729,,,,,,-,",
-      "x-request-id": "req-093d89af49eb22a3c3d0341c"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-c67eef59c57d91918c3b7657",
+      "id": "chatcmpl-96900ab22b5722d30b746405",
       "object": "chat.completion",
-      "created": 1770138269,
+      "created": 1770392830,
       "model": "gemini-3-pro",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Here are two solutions to find the length of the Longest Increasing Subsequence (LIS) in Python: a naive recursive approach and an optimal approach using binary search.\n\n### 1. The Naive Solution (Recursion)\n\nThis approach explores every possible subsequence. For each element, we decide whether to include it in the subsequence or skip it, provided it is greater than the previous element included.\n\n*   **Time Complexity:** $O(2^n)$ - Exponential (very slow for large inputs).\n*   **Space Complexity:** $O(n)$ - Due to recursion stack depth.\n\n```python\ndef length_of_lis_naive(nums):\n    \"\"\"\n    Naive recursive solution to find the length of the LIS.\n    \"\"\"\n    def _lis_helper(prev_index, current_index):\n        # Base case: if we've reached the end of the array\n        if current_index == len(nums):\n            return 0\n        \n        # Option 1: Exclude the current element\n        taken = 0\n        not_taken = _lis_helper(prev_index, current_index + 1)\n        \n        # Option 2: Include the current element (if valid)\n        # We can only include nums[current_index] if it's strictly greater\n        # than the previous element we picked (nums[prev_index])\n        if prev_index == -1 or nums[current_index] > nums[prev_index]:\n            taken = 1 + _lis_helper(current_index, current_index + 1)\n            \n        return max(taken, not_taken)\n\n    return _lis_helper(-1, 0)\n```\n\n---\n\n### 2. The Optimal Solution (Patience Sorting / Binary Search)\n\nWhile a standard Dynamic Programming solution takes $O(n^2)$, we can achieve $O(n \\log n)$ by building a \"tails\" array.\n\n**The Logic:**\nWe maintain a list called `tails`. The element `tails[i]` stores the *smallest tail of all increasing subsequences of length `i+1` found so far*.\n1. Iterate through every number `x` in the input `nums`.\n2. If `x` is larger than all tails, append it (we found a longer subsequence).\n3. If `x` is smaller, use binary search (bisect) to find the smallest element in `tails` that is greater than or equal to `x` and replace it. This keeps our potential subsequences \"potent\" by keeping end elements as small as possible, allowing for more future additions.\n\n*   **Time Complexity:** $O(n \\log n)$ - We iterate through $n$ elements, and for each, we perform a binary search which takes $O(\\log n)$.\n*   **Space Complexity:** $O(n)$ - To store the `tails` array.\n\n```python\nimport bisect\n\ndef length_of_lis_optimal(nums):\n    \"\"\"\n    Optimal solution using Binary Search (Patience Sorting strategy).\n    Time Complexity: O(n log n)\n    \"\"\"\n    if not nums:\n        return 0\n    \n    # 'tails' will store the smallest tail of all increasing subsequences\n    # of length i+1 in tails[i].\n    tails = []\n    \n    for num in nums:\n        # If tails is empty or num is greater than the largest tail,\n        # we can extend the longest subsequence found so far.\n        if not tails or num > tails[-1]:\n            tails.append(num)\n        else:\n            # If num is not greater, we find the smallest element in tails\n            # that is >= num and replace it. This effectively starts a new\n            # potential sequence or lowers the threshold for an existing length.\n            # bisect_left returns the insertion point to maintain sorted order.\n            idx = bisect.bisect_left(tails, num)\n            tails[idx] = num\n            \n    return len(tails)\n```\n\n### Example Usage\n\n```python\n# Test data\narr = [10, 9, 2, 5, 3, 7, 101, 18]\n\n# Naive\nprint(f\"Naive Result: {length_of_lis_naive(arr)}\") \n# Output: 4 (The sequence is [2, 3, 7, 18])\n\n# Optimal\nprint(f\"Optimal Result: {length_of_lis_optimal(arr)}\") \n# Output: 4\n```",
-            "reasoning_content": "**Analyzing the Problem's Core**\n\nI'm focused on grasping the essence of the user's objective: crafting Python functions to pinpoint the LIS. The user's specification of \"naive\" versus \"optimal\" approaches has me pondering the implications for algorithmic complexity. I'm now comparing and contrasting the potential tradeoffs involved.\n\n\n**Evaluating Approach Options**\n\nI've been mapping the user's need for both \"naive\" and \"optimal\" LIS solutions. I'm leaning toward a dynamic programming strategy to optimize performance. The key consideration now is how to effectively translate this knowledge into Python code, incorporating the distinct characteristics of each requested solution type.\n\n\n",
-            "reasoning": "**Analyzing the Problem's Core**\n\nI'm focused on grasping the essence of the user's objective: crafting Python functions to pinpoint the LIS. The user's specification of \"naive\" versus \"optimal\" approaches has me pondering the implications for algorithmic complexity. I'm now comparing and contrasting the potential tradeoffs involved.\n\n\n**Evaluating Approach Options**\n\nI've been mapping the user's need for both \"naive\" and \"optimal\" LIS solutions. I'm leaning toward a dynamic programming strategy to optimize performance. The key consideration now is how to effectively translate this knowledge into Python code, incorporating the distinct characteristics of each requested solution type.\n\n\n"
+            "content": "Here are the two solutions for finding the length of the Longest Increasing Subsequence (LIS) in Python.\n\n### 1. The Naive Solution (Recursion)\n\nThe naive approach explores every possible subsequence. For every element, we have two choices: either include it in the subsequence (if it's larger than the previous element) or skip it.\n\n**Time Complexity:** $O(2^n)$ - Exponential (very slow for large inputs).\n**Space Complexity:** $O(n)$ - For the recursion stack.\n\n```python\ndef length_of_lis_naive(nums):\n    def solve(index, previous_val):\n        # Base case: if we've reached the end of the array\n        if index == len(nums):\n            return 0\n        \n        # Option 1: Skip the current element\n        taken_len = 0\n        not_taken_len = solve(index + 1, previous_val)\n        \n        # Option 2: Include the current element (only if it's strictly increasing)\n        if nums[index] > previous_val:\n            taken_len = 1 + solve(index + 1, nums[index])\n            \n        return max(taken_len, not_taken_len)\n\n    # Start with index 0 and a previous value of negative infinity\n    return solve(0, float('-inf'))\n\n# Example usage:\n# print(length_of_lis_naive([10, 9, 2, 5, 3, 7, 101, 18])) # Output: 4\n```\n\n---\n\n### 2. The Optimal Solution (Patience Sorting / Binary Search)\n\nThis approach builds a temporary array called `tails`. The element `tails[i]` stores the *smallest tail of all increasing subsequences of length `i+1`*.\n\nWe iterate through the numbers and perform a binary search on the `tails` array:\n1. If the current number is greater than all tails, append it (we found a longer subsequence).\n2. If the current number is smaller, replace the existing element in `tails` that is just larger than or equal to it. This keeps our potential subsequences \"potent\" by keeping their end values as small as possible.\n\n**Time Complexity:** $O(n \\log n)$ - We iterate through $n$ numbers, and for each, we do a binary search ($O(\\log n)$).\n**Space Complexity:** $O(n)$ - To store the `tails` array.\n\n```python\nimport bisect\n\ndef length_of_lis_optimal(nums):\n    if not nums:\n        return 0\n    \n    # 'tails' will store the smallest tail of all increasing subsequences \n    # of length i+1 found so far.\n    tails = []\n    \n    for num in nums:\n        # Use binary search to find the insertion point\n        # bisect_left finds the first index where num could be inserted \n        # while maintaining order.\n        idx = bisect.bisect_left(tails, num)\n        \n        # If idx is equal to the length of tails, num is greater than \n        # all existing tails, so we extend the LIS.\n        if idx < len(tails):\n            tails[idx] = num\n        else:\n            tails.append(num)\n            \n    return len(tails)\n\n# Example usage:\nnums = [10, 9, 2, 5, 3, 7, 101, 18]\nprint(f\"Length of LIS: {length_of_lis_optimal(nums)}\") # Output: 4\n```\n\n### Explanation of the Optimal Logic\nLet's trace `[10, 9, 2, 5, 3, 7, 101, 18]`:\n\n1.  **Num 10:** `tails` is empty. Append 10. `tails = [10]`\n2.  **Num 9:** 9 is smaller than 10. Replace 10. `tails = [9]` (A subsequence of length 1 ending in 9 is better than one ending in 10).\n3.  **Num 2:** 2 is smaller than 9. Replace 9. `tails = [2]`\n4.  **Num 5:** 5 is larger than 2. Append 5. `tails = [2, 5]`\n5.  **Num 3:** 3 is larger than 2 but smaller than 5. Replace 5. `tails = [2, 3]` (We now have a subsequence of length 2 ending in 3, which is better than ending in 5).\n6.  **Num 7:** 7 is larger than 3. Append 7. `tails = [2, 3, 7]`\n7.  **Num 101:** 101 is larger than 7. Append 101. `tails = [2, 3, 7, 101]`\n8.  **Num 18:** 18 is larger than 7 but smaller than 101. Replace 101. `tails = [2, 3, 7, 18]`\n\nFinal length is `len(tails)`, which is **4**.",
+            "reasoning_content": "**Analyzing the Requirements**\n\nI've started by internalizing the project's core need: a Python function to locate the Longest Increasing Subsequence within an integer array, as requested. The task demands both a basic and an advanced solution. I'm focusing on breaking down the problem's components.\n\n\n**Dissecting the Core Elements**\n\nI'm now fully immersed in dissecting the project's requirements. The key input and output are clearly defined. I'm focusing on the constraints, specifically the demand for both a straightforward and an efficient solution to the LIS problem. I am aiming to establish the scope of each method.\n\n\n",
+            "reasoning": "**Analyzing the Requirements**\n\nI've started by internalizing the project's core need: a Python function to locate the Longest Increasing Subsequence within an integer array, as requested. The task demands both a basic and an advanced solution. I'm focusing on breaking down the problem's components.\n\n\n**Dissecting the Core Elements**\n\nI'm now fully immersed in dissecting the project's requirements. The key input and output are clearly defined. I'm focusing on the constraints, specifically the demand for both a straightforward and an efficient solution to the LIS problem. I am aiming to establish the scope of each method.\n\n\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 1150,
+        "completion_tokens": 1338,
         "prompt_tokens": 30,
-        "total_tokens": 1180,
+        "total_tokens": 1368,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 143,
+          "reasoning_tokens": 148,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": null

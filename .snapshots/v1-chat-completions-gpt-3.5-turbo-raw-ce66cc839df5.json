@@ -1,5 +1,44 @@
 {
   "key": "v1-chat-completions-gpt-3.5-turbo-raw-ce66cc839df5",
+  "test": {
+    "name": "handles tool calling with gpt-3.5-turbo-raw",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-3.5-turbo-raw",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +46,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbf46cdae61ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 22:53:59 GMT",
-      "openai-processing-ms": "947",
+      "openai-processing-ms": "633",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=8yqMOuLDzTkGNnx5oX2s92VY7xhDgmgOXPtYkRo76rE-1770245639-1.0.1.1-d6gkE4yq0cYoiHvpAj9jWz7nGHF2y_98cf62cjrqeZJnpPSpES.1WF6vvBbPlk28S0tzO.1qSnDeVug.zqHD8UQXgrKQ537MFHrlnBLxv.E; path=/; expires=Wed, 04-Feb-26 23:23:59 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",4c7543fc80f255578722a8e9137e44cd,10.0.20.182,55444,68.185.245.236,,42464358465,1,1770245639.199,0.976,,.,0,0,0.000,0.975,-,0,0,826,268,134,10,34729,,,,,,-,",
-      "x-request-id": "req-ca26c96ed8dc2730761920f3"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-c7bb6d978c1bea966cb99274",
+      "id": "chatcmpl-19145006a705d97ed973989a",
       "object": "chat.completion",
-      "created": 1770245639,
+      "created": 1770393171,
       "model": "gpt-3.5-turbo-raw",
       "choices": [
         {
@@ -34,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "call_jQkkAoPxKLIwSDZMUiGHRuPK",
+                "id": "call_0Wjy7kVA95xsGubkP3y844w6",
                 "type": "function",
                 "function": {
                   "name": "getWeather",

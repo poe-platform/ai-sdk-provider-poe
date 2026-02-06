@@ -1,36 +1,52 @@
 {
   "key": "v1-responses-o3-mini-ae59bc87abf4",
+  "test": {
+    "name": "generates text with o3-mini",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "o3-mini",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbc46da2461ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:52:00 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=JZcRcZ_fxuBMWhWv4QsoWTdjztmrEyp60KZlFCCNTUc-1770245520-1.0.1.1-m0LMmMvpDJPmgkDd0TYnXt_Qwvj7xCf.HKxPL8aAX3fPMoWq6HRu_QHZLtloY2hGyvQPiqGCWd6CCZyZMNz9yjgmc_F3jS6vx2cigk4JG8I; path=/; expires=Wed, 04-Feb-26 23:22:00 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",f178b131746dbd04e0445068b3595183,10.0.20.182,32950,68.185.245.236,,42450806784,1,1770245520.933,5.568,,.,0,0,0.000,5.568,-,0,0,1437,216,108,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDkxMWQ2MmU0MmQyZmM4ODAxNjk4M2NkOGJjMTVjODE5MGEwODExN2RmYTVkYzdlM2Q=",
-      "created_at": 1770245515,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDJiYmMxNmZjYWQ0ODJjMDAxNjk4NjBkZDZjOGQ0ODFhMGE2OWI0Yjk2MjdkMGRiZjk=",
+      "created_at": 1770393046,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_0911d62e42d2fc88016983cd8f0f74819095bb513ac25c0153",
+          "id": "rs_02bbc16fcad482c00169860dd9f80481a0b52459810b1644e9",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0911d62e42d2fc88016983cd909dcc8190b87841e466267264",
+          "id": "msg_02bbc16fcad482c00169860dda7c1481a09d4d90a88be6d380",
           "content": [
             {
               "annotations": [],
@@ -65,18 +81,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 325,
+        "output_tokens": 261,
         "output_tokens_details": {
-          "reasoning_tokens": 320
+          "reasoning_tokens": 256
         },
-        "total_tokens": 338
+        "total_tokens": 274
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245520,
+      "completed_at": 1770393050,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

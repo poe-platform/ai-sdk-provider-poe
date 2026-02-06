@@ -1,40 +1,56 @@
 {
   "key": "v1-responses-gpt-5.2-instant-12f9931dcf08",
+  "test": {
+    "name": "generates text with gpt-5.2-instant",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.2-instant",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c948713c8ab1832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:39:00 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=zFys5kuvkjT45Rd7ZjJqDGJPnahNvtZ9wvfZ1ZKgNak-1770316740-1.0.1.1-eewfkJ62_N8S_O9rofNVFLZecs7wLh4egVKf_7pNQL7YwTPvRTh01RYovh6oDKxsqaZCjewL4U0UKuZNQE6Mt84bMmEt6_HMqxL3ku6jmVY; path=/; expires=Thu, 05-Feb-26 19:09:00 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",139c8b08e216345436b51b05480c2a6f,10.0.20.182,3950,68.185.245.236,,43034605852,1,1770316740.192,3.568,,.,0,0,0.000,3.567,-,0,0,1439,207,103,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDFkYTM2ZDg0NjE1MjYzZjAxNjk4NGUzYzBjOTk0ODE5NDkwYzQwMzY5ZjkwZjNhZjU=",
-      "created_at": 1770316736,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDRlNWQyMDdlNTYxYTE1NDAxNjk4NjBjZWJjYzE4ODE5MDg0ODEwZTJhNTFiNjRkODg=",
+      "created_at": 1770392811,
       "metadata": {},
       "model": "gpt-5.2-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_01da36d84615263f016984e3c128108194a0b207fd81b1bf8a",
+          "id": "rs_04e5d207e561a1540169860cec0d908190aac1b40cd82d84c5",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_01da36d84615263f016984e3c3e9cc8194bd0f99777a000c53",
+          "id": "msg_04e5d207e561a1540169860ceddb6481908d58885c960f08ca",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there friend",
+              "text": "Hello and welcome",
               "type": "output_text",
               "logprobs": []
             }
@@ -65,18 +81,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 159,
+        "output_tokens": 95,
         "output_tokens_details": {
-          "reasoning_tokens": 128
+          "reasoning_tokens": 64
         },
-        "total_tokens": 172
+        "total_tokens": 108
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316740,
+      "completed_at": 1770392815,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

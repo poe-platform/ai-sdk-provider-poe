@@ -1,5 +1,54 @@
 {
   "key": "v1-chat-completions-grok-4-c7595fafda42",
+  "test": {
+    "name": "generates structured output with xai/grok-4",
+    "file": "tests/integration/other.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-4",
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "ingredients": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "ingredients",
+              "steps"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          },
+          "strict": true,
+          "name": "response"
+        }
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Parse this recipe:\n\nBanana Smoothie\n\nIngredients:\n- 2 bananas\n- 1 cup milk\n- 1 tbsp honey\n\nSteps:\n1. Peel bananas\n2. Blend all ingredients\n3. Serve cold"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +56,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9b89f8ad9edd6d-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Fri, 06 Feb 2026 15:04:22 GMT",
-      "openai-processing-ms": "7360",
+      "openai-processing-ms": "10490",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=3nMM6cRQwSt9fRH3UNCxc9SDE5zqRYLZbyTAk3Fy0R0-1770390262-1.0.1.1-CFDF7_9Nj0.85msCSipDJPT3EPlOhhIkc04y.d2E6GFXULryXkvUjWh7HzaA5O0d6CBL.1fAXT62f09zgBaRTkRkgCfwLXRuB.ce0KXpwDU; path=/; expires=Fri, 06-Feb-26 15:34:22 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",98b8015692adeb097a291eade0fc2105,10.0.2.237,39572,68.185.245.236,,43589062497,1,1770390262.863,7.363,,.,0,0,0.000,7.363,-,0,0,1036,873,436,10,34729,,,,,,-,",
-      "x-request-id": "req-11eca075e9d8ddebcbe23d7c"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-60e79ef1df1c9fb936553332",
+      "id": "chatcmpl-e372fa74414fb94cfe38c59c",
       "object": "chat.completion",
-      "created": 1770390262,
+      "created": 1770392840,
       "model": "grok-4",
       "choices": [
         {
@@ -43,12 +87,12 @@
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 316,
+          "reasoning_tokens": 327,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 836
+          "cached_tokens": 686
         }
       }
     }

@@ -1,40 +1,56 @@
 {
   "key": "v1-responses-gpt-5.2-codex-fd1da107ccf5",
+  "test": {
+    "name": "generates text with gpt-5.2-codex",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.2-codex",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c948734b8f61832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:39:03 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=R8WECGY6cPxkpGP89oBTYYuXp9SwmMgBAk0.ZSJxRq8-1770316743-1.0.1.1-xjOeVNCZIOLEuPVmfH4cWUMQNOwMJV9kTBf4YyCdt0ouRowv_1lg5sLMMUcv.JsSQ_IH76Km5MokXnLUc8pKyD01wCNgqt9zwnkQKyPx4O4; path=/; expires=Thu, 05-Feb-26 19:09:03 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",79bad1fc2dd10a77d251adc3f933f3e5,10.0.20.182,55252,68.185.245.236,,18109793319,1,1770316743.325,1.414,,.,0,0,0.001,1.415,-,0,0,1429,77,38,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDc3YjI1YTRhN2E1MDc4YjAxNjk4NGUzYzYwZDA4ODFhM2E2YTA1NmYyNTI0YWJmODI=",
-      "created_at": 1770316742,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGJkZTAxOTFiNzZiNGQ5NTAxNjk4NjBjZjQwOTgwODFhMTgzNTZkNDFlZWI3ZGI2NzY=",
+      "created_at": 1770392820,
       "metadata": {},
       "model": "gpt-5.2-codex",
       "object": "response",
       "output": [
         {
-          "id": "rs_077b25a4a7a5078b016984e3c6678881a3b7f448c540bd3d17",
+          "id": "rs_0bde0191b76b4d950169860cf45b1881a1928728d1a5845d64",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_077b25a4a7a5078b016984e3c6d4c081a3af9cfe5287177f8d",
+          "id": "msg_0bde0191b76b4d950169860cf4a5bc81a198b745d72a64ac44",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there friend",
+              "text": "Hello to you",
               "type": "output_text",
               "logprobs": []
             }
@@ -65,18 +81,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 30,
+        "output_tokens": 23,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 43
+        "total_tokens": 36
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316743,
+      "completed_at": 1770392820,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

@@ -1,31 +1,47 @@
 {
   "key": "v1-responses-gpt-5.2-1b51fb758671",
+  "test": {
+    "name": "generates text with gpt-5.2",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.2",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c94869d1d271832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:38:38 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=YRbY4gbo3E7VXdxDnsv8A5u02Rd3Rqyvnc40CKdBVCc-1770316718-1.0.1.1-MWkCYvkc9N_YkbmUthRAOfgX.GJOJwEkah2PUF62cIHmw5C76snr06hEfC1K5Nx1fgLbShEmEL_tqqSZr96DWQ9WFuGj9GjgjHhNijxUAkE; path=/; expires=Thu, 05-Feb-26 19:08:38 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",686bf6a357db2ccfa3cf5afa6087868e,10.0.20.182,21756,68.185.245.236,,43034452147,1,1770316718.584,0.876,,.,0,0,0.001,0.877,-,0,0,1324,273,136,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk4M2VlNDNmNGQwYjViMDAxNjk4NGUzYWRkNjc0ODE5N2FmYzlhNzRhNjI5MzhkMGU=",
-      "created_at": 1770316717,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM3MmNiYjQzMWIyNDI4MzAxNjk4NjBjZDk5NTE0ODE5Njg1ZDM3NjcxNjc5YWM3OTg=",
+      "created_at": 1770392793,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_0983ee43f4d0b5b0016984e3ae425c81979ff34ea508291923",
+          "id": "msg_0c72cbb431b242830169860cdb184481969432ebfda775d928",
           "content": [
             {
               "annotations": [],
@@ -71,7 +87,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316718,
+      "completed_at": 1770392795,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

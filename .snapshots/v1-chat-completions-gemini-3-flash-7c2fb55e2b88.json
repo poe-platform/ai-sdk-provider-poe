@@ -1,5 +1,44 @@
 {
   "key": "v1-chat-completions-gemini-3-flash-7c2fb55e2b88",
+  "test": {
+    "name": "handles tool calling with gemini-3-flash",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,24 +46,19 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8e0b307af90558-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 23:45:48 GMT",
-      "openai-processing-ms": "1317",
+      "openai-processing-ms": "1108",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=opk_wKVCDWlRR4YJ11PUiVK7srCGyA8oamsUmLv4f6Q-1770248748-1.0.1.1-i3p6hF7doMV3GBssLT5FHP7p3Ic9HanO.x5tGvxX7FyU1kyfnyHGmmXM3CNkJ3D_vd11oczv03voGufRCDhu12y0t.TMykEJgDTJ48tgKlg; path=/; expires=Thu, 05-Feb-26 00:15:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",1bea9bfda30310ba7be76f7d000e0e4b,10.0.20.182,14518,68.185.245.236,,42476169759,1,1770248748.932,1.320,,.,0,0,0.000,1.319,-,0,0,1001,203,101,10,34729,,,,,,-,",
-      "x-request-id": "req-d844fb1fb49c766263bdfc10"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5670c1ca08f7745f89d84a6b",
+      "id": "chatcmpl-539533973c123717786d5d48",
       "object": "chat.completion",
-      "created": 1770248748,
+      "created": 1770392935,
       "model": "gemini-3-flash",
       "choices": [
         {
@@ -34,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "tool_getWeather_Hc76S7wvyk1OT6X9HvpW",
+                "id": "tool_getWeather_2VuMDSSYYR1xYo5Y4itp",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -42,7 +76,7 @@
                 },
                 "extra_content": {
                   "google": {
-                    "thought_signature": "CiEBjz1rX+9bSZrMl+M+UlD3JYcvxLc2JADTpaZkpU7jVkE="
+                    "thought_signature": "CiEBjz1rX/ZGX2IDT3g2q9WRFmJM3usdKzgx83KJ4Kdxnk0="
                   }
                 }
               }

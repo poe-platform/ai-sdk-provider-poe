@@ -1,31 +1,47 @@
 {
   "key": "v1-responses-gpt-5.2-pro-9f10c03f1c95",
+  "test": {
+    "name": "generates text with gpt-5.2-pro",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.2-pro",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c9486ac39b81832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Thu, 05 Feb 2026 18:38:48 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=.6Ygq08HGiYsZed_lGCao5MuY2H9pKvTFjicSX4O9QA-1770316728-1.0.1.1-WAXD6evFrLk4HTECX7YTrOyzzoI_Yq4rUU9uM3TL9iU3ClCY.nlltAMw6ieXOYqirj4w2.HS4no9GrOOGPH_N3NyyEKa5BRyQmkaes0BVPU; path=/; expires=Thu, 05-Feb-26 19:08:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",df15fb8509c6b191fbfd3f080109f82b,10.0.20.182,1084,68.185.245.236,,18109614434,1,1770316728.154,8.092,,.,0,0,0.000,8.092,-,0,0,1330,74,37,10,34729,,,,,,-,"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDljNWM4YTk5YjI5ODhlZTAxNjk4NGUzYjAzMTM0ODE5Zjg0MDJiZmVmZThjYzAwNDY=",
-      "created_at": 1770316720,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGI5YjFjZDc4NTliM2RmZjAxNjk4NjBjZGQzNjU4ODE5Nzg5ZjllNWI1YjhkNmZjZGM=",
+      "created_at": 1770392797,
       "metadata": {},
       "model": "gpt-5.2-pro-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_09c5c8a99b2988ee016984e3b7feb0819f92bd683b48d5a07e",
+          "id": "msg_0b9b1cd7859b3dff0169860ce489f08197b1bd26c9bc0623f7",
           "content": [
             {
               "annotations": [],
@@ -71,7 +87,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770316728,
+      "completed_at": 1770392804,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

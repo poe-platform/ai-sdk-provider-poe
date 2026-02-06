@@ -1,5 +1,20 @@
 {
   "key": "v1-chat-completions-gpt-3.5-turbo-9ecfed75b326",
+  "test": {
+    "name": "generates text with gpt-3.5-turbo",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
   "response": {
     "status": 200,
     "headers": {
@@ -7,31 +22,26 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8dbf38b99561ed-ORD",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "date": "Wed, 04 Feb 2026 22:53:56 GMT",
-      "openai-processing-ms": "640",
+      "openai-processing-ms": "1042",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=qNM77px7393ColwNJ_13BCx8NAyTWge8xKqTvQyCA7c-1770245636-1.0.1.1-S3tdPRmd3dwUYvQhk4iSbJlZvKFzENr7XJjy12Cx0wFHQJtH5eXIJ.IZJ3f4qQbniPmXGajhOz_JPUkEDaxmpegicBzt_FpHpS1Lx5x5S9A; path=/; expires=Wed, 04-Feb-26 23:23:56 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked",
-      "x-q-stat": ",28fd2acea3e02910d8bcabf7241cb8d2,10.0.20.182,38874,68.185.245.236,,42395967443,1,1770245636.620,0.643,,.,0,0,0.000,0.643,-,0,0,889,102,51,10,34729,,,,,,-,",
-      "x-request-id": "req-6d5c8b9701d4f9d4820b0c94"
+      "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-4a89466c8bc1dbf59610b7d4",
+      "id": "chatcmpl-82a3b3e56e0015396e812afa",
       "object": "chat.completion",
-      "created": 1770245636,
+      "created": 1770393168,
       "model": "gpt-3.5-turbo",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there friend!"
+            "content": "Hello there friend."
           },
           "finish_reason": "stop"
         }
