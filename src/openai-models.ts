@@ -24,20 +24,20 @@ export const OPENAI_MODELS: Record<string, OpenAIModelDef> = {
 
   // GPT-5
   "gpt-5":              {},
-  "gpt-5-pro":          { timeout: 300_000 },
+  "gpt-5-pro":          { tags: ["timeout:image"] },
   "gpt-5-mini":         {},
   "gpt-5-nano":         {},
   "gpt-5-chat":         {},
   "gpt-5-codex":        {},
 
   // O-series
-  "o4-mini":            { reasoning: true },
-  "o3":                 { reasoning: true },
-  "o3-pro":             { reasoning: true },
-  "o3-mini":            { reasoning: true },
-  "o3-mini-high":       { reasoning: true },
-  "o1":                 { reasoning: true },
-  "o1-pro":             { reasoning: true },
+  "o4-mini":            { reasoning: true, tags: ["timeout:reasoning"] },
+  "o3":                 { reasoning: true, tags: ["timeout:reasoning"] },
+  "o3-pro":             { reasoning: true, tags: ["timeout:reasoning"] },
+  "o3-mini":            { reasoning: true, tags: ["timeout:reasoning"] },
+  "o3-mini-high":       { reasoning: true, tags: ["timeout:reasoning"] },
+  "o1":                 { reasoning: true, tags: ["timeout:reasoning"] },
+  "o1-pro":             { reasoning: true, tags: ["timeout:reasoning"] },
   "o4-mini-deep-research": { skip: "takes too long" },
   "o3-deep-research":      { skip: "takes too long" },
 
@@ -63,10 +63,10 @@ export const OPENAI_MODELS: Record<string, OpenAIModelDef> = {
   "gpt-3.5-turbo-instruct":  { route: "chat", tools: false },
 
   // Multimedia — chat completions only
-  "gpt-image-1.5":     { route: "chat", tools: false },
-  "gpt-image-1":       { route: "chat", tools: false },
-  "gpt-image-1-mini":  { route: "chat", tools: false },
-  "dall-e-3":          { route: "chat", tools: false },
-  "sora-2":            { route: "chat", tools: false },
-  "sora-2-pro":        { route: "chat", tools: false, timeout: 300_000 },
+  "gpt-image-1.5":     { route: "chat", tools: false, tags: ["timeout:image"] },
+  "gpt-image-1":       { route: "chat", tools: false, tags: ["timeout:image"] },
+  "gpt-image-1-mini":  { route: "chat", tools: false, tags: ["timeout:image"] },
+  "dall-e-3":          { route: "chat", tools: false, tags: ["timeout:image"] },
+  "sora-2":            { route: "chat", tools: false, tags: ["timeout:video"] },
+  "sora-2-pro":        { route: "chat", tools: false, tags: ["timeout:video"] },
 };
