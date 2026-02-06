@@ -82,4 +82,26 @@ describe("openai provider", () => {
 
     expect(text).toBeTruthy();
   });
+
+  it("handles vision with gpt-5.2 via URL", async () => {
+    const { text } = await generateText({
+      model: poe("openai/gpt-5.2"),
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: "What is on this image? Be brief." },
+            {
+              type: "image",
+              image: new URL(
+                "https://raw.githubusercontent.com/poe-platform/ai-sdk-provider-poe/refs/heads/main/tests/fixtures/banner.jpg"
+              ),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(text).toBeTruthy();
+  });
 });

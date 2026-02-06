@@ -1,0 +1,101 @@
+{
+  "key": "v1-responses-gpt-5.2-c9518ecc3e33",
+  "test": {
+    "name": "handles vision with gpt-5.2 via URL",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.2",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "What is on this image? Be brief."
+            },
+            {
+              "type": "input_image",
+              "image_url": "https://raw.githubusercontent.com/poe-platform/ai-sdk-provider-poe/refs/heads/main/tests/fixtures/banner.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDhhNWIyOGQ0NDZjNWYwZTAxNjk4NjU1ZDYwY2Y4ODE5ZmIzZjBjMDQwY2ZkNjA3NGQ=",
+      "created_at": 1770411478,
+      "metadata": {},
+      "model": "gpt-5.2-2025-12-11",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_08a5b28d446c5f0e01698655d6d174819f93d44829e1a825db",
+          "content": [
+            {
+              "annotations": [],
+              "text": "A Poe promotional banner announcing “Now available: Claude Opus 4.6,” showing several AI app icons (e.g., GPT-5.2 Codex, Gemini, Kimi, Runway, Grok, ElevenLabs) and “poe.com.”",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 0.98,
+      "reasoning": {
+        "effort": "none"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 1825,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 58,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1883
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770411480,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}
