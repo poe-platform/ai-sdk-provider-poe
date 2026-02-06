@@ -1,0 +1,14 @@
+^\.git/
+^node_modules/
+^dist/
+^build/
+^\.build-types-tmp/
+^\.env
+^logs/
+^\.idea/
+^\.vscode/
+^\.DS_Store
+^\.claude/
+^\.agents/
+^\.poe-code-ralph/
+^coverage/
