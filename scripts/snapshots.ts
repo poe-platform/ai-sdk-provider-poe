@@ -10,7 +10,7 @@ import {
 const MAX_AGE_MS = 10 * 60 * 1000;
 
 function resolveSnapshotDir(): string {
-  return process.env.POE_SNAPSHOT_DIR?.trim() || "__snapshots__";
+  return process.env.POE_SNAPSHOT_DIR?.trim() || ".snapshots";
 }
 
 async function loadAccessedKeys(snapshotDir: string): Promise<Set<string>> {

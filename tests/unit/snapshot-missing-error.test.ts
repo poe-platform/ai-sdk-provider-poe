@@ -39,7 +39,7 @@ describe("snapshot fetch overrides", () => {
     try {
       const snapshotFetch = createSnapshotFetch({
         mode: "playback",
-        snapshotDir: "__snapshots__/__missing__",
+        snapshotDir: ".snapshots/__missing__",
         onMiss: "error"
       });
 
@@ -66,7 +66,7 @@ describe("snapshot fetch overrides", () => {
     try {
       const snapshotFetch = createSnapshotFetch({
         mode: "playback",
-        snapshotDir: "__snapshots__/__missing__",
+        snapshotDir: ".snapshots/__missing__",
         onMiss: "error"
       });
 
@@ -86,7 +86,7 @@ describe("snapshot fetch overrides", () => {
   it("clearAllOverrides reverts to config defaults", async () => {
     const snapshotFetch = createSnapshotFetch({
       mode: "playback",
-      snapshotDir: "__snapshots__/__missing__",
+      snapshotDir: ".snapshots/__missing__",
       onMiss: "error"
     });
 
@@ -117,7 +117,7 @@ describe("SnapshotMissingError", () => {
 
     const snapshotFetch = createSnapshotFetch({
       mode: "playback",
-      snapshotDir: "__snapshots__/__missing__",
+      snapshotDir: ".snapshots/__missing__",
       onMiss: "error"
     });
 
@@ -145,7 +145,7 @@ describe("SnapshotMissingError", () => {
     try {
       const snapshotFetch = createSnapshotFetch({
         mode: "playback",
-        snapshotDir: "__snapshots__/__missing__",
+        snapshotDir: ".snapshots/__missing__",
         onMiss: "error"
       });
 

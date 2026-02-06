@@ -63,10 +63,6 @@ async function testCaching(modelId: string) {
   const secondMeta = second.providerMetadata?.anthropic as Record<string, number> | undefined;
   const thirdMeta = third.providerMetadata?.anthropic as Record<string, number> | undefined;
 
-  console.log(`${modelId} - First call metadata:`, firstMeta);
-  console.log(`${modelId} - Second call metadata:`, secondMeta);
-  console.log(`${modelId} - Third call metadata:`, thirdMeta);
-
   // First call should create cache (cacheCreationInputTokens > 0)
   if (firstMeta?.cacheCreationInputTokens !== undefined) {
     expect(firstMeta.cacheCreationInputTokens).toBeGreaterThan(0);

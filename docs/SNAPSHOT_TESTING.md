@@ -10,7 +10,7 @@ tests against the live Poe API.
 test code
   -> createPoe({ fetch: getSnapshotFetch() })
      -> SnapshotFetch intercepts every HTTP call
-        record mode  -> real fetch, save JSON to __snapshots__/
+        record mode  -> real fetch, save JSON to .snapshots/
         playback mode -> load JSON, return synthetic Response
 ```
 
@@ -59,7 +59,7 @@ The global setup file:
 | Variable             | Values                          | Default      |
 |----------------------|---------------------------------|--------------|
 | `POE_SNAPSHOT_MODE`  | `record`, `playback`            | `playback`   |
-| `POE_SNAPSHOT_DIR`   | directory path                  | `__snapshots__` |
+| `POE_SNAPSHOT_DIR`   | directory path                  | `.snapshots` |
 | `POE_SNAPSHOT_MISS`  | `error`, `warn`, `passthrough`  | `error`      |
 | `RELEASE_STAGE`      | `stable`, `beta`, `alpha`       | `alpha` via `npm test` |
 
@@ -176,7 +176,7 @@ RELEASE_STAGE=alpha npx vitest --tag snapshot:record --run
 
 The test is skipped in stable/beta and only runs when the stage allows it.
 
-Snapshots are saved to `__snapshots__/`. Both the test file and its snapshots
+Snapshots are saved to `.snapshots/`. Both the test file and its snapshots
 must be committed together.
 
 ## Missing snapshot behavior
@@ -217,7 +217,7 @@ tests/
     *.test.ts                   # integration tests
   unit/
     *.test.ts                   # unit tests (mock fetch, no snapshots)
-__snapshots__/
+.snapshots/
   *.json                        # recorded HTTP snapshots
   .accessed-keys.json           # keys accessed in last test run
 ```

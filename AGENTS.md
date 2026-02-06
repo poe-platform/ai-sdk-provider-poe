@@ -12,10 +12,10 @@ Integration test must use snapshot testing
 
 - Add test to tests/integration/other.test.ts (or create new file depending on provider)
 - Use poe("provider/model-name") or poe("model-name") for chat/completions with getSnapshotFetch()
-- Record
+- Record - choose either, you don't need both
   - Preferred: Individual tests via vitest `tags: ["snapshot:record"]`
   - Full test file: `POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/other.test.ts`
-- Snapshots saved to __snapshots__/ check contents
+- Snapshots saved to .snapshots/ check contents
 - Playback happens automatically on normal npm test.
 - You must commit both test and snapshots when done, snapshots are inseparable
 - Use `tags: ["stage:alpha"]` or `tags: ["stage:beta"]` to gate tests by release stage
