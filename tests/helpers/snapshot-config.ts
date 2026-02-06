@@ -1,5 +1,5 @@
 export type SnapshotMode = "record" | "playback";
-export type SnapshotMissBehavior = "error" | "warn" | "passthrough";
+export type SnapshotMissBehavior = "error" | "warn" | "passthrough" | "record";
 
 /** Vitest tags that override snapshot env variables per-test. */
 export const SNAPSHOT_TAGS = {
@@ -9,6 +9,8 @@ export const SNAPSHOT_TAGS = {
   "snapshot:miss-warn": { onMiss: "warn" as SnapshotMissBehavior },
   /** POE_SNAPSHOT_MISS=passthrough */
   "snapshot:miss-passthrough": { onMiss: "passthrough" as SnapshotMissBehavior },
+  /** POE_SNAPSHOT_MISS=record */
+  "snapshot:miss-record": { onMiss: "record" as SnapshotMissBehavior },
 } as const;
 
 export type SnapshotTag = keyof typeof SNAPSHOT_TAGS;
@@ -51,7 +53,7 @@ function parseSnapshotMode(value: string | undefined): SnapshotMode {
 
 function parseSnapshotMiss(value: string | undefined): SnapshotMissBehavior | undefined {
   const trimmed = value?.trim();
-  if (trimmed === "error" || trimmed === "warn" || trimmed === "passthrough") {
+  if (trimmed === "error" || trimmed === "warn" || trimmed === "passthrough" || trimmed === "record") {
     return trimmed;
   }
   return undefined;

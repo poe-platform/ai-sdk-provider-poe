@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { join, dirname } from "node:path";
 import * as fs from "node:fs/promises";
+import { getCurrentTest } from "@vitest/runner";
 import type { SnapshotMode, SnapshotMissBehavior } from "./snapshot-config.js";
 
 export interface SnapshotFetchOptions {
@@ -10,8 +11,17 @@ export interface SnapshotFetchOptions {
   now?: () => Date;
 }
 
+export interface TestContext {
+  name: string;
+  file: string;
+}
+
 export interface FetchSnapshot {
   key: string;
+  test?: TestContext;
+  request?: {
+    body: unknown;
+  };
   response: {
     status: number;
     headers: Record<string, string>;
@@ -19,6 +29,19 @@ export interface FetchSnapshot {
     chunks?: string[];
   };
 }
+
+/** Response headers that should be stripped from snapshots for security/privacy reasons */
+const SANITIZED_RESPONSE_HEADERS = new Set([
+  "set-cookie",
+  "x-q-stat",
+  "cf-ray",
+  "x-request-id",
+  "date",
+]);
+
+/** Set to "true" to disable response header sanitization. Use with caution. */
+const DANGEROUSLY_ALLOW_SENSITIVE_HEADERS =
+  process.env.POE_DANGEROUSLY_ALLOW_SENSITIVE_HEADERS === "true";
 
 export class SnapshotMissingError extends Error {
   constructor(message: string) {
@@ -109,6 +132,7 @@ async function recordSnapshot(
   isStreaming: boolean
 ): Promise<Response> {
   const response = await fetch(input, init);
+  const requestBody = init?.body ? JSON.parse(init.body as string) : null;
 
   let responseBody: unknown;
   let chunks: string[] | undefined;
@@ -129,11 +153,27 @@ async function recordSnapshot(
     responseBody = await response.clone().json();
   }
 
+  const sanitizedResponseHeaders = DANGEROUSLY_ALLOW_SENSITIVE_HEADERS
+    ? Object.fromEntries(response.headers.entries())
+    : Object.fromEntries(
+        [...response.headers.entries()].filter(([k]) => !SANITIZED_RESPONSE_HEADERS.has(k.toLowerCase()))
+      );
+
+  const test = getCurrentTest();
+  const testContext: TestContext | undefined = test ? {
+    name: test.name,
+    file: test.file?.name?.replace(/^.*[/\\]tests[/\\]/, "tests/") ?? "unknown",
+  } : undefined;
+
   const snapshot: FetchSnapshot = {
     key,
+    ...(testContext && { test: testContext }),
+    request: {
+      body: requestBody,
+    },
     response: {
       status: response.status,
-      headers: Object.fromEntries(response.headers.entries()),
+      headers: sanitizedResponseHeaders,
       body: responseBody,
       chunks
     },
@@ -170,7 +210,7 @@ async function playbackSnapshot(
     snapshot = JSON.parse(raw);
   } catch (error) {
     if (isNotFound(error)) {
-      return handleMiss(input, init, key, options);
+      return handleMiss(input, init, snapshotPath, key, options, isStreaming);
     }
     throw error;
   }
@@ -191,10 +231,24 @@ async function playbackSnapshot(
 async function handleMiss(
   input: RequestInfo | URL,
   init: RequestInit | undefined,
+  snapshotPath: string,
   key: string,
-  options: SnapshotFetchOptions
+  options: SnapshotFetchOptions,
+  isStreaming: boolean
 ): Promise<Response> {
+  if (options.onMiss === "record") {
+    const test = getCurrentTest();
+    const testInfo = test ? ` [${test.name}]` : "";
+    console.log(`Recording missing snapshot: ${key}${testInfo}`);
+    return recordSnapshot(input, init, snapshotPath, key, options, isStreaming);
+  }
+
   if (options.onMiss === "error") {
+    const test = getCurrentTest();
+    const testInfo = test
+      ? `\nTest: ${test.name}\nFile: ${test.file?.name ?? "unknown"}\n`
+      : "";
+
     const recordCommand = getRecordCommandFromCurrentInvocation();
     const recordHints: string[] = [];
 
@@ -212,13 +266,15 @@ async function handleMiss(
     }
 
     throw new SnapshotMissingError(
-      `Snapshot not found: ${key}\n\nTo record it, re-run your test with:\n  ${recordHints.join(
+      `Snapshot not found: ${key}${testInfo}\nTo record it, re-run your test with:\n  ${recordHints.join(
         "\n  "
       )}\n`
     );
   }
   if (options.onMiss === "warn") {
-    console.warn(`Snapshot not found: ${key}; falling back to live call.`);
+    const test = getCurrentTest();
+    const testInfo = test ? ` [${test.name}]` : "";
+    console.warn(`Snapshot not found: ${key}${testInfo}; falling back to live call.`);
   }
   return fetch(input, init);
 }
