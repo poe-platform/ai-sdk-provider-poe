@@ -1,9 +1,14 @@
 import { describe, it, expect } from "vitest";
 import { generateText, tool } from "ai";
 import { z } from "zod";
+import { readFileSync } from "fs";
 import { createPoe } from "../../src/poe-provider.js";
 import { OPENAI_MODELS } from "../../src/openai-models.js";
 import { getSnapshotFetch } from "../helpers/index.js";
+
+const bannerImage = readFileSync(
+  new URL("../fixtures/banner.jpg", import.meta.url)
+);
 
 const poe = createPoe({
   fetch: getSnapshotFetch(),
@@ -60,4 +65,21 @@ describe("openai provider", () => {
       }
     });
   }
+
+  it("handles vision with gpt-5.2", async () => {
+    const { text } = await generateText({
+      model: poe("openai/gpt-5.2"),
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: "What is on this image? Be brief." },
+            { type: "image", image: bannerImage },
+          ],
+        },
+      ],
+    });
+
+    expect(text).toBeTruthy();
+  });
 });
