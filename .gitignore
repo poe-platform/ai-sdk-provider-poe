@@ -1,3 +1,6 @@
+# Agent Instructions
+# - keep in sync with .trufflehogignore
+
 # Dependencies
 node_modules/
 

@@ -27,7 +27,9 @@
     "verify-model": "tsx scripts/verify-model.ts",
     "verify-model:stable": "RELEASE_STAGE=stable tsx scripts/verify-model.ts",
     "verify-model:beta": "RELEASE_STAGE=beta tsx scripts/verify-model.ts",
-    "verify-model:alpha": "RELEASE_STAGE=alpha tsx scripts/verify-model.ts"
+    "verify-model:alpha": "RELEASE_STAGE=alpha tsx scripts/verify-model.ts",
+    "prepare": "husky",
+    "secrets": "trufflehog filesystem . --no-update --fail --exclude-paths=.trufflehogignore"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.37",
@@ -41,6 +43,7 @@
     "commander": "^12.0.0",
     "dotenv": "^17.2.3",
     "esbuild": "^0.27.2",
+    "husky": "^9.1.7",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0",
     "vitest": "^4.1.0-beta.3"
