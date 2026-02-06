@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-grok-4-c7595fafda42",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9b89f8ad9edd6d-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Fri, 06 Feb 2026 15:04:22 GMT",
+      "openai-processing-ms": "7360",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=3nMM6cRQwSt9fRH3UNCxc9SDE5zqRYLZbyTAk3Fy0R0-1770390262-1.0.1.1-CFDF7_9Nj0.85msCSipDJPT3EPlOhhIkc04y.d2E6GFXULryXkvUjWh7HzaA5O0d6CBL.1fAXT62f09zgBaRTkRkgCfwLXRuB.ce0KXpwDU; path=/; expires=Fri, 06-Feb-26 15:34:22 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",98b8015692adeb097a291eade0fc2105,10.0.2.237,39572,68.185.245.236,,43589062497,1,1770390262.863,7.363,,.,0,0,0.000,7.363,-,0,0,1036,873,436,10,34729,,,,,,-,",
+      "x-request-id": "req-11eca075e9d8ddebcbe23d7c"
+    },
+    "body": {
+      "id": "chatcmpl-60e79ef1df1c9fb936553332",
+      "object": "chat.completion",
+      "created": 1770390262,
+      "model": "grok-4",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": " {\"name\":\"Banana Smoothie\",\"ingredients\":[\"2 bananas\",\"1 cup milk\",\"1 tbsp honey\"],\"steps\":[\"Peel bananas\",\"Blend all ingredients\",\"Serve cold\"]}"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 32,
+        "prompt_tokens": 837,
+        "total_tokens": 869,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 316,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 836
+        }
+      }
+    }
+  }
+}

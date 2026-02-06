@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { generateText, tool } from "ai";
+import { generateText, Output, tool } from "ai";
 import { z } from "zod";
 import { createPoe } from "../../src/poe-provider.js";
 import { getSnapshotFetch } from "../helpers/index.js";
@@ -68,5 +68,35 @@ describe("models without prefix (chat completions)", () => {
     expect(text).toBeTruthy();
     expect(text).toContain("def");
     expect(usage.outputTokens).toBeGreaterThan(1);
+  });
+
+  it("generates structured output with xai/grok-4", async () => {
+    const { output } = await generateText({
+      model: poe("xai/grok-4"),
+      prompt: `Parse this recipe:
+
+Banana Smoothie
+
+Ingredients:
+- 2 bananas
+- 1 cup milk
+- 1 tbsp honey
+
+Steps:
+1. Peel bananas
+2. Blend all ingredients
+3. Serve cold`,
+      output: Output.object({
+        schema: z.object({
+          name: z.string(),
+          ingredients: z.array(z.string()),
+          steps: z.array(z.string()),
+        }),
+      }),
+    });
+
+    expect(output!.name).toBe("Banana Smoothie");
+    expect(output!.ingredients).toEqual(["2 bananas", "1 cup milk", "1 tbsp honey"]);
+    expect(output!.steps).toEqual(["Peel bananas", "Blend all ingredients", "Serve cold"]);
   });
 });
