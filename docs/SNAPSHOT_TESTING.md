@@ -29,6 +29,9 @@ For example: `v1-chat-completions-Kimi-K2.5-a1b2c3d4e5f6.json`
 ```json
 {
   "key": "v1-chat-completions-Kimi-K2.5-a1b2c3d4e5f6",
+  "request": {
+    "body": { "model": "Kimi-K2.5", "messages": [...] }
+  },
   "response": {
     "status": 200,
     "headers": { "content-type": "application/json" },
@@ -38,8 +41,19 @@ For example: `v1-chat-completions-Kimi-K2.5-a1b2c3d4e5f6.json`
 }
 ```
 
-`body` is set for non-streaming responses. `chunks` is set for streaming
-(`stream: true`) responses. Both are mutually exclusive.
+- `request.body` contains the parsed request body for debugging
+- `response.body` is set for non-streaming responses
+- `response.chunks` is set for streaming (`stream: true`) responses
+- `body` and `chunks` are mutually exclusive
+
+### Header sanitization
+
+Security-sensitive response headers (cookies, request IDs, etc.) are stripped
+from snapshots by default. To include all headers for debugging:
+
+```sh
+POE_DANGEROUSLY_ALLOW_SENSITIVE_HEADERS=true POE_SNAPSHOT_MODE=record npm test
+```
 
 ### Test setup (`tests/setup.ts`)
 
@@ -56,12 +70,13 @@ The global setup file:
 
 ### Environment variables
 
-| Variable             | Values                          | Default      |
-|----------------------|---------------------------------|--------------|
-| `POE_SNAPSHOT_MODE`  | `record`, `playback`            | `playback`   |
-| `POE_SNAPSHOT_DIR`   | directory path                  | `.snapshots` |
-| `POE_SNAPSHOT_MISS`  | `error`, `warn`, `passthrough`  | `error`      |
-| `RELEASE_STAGE`      | `stable`, `beta`, `alpha`       | `alpha` via `npm test` |
+| Variable                                 | Values                                   | Default      |
+|------------------------------------------|------------------------------------------|--------------|
+| `POE_SNAPSHOT_MODE`                      | `record`, `playback`                     | `playback`   |
+| `POE_SNAPSHOT_DIR`                       | directory path                           | `.snapshots` |
+| `POE_SNAPSHOT_MISS`                      | `error`, `warn`, `passthrough`, `record` | `error`      |
+| `POE_DANGEROUSLY_ALLOW_SENSITIVE_HEADERS`| `true`                                   | *(unset)*    |
+| `RELEASE_STAGE`                          | `stable`, `beta`, `alpha`                | `alpha` via `npm test` |
 
 ### Vitest tags
 
@@ -77,9 +92,11 @@ Control snapshot recording/miss behavior per-test:
 | `snapshot:record`           | `POE_SNAPSHOT_MODE=record`         |
 | `snapshot:miss-warn`        | `POE_SNAPSHOT_MISS=warn`           |
 | `snapshot:miss-passthrough` | `POE_SNAPSHOT_MISS=passthrough`    |
+| `snapshot:miss-record`      | `POE_SNAPSHOT_MISS=record`         |
 
 `snapshot:record` sets record mode for the test (real API key, save response).
-It does **not** auto-skip — use a stage tag to gate when the test runs.
+`snapshot:miss-record` plays back existing snapshots but records missing ones.
+Neither auto-skips — use a stage tag to gate when the test runs.
 
 #### Stage tags
 
@@ -93,6 +110,15 @@ Gate tests by release stage (`RELEASE_STAGE` env variable):
 
 Stage hierarchy: `stable` < `beta` < `alpha`. A test tagged `stage:beta` runs
 in beta and alpha but is skipped in stable.
+
+#### Timeout tags
+
+Extended timeouts for slow operations:
+
+| Tag              | Timeout   | Use case          |
+|------------------|-----------|-------------------|
+| `timeout:image`  | 5 minutes | Image generation  |
+| `timeout:video`  | 10 minutes| Video generation  |
 
 There are two complementary stage gating mechanisms:
 
@@ -144,16 +170,12 @@ truth for snapshot tag effects. Stage tags are handled directly in `setup.ts`.
 
 ## Recording snapshots
 
-### Option 1: env variable (all tests in a file)
+Choose **one** method — do not combine env variable with tags.
 
-```sh
-POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/google.test.ts
-```
+### Option 1: per-test tags (preferred for individual tests)
 
-### Option 2: per-test tags
-
-Combine a stage tag with `snapshot:record`. The stage tag gates *when* the test
-runs, and `snapshot:record` enables recording mode:
+Use `snapshot:record` tag to record a single test. Combine with a stage tag to
+gate when the test runs:
 
 ```ts
 it("generates text with Nano-Banana", {
@@ -175,6 +197,19 @@ RELEASE_STAGE=alpha npx vitest --tag snapshot:record --run
 ```
 
 The test is skipped in stable/beta and only runs when the stage allows it.
+After recording, remove the `snapshot:record` tag and commit both the test
+and snapshot files.
+
+### Option 2: env variable (entire test file)
+
+Use `POE_SNAPSHOT_MODE=record` to record all tests in a file:
+
+```sh
+POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/google.test.ts
+```
+
+This records every test in the file. Use this when adding multiple tests at
+once or re-recording an entire suite.
 
 Snapshots are saved to `.snapshots/`. Both the test file and its snapshots
 must be committed together.
@@ -183,11 +218,12 @@ must be committed together.
 
 When a test runs in playback mode and the snapshot file doesn't exist:
 
-| `POE_SNAPSHOT_MISS` | Behavior                                          |
-|---------------------|---------------------------------------------------|
+| `POE_SNAPSHOT_MISS` | Behavior                                           |
+|---------------------|----------------------------------------------------|
 | `error` (default)   | Throws `SnapshotMissingError` with recording hints |
 | `warn`              | Logs a warning, falls back to live API call        |
 | `passthrough`       | Silently falls back to live API call               |
+| `record`            | Records only missing snapshots, plays back existing|
 
 ## Snapshot management scripts
 
