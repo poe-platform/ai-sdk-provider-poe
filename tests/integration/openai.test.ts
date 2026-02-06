@@ -80,7 +80,7 @@ describe("openai provider", () => {
       ],
     });
 
-    expect(text).toBeTruthy();
+    expect(text.toLowerCase()).toContain("poe");
   });
 
   it("handles vision with gpt-5.2 via URL", async () => {
@@ -102,6 +102,6 @@ describe("openai provider", () => {
       ],
     });
 
-    expect(text).toBeTruthy();
+    expect(text.toLowerCase()).toContain("poe");
   });
 });
