@@ -6,31 +6,31 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8db648fa0461ed-ORD",
+      "cf-ray": "9c948713c8ab1832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:47:52 GMT",
+      "date": "Thu, 05 Feb 2026 18:39:00 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=aIBZbOhl6i.Zm46fa8bfvmlAizyMsognlDHIn0BECCA-1770245272-1.0.1.1-OQnhmYZ5zRWgQCXtC9wGXoUMUOJ.7qNsAljziM4J403YVll32EpCf4Mt753U2qbP76Vj3ib5W3OiCGzCX0tYW7EmgyF9L0Zc5eFKvd9yekM; path=/; expires=Wed, 04-Feb-26 23:17:52 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=zFys5kuvkjT45Rd7ZjJqDGJPnahNvtZ9wvfZ1ZKgNak-1770316740-1.0.1.1-eewfkJ62_N8S_O9rofNVFLZecs7wLh4egVKf_7pNQL7YwTPvRTh01RYovh6oDKxsqaZCjewL4U0UKuZNQE6Mt84bMmEt6_HMqxL3ku6jmVY; path=/; expires=Thu, 05-Feb-26 19:09:00 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",4c25c132d69fcbe73e6995d4e064c31c,10.0.20.182,27722,68.185.245.236,,42461430405,1,1770245272.321,2.378,,.,0,0,0.001,2.379,-,0,0,1437,226,113,10,34729,,,,,,-,"
+      "x-q-stat": ",139c8b08e216345436b51b05480c2a6f,10.0.20.182,3950,68.185.245.236,,43034605852,1,1770316740.192,3.568,,.,0,0,0.000,3.567,-,0,0,1439,207,103,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDhhOGQyMDYyYzU3ZDJjMTAxNjk4M2NjOTYyNWQ4ODE5MDkwYThmMTEyNWYxN2VmYjE=",
-      "created_at": 1770245270,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDFkYTM2ZDg0NjE1MjYzZjAxNjk4NGUzYzBjOTk0ODE5NDkwYzQwMzY5ZjkwZjNhZjU=",
+      "created_at": 1770316736,
       "metadata": {},
       "model": "gpt-5.2-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_08a8d2062c57d2c1016983cc966c2c8190820261e0caa43b4b",
+          "id": "rs_01da36d84615263f016984e3c128108194a0b207fd81b1bf8a",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_08a8d2062c57d2c1016983cc97e3a48190a325b11b88266bc2",
+          "id": "msg_01da36d84615263f016984e3c3e9cc8194bd0f99777a000c53",
           "content": [
             {
               "annotations": [],
@@ -65,18 +65,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 93,
+        "output_tokens": 159,
         "output_tokens_details": {
-          "reasoning_tokens": 64
+          "reasoning_tokens": 128
         },
-        "total_tokens": 106
+        "total_tokens": 172
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245272,
+      "completed_at": 1770316740,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

@@ -1,0 +1,86 @@
+{
+  "key": "v1-responses-o1-pro-e11fdb84da4a",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c96b064af98617e-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 06 Feb 2026 00:56:55 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=GGsnfa88VLFJtnffDiDDQVixnl.zpb2MLydKD.NUomY-1770339415-1.0.1.1-sXpDGjHAOG3N4ojOzYJIk_QcpnzgkaUsu4PkHtzhNdNU5a63HajXY9XLnwNMjr2WmgKQGtUYYqjaLl5_WxNN3il09haf8wDz41yio.asGfU; path=/; expires=Fri, 06-Feb-26 01:26:55 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",fda2216704c07ce38a398a8ad339ccb6,10.0.20.182,14806,68.185.245.236,,43195501196,1,1770339415.875,15.416,,.,0,0,0.000,15.416,-,0,0,1416,196,98,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGY1MmE4ZWUyMzEzNTM4NDAxNjk4NTNjNDg5MzVjODE5ZDlkMmM0MWI4NDliOWNmNjQ=",
+      "created_at": 1770339400,
+      "metadata": {},
+      "model": "o1-pro-2025-03-19",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_0f52a8ee231353840169853c578854819d9125ddab5068a6f9",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_0f52a8ee231353840169853c578940819d887f5661c52aa503",
+          "content": [
+            {
+              "annotations": [],
+              "text": "56.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 3,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 17
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770339415,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

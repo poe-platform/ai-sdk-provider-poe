@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-359c693e4181",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T21:46:22Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c959983ff558e1c-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 21:46:31 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=J7c0.FimX32Acg5ymKvs4f_3xwLZUfAv7BPDZOQgO3U-1770327991-1.0.1.1-IRNm6JXKi1sTiYcuhicWn.ABlthHK_9TGe.RHVlG_iYX7HwBCK0zEU6K_aOPrsju7BDfsLooTLcFt0Ls3X2.kb8bv35Tu8xqNr3z5WVOssU; path=/; expires=Thu, 05-Feb-26 22:16:31 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",515f3b193d67919022e9fa069201c5ee,10.0.20.182,53442,68.185.245.236,,18196131573,1,1770327991.360,10.241,,.,0,0,0.001,10.175,-,0,0,889,98,49,10,393216,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_56d605cbc10b4cc787fe53d07e60512a",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help with questions across any of these specialized domains. What would you like to explore?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 4469,
+        "cache_read_input_tokens": 969778,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4469,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 24,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

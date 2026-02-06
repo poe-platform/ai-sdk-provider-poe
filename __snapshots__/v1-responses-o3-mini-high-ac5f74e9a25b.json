@@ -1,0 +1,86 @@
+{
+  "key": "v1-responses-o3-mini-high-ac5f74e9a25b",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c96b02c8be86088-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Fri, 06 Feb 2026 00:56:34 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=EohweXBg_otIbIjibGz5SqAQ2SI8vVkywC7WvwBJwnU-1770339394-1.0.1.1-PZGO0dPpqrwjHmQYdgU_JDKnHCYaeRd.RdmOfP5_hntYOv5bdnIqgaG.qcOtT1zA9OWZI.tObx5JRRhDaQvis41GHWBlvvNL2hNBfETDGpI; path=/; expires=Fri, 06-Feb-26 01:26:34 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",aac61850a0374e7789e967a5714b2bf3,10.0.20.182,18962,68.185.245.236,,43208062400,1,1770339394.116,2.628,,.,0,0,0.001,2.628,-,0,0,1447,245,122,10,34729,,,,,,-,"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDdhMTQ5YmJiZWIyZTczYTAxNjk4NTNjM2ZhZGYwODE5MDk3YTcxMjUyZWRiNWVhODQ=",
+      "created_at": 1770339391,
+      "metadata": {},
+      "model": "o3-mini-2025-01-31",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_07a149bbbeb2e73a0169853c417c7881909612c6fa1ae13b44",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_07a149bbbeb2e73a0169853c41e2c88190a45221c3f8ed19e0",
+          "content": [
+            {
+              "annotations": [],
+              "text": "7 multiplied by 8 equals 56.",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "medium"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 14,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 138,
+        "output_tokens_details": {
+          "reasoning_tokens": 128
+        },
+        "total_tokens": 152
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1770339394,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0
+    }
+  }
+}

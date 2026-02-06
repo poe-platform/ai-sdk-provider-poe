@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-b05d30602331",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T22:36:12Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95e295ece6616f-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 22:36:17 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=t2biMXKqBQuq4IpMU9BX_DhMNUyhXBm3f7LQ6HMexL0-1770330977-1.0.1.1-EVFOrXBKA_1sY7vIOguA3ekP61eNVWkLydGy3e70_X._lxenj_RHxwc51_N7xmHIUVjxBqi.iq9FSUHlbXsXiq_NLvOTywEYqBQMBf.HH1g; path=/; expires=Thu, 05-Feb-26 23:06:17 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",ddc8702bfa555ce55ddd869e4194b187,10.0.20.182,20462,68.185.245.236,,43075195282,1,1770330977.145,6.117,,.,0,0,0.001,6.073,-,0,0,883,138,69,10,65536,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_585de433651247c3b3715ba1cc20d612",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help with questions across any of these specialized domains. What would you like to explore?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 406684,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 24,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

@@ -6,26 +6,26 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8db5ba4c2561ed-ORD",
+      "cf-ray": "9c94869d1d271832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:47:28 GMT",
+      "date": "Thu, 05 Feb 2026 18:38:38 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=Czipq4_HclpKl50dRbws086bBkaygK5RwxudJX9dO3M-1770245248-1.0.1.1-V5nKHnQh2v3oI7g8qwVPMFx5LtOkAC94bGFfdzjPsbvWGnpMOOh9oOqUXol4l58LZin7ZmK5ElShVbyGrTHM7DOzg8Jo036WU1SvmsVh73k; path=/; expires=Wed, 04-Feb-26 23:17:28 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=YRbY4gbo3E7VXdxDnsv8A5u02Rd3Rqyvnc40CKdBVCc-1770316718-1.0.1.1-MWkCYvkc9N_YkbmUthRAOfgX.GJOJwEkah2PUF62cIHmw5C76snr06hEfC1K5Nx1fgLbShEmEL_tqqSZr96DWQ9WFuGj9GjgjHhNijxUAkE; path=/; expires=Thu, 05-Feb-26 19:08:38 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",682c1aabe68622a317ff00872c70262a,10.0.20.182,18328,68.185.245.236,,42461252067,1,1770245248.222,1.102,,.,0,0,0.001,1.101,-,0,0,1324,218,109,10,34729,,,,,,-,"
+      "x-q-stat": ",686bf6a357db2ccfa3cf5afa6087868e,10.0.20.182,21756,68.185.245.236,,43034452147,1,1770316718.584,0.876,,.,0,0,0.001,0.877,-,0,0,1324,273,136,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM3ZmUzOTRlNzg5NWQ4OTAxNjk4M2NjN2YzZjI4ODE5MWIxNzE0NzU2OWRiZjY1ZmE=",
-      "created_at": 1770245247,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk4M2VlNDNmNGQwYjViMDAxNjk4NGUzYWRkNjc0ODE5N2FmYzlhNzRhNjI5MzhkMGU=",
+      "created_at": 1770316717,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_0c7fe394e7895d89016983cc7fbff4819182cba588dbdaf63e",
+          "id": "msg_0983ee43f4d0b5b0016984e3ae425c81979ff34ea508291923",
           "content": [
             {
               "annotations": [],
@@ -71,7 +71,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245248,
+      "completed_at": 1770316718,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-9a85216f4acd",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T22:36:52Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95e3905ec5616f-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 22:37:01 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=FQ0OV6QS9TEYHNe8GSjCw6l_W9Zj2hRwji0X_WAZR1M-1770331021-1.0.1.1-jbndFiDXkYDbjUpZ0Nn3OGLEGs0I_3YgGdZWaLzeKzbWxgTyaUi0o9nWR1f8o_RqmsbqHkFvSZtFgzqC.P61jXkU8R3n9yBcjgtsUbc.cS8; path=/; expires=Thu, 05-Feb-26 23:07:01 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",5cccc5cb5be4824a04197a1e2dfad7b5,10.0.20.182,47662,68.185.245.236,,18218948001,1,1770331020.996,9.136,,.,0,0,0.000,9.113,-,0,0,1073,74,37,10,204800,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_2b2c00c38d2240229bd94fac266c7e5c",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help! I have extensive knowledge across all of these specialized domains. What would you like to explore or discuss? Feel free to ask questions about any of these fields, request explanations of specific concepts, or pose interdisciplinary problems that might span multiple domains."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 630134,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 59,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

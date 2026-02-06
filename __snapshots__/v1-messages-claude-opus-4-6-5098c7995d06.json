@@ -1,0 +1,28 @@
+{
+  "key": "v1-messages-claude-opus-4-6-5098c7995d06",
+  "response": {
+    "status": 401,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95e5710a44b0fc-ORD",
+      "connection": "keep-alive",
+      "content-length": "140",
+      "content-type": "application/json; charset=utf-8",
+      "date": "Thu, 05 Feb 2026 22:38:07 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=9i.x_vrs.AB.yL2.F.1ZeGReiBYGuA7AgbedBEvGGPc-1770331087-1.0.1.1-SV5GAsA8Xmxjf9CTYsr8Nua.wDJ1z4oNUA.XwOIFW3xqTdcavBaZbBF0Fk0F95oEhASbgksfK0rIf3eurlB84AY8mFW2i3MtzzGtrLc15lo; path=/; expires=Thu, 05-Feb-26 23:08:07 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",c69926b6d06b1ccc1727c034a6d28d3b,10.0.20.182,63670,68.185.245.236,,18219515270,1,1770331087.758,0.026,,.,0,0,0.001,0.009,-,0,0,362,104,52,10,114688,,,,,,-,"
+    },
+    "body": {
+      "type": "error",
+      "error": {
+        "type": "authentication_error",
+        "message": "Invalid API key"
+      },
+      "request_id": "req_poe_0da7fe64e4ee4bb9a6726f6bf073f5ca"
+    }
+  }
+}

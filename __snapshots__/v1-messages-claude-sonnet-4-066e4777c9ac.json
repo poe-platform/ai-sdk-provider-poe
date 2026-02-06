@@ -1,0 +1,55 @@
+{
+  "key": "v1-messages-claude-sonnet-4-066e4777c9ac",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:47Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9483e648fbd8ab-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:36:48 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=kaqowhEOwmr2ysx6HCkYF1tWh08A1DqnFuKbplkczEg-1770316608-1.0.1.1-npoiVnDdmOE4dq1_buGe0_8lrr2iDS7J_yDRjXxIcguJAxMPz2BX2lwL7MBe3mhLicni5OcgD2TKuSJaMi1LyzInFSQvkkDDBstS8Zz6_i4; path=/; expires=Thu, 05-Feb-26 19:06:48 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",731f540d6394214d30e73bfdfeddfe02,10.0.20.182,58404,68.185.245.236,,18108698307,1,1770316608.389,1.927,,.,0,0,0.001,1.927,-,0,0,341,115,57,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-sonnet-4-20250514",
+      "id": "req_poe_475fba5078a34d979b7873409d1ae848",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This is a simple multiplication problem. 7 * 8 = 56.",
+          "signature": "EtwBCkYICxgCKkBf/RQgNORdrt2GODwXJkQL1GXfF4MIqMaReULMgnYqSypg8WYg8BP9eZl9dB5FboTNG9zzYU3eVvT4Uh3jYu68Egz1GnYqvtbH3DWLhyIaDK/LUW5JD+fjo9Md2SIwS9DmUkfHxFG4i93xXTq8wanUS7uoSsNmdFXpjk3Y0torTci4+JwtH86tk0zAjL5gKkRWoIlCJJO1WHHbxVm7uFnTZVN4yTrA+wZV2qKunGVTqGQzdd6IGjdgK+KxiY3/p5ri0DlRJ/GKqWJERzWONk8PUHkE3hgB"
+        },
+        {
+          "type": "text",
+          "text": "7 * 8 = 56"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 45,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "service_tier": "standard",
+        "inference_geo": "not_available"
+      }
+    }
+  }
+}

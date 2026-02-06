@@ -1,0 +1,56 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-aba530739438",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:41Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9483c0af88d8ab-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:36:42 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Fhr8lDoOqPAMbu5FlriLgVYfn.ZZbckX3xs8THETWls-1770316602-1.0.1.1-ygmC0Zm9he.xu5teLJyc2ZUSb6NUR3g9T_QwKNlOpiZVdYL1MrCby1swsJFL5N0vS1jBU9nd8xdPUHkaCDqW5FqmOaTYTYefzocLhVhNfnw; path=/; expires=Thu, 05-Feb-26 19:06:42 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",536dc9f83a0169baab1c5c4da42505f6,10.0.20.182,12286,68.185.245.236,,43033506213,1,1770316602.036,1.585,,.,0,0,0.000,1.584,-,0,0,913,285,142,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_e246a4fb58f740618d4ad16920fc9ab0",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'll help you check the weather in San Francisco right away."
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_vrtx_01A9E3zj8Mpf5m96WFzMNj5L",
+          "name": "getWeather",
+          "input": {
+            "location": "San Francisco"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 379,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 68
+      }
+    }
+  }
+}

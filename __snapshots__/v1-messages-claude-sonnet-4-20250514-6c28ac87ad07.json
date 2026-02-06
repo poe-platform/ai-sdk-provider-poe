@@ -1,0 +1,58 @@
+{
+  "key": "v1-messages-claude-sonnet-4-20250514-6c28ac87ad07",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:35:53Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c948295393261dc-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:35:54 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=5BGpA1DTQiik3TupQ0.dwyh8xOxWYxsxgfhvxVHkkTQ-1770316554-1.0.1.1-.rME7uB_Pm_1ffbJQZbdfl7Ryxksy5AP1zNR0iLrs8xGGBpnjgVhT8xirWrafljLrOu.3by8K_e7QWh1VZY0oiQ2iWDgOai2MOsdcXaKlBI; path=/; expires=Thu, 05-Feb-26 19:05:54 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",bd961e704695193a735f14363719cb97,10.0.20.182,11948,68.185.245.236,,18108260864,1,1770316554.470,1.933,,.,0,0,0.000,1.932,-,0,0,987,76,38,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-sonnet-4-20250514",
+      "id": "req_poe_25af10422bf74100a825736427e3bb32",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'll check the current weather in San Francisco for you using the getWeather tool."
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01ST6RgZS7gByq5MjeGK1zUT",
+          "name": "getWeather",
+          "input": {
+            "location": "San Francisco"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 428,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 73,
+        "service_tier": "standard",
+        "inference_geo": "not_available"
+      }
+    }
+  }
+}

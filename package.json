@@ -30,7 +30,7 @@
     "verify-model:alpha": "RELEASE_STAGE=alpha tsx scripts/verify-model.ts"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^3.0.35",
+    "@ai-sdk/anthropic": "^3.0.37",
     "@ai-sdk/openai": "^3.0.25",
     "@ai-sdk/provider": "^3.0.7",
     "@ai-sdk/provider-utils": "^4.0.13"

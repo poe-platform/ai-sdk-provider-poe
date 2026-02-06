@@ -6,31 +6,31 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8db67d58b561ed-ORD",
+      "cf-ray": "9c9487541ed31832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:47:59 GMT",
+      "date": "Thu, 05 Feb 2026 18:39:08 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=7qc9kzTPdO1JRb1JtX_2twxSXW3HtXbaajhLWVH87UM-1770245279-1.0.1.1-al2H1G_lnoBIRko1qThdoSVSZGKw1IL7M9781vc6Hdq_oou82jZybMLbp_n5Mdj254EXsttvnlkoX_JqYqCbhS8bed03x_jmIaAqof.a6Cw; path=/; expires=Wed, 04-Feb-26 23:17:59 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=GzZqRw4441uRXfQzNiCSOAJl.2KjQLgtYtfybuvAXLE-1770316748-1.0.1.1-.TVn3XAzvGZ_k0RqpqleOoYRB0Tme.HkVk7X4IjsKZiX8_eoJ9kDsg03WnDzRq9_nD768llWE_GOYhtSuqBn9VPM_q3kdvRUrZVLhj7.doQ; path=/; expires=Thu, 05-Feb-26 19:09:08 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",23b6fb48cf0cdef18bb4aa6902dae495,10.0.20.182,17092,68.185.245.236,,17536622778,1,1770245279.396,1.078,,.,0,0,0.000,1.078,-,0,0,1434,117,58,10,34729,,,,,,-,"
+      "x-q-stat": ",07dd3908586ffdc6e4c0eada7b6547f1,10.0.20.182,53810,68.185.245.236,,42966415692,1,1770316748.340,1.429,,.,0,0,0.000,1.429,-,0,0,1435,198,99,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGFjMGQyOTcwNjBkMDYzNzAxNjk4M2NjOWU3NjI0ODE5NDkyOTBiN2U1MTc5NjczNDM=",
-      "created_at": 1770245278,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDFlMjFjNmE2YjNmNWI3ZjAxNjk4NGUzY2IwZTA4ODE5NDg2NTZiZTRiMTQyNWI1NmQ=",
+      "created_at": 1770316747,
       "metadata": {},
       "model": "gpt-5.1-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_0ac0d297060d0637016983cc9ebfc48194a135682701d518aa",
+          "id": "rs_01e21c6a6b3f5b7f016984e3cb4ac4819489e67571334179a8",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0ac0d297060d0637016983cc9f1fa08194a5ecf4c161ef85f1",
+          "id": "msg_01e21c6a6b3f5b7f016984e3cc0bdc819496ac70db189c1c21",
           "content": [
             {
               "annotations": [],
@@ -65,18 +65,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 47,
+        "output_tokens": 85,
         "output_tokens_details": {
-          "reasoning_tokens": 0
+          "reasoning_tokens": 64
         },
-        "total_tokens": 60
+        "total_tokens": 98
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245279,
+      "completed_at": 1770316748,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

@@ -6,35 +6,35 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8db6d5eb6961ed-ORD",
+      "cf-ray": "9c9487b91ef81832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:48:14 GMT",
+      "date": "Thu, 05 Feb 2026 18:39:26 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=heUiLa4ebXaWZgU0nxf8hMR7qqk5Bg.pYZduphKwl00-1770245294-1.0.1.1-opESgPZuJu0VwhFsoNmqv9CN3jowloQH1.8NnXk1WhwpYqiV31Ja_HExl2nJLn1AwHVS4FkdDZPlPNvS1i2X5m9I68fbNyImVWN9ZfI81BA; path=/; expires=Wed, 04-Feb-26 23:18:14 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=E3rj.84PBdL5bRz4YlzYg6Vxs7au2X_XGWryjJfEmB0-1770316766-1.0.1.1-PFkprmwv_NjbdQGFfSGlmkY7z0ZCd30To330360LrhUWqLkLIB15y2WIlhertIWNl2pC3XKm3958WzNDnf0H7qvORZpq1UGECMdRC4Iw84M; path=/; expires=Thu, 05-Feb-26 19:09:26 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",c7076e75078d114183e555ab82ea0891,10.0.20.182,30356,68.185.245.236,,42393235591,1,1770245294.713,2.219,,.,0,0,0.000,2.219,-,0,0,1730,272,136,10,34729,,,,,,-,"
+      "x-q-stat": ",be38a315ee5cb9911cd1c038ff5e29e8,10.0.20.182,62772,68.185.245.236,,42966548867,1,1770316766.475,3.393,,.,0,0,0.000,3.393,-,0,0,1730,78,39,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDFiNGUxZDQxMDljYjA5ZDAxNjk4M2NjYWM5ZDM0ODFhMTg2ZTg2Mzg1OTcwMTJhYTQ=",
-      "created_at": 1770245292,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGViZTVkZTQzZGNjYjY0OTAxNjk4NGUzZGI1OWMwODE5MGFhZjg3NTg1MDEyY2Q0N2I=",
+      "created_at": 1770316763,
       "metadata": {},
       "model": "gpt-5-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_01b4e1d4109cb09d016983ccace0e081a1938c5ee957fe61b5",
+          "id": "rs_0ebe5de43dccb649016984e3dba9488190ae50358e6499ccf2",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_8EFoj9rPrPbt8oKPdj09VSEq",
+          "call_id": "call_1LqvliR46VmOFXGuS6IRar6r",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_01b4e1d4109cb09d016983ccae857c81a1ab5ce71def612960",
+          "id": "fc_0ebe5de43dccb649016984e3ddf4148190848929822465a1ae",
           "status": "completed"
         }
       ],
@@ -79,18 +79,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 133,
+        "output_tokens": 114,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 199
+        "total_tokens": 180
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245294,
+      "completed_at": 1770316766,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

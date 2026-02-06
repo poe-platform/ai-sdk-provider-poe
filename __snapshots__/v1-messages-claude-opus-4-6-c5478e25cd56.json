@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-c5478e25cd56",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:53:53Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c949ce4ad2f61b1-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:54:25 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=oDXXB9RuX_8qjhFZNVtbZbCwbLPKRYJhOygWLZ6pEmo-1770317665-1.0.1.1-_MIQQftxCRD4KjPlgY4GmBWwRM6IChqNOjHSFdDkWAtgJN.76om09KWwK98k9hWMAa3l_yiOOcucV6sDWzunSMUbSXHJyv8ux.T0xO7SKq8; path=/; expires=Thu, 05-Feb-26 19:24:25 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",f5fc697c2046064ca63a45e1bff7c025,10.0.20.182,37298,68.185.245.236,,18116976010,1,1770317665.076,33.057,,.,0,0,0.001,33.026,-,0,0,1278,182,91,10,262144,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_be44c20736254b82902b2e8b3733f06e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I notice you've provided an extremely extensive system prompt that has been repeated many dozens of times. I'm ready to help you with questions across any of these fascinating interdisciplinary domains. What would you like to know? I can assist with topics ranging from zygomorphic crystallography and pneumatic differential calculus to forensic palynology, archaeoacoustic phenomenology, topological data analysis, and many more. Just ask your question and I'll draw on the relevant expertise."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 715043,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 138544,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 102,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

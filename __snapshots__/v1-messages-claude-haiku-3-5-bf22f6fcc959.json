@@ -1,0 +1,48 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-bf22f6fcc959",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:40Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9483b86ebdd8ab-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:36:40 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=Uy3gShzI7v_bpiDkqoitw67xlvg9zRdJQvu.cDY3EF8-1770316600-1.0.1.1-PoAbrilB47RL06043kHvL_xDeLtiCGyw4dDgZOmT2XSP7nFWenKXAjSBDf8lYdE2Aqo1cCbYapgMEU6BLASMKprvynPmmtiWuIp7wnPpE00; path=/; expires=Thu, 05-Feb-26 19:06:40 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",3b56158306b8ced8d71b1ad0e96f07d3,10.0.20.182,57742,68.185.245.236,,43020871091,1,1770316600.354,1.226,,.,0,0,0.001,1.225,-,0,0,751,255,127,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-3-5-haiku-20241022",
+      "id": "req_poe_277dea82cf774a01aae334e6027a4f0c",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hello there, friend!"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 15,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 8
+      }
+    }
+  }
+}

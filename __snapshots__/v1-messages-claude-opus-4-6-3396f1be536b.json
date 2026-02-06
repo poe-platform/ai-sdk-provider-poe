@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-3396f1be536b",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T22:32:39Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95dd5f88c3e14e-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 22:32:52 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=iMMNvsxe1COlC2SMYoKmqPB4O566JFcalfBSZ6lfIq0-1770330772-1.0.1.1-MC0t_Frwf42vrh6rwNlhj1adfLZo957hZIQQZejtrYwL_za4AR4ZzRier4KzsajWqN1.SvaPKjbGVb3asBGvHT0gf4PC12rLNgnTTOXApTA; path=/; expires=Thu, 05-Feb-26 23:02:52 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",67373db661464cfe699cf2cedfa09ac5,10.0.20.182,54266,68.185.245.236,,43073577679,1,1770330772.080,13.845,,.,0,0,0.000,13.574,-,0,0,1755,171,85,10,3342336,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_c3d0392221084114ad2b84658ef0c33c",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I notice your message contains an extremely large amount of repeated system prompt text. It appears the domain expertise descriptions have been duplicated many dozens of times. I don't see an actual question from you yet.\n\nI'm ready to help with any questions you might have across any of the domains described in the system prompt, including topics like:\n\n- **Zygomorphic crystallography** and mineral symmetry\n- **Pneumatic differential calculus** and gas dynamics\n- **Phytolinguistic semiotics** and plant communication\n- **Quantum archaeometry** and artifact analysis\n- **Topological data analysis** and persistent homology\n- **Archaeoacoustic phenomenology** and ancient soundscapes\n- **Molecular gastronomy** and culinary science\n- **Forensic palynology** and pollen analysis\n- **Stochastic paleoclimatology** and climate reconstruction\n- And many more specialized fields\n\nWhat would you like to know about? Please go ahead and ask your question."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 44690,
+        "cache_read_input_tokens": 808894,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 44690,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 221,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

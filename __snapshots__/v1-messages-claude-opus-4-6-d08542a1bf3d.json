@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-d08542a1bf3d",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T22:14:05Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95c230cc269bcc-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 22:14:11 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=uuEsMSqYQgNuvDR_HvbXFgA7YZq6PRQ1zsTQVb3txQQ-1770329651-1.0.1.1-r9VvzMnOWh5Lezc0ccs5f1Z_cdER_a.OJ2sfEG9JCdwFVfDd3gzXW8kh_O0haJIDsDgqO25YTD4Va0H44AvkJwEzcB3rLSndRBvZRuAlRHM; path=/; expires=Thu, 05-Feb-26 22:44:11 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",afa875ba2a2b8c11635e15024a56fc7e,10.0.20.182,18338,68.185.245.236,,43120785368,1,1770329651.392,7.353,,.,0,0,0.000,7.343,-,0,0,891,210,105,10,131072,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_6d7f918f5e0e4d328a1932e5ab4fd91b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help with questions across any of these specialized domains. What would you like to explore?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 44690,
+        "cache_read_input_tokens": 272614,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 44690,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 24,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

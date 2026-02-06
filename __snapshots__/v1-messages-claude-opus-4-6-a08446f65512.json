@@ -1,0 +1,58 @@
+{
+  "key": "v1-messages-claude-opus-4-6-a08446f65512",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-06T00:57:19Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c96b1507891e14e-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Fri, 06 Feb 2026 00:57:20 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=neZSud9AcygH0N6L95I3b5kIWHMDhXfFjlmAiqEqc3g-1770339440-1.0.1.1-EzJa8WBG8BdLn_0Qlz2N8lq83qzeUENQbgXTZ1VQNfT7ytyscAS2GPHirGMTlaSb1HGsviyY_DFzeZy7y183tzgfF45TJkmXATBxsY57lo8; path=/; expires=Fri, 06-Feb-26 01:27:20 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",e1f91a739aea51098cebbd78ea43c225,10.0.20.182,3732,68.185.245.236,,43195787836,1,1770339440.302,2.096,,.,0,0,0.001,2.097,-,0,0,958,208,104,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-6",
+      "id": "req_poe_5907bcfae8d445db90493d35a4c03d2e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "\n\nI'll get the current weather in San Francisco for you right away!"
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01YVeEmoUB514VE2tYXGfspC",
+          "name": "getWeather",
+          "input": {
+            "location": "San Francisco"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 612,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 70,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

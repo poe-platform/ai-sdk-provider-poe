@@ -1,0 +1,31 @@
+{
+  "key": "v1-messages-claude-opus-4-5-20250514-764216b66839",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:25:40Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c94739d5de761a0-ORD",
+      "connection": "keep-alive",
+      "content-length": "162",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:25:39 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=9BlGY6ulMg0YbXbHVMNywyDMQ6yzNpnknbT0Wgu.s1M-1770315939-1.0.1.1-Zj_5z51R97VjgUGtDD0oeCU5Ncw7B24TaqVNle5ArAVPsQASV98ME_rou4TT_U4_zI2A1qzesmK6FbcrbRjPnLt9kXWLsOSf950YpcmiFAM; path=/; expires=Thu, 05-Feb-26 18:55:39 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",e826c30d7567449283e77a200552b02d,10.0.20.182,60000,68.185.245.236,,43015536324,1,1770315939.715,0.272,,.,0,0,0.001,0.273,-,0,0,512,215,107,10,34729,,,,,,-,"
+    },
+    "body": {
+      "type": "error",
+      "error": {
+        "type": "invalid_request_error",
+        "message": "tools.0.custom.input_schema.type: Field required"
+      },
+      "request_id": "req_011CXqPgNR3ZfgEicbkA47PD"
+    }
+  }
+}

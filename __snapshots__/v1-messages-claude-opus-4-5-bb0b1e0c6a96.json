@@ -1,0 +1,54 @@
+{
+  "key": "v1-messages-claude-opus-4-5-bb0b1e0c6a96",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:33Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c948390da14d8ab-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:36:34 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=JS9GuCMRqJzokh5HSzxeVN.eM1ME5u.tl1fYC8W9.CI-1770316594-1.0.1.1-nlb_.nhyEo7dLNjnRRLtnuDSMH2WE1XHEixJeBCtialwOEVDF1T9Fe4mEMqQTEzoeyD0OeVJOFe92Holi.uG6h2VptqfS.gc1uqlkiATMJ8; path=/; expires=Thu, 05-Feb-26 19:06:34 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",9eb311e1a0c41fe01c190d43936d3023,10.0.20.182,53780,68.185.245.236,,43020820276,1,1770316594.929,2.129,,.,0,0,0.000,2.129,-,0,0,879,223,111,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_7e98ffc6a1384a8984fa8187804a4308",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01GDJ3Q7iEFq8L5uThzGUreM",
+          "name": "getWeather",
+          "input": {
+            "location": "San Francisco"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 611,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 54,
+        "service_tier": "standard",
+        "inference_geo": "not_available"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "v1-messages-claude-haiku-3-5-20241022-f85986d8fea8",
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:25:45Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9473bf4a7061a0-ORD",
+      "connection": "keep-alive",
+      "content-length": "168",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:25:45 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=8mjXrPUMjqbVANrhf5W5BCKTSvYGHIwvq3N71y5NUbg-1770315945-1.0.1.1-kijOsoPlNWIIsk5s2Lwul4x0AienSmdrHDpwAbL.CQhnydJiTHjGCpCscwFPTSxXlzp.wqS20ogcRcDskWNxFoxk4zgRnn_4Ux1MuiSpgl8; path=/; expires=Thu, 05-Feb-26 18:55:45 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "x-q-stat": ",e0bf6a6ef3b86babe6251801116de060,10.0.20.182,62584,68.185.245.236,,42959931701,1,1770315945.226,0.354,,.,0,0,0.000,0.354,-,0,0,350,85,42,10,34729,,,,,,-,"
+    },
+    "body": {
+      "type": "error",
+      "error": {
+        "type": "invalid_request_error",
+        "message": "'claude-3-5-haiku-20241022' does not support thinking."
+      },
+      "request_id": "req_011CXqPgn8KHQ1oz2knBJ2PK"
+    }
+  }
+}

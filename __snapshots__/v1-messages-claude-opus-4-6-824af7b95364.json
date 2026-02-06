@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-824af7b95364",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:49:17Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c949635aa8e61b1-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:49:23 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=HPFUJsahqAROXJE4Jl0mPlB3BxcomrsACXy7DU5xIm8-1770317363-1.0.1.1-iU0kmLt._t6u4io2GFo3slgBkv4_PZjKGXWkVr.PJtVjsmyySjjwPIguc11C9gZMwhWw6R5v2E1Ukx7laPyNB9PN3WHpyJsBMxuQGowG1iQ; path=/; expires=Thu, 05-Feb-26 19:19:23 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",ac77d58dfa27fc638c2b48a9374a83e5,10.0.20.182,3832,68.185.245.236,,42971322147,1,1770317363.645,6.891,,.,0,0,0.000,6.856,-,0,0,887,78,39,10,229376,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_96b091b638194da5b727497bae3ae202",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help with questions across any of these specialized domains. What would you like to explore?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 89383,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 138544,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 24,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

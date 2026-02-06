@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-800dfdbc7ab2",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:49:57Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c94972ad8d261b1-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:50:13 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=aqJ7amdGw.gF2NwSbm.fy.GbwYsrwjOI4i8uGonK_pk-1770317413-1.0.1.1-3r2MtN9iuHiyvVUmbfg53MK0j0JFKU3Dreq09DNmccfoBWO3obu1B5ikTnJm8YjZW_bi3YU25bYAVV8ESJiVOgbbr7Kmv.T40yWfNEf5Whs; path=/; expires=Thu, 05-Feb-26 19:20:13 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",c1b6e6cb04529877c4a2430d23d32e19,10.0.20.182,59792,68.185.245.236,,43027289124,1,1770317412.991,16.617,,.,0,0,0.000,16.592,-,0,0,1237,393,196,10,98304,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_ec82968c5cbb48de814e7a4615ab58fb",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help! I have extensive knowledge across all of these specialized domains. What question would you like to explore? Whether it's about the symmetry operations in zygomorphic crystal systems, Chapman-Enskog expansions in rarefied gas dynamics, terpenoid signaling syntax in plant communication, or any of the other fields covered in my expertise, I'm here to provide detailed, technically informed responses.\n\nWhat would you like to discuss?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 268143,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 138544,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 98,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

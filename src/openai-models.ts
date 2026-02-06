@@ -1,6 +1,7 @@
 export interface OpenAIModelDef {
   route?: "chat";
   tools?: false;
+  reasoning?: true;
   skip?: string;
   timeout?: number;
   tags?: string[];
@@ -30,15 +31,15 @@ export const OPENAI_MODELS: Record<string, OpenAIModelDef> = {
   "gpt-5-codex":        {},
 
   // O-series
-  "o4-mini":            {},
-  "o3":                 {},
-  "o3-pro":             {},
-  "o3-mini":            {},
-  "o3-mini-high":       {},
-  "o1":                 {},
-  "o1-pro":             {},
-  "o4-mini-deep-research": { skip: "requires built-in tools" },
-  "o3-deep-research":      { skip: "requires built-in tools" },
+  "o4-mini":            { reasoning: true },
+  "o3":                 { reasoning: true },
+  "o3-pro":             { reasoning: true },
+  "o3-mini":            { reasoning: true },
+  "o3-mini-high":       { reasoning: true },
+  "o1":                 { reasoning: true },
+  "o1-pro":             { reasoning: true },
+  "o4-mini-deep-research": { skip: "takes too long" },
+  "o3-deep-research":      { skip: "takes too long" },
 
   // GPT-4.1
   "gpt-4.1":            {},

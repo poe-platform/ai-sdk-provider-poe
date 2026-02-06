@@ -1,0 +1,50 @@
+{
+  "key": "v1-messages-claude-opus-4-6-e528c10552cb",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T22:33:43Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c95deea6b6ee14e-STL",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 22:33:55 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=HDh_4OACujjj3M89Kap2IfRurkfVf5SPnUUAWc8.c.w-1770330835-1.0.1.1-Lg9Yp7ifmerWcbaZYbrjvWAJOWD_DvGWVjA1T9TlrnIOVeohCK2PghEZINP0HXnEGbn5FfQckRnxAupahwGeIDY9PQDlYkKicB8IZaIUz7g; path=/; expires=Thu, 05-Feb-26 23:03:55 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",9fe28b13825017cedec1c9cdf48a836d,10.0.20.182,29912,68.185.245.236,,43129684854,1,1770330835.142,13.437,,.,0,0,0.000,13.179,-,0,0,889,241,120,10,2940928,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_b05d610dbde241f99cecfcda9b4f6085",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'm ready to help with questions across any of these specialized domains. What would you like to explore?"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 3,
+        "cache_creation_input_tokens": 4469,
+        "cache_read_input_tokens": 951902,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4469,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 24,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

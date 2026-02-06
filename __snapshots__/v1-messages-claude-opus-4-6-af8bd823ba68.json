@@ -1,0 +1,55 @@
+{
+  "key": "v1-messages-claude-opus-4-6-af8bd823ba68",
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-02-05T18:36:43Z",
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9c9483cb9a34d8ab-ORD",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "date": "Thu, 05 Feb 2026 18:36:43 GMT",
+      "server": "cloudflare",
+      "set-cookie": "__cf_bm=_wDLAUrAwa.ax6yElhyUu0UCaVVMnPaDY9CiaYYkiog-1770316603-1.0.1.1-MfM1N3zBnaS2CwzikAXeT8aDLBLVwEVsGKo_ns3CaHcVr8e7Ddy5UBcaoUkPUVBwJm_pC8o2IfU1Reo1ZhYfTR9C6GFFJ.BH7ixH7psJnPw; path=/; expires=Thu, 05-Feb-26 19:06:43 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked",
+      "x-q-stat": ",c06ffbaa74be5173a2e58e8e8e1e431a,10.0.20.182,55744,68.185.245.236,,18108663867,1,1770316603.856,1.645,,.,0,0,0.000,1.646,-,0,0,1075,105,52,10,34729,,,,,,-,"
+    },
+    "body": {
+      "model": "claude-fudge-eap",
+      "id": "req_poe_d329e6e5bf184695bfcd9b99c40955f2",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "56",
+          "signature": "EqoBCkYICxgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxEgyiQdccy1dCVfObvo4aDKZw2xZiGZd8TrY7nyIw5Hnt3DykY/cFcpIGpeMazT0WeOsOM9TkYg8moKVEcbIgQMd/flTVCdee2Ol6qrSmKhKy+AO+tb3VAe8a3QDMKMSebiMYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "7 * 8 = **56**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 45,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 22,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    }
+  }
+}

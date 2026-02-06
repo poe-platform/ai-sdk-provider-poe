@@ -6,35 +6,35 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
-      "cf-ray": "9c8db68b7c8d61ed-ORD",
+      "cf-ray": "9c948763adfd1832-STL",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "date": "Wed, 04 Feb 2026 22:48:02 GMT",
+      "date": "Thu, 05 Feb 2026 18:39:10 GMT",
       "server": "cloudflare",
-      "set-cookie": "__cf_bm=VIDNWOzYoPnGMNUFd3B0Pd2tRi_4CzmP6adWRPt0KXs-1770245282-1.0.1.1-DTX.HJZQVOPRhLuEqghT0XfuLjoUqT4iNM1nJlFigtAfSWr.E5rCXdL.MoUYZ.PNhobDo08dxf7JeCJOMAHL3r0wU8LCVQBDznWVMqJKMJQ; path=/; expires=Wed, 04-Feb-26 23:18:02 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
+      "set-cookie": "__cf_bm=YKBue13CKwZCJ3ck0QLtSN0Yp_UaGi8FwWkAv7PHULk-1770316750-1.0.1.1-l1._bacnE6IqvtKwAfnn0IHIf4XKavTMB2.Alt9BFQnaKugV9wky9_fIB0IQ60wTvCMTKyZMI4wDcukh._v5FcnK5w0BfftXRa0AfrdRcJA; path=/; expires=Thu, 05-Feb-26 19:09:10 GMT; domain=.poe.com; HttpOnly; Secure; SameSite=None",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked",
-      "x-q-stat": ",c1ee113bbd1a607c2142a1c9107c2d4b,10.0.20.182,18218,68.185.245.236,,17536640622,1,1770245282.238,1.641,,.,0,0,0.000,1.641,-,0,0,1431,73,36,10,34729,,,,,,-,"
+      "x-q-stat": ",21441b7c079c555807dcc76592b026db,10.0.20.182,55458,68.185.245.236,,42966436216,1,1770316750.553,1.142,,.,0,0,0.000,1.142,-,0,0,1428,124,62,10,34729,,,,,,-,"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGJlMmIwN2FlNmIyZmZjMjAxNjk4M2NjYTBiZTY4ODE5Nzg0OWUyMmQ3MWExNjA4NWQ=",
-      "created_at": 1770245280,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGMyYTllOWVmYmZhZjJmYzAxNjk4NGUzY2Q5NWU4ODE5M2IwYWM1ZDhmZjE1ZTNhYmM=",
+      "created_at": 1770316749,
       "metadata": {},
       "model": "gpt-5.1-codex",
       "object": "response",
       "output": [
         {
-          "id": "rs_0be2b07ae6b2ffc2016983cca109c48197899acf16fa5700c9",
+          "id": "rs_0c2a9e9efbfaf2fc016984e3cde6008193b98084c6dd01f103",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0be2b07ae6b2ffc2016983cca1f1248197a0a53e14db75addb",
+          "id": "msg_0c2a9e9efbfaf2fc016984e3ce42a48193be174f56a286d463",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend",
+              "text": "Hello there friend",
               "type": "output_text",
               "logprobs": []
             }
@@ -65,18 +65,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 89,
+        "output_tokens": 44,
         "output_tokens_details": {
-          "reasoning_tokens": 64
+          "reasoning_tokens": 0
         },
-        "total_tokens": 102
+        "total_tokens": 57
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770245282,
+      "completed_at": 1770316750,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

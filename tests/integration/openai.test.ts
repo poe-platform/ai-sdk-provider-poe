@@ -45,6 +45,19 @@ describe("openai provider", () => {
           expect(toolCalls[0].toolName).toBe("getWeather");
         });
       }
+
+      if (def.reasoning) {
+        run(`uses reasoning with ${name}`, opts, async () => {
+          const { text, reasoning } = await generateText({
+            model: poe(`openai/${name}`),
+            prompt: "What is 7 * 8?",
+          });
+
+          expect(text).toBeTruthy();
+          expect(text).toContain("56");
+          expect(reasoning).toBeTruthy();
+        });
+      }
     });
   }
 });
