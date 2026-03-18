@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-Python-bbad2bcc8d27",
+  "test": {
+    "name": "generates text with Python",
+    "file": "tests/integration/poe-bots.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "Python",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "242",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-0041207e3b472c47571f0c3c",
+      "object": "chat.completion",
+      "created": 1770831916,
+      "model": "Python",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "```plaintext\nFile \"/tmp/tmpn3w98lfa.py\", line 1\n    Say hello in exactly 3 words\n        ^^^^^\nSyntaxError: invalid syntax\n```"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 39,
+        "total_tokens": 46
+      }
+    }
+  }
+}

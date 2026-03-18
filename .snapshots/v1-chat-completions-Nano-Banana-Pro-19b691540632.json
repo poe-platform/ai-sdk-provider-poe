@@ -1,0 +1,65 @@
+{
+  "key": "v1-chat-completions-Nano-Banana-Pro-19b691540632",
+  "test": {
+    "name": "generates text with Nano-Banana-Pro",
+    "file": "tests/integration/poe-bots.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "Nano-Banana-Pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "19462",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-70a81dfe63c1c577f752f589",
+      "object": "chat.completion",
+      "created": 1770831827,
+      "model": "Nano-Banana-Pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello to you.",
+            "reasoning_content": "**Defining Initial Constraints**\n\nI'm focused on the goal: say hello with three words. The first attempt, \"Hello there,\" wasn't sufficient, so I'm pushing for more options.\n\n\n**Exploring Greeting Options**\n\nI've explored various greeting options to fit the criteria. I've now considered phrases like \"Hello to you,\" \"Good morning all,\" and \"Well hello there.\" I'm also thinking about the nuances of tone. My current focus is to refine the choices by selecting the one that is the most broadly suitable.\n\n\n**Prioritizing Universality**\n\nI'm now honing in on the most universally understood greetings. Considering \"Hello to everyone\" and \"Hi to you,\" the focus is on selecting the simplest and most widely applicable. I am trying to avoid anything too specific, and leaning toward phrases that work across a variety of contexts. My aim is to deliver a solution that is both clear and adaptable.\n\n\n**Finalizing Phrase Selection**\n\nI'm now revisiting options, considering both common usage and the core requirement. The aim is to balance simplicity and recognizability. I've been experimenting with variations, including a reiteration, but now I'm leaning toward a more direct approach. \"Hello to you\" still appears to be a strong candidate due to its clarity.\n\n\n**Finalizing the Selection**\n\nI'm now narrowing down the options. I've considered several phrases, weighing their practicality. After a more focused review, \"Hello to you\" appears to be the most fitting choice, fulfilling all the requirements. I am confident that it works, and I am satisfied with the result.\n\n\n",
+            "reasoning": "**Defining Initial Constraints**\n\nI'm focused on the goal: say hello with three words. The first attempt, \"Hello there,\" wasn't sufficient, so I'm pushing for more options.\n\n\n**Exploring Greeting Options**\n\nI've explored various greeting options to fit the criteria. I've now considered phrases like \"Hello to you,\" \"Good morning all,\" and \"Well hello there.\" I'm also thinking about the nuances of tone. My current focus is to refine the choices by selecting the one that is the most broadly suitable.\n\n\n**Prioritizing Universality**\n\nI'm now honing in on the most universally understood greetings. Considering \"Hello to everyone\" and \"Hi to you,\" the focus is on selecting the simplest and most widely applicable. I am trying to avoid anything too specific, and leaning toward phrases that work across a variety of contexts. My aim is to deliver a solution that is both clear and adaptable.\n\n\n**Finalizing Phrase Selection**\n\nI'm now revisiting options, considering both common usage and the core requirement. The aim is to balance simplicity and recognizability. I've been experimenting with variations, including a reiteration, but now I'm leaning toward a more direct approach. \"Hello to you\" still appears to be a strong candidate due to its clarity.\n\n\n**Finalizing the Selection**\n\nI'm now narrowing down the options. I've considered several phrases, weighing their practicality. After a more focused review, \"Hello to you\" appears to be the most fitting choice, fulfilling all the requirements. I am confident that it works, and I am satisfied with the result.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 1107,
+        "prompt_tokens": 7,
+        "total_tokens": 1114,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 1103,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": null
+      }
+    }
+  }
+}

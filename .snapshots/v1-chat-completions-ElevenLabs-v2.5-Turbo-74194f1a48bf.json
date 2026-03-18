@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-ElevenLabs-v2.5-Turbo-74194f1a48bf",
+  "test": {
+    "name": "generates text with ElevenLabs-v2.5-Turbo",
+    "file": "tests/integration/poe-bots.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "ElevenLabs-v2.5-Turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "982",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-3fb3859a5d4d8ed461d94ba9",
+      "object": "chat.completion",
+      "created": 1770831840,
+      "model": "ElevenLabs-v2.5-Turbo",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "https://pfst.cf2.poecdn.net/base/audio/cc49bf2de201dee7059bde55e03e4afb3a954c644d309268da9a3f2196e7a417"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 0,
+        "total_tokens": 7
+      }
+    }
+  }
+}

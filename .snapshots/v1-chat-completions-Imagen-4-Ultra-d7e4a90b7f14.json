@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-Imagen-4-Ultra-d7e4a90b7f14",
+  "test": {
+    "name": "generates text with Imagen-4-Ultra",
+    "file": "tests/integration/poe-bots.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "Imagen-4-Ultra",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "10767",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-1364fc4c83fce4ab597889a5",
+      "object": "chat.completion",
+      "created": 1770831883,
+      "model": "Imagen-4-Ultra",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/99fc405d0046a066d9b2544c817d00f3fe5cc81f0c9440df227345c40b4da139?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/99fc405d0046a066d9b2544c817d00f3fe5cc81f0c9440df227345c40b4da139?w=1024&h=1024"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 73,
+        "total_tokens": 80
+      }
+    }
+  }
+}
