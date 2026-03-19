@@ -1,0 +1,63 @@
+{
+  "key": "v1-chat-completions-nova-premier-1.0-cda6b842ec82",
+  "test": {
+    "name": "generates text with nova-premier-1.0",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "nova-premier-1.0",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "2836",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-eea8559efe622ee2da29a27d",
+      "object": "chat.completion",
+      "created": 1773881502,
+      "model": "nova-premier-1.0",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "\nHi there friend",
+            "reasoning_content": "\n- The user wants a 3-word hello. \n- \"Hi there friend\" and \"Hello dear user\" work.\n- \"Hi to you\" also fits. \n- Must pick one valid option. \"Hello dear user\" is too formal. \"Hi there friend\" sounds friendly.\n",
+            "reasoning": "\n- The user wants a 3-word hello. \n- \"Hi there friend\" and \"Hello dear user\" work.\n- \"Hi to you\" also fits. \n- Must pick one valid option. \"Hello dear user\" is too formal. \"Hi there friend\" sounds friendly.\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 117,
+        "total_tokens": 200,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 115
+        }
+      }
+    }
+  }
+}

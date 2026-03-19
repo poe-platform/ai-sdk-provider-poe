@@ -1,0 +1,66 @@
+{
+  "key": "v1-chat-completions-glm-4.6-3fe45756688b",
+  "test": {
+    "name": "generates text with glm-4.6",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "glm-4.6",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1027",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-bb956e2bf24c8fb1707d0fff",
+      "object": "chat.completion",
+      "created": 1773881480,
+      "model": "glm-4.6",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello there, friend."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 12,
+        "total_tokens": 18,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 2
+        }
+      }
+    }
+  }
+}

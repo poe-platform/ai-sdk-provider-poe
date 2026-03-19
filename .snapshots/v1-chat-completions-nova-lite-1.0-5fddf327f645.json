@@ -1,0 +1,61 @@
+{
+  "key": "v1-chat-completions-nova-lite-1.0-5fddf327f645",
+  "test": {
+    "name": "generates text with nova-lite-1.0",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "nova-lite-1.0",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "635",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-2f67f48977d881efbb161102",
+      "object": "chat.completion",
+      "created": 1773881503,
+      "model": "nova-lite-1.0",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello, world, peace."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 7,
+        "prompt_tokens": 20,
+        "total_tokens": 27,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 20
+        }
+      }
+    }
+  }
+}

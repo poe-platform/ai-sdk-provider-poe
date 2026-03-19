@@ -1,0 +1,63 @@
+{
+  "key": "v1-chat-completions-nova-lite-2-a232919c35c8",
+  "test": {
+    "name": "generates text with nova-lite-2",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "nova-lite-2",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "5050",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-ed8b13c5af4ff22c193e222d",
+      "object": "chat.completion",
+      "created": 1773881508,
+      "model": "nova-lite-2",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "### Hello to you",
+            "reasoning_content": "[REDACTED].",
+            "reasoning": "[REDACTED]."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 814,
+        "prompt_tokens": 88,
+        "total_tokens": 902,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  }
+}

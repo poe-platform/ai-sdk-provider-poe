@@ -1,0 +1,68 @@
+{
+  "key": "v1-chat-completions-grok-3-mini-0bb4f1ea5869",
+  "test": {
+    "name": "grok-3-mini produces reasoning",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-3-mini",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is 7 * 8?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1773",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-5188a8433ee36a234169deb1",
+      "object": "chat.completion",
+      "created": 1773881476,
+      "model": "grok-3-mini",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "7 multiplied by 8 equals 56.",
+            "reasoning_content": "First, the user asked, \"What is 7 * 8?\" This is a straightforward multiplication question. 7 multiplied by 8 equals 56.\n\nAs an AI, I should respond helpfully and accurately. Since this is a simple math question, I don't need to overcomplicate it.\n\nI could just say, \"7 multiplied by 8 is 56.\" But to make it more engaging, I might add a bit more, like explaining the calculation briefly.\n\nThe user might be testing basic functionality, so keeping it simple is fine.\n\nFinally, ensure the response is clear and direct.",
+            "reasoning": "First, the user asked, \"What is 7 * 8?\" This is a straightforward multiplication question. 7 multiplied by 8 equals 56.\n\nAs an AI, I should respond helpfully and accurately. Since this is a simple math question, I don't need to overcomplicate it.\n\nI could just say, \"7 multiplied by 8 is 56.\" But to make it more engaging, I might add a bit more, like explaining the calculation briefly.\n\nThe user might be testing basic functionality, so keeping it simple is fine.\n\nFinally, ensure the response is clear and direct."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 9,
+        "prompt_tokens": 15,
+        "total_tokens": 24,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 121,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 14
+        }
+      }
+    }
+  }
+}

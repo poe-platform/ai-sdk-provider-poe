@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-sonnet-4.5-986c4714faf5",
+  "test": {
+    "name": "uses thinking with claude-sonnet-4.5",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-19T00:52:01Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-5-20250929",
+      "id": "req_poe_403d4b4f61a742688a9d95b8a1d57eeb",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This is a simple multiplication question.\n\n7 * 8 = 56",
+          "signature": "Et8BCkgICxABGAIqQDh6TFce+nxN+vePw8/cyCuKIVus+JGOY2GACilkHpBE9el4VBN95QRdi2IF+z1b+cD56Vsx6Z6yGnbvxjOu3Z4SDLxSIIXHH6FxCQURiRoMaROvxSYUrmBEclUnIjC1mRfcKEtV2FcfWk+VcDy8bb//JLx6Q23siNF+0aphYB116ortXNKPKJqb9348s5MqRex2ACfMoMoehPSWb6KrxlBG1vybCyB/igH9JF8ZadyPkru0fi8zhnjHUIhWX4pNOuE9AA/wOHmw5YeYMirQXikorvTAtRgB"
+        },
+        {
+          "type": "text",
+          "text": "7 * 8 = 56"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 45,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 37,
+        "total_tokens": 82
+      }
+    }
+  }
+}

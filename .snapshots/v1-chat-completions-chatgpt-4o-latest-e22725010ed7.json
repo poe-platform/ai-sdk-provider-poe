@@ -1,0 +1,71 @@
+{
+  "key": "v1-chat-completions-chatgpt-4o-latest-e22725010ed7",
+  "test": {
+    "name": "generates text with chatgpt-4o-latest",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "chatgpt-4o-latest",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "840",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-0d51146c-f489-4c60-964a-91ce199c7d12",
+      "created": 1773880808,
+      "model": "gpt-5.2",
+      "object": "chat.completion",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "Hello to you",
+            "role": "assistant",
+            "tool_calls": null,
+            "function_call": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 7,
+        "prompt_tokens": 13,
+        "total_tokens": 20,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": null,
+          "image_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "text_tokens": null,
+          "image_tokens": null,
+          "video_tokens": null
+        }
+      }
+    }
+  }
+}

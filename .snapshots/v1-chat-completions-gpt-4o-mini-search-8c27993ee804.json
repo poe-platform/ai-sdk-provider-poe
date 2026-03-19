@@ -24,43 +24,71 @@
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
-      "content-type": "application/json",
-      "openai-processing-ms": "1770",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1685",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-3976b13403ba595a66ce63c2",
+      "id": "chatcmpl-d3f6733c-9598-4e16-874a-a219650cb128",
+      "created": 1773880809,
+      "model": "gpt-4o-mini-search-preview-2025-03-11",
       "object": "chat.completion",
-      "created": 1770393159,
-      "model": "gpt-4o-mini-search",
+      "system_fingerprint": "",
       "choices": [
         {
+          "finish_reason": "stop",
           "index": 0,
           "message": {
+            "content": "In English, \"hello\" is a common greeting. In Italian, \"ciao\" serves as both \"hello\" and \"goodbye.\" ([en.wikipedia.org](https://en.wikipedia.org/wiki/Ciao?utm_source=openai)) In Arabic, \"as-salāmu ʿalaykum\" translates to \"peace be upon you,\" used as a greeting. ([bearmt.org](https://www.bearmt.org/uploads/2/6/2/8/26284832/grade-3-5.pdf?utm_source=openai)) ",
             "role": "assistant",
-            "content": "\"Hello\" is a common English greeting. In Italian, \"Ciao\" serves as both \"hello\" and \"goodbye.\" ([en.wikipedia.org](https://en.wikipedia.org/wiki/Ciao?utm_source=openai)) "
+            "tool_calls": null,
+            "function_call": null,
+            "provider_specific_fields": {
+              "refusal": null
+            },
+            "annotations": [
+              {
+                "type": "url_citation",
+                "url_citation": {
+                  "end_index": 173,
+                  "start_index": 99,
+                  "title": "Ciao",
+                  "url": "https://en.wikipedia.org/wiki/Ciao?utm_source=openai"
+                }
+              },
+              {
+                "type": "url_citation",
+                "url_citation": {
+                  "end_index": 356,
+                  "start_index": 261,
+                  "title": "GRADE LEVEL: 3-5",
+                  "url": "https://www.bearmt.org/uploads/2/6/2/8/26284832/grade-3-5.pdf?utm_source=openai"
+                }
+              }
+            ]
           },
-          "finish_reason": "stop"
+          "provider_specific_fields": {}
         }
       ],
       "usage": {
-        "completion_tokens": 47,
+        "completion_tokens": 115,
         "prompt_tokens": 7,
-        "total_tokens": 54,
+        "total_tokens": 122,
         "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
           "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
+          "rejected_prediction_tokens": 0
         },
         "prompt_tokens_details": {
-          "audio_tokens": null,
+          "audio_tokens": 0,
           "cached_tokens": 0
         }
-      }
+      },
+      "service_tier": null
     }
   }
 }

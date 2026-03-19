@@ -1,0 +1,116 @@
+{
+  "key": "v1-responses-gemini-3.1-pro-ce2dcd2b5996",
+  "test": {
+    "name": "handles tool calling with gemini-3.1-pro",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-pro",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "What is the weather in San Francisco? Use the getWeather tool."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "getWeather",
+          "description": "Get the current weather for a location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "4069",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjgwVzdhZEszUEtuRHVlVVA5TURNcUF3",
+      "created_at": 1773880819,
+      "metadata": {},
+      "model": "gemini-3.1-pro-preview",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "message",
+          "id": "80W7adK3PKnDueUP9MDMqAw",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "annotations": []
+            }
+          ]
+        },
+        {
+          "arguments": "{\"location\": \"San Francisco\"}",
+          "call_id": "call_d8ac76aac6fb4a959eacdd3206e3__thought__Cq0DAY89a18mYJ+IpYWsCzhjLevXSXTLKU1xMlEIeWSMmTpcNmzqsZl4NiayE8v3+djo6QeYqtQ7u0P8ny5CobUsTioDqiPJeSHZIq/7ZESFis8ayMcP7sZwOxwY/5A45ekTt//X9tN4CaKAFdwK+zsy7ewudFuO/BhHFG/Qx6r8mhHr/p8AT953RsX+grxyGLvL2XM4ZLL32u3Xd9ddTP0f7xGabMiHmz2OMiU4tonronUt0FR+mjxTXNrSxR5ButI7jHcbsylpG/Kv4XPd3peBqG6ROtSYUN0gEiA/3xWlWL6w+ZHLwi13uzG6uX4LTaljBlI7N7Pci15UY4OFrLtkxUVCMFqcTaTo7GmgraOYF6g3cKkBQbAduM+hFfLkFO0T7qi2gcJferXK+lm6OmjPhEUVTMf8+jPyiV/TOTM88diwRPhwzLTsjjMm4/GA1KLIgI13Wjc1ITr7Tvo2it2OyRDU6nGXRwwhLUHR9gPcqc0HihaZXMSbnerwclB91ZhHFZGWcu2sLiX6s3hneHFefymMfVTixUBTT9+78q8wTwOLkcKt3Lp+j2uphWb6CiEBjz1rXzV4hB0VMKm4VxyvzrZmm9wuBB4RdbQbeeUtr/MKIgGPPWtfJsnpqgNmaoJlSSMkLKKj80UJ60AfqYBG/vuqWmIKIgGPPWtfo52tioErZoJGUIpf07MGEaHV0gLpy4OTNd5/55A=",
+          "name": "getWeather",
+          "type": "function_call",
+          "id": "call_d8ac76aac6fb4a959eacdd3206e3__thought__Cq0DAY89a18mYJ+IpYWsCzhjLevXSXTLKU1xMlEIeWSMmTpcNmzqsZl4NiayE8v3+djo6QeYqtQ7u0P8ny5CobUsTioDqiPJeSHZIq/7ZESFis8ayMcP7sZwOxwY/5A45ekTt//X9tN4CaKAFdwK+zsy7ewudFuO/BhHFG/Qx6r8mhHr/p8AT953RsX+grxyGLvL2XM4ZLL32u3Xd9ddTP0f7xGabMiHmz2OMiU4tonronUt0FR+mjxTXNrSxR5ButI7jHcbsylpG/Kv4XPd3peBqG6ROtSYUN0gEiA/3xWlWL6w+ZHLwi13uzG6uX4LTaljBlI7N7Pci15UY4OFrLtkxUVCMFqcTaTo7GmgraOYF6g3cKkBQbAduM+hFfLkFO0T7qi2gcJferXK+lm6OmjPhEUVTMf8+jPyiV/TOTM88diwRPhwzLTsjjMm4/GA1KLIgI13Wjc1ITr7Tvo2it2OyRDU6nGXRwwhLUHR9gPcqc0HihaZXMSbnerwclB91ZhHFZGWcu2sLiX6s3hneHFefymMfVTixUBTT9+78q8wTwOLkcKt3Lp+j2uphWb6CiEBjz1rXzV4hB0VMKm4VxyvzrZmm9wuBB4RdbQbeeUtr/MKIgGPPWtfJsnpqgNmaoJlSSMkLKKj80UJ60AfqYBG/vuqWmIKIgGPPWtfo52tioErZoJGUIpf07MGEaHV0gLpy4OTNd5/55A=",
+          "status": "completed",
+          "provider_specific_fields": {
+            "thought_signature": "Cq0DAY89a18mYJ+IpYWsCzhjLevXSXTLKU1xMlEIeWSMmTpcNmzqsZl4NiayE8v3+djo6QeYqtQ7u0P8ny5CobUsTioDqiPJeSHZIq/7ZESFis8ayMcP7sZwOxwY/5A45ekTt//X9tN4CaKAFdwK+zsy7ewudFuO/BhHFG/Qx6r8mhHr/p8AT953RsX+grxyGLvL2XM4ZLL32u3Xd9ddTP0f7xGabMiHmz2OMiU4tonronUt0FR+mjxTXNrSxR5ButI7jHcbsylpG/Kv4XPd3peBqG6ROtSYUN0gEiA/3xWlWL6w+ZHLwi13uzG6uX4LTaljBlI7N7Pci15UY4OFrLtkxUVCMFqcTaTo7GmgraOYF6g3cKkBQbAduM+hFfLkFO0T7qi2gcJferXK+lm6OmjPhEUVTMf8+jPyiV/TOTM88diwRPhwzLTsjjMm4/GA1KLIgI13Wjc1ITr7Tvo2it2OyRDU6nGXRwwhLUHR9gPcqc0HihaZXMSbnerwclB91ZhHFZGWcu2sLiX6s3hneHFefymMfVTixUBTT9+78q8wTwOLkcKt3Lp+j2uphWb6CiEBjz1rXzV4hB0VMKm4VxyvzrZmm9wuBB4RdbQbeeUtr/MKIgGPPWtfJsnpqgNmaoJlSSMkLKKj80UJ60AfqYBG/vuqWmIKIgGPPWtfo52tioErZoJGUIpf07MGEaHV0gLpy4OTNd5/55A="
+          }
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 32,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 32
+        },
+        "output_tokens": 121,
+        "output_tokens_details": {
+          "reasoning_tokens": 112,
+          "text_tokens": 9
+        },
+        "total_tokens": 153
+      },
+      "provider_specific_fields": {
+        "traffic_type": "PROVISIONED_THROUGHPUT"
+      }
+    }
+  }
+}

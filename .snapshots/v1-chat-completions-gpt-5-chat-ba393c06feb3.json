@@ -1,0 +1,71 @@
+{
+  "key": "v1-chat-completions-gpt-5-chat-ba393c06feb3",
+  "test": {
+    "name": "generates text with gpt-5-chat",
+    "file": "tests/integration/openai.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5-chat",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "556",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-465727e7-dd40-4786-b31a-59b4bf1d7a7c",
+      "created": 1773880796,
+      "model": "gpt-5-chat-latest",
+      "object": "chat.completion",
+      "system_fingerprint": null,
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "Hello, my friend!",
+            "role": "assistant",
+            "tool_calls": null,
+            "function_call": null
+          }
+        }
+      ],
+      "usage": {
+        "completion_tokens": 6,
+        "prompt_tokens": 14,
+        "total_tokens": 20,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": null,
+          "image_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0,
+          "text_tokens": null,
+          "image_tokens": null,
+          "video_tokens": null
+        }
+      }
+    }
+  }
+}

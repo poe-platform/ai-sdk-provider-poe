@@ -1,0 +1,68 @@
+{
+  "key": "v1-chat-completions-kimi-k2-thinking-14148d667b90",
+  "test": {
+    "name": "generates text with kimi-k2-thinking",
+    "file": "tests/integration/reasoning-models.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "kimi-k2-thinking",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "7093",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-3d2ad928a497cd1afc48d8c9",
+      "object": "chat.completion",
+      "created": 1773881489,
+      "model": "kimi-k2-thinking",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello there, friend",
+            "reasoning_content": "The user wants me to say hello in exactly 3 words.\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means my response must contain precisely 3 words.\n\nLet me think of common 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you?\" (4 words - \"Hi,\" counts as one word, \"how\" is second, \"are\" is third, \"you?\" is fourth)\n- \"Good morning everyone\" (3 words)\n- \"Hey there buddy\" (3 words)\n- \"Hello to you\" (3 words)\n- \"Hi there friend\" (3 words)\n- \"Hello, my friend\" (3 words)\n- \"Greetings to all\" (3 words)\n\nThe simplest and most direct would be \"Hello there, friend\" or \"Hello to you\" or \"Hi there friend\".\n\nLet me double-check the word count:\n- \"Hello\" = 1 word\n- \"there,\" = 1 word (punctuation doesn't create separate words)\n- \"friend\" = 1 word\n\nTotal: 3 words.\n\n\"Hello there, friend\" is a natural, friendly greeting that fits the requirement perfectly.",
+            "reasoning": "The user wants me to say hello in exactly 3 words.\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means my response must contain precisely 3 words.\n\nLet me think of common 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you?\" (4 words - \"Hi,\" counts as one word, \"how\" is second, \"are\" is third, \"you?\" is fourth)\n- \"Good morning everyone\" (3 words)\n- \"Hey there buddy\" (3 words)\n- \"Hello to you\" (3 words)\n- \"Hi there friend\" (3 words)\n- \"Hello, my friend\" (3 words)\n- \"Greetings to all\" (3 words)\n\nThe simplest and most direct would be \"Hello there, friend\" or \"Hello to you\" or \"Hi there friend\".\n\nLet me double-check the word count:\n- \"Hello\" = 1 word\n- \"there,\" = 1 word (punctuation doesn't create separate words)\n- \"friend\" = 1 word\n\nTotal: 3 words.\n\n\"Hello there, friend\" is a natural, friendly greeting that fits the requirement perfectly."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 258,
+        "prompt_tokens": 14,
+        "total_tokens": 272,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 252,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        }
+      }
+    }
+  }
+}
