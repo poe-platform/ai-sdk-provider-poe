@@ -52,9 +52,9 @@ describe("models without prefix (chat completions)", () => {
     expect(typeof text).toBe("string");
   });
 
-  it("supports thinking_level and web_search with gemini-3-pro", async () => {
+  it("supports thinking_level and web_search with gemini-3.1-pro", async () => {
     const { text, usage } = await generateText({
-      model: poe("gemini-3-pro"),
+      model: poe("gemini-3.1-pro"),
       prompt:
         "Write a Python function where given an int array, it returns the length of the longest strictly increasing subsequence. Give the naive solution and an optimal solution.",
       experimental_providerMetadata: {

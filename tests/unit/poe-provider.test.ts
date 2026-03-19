@@ -21,9 +21,9 @@ describe("createPoe", () => {
 
   it("routes openai/* to openai responses provider", () => {
     const poe = createPoe();
-    const model = poe("openai/gpt-4o");
+    const model = poe("openai/gpt-5.2");
     expect(model.provider).toBe("openai.responses");
-    expect(model.modelId).toBe("gpt-4o");
+    expect(model.modelId).toBe("gpt-5.2");
   });
 
   it.skip("routes google/* to openai responses provider, stripping prefix", () => {

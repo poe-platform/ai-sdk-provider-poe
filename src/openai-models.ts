@@ -27,7 +27,7 @@ export const OPENAI_MODELS: Record<string, OpenAIModelDef> = {
   "gpt-5-pro":          { tags: ["timeout:image"] },
   "gpt-5-mini":         {},
   "gpt-5-nano":         {},
-  "gpt-5-chat":         {},
+  "gpt-5-chat":         { route: "chat" },
   "gpt-5-codex":        {},
 
   // O-series
@@ -41,16 +41,16 @@ export const OPENAI_MODELS: Record<string, OpenAIModelDef> = {
   "o4-mini-deep-research": { skip: "takes too long" },
   "o3-deep-research":      { skip: "takes too long" },
 
-  // GPT-4.1
-  "gpt-4.1":            {},
-  "gpt-4.1-mini":       {},
-  "gpt-4.1-nano":       {},
+  // GPT-4.1 — chat completions only
+  "gpt-4.1":            { route: "chat" },
+  "gpt-4.1-mini":       { route: "chat" },
+  "gpt-4.1-nano":       { route: "chat" },
 
-  // GPT-4o
-  "gpt-4o":             {},
-  "gpt-4o-mini":        {},
-  "gpt-4o-aug":         {},
-  "chatgpt-4o-latest":  { tools: false },
+  // GPT-4o — chat completions only
+  "gpt-4o":             { route: "chat" },
+  "gpt-4o-mini":        { route: "chat" },
+  "gpt-4o-aug":         { route: "chat" },
+  "chatgpt-4o-latest":  { route: "chat", tools: false },
 
   // Legacy — chat completions only
   "gpt-4o-search":           { route: "chat", tools: false },
