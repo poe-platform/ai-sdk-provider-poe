@@ -78,7 +78,7 @@ describe("anthropic provider", () => {
 
   it.skip("opus 4.6 1 million context", {
     timeout: 3600000,
-    tags: ["stage:alpha", "snapshot:record"],
+    tags: ["snapshot:record"],
   }, async () => {
     const model = poe("anthropic/claude-opus-4-6");
     const userContents: string[] = [];

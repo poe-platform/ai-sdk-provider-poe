@@ -2,12 +2,12 @@
   "name": "ai-sdk-provider-poe",
   "version": "0.0.0-dev",
   "type": "module",
-  "main": "./dist/stable/index.js",
-  "types": "./dist/stable/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/stable/index.d.ts",
-      "import": "./dist/stable/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "files": [
@@ -15,19 +15,13 @@
   ],
   "scripts": {
     "build": "tsc --noEmit && tsx scripts/build-release-stages.ts",
-    "test": "RELEASE_STAGE=alpha vitest run",
-    "test:stable": "RELEASE_STAGE=stable vitest run",
-    "test:beta": "RELEASE_STAGE=beta vitest run",
-    "test:alpha": "RELEASE_STAGE=alpha vitest run",
+    "test": "vitest run",
     "test:watch": "vitest",
     "snapshots:list": "tsx scripts/snapshots.ts list",
     "snapshots:list:stale": "tsx scripts/snapshots.ts list:stale",
     "snapshots:delete": "tsx scripts/snapshots.ts delete",
     "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale",
     "verify-model": "tsx scripts/verify-model.ts",
-    "verify-model:stable": "RELEASE_STAGE=stable tsx scripts/verify-model.ts",
-    "verify-model:beta": "RELEASE_STAGE=beta tsx scripts/verify-model.ts",
-    "verify-model:alpha": "RELEASE_STAGE=alpha tsx scripts/verify-model.ts",
     "prepare": "husky",
     "secrets": "trufflehog filesystem . --no-update --fail --exclude-paths=.trufflehogignore"
   },

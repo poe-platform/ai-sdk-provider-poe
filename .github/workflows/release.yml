@@ -11,9 +11,6 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        release-stage: [stable, beta, alpha]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,13 +20,7 @@ jobs:
           node-version: 22
       - run: npm clean-install
       - run: npm run build
-      - name: Test (${{ matrix.release-stage }})
-        run: |
-          if [ "${{ matrix.release-stage }}" = "stable" ]; then
-            npm test
-          else
-            npm run test:${{ matrix.release-stage }}
-          fi
+      - run: npm test
   release:
     needs: test
     runs-on: ubuntu-latest
