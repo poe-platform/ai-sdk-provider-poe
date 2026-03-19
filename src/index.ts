@@ -4,3 +4,5 @@ export { OPENAI_MODELS } from "./openai-models.js";
 export type { OpenAIModelDef } from "./openai-models.js";
 export { GOOGLE_MODELS } from "./google-models.js";
 export type { GoogleModelDef } from "./google-models.js";
+export { fetchPoeModels, POE_DEFAULT_BASE_URL } from "./poe-models.js";
+export type { PoeModelInfo } from "./poe-models.js";

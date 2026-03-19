@@ -2,15 +2,7 @@ import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
-import { OPENAI_MODELS } from "./openai-models.js";
-import { GOOGLE_MODELS } from "./google-models.js";
-import { isAlphaStage } from "./release-stage.js";
-
-const chatOnly = (models: Record<string, { route?: "chat" }>) =>
-  new Set(Object.entries(models).filter(([, m]) => m.route === "chat").map(([n]) => n));
-
-const OPENAI_CHAT_ONLY = chatOnly(OPENAI_MODELS);
-const GOOGLE_CHAT_ONLY = chatOnly(GOOGLE_MODELS);
+import { POE_DEFAULT_BASE_URL, resolveProvider } from "./poe-models.js";
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -25,7 +17,7 @@ export interface PoeProvider {
 }
 
 export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
-  const baseURL = withoutTrailingSlash(options.baseURL) ?? "https://api.poe.com/v1";
+  const baseURL = withoutTrailingSlash(options.baseURL) ?? POE_DEFAULT_BASE_URL;
 
   const getApiKey = () =>
     loadApiKey({
@@ -62,20 +54,14 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
   };
 
   const languageModel = (modelId: string): LanguageModelV3 => {
-    const [prefix, ...rest] = modelId.split("/");
-    const [provider, model] = rest.length ? [prefix, rest.join("/")] : [null, prefix];
+    const { provider, model } = resolveProvider(modelId);
 
     switch (provider) {
       case "anthropic":
         return getAnthropicProvider()(model);
-      case "openai":
-        if (OPENAI_CHAT_ONLY.has(model)) return getOpenAIProvider().chat(model);
+      case "openai-responses":
         return getOpenAIProvider().responses(model);
-      case "google":
-        if (GOOGLE_CHAT_ONLY.has(model)) return getOpenAIProvider().chat(model);
-        if (isAlphaStage()) return getOpenAIProvider().responses(model);
-        return getOpenAIProvider().chat(model);
-      default:
+      case "openai-chat":
         return getOpenAIProvider().chat(model);
     }
   };
