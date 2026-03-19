@@ -10,11 +10,10 @@ const poe = createPoe({
 /**
  * Integration tests for models from the reasoning investigation table.
  * Covers models not already exercised by openai/google/anthropic test suites.
- * Tagged snapshot:record so first run records real API responses.
  */
 
-const OPTS = { tags: ["snapshot:record"] };
-const SLOW = { tags: ["snapshot:record", "timeout:slow"], timeout: 180_000 };
+const OPTS = {};
+const SLOW = { tags: ["timeout:slow"], timeout: 180_000 };
 
 // --- XAI ---
 
