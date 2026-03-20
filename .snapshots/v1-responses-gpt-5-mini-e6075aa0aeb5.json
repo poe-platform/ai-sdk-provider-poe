@@ -23,30 +23,33 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "4613",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDE3YThhMWNkYzBkNWQ3ZDAxNjk4NjBkOGEyMzIwODE5MzlhOGIxMmNhOGU3MjhjNzg=",
-      "created_at": 1770392970,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDViOTE5Yzc2ZjlkMDE4OTAxNjliZDUzOGQxOWU4ODE5Mjg3MzdhZmJiY2Q1OWZmNmQ=",
+      "created_at": 1774015373,
       "metadata": {},
       "model": "gpt-5-mini-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_017a8a1cdc0d5d7d0169860d8a91088193a51ae6e088b7bb7a",
+          "id": "rs_05b919c76f9d01890169bd538d9d74819296555e1f9ab73f46",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_017a8a1cdc0d5d7d0169860d8f72088193911dfe8c730a3af1",
+          "id": "msg_05b919c76f9d01890169bd539168f08192a55842cecde6ea06",
           "content": [
             {
               "annotations": [],
@@ -66,7 +69,8 @@
       "tools": [],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -81,18 +85,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 253,
+        "output_tokens": 270,
         "output_tokens_details": {
-          "reasoning_tokens": 192
+          "reasoning_tokens": 256
         },
-        "total_tokens": 266
+        "total_tokens": 283
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392975,
+      "completed_at": 1774015377,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

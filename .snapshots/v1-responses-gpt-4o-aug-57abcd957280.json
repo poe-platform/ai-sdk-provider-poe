@@ -1,7 +1,7 @@
 {
   "key": "v1-responses-gpt-4o-aug-57abcd957280",
   "test": {
-    "name": "handles tool calling with gpt-4o-aug",
+    "name": "handles vision with gpt-5.2",
     "file": "tests/integration/openai.test.ts"
   },
   "request": {
@@ -45,29 +45,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "6681",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDY1MDE3ZTI4OTU5ZDZhNTAxNjk4NjBlNDE5YTMwODFhMGFiMzI2ZTgyY2Y5MDE1ZGU=",
-      "created_at": 1770393153,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQwMGJhMGZkY2EyYTBkMDAxNjliZDU0NDNkNWQwODE5NWE3OTNhN2JmZGQ3MzI1MDU=",
+      "created_at": 1774015555,
       "metadata": {},
       "model": "gpt-4o-2024-08-06",
       "object": "response",
       "output": [
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_3cCHpohUcWeMiFGzPM3xUsdS",
+          "call_id": "call_CLPJQDrXNTZEFH1ixE4lVfWG",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_065017e28959d6a50169860e4200c081a0bfe129c59dc28f74",
+          "id": "fc_0d00ba0fdca2a0d00169bd544a43648195812ed0c15b873f67",
           "status": "completed"
         }
       ],
@@ -96,7 +99,10 @@
         }
       ],
       "top_p": 1,
-      "reasoning": {},
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
       "status": "completed",
       "text": {
         "format": {
@@ -121,7 +127,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393154,
+      "completed_at": 1774015562,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

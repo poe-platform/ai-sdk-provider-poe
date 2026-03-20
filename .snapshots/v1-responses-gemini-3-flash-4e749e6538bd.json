@@ -30,22 +30,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2012",
+      "openai-processing-ms": "1946",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOi1FVzdhWWlkQjU2QTRPVVBwX1cyd1FV",
-      "created_at": 1773880824,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjBsSzlhZVdTR3BfcmpiSVBpTnJMLUFr",
+      "created_at": 1774015186,
       "metadata": {},
       "model": "gemini-3-flash-preview",
       "object": "chat.completion",
       "output": [
         {
           "type": "message",
-          "id": "-EW7aYidB56A4OUPp_W2wQU",
+          "id": "0lK9aeWSGp_rjbIPiNrL-Ak",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -69,12 +69,12 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 246,
+        "output_tokens": 176,
         "output_tokens_details": {
-          "reasoning_tokens": 241,
+          "reasoning_tokens": 171,
           "text_tokens": 5
         },
-        "total_tokens": 253
+        "total_tokens": 183
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"

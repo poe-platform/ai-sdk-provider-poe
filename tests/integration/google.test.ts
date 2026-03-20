@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { generateText, tool } from "ai";
 import { z } from "zod";
 import { createPoe } from "../../src/poe-provider.js";
-import { GOOGLE_MODELS } from "../../src/google-models.js";
+import { getTestModels } from "../../src/poe-models.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 
 const poe = createPoe({
@@ -10,26 +10,23 @@ const poe = createPoe({
 });
 
 describe("google provider", () => {
-  for (const [name, def] of Object.entries(GOOGLE_MODELS)) {
-    describe(name, () => {
-      const run = def.skip ? it.skip : it;
-      const opts = {
-        ...(def.timeout && { timeout: def.timeout }),
-        ...(def.tags && { tags: def.tags }),
-      };
+  for (const model of getTestModels("Google")) {
+    describe(model.id, () => {
+      const run = model.skip ? it.skip : it;
+      const opts = model.tags.length ? { tags: model.tags } : {};
 
-      run(`generates text with ${name}`, opts, async () => {
+      run(`generates text with ${model.id}`, opts, async () => {
         const { text } = await generateText({
-          model: poe(`google/${name}`),
+          model: poe(`google/${model.id}`),
           prompt: "Say hello in exactly 3 words",
         });
         expect(text).toBeTruthy();
       });
 
-      if (def.tools !== false) {
-        run(`handles tool calling with ${name}`, opts, async () => {
+      if (model.hasTools) {
+        run(`handles tool calling with ${model.id}`, opts, async () => {
           const { toolCalls } = await generateText({
-            model: poe(`google/${name}`),
+            model: poe(`google/${model.id}`),
             prompt:
               "What is the weather in San Francisco? Use the getWeather tool.",
             tools: {

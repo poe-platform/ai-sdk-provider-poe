@@ -45,29 +45,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1076",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGMwNzkyMzgzMTA1NzIzMDAxNjk4NjBlM2ZlODgwODFhMDk0NmY0NzU0ZWE1MDRkZDA=",
-      "created_at": 1770393151,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGRmYmMwNWU3ZjFlOTFmYTAxNjliZDU0M2Q3ODhjODE5Y2IzNDg1MGI0YTI5YTk5NWQ=",
+      "created_at": 1774015549,
       "metadata": {},
       "model": "gpt-4o-mini-2024-07-18",
       "object": "response",
       "output": [
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_zWSd3C0EHPERWzGyUya0nOoq",
+          "call_id": "call_AGoEmUfaI9ElaP8nsWIVaBwR",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0c079238310572300169860e406df481a099f63a5a59065629",
+          "id": "fc_0dfbc05e7f1e91fa0169bd543e5d3c819c9d5db3afef6d75ad",
           "status": "completed"
         }
       ],
@@ -96,7 +99,10 @@
         }
       ],
       "top_p": 1,
-      "reasoning": {},
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
       "status": "completed",
       "text": {
         "format": {
@@ -121,7 +127,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393152,
+      "completed_at": 1774015550,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

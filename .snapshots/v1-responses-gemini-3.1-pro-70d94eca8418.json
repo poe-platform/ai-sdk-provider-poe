@@ -2,7 +2,7 @@
   "key": "v1-responses-gemini-3.1-pro-70d94eca8418",
   "test": {
     "name": "generates text with gemini-3.1-pro",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "tests/integration/google.test.ts"
   },
   "request": {
     "body": {
@@ -30,28 +30,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "6423",
+      "openai-processing-ms": "9247",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnZVaTdhZjNJS01TQnh0VVBpZExBMEFR",
-      "created_at": 1773881533,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnlWSzlhYXFJQmU2eG9NOFAzZVduMkF3",
+      "created_at": 1774015177,
       "metadata": {},
       "model": "gemini-3.1-pro-preview",
       "object": "chat.completion",
       "output": [
         {
           "type": "message",
-          "id": "vUi7af3IKMSBxtUPidLA0AQ",
+          "id": "yVK9aaqIBe6xoM8P3eWn2Aw",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Hello to you!",
+              "text": "Hello to you.",
               "annotations": []
             }
           ]
@@ -69,12 +69,12 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 408,
+        "output_tokens": 233,
         "output_tokens_details": {
-          "reasoning_tokens": 404,
+          "reasoning_tokens": 229,
           "text_tokens": 4
         },
-        "total_tokens": 415
+        "total_tokens": 240
       },
       "provider_specific_fields": {
         "traffic_type": "PROVISIONED_THROUGHPUT"

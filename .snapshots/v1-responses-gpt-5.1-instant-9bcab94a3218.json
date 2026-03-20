@@ -45,29 +45,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "870",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDlmNGQzYzQ3MDAzM2UzMTAxNjk4NjBjZmJmODY4ODE5ZWEyNzYxMjA0NTg2NDAxMTQ=",
-      "created_at": 1770392828,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDJkNzM2M2E3MTFlNGVlYjAxNjliZDUzMGJjNzc4ODE5NmE5OGI0ZGIxYjY0YmVmZTg=",
+      "created_at": 1774015243,
       "metadata": {},
       "model": "gpt-5.1-chat-latest",
       "object": "response",
       "output": [
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_kfspCzDuRqsS68MuGPuFCjvJ",
+          "call_id": "call_7n5UY0UHwWYtTOcLC9rOTq60",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_09f4d3c470033e310169860cfc88e8819eaf5b1f4a8365b607",
+          "id": "fc_02d7363a711e4eeb0169bd530c19b88196a0d4e2f931e998d6",
           "status": "completed"
         }
       ],
@@ -97,7 +100,8 @@
       ],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -123,7 +127,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392829,
+      "completed_at": 1774015244,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

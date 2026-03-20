@@ -1,19 +1,19 @@
 {
-  "key": "v1-responses-chatgpt-4o-latest-cffb3c0d2942",
+  "key": "v1-responses-gpt-5.2-6e7241e58352",
   "test": {
-    "name": "generates text with chatgpt-4o-latest",
+    "name": "uses reasoning with gpt-5.2",
     "file": "tests/integration/openai.test.ts"
   },
   "request": {
     "body": {
-      "model": "chatgpt-4o-latest",
+      "model": "gpt-5.2",
       "input": [
         {
           "role": "user",
           "content": [
             {
               "type": "input_text",
-              "text": "Say hello in exactly 3 words"
+              "text": "What is 7 * 8?"
             }
           ]
         }
@@ -23,29 +23,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "738",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDgyOGQ0ZDgyOTAyOTk4MDAxNjk4NjBlNDI2MmE4ODE5NGFjODQxOGJjZTA5ODM0YzI=",
-      "created_at": 1770393154,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGUwNzNjMzE0NWU0M2ExZjAxNjliZDViNjMxOWIwODFhMGExNjkwNjhhZDQ4YTExMzY=",
+      "created_at": 1774017379,
       "metadata": {},
-      "model": "chatgpt-4o-latest",
+      "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_0828d4d8290299800169860e42abe08194a54b75a81d342f33",
+          "id": "msg_0e073c3145e43a1f0169bd5b63758481a09951daf19b757970",
           "content": [
             {
               "annotations": [],
-              "text": "Hello to you!",
+              "text": "7 × 8 = **56**.",
               "type": "output_text",
               "logprobs": []
             }
@@ -59,8 +62,11 @@
       "temperature": 1,
       "tool_choice": "auto",
       "tools": [],
-      "top_p": 1,
-      "reasoning": {},
+      "top_p": 0.98,
+      "reasoning": {
+        "effort": "none",
+        "summary": null
+      },
       "status": "completed",
       "text": {
         "format": {
@@ -74,18 +80,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 5,
+        "output_tokens": 13,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 19
+        "total_tokens": 27
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393154,
+      "completed_at": 1774017379,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

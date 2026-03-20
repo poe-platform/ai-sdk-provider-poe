@@ -1,0 +1,84 @@
+{
+  "key": "v1-responses-gemini-3.1-pro-e41301cf6b41",
+  "test": {
+    "name": "supports thinking_level and web_search with gemini-3.1-pro",
+    "file": "tests/integration/other.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-pro",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Write a Python function where given an int array, it returns the length of the longest strictly increasing subsequence. Give the naive solution and an optimal solution."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "31314",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlgxMjlhZi1nQlBlZnlPZ1A2TVRYbVEw",
+      "created_at": 1774017887,
+      "metadata": {},
+      "model": "gemini-3.1-pro-preview",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "message",
+          "id": "X129af-gBPefyOgP6MTXmQ0",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Here are the solutions for finding the length of the Longest Strictly Increasing Subsequence (LIS). \n\nI have included the **Naive Solution** (Recursive), a brief mention of the standard **Dynamic Programming Solution**, and the **Optimal Solution** (Binary Search).\n\n### 1. Naive Solution (Recursion)\nThe naive approach uses recursion. For every element in the array, we have two choices:\n1. Include the current element in the subsequence (if it is strictly greater than the previous included element).\n2. Exclude the current element.\n\nWe explore all valid combinations and return the maximum length.\n\n```python\ndef length_of_LIS_naive(arr):\n    if not arr:\n        return 0\n\n    def solve(curr_idx, prev_idx):\n        # Base case: if we reach the end of the array\n        if curr_idx == len(arr):\n            return 0\n        \n        # Option 1: Exclude the current element\n        length_exclude = solve(curr_idx + 1, prev_idx)\n        \n        # Option 2: Include the current element (only if it's strictly greater)\n        length_include = 0\n        if prev_idx == -1 or arr[curr_idx] > arr[prev_idx]:\n            length_include = 1 + solve(curr_idx + 1, curr_idx)\n            \n        return max(length_exclude, length_include)\n\n    # Start recursion from index 0, with -1 representing no previous element\n    return solve(0, -1)\n```\n* **Time Complexity:** $O(2^n)$ - At each step, we make a branching decision (include or exclude), leading to an exponential number of paths. This will result in a Time Limit Exceeded (TLE) error for arrays larger than ~20 elements.\n* **Space Complexity:** $O(n)$ - For the recursion stack.\n\n*(Note: You can optimize this to $O(n^2)$ by adding memoization, which is the standard Dynamic Programming approach).*\n\n---\n\n### 2. Optimal Solution (Binary Search / Patience Sorting)\nThe most optimal way to solve this is using an array to build the subsequence and utilizing **Binary Search**. \n\nWe maintain an array `sub` where `sub[i]` stores the smallest ending element of a strictly increasing subsequence of length `i + 1`. \n* We iterate through the numbers. If a number is greater than the last element in `sub`, we append it (extending the LIS).\n* If it is smaller, we use binary search to find the first element in `sub` that is greater than or equal to the current number, and we **overwrite** it. This keeps the ending elements as small as possible, maximizing our chances of appending more elements later.\n\n```python\nimport bisect\n\ndef length_of_LIS_optimal(arr):\n    if not arr:\n        return 0\n\n    sub = []\n    \n    for num in arr:\n        # bisect_left finds the index of the first element in 'sub' that is >= 'num'\n        idx = bisect.bisect_left(sub, num)\n        \n        # If 'num' is greater than all elements in 'sub', append it\n        if idx == len(sub):\n            sub.append(num)\n        # Otherwise, replace the first element that is >= 'num'\n        else:\n            sub[idx] = num\n            \n    # The length of the 'sub' array represents the length of the LIS\n    return len(sub)\n```\n\n#### How the optimal solution works (Example):\nLet `arr = [10, 9, 2, 5, 3, 7, 101, 18]`\n1. `num = 10`: `sub` is empty. Append 10. `sub = [10]`\n2. `num = 9`: 9 is less than 10. Overwrite 10. `sub = [9]`\n3. `num = 2`: 2 is less than 9. Overwrite 9. `sub = [2]`\n4. `num = 5`: 5 is greater than 2. Append 5. `sub = [2, 5]`\n5. `num = 3`: 3 replaces 5 (keeps tails small). `sub = [2, 3]`\n6. `num = 7`: 7 is greater than 3. Append 7. `sub = [2, 3, 7]`\n7. `num = 101`: 101 is greater than 7. Append 101. `sub = [2, 3, 7, 101]`\n8. `num = 18`: 18 replaces 101. `sub = [2, 3, 7, 18]`\n\nResult is `len(sub)`, which is `4`. *(Note: `sub` does not always contain the actual subsequence elements, but its **length** will always be exactly the length of the LIS).*\n\n* **Time Complexity:** $O(n \\log n)$ - We iterate through the array of size $n$ exactly once. For each element, we perform a binary search which takes $O(\\log n)$ time.\n* **Space Complexity:** $O(n)$ - In the worst case (if the array is already strictly increasing), the `sub` array will store all $n$ elements.",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 30,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 30
+        },
+        "output_tokens": 2494,
+        "output_tokens_details": {
+          "reasoning_tokens": 1277,
+          "text_tokens": 1217
+        },
+        "total_tokens": 2524
+      },
+      "provider_specific_fields": {
+        "traffic_type": "PROVISIONED_THROUGHPUT"
+      }
+    }
+  }
+}

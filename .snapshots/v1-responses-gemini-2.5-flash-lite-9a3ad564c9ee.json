@@ -1,0 +1,84 @@
+{
+  "key": "v1-responses-gemini-2.5-flash-lite-9a3ad564c9ee",
+  "test": {
+    "name": "generates text with gemini-2.5-flash-lite",
+    "file": "tests/integration/google.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-flash-lite",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Say hello in exactly 3 words"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "463",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjNsSzlhY09GRG9XSGgtY1ByUFM3dVFF",
+      "created_at": 1774015198,
+      "metadata": {},
+      "model": "gemini-2.5-flash-lite-preview-09-2025",
+      "object": "chat.completion",
+      "output": [
+        {
+          "type": "message",
+          "id": "3lK9acOFDoWHh-cPrPS7uQE",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Hello there friend",
+              "annotations": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {},
+      "usage": {
+        "input_tokens": 7,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 7
+        },
+        "output_tokens": 3,
+        "output_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": 3
+        },
+        "total_tokens": 10
+      },
+      "provider_specific_fields": {
+        "traffic_type": "ON_DEMAND"
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import { generateText, tool } from "ai";
 import { z } from "zod";
 import { readFileSync } from "fs";
 import { createPoe } from "../../src/poe-provider.js";
-import { OPENAI_MODELS } from "../../src/openai-models.js";
+import { getTestModels } from "../../src/poe-models.js";
 import { getSnapshotFetch } from "../helpers/index.js";
 
 const bannerImage = readFileSync(
@@ -15,26 +15,23 @@ const poe = createPoe({
 });
 
 describe("openai provider", () => {
-  for (const [name, def] of Object.entries(OPENAI_MODELS)) {
-    describe(name, () => {
-      const run = def.skip ? it.skip : it;
-      const opts = {
-        ...(def.timeout && { timeout: def.timeout }),
-        ...(def.tags && { tags: def.tags }),
-      };
+  for (const model of getTestModels("OpenAI")) {
+    describe(model.id, () => {
+      const run = model.skip ? it.skip : it;
+      const opts = model.tags.length ? { tags: model.tags } : {};
 
-      run(`generates text with ${name}`, opts, async () => {
+      run(`generates text with ${model.id}`, opts, async () => {
         const { text } = await generateText({
-          model: poe(`openai/${name}`),
+          model: poe(`openai/${model.id}`),
           prompt: "Say hello in exactly 3 words",
         });
         expect(text).toBeTruthy();
       });
 
-      if (def.tools !== false) {
-        run(`handles tool calling with ${name}`, opts, async () => {
+      if (model.hasTools) {
+        run(`handles tool calling with ${model.id}`, opts, async () => {
           const { toolCalls } = await generateText({
-            model: poe(`openai/${name}`),
+            model: poe(`openai/${model.id}`),
             prompt:
               "What is the weather in San Francisco? Use the getWeather tool.",
             tools: {
@@ -51,10 +48,10 @@ describe("openai provider", () => {
         });
       }
 
-      if (def.reasoning) {
-        run(`uses reasoning with ${name}`, opts, async () => {
+      if (model.hasReasoning) {
+        run(`uses reasoning with ${model.id}`, opts, async () => {
           const { text, reasoning } = await generateText({
-            model: poe(`openai/${name}`),
+            model: poe(`openai/${model.id}`),
             prompt: "What is 7 * 8?",
           });
 

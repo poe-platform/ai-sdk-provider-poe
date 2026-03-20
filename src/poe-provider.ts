@@ -2,7 +2,7 @@ import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
-import { POE_DEFAULT_BASE_URL, resolveProvider } from "./poe-models.js";
+import { POE_DEFAULT_BASE_URL, resolveProvider, fetchPoeModels, setRefetchFn } from "./poe-models.js";
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -65,6 +65,13 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
         return getOpenAIProvider().chat(model);
     }
   };
+
+  // Register refetch function for cache-miss background refresh
+  const doRefetch = () => fetchPoeModels({ apiKey: options.apiKey, baseURL, fetch: options.fetch }).then(() => {});
+  setRefetchFn(doRefetch);
+
+  // Background warm: populate routing cache from /v1/models
+  doRefetch().catch(() => {});
 
   const provider = function (modelId: string) {
     if (new.target) {

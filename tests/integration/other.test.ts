@@ -52,7 +52,7 @@ describe("models without prefix (chat completions)", () => {
     expect(typeof text).toBe("string");
   });
 
-  it("supports thinking_level and web_search with gemini-3.1-pro", async () => {
+  it("supports thinking_level and web_search with gemini-3.1-pro", { tags: ["timeout:slow"] }, async () => {
     const { text, usage } = await generateText({
       model: poe("gemini-3.1-pro"),
       prompt:

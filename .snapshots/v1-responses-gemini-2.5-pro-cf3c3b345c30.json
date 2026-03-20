@@ -1,12 +1,12 @@
 {
-  "key": "v1-responses-gemini-3-pro-2921e02f8286",
+  "key": "v1-responses-gemini-2.5-pro-cf3c3b345c30",
   "test": {
-    "name": "generates text with gemini-3-pro",
+    "name": "handles tool calling with gemini-2.5-pro",
     "file": "tests/integration/google.test.ts"
   },
   "request": {
     "body": {
-      "model": "gemini-3-pro",
+      "model": "gemini-2.5-pro",
       "input": [
         {
           "role": "user",
@@ -30,28 +30,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "5320",
+      "openai-processing-ms": "5742",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOkVrVzdhY0tWUFA2a3lPZ1BrN2FyQ0E=",
-      "created_at": 1773880594,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjFGSzlhYTJPR3NDa29NOFBtNC1NaUFV",
+      "created_at": 1774015188,
       "metadata": {},
-      "model": "gemini-3-pro-preview",
+      "model": "gemini-2.5-pro",
       "object": "chat.completion",
       "output": [
         {
           "type": "message",
-          "id": "EkW7acKVPP6kyOgPk7arCA",
+          "id": "1FK9aa2OGsCkoM8Pm4-MiAU",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Hello to you.",
+              "text": "How are you?",
               "annotations": []
             }
           ]
@@ -69,12 +69,12 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 336,
+        "output_tokens": 487,
         "output_tokens_details": {
-          "reasoning_tokens": 332,
+          "reasoning_tokens": 483,
           "text_tokens": 4
         },
-        "total_tokens": 343
+        "total_tokens": 494
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"

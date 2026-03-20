@@ -45,34 +45,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1639",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDQwZjZlOWZhYjc4NmVkNjAxNjk4NjBkZTQwZGY4ODFhMGI1Y2I4MDg5MmZjOTU3NTU=",
-      "created_at": 1770393060,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDYxYzNiNmYxNmI3Nzc1NTAxNjliZDUzZmExMzEwODE5MzliODM0NDkzNzQ5MGI1YWY=",
+      "created_at": 1774015482,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_040f6e9fab786ed60169860de56ee881a0ac52b258a4c76214",
+          "id": "rs_061c3b6f16b777550169bd53fa5a448193a2dcc2a68442026e",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\": \"San Francisco\"}",
-          "call_id": "call_mKQVQtioSupXC1p2RuOZUHOc",
+          "call_id": "call_nGO2It3WHo87pyneVsPRgQRu",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_040f6e9fab786ed60169860de632d081a09db4c47640aba97b",
+          "id": "fc_061c3b6f16b777550169bd53fab92881938ee81eb400ff8874",
           "status": "completed"
         }
       ],
@@ -102,7 +105,8 @@
       ],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -117,18 +121,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 81,
+        "output_tokens": 42,
         "output_tokens_details": {
-          "reasoning_tokens": 64
+          "reasoning_tokens": 0
         },
-        "total_tokens": 144
+        "total_tokens": 105
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393062,
+      "completed_at": 1774015483,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

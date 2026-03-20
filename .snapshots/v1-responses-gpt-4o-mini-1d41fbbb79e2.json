@@ -23,25 +23,28 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "490",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDNkZjBjZDdiMGY2ZDAwNDAxNjk4NjBlM2YzNzI4ODE5NzgzZGViZmI4ZDk3NzY0YmY=",
-      "created_at": 1770393151,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGIyOTYzZWJkOTFjMzNlYTAxNjliZDU0M2NlYmIwODFhMGJjYWU5MjRlOWRiM2U0OTk=",
+      "created_at": 1774015548,
       "metadata": {},
       "model": "gpt-4o-mini-2024-07-18",
       "object": "response",
       "output": [
         {
-          "id": "msg_03df0cd7b0f6d0040169860e3f75d08197a635e15078497c97",
+          "id": "msg_0b2963ebd91c33ea0169bd543d331881a095e184fc22787346",
           "content": [
             {
               "annotations": [],
@@ -60,7 +63,10 @@
       "tool_choice": "auto",
       "tools": [],
       "top_p": 1,
-      "reasoning": {},
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
       "status": "completed",
       "text": {
         "format": {
@@ -85,7 +91,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393151,
+      "completed_at": 1774015549,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

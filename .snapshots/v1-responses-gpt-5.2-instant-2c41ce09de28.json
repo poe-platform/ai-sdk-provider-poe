@@ -45,34 +45,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1537",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGFkYWM1YWQyMWMxNmExNzAxNjk4NjBjZjAxMGE0ODE5NTljODE3OGMzMzA0MzNmMGE=",
-      "created_at": 1770392816,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQ0MDQ3NzU1OTllODI5NzAxNjliZDUzMDE3NmZjODE5Y2IxN2NiYzQyNzA3YTRhZGU=",
+      "created_at": 1774015233,
       "metadata": {},
       "model": "gpt-5.2-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_0adac5ad21c16a170169860cf06d9c8195a794aab14e4fb2dd",
+          "id": "rs_0d404775599e82970169bd5301d8e8819ca685279b20add55e",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_77IXptfc67GprP7wNZKAo6Fu",
+          "call_id": "call_GAYQDjuhuGcLYIvLvpjWY0XE",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0adac5ad21c16a170169860cf19f208195965f61120d8e2125",
+          "id": "fc_0d404775599e82970169bd5302a3ac819c810b8fa454fcd919",
           "status": "completed"
         }
       ],
@@ -102,7 +105,8 @@
       ],
       "top_p": 0.85,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -117,18 +121,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 73,
+        "output_tokens": 51,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 139
+        "total_tokens": 117
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392819,
+      "completed_at": 1774015234,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

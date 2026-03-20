@@ -45,34 +45,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1732",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDQ4YjE2OTJkNTExOGJiODAxNjk4NjBkMjY1YTk0ODE5NDkxZWNhNmMzMjIzNWY3NzE=",
-      "created_at": 1770392870,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDMyYjQzYjUzOTE2ODk2NTAxNjliZDUzMWM3MjQ4ODE5MmI5MmNmMzkzNzMwNjIxNjk=",
+      "created_at": 1774015260,
       "metadata": {},
       "model": "gpt-5-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_048b1692d5118bb80169860d269a5481948c2e78e252cdca99",
+          "id": "rs_032b43b5391689650169bd531cc8ac819297ade3d45a7dddc3",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_NdDKLdrtJcd1fF9cw2PEFP8H",
+          "call_id": "call_8ZICtZwQ04HvJ8vNyNN8ZIij",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_048b1692d5118bb80169860d283bf08194a793dac064828d52",
+          "id": "fc_032b43b5391689650169bd531dc69081929e262e14a70c6692",
           "status": "completed"
         }
       ],
@@ -102,7 +105,8 @@
       ],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -117,18 +121,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 122,
+        "output_tokens": 104,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 188
+        "total_tokens": 170
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392874,
+      "completed_at": 1774015262,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

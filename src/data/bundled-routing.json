@@ -1,0 +1,1106 @@
+[
+  {
+    "id": "assistant",
+    "owned_by": "Poe",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "claude-opus-4.6",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "nano-banana-2",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses"
+    ],
+    "output_modalities": [
+      "image"
+    ]
+  },
+  {
+    "id": "gpt-5.4",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "image"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "claude-sonnet-4.6",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.4-nano",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.4-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gemini-3.1-pro",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.4-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "image"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gemini-3.1-flash-lite",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.3-instant",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-haiku-4.5",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.2",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gemini-3-flash",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.2-instant",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-sonnet-4.5",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.3-codex-spark",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "claude-opus-4.5",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gemini-2.5-pro",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.2-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.1-instant",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.1-codex",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.1",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5-chat",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-opus-4.1",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5.1-codex-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5.1-codex-max",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "nano-banana-pro",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "image"
+    ]
+  },
+  {
+    "id": "nano-banana",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "text",
+      "image"
+    ]
+  },
+  {
+    "id": "gpt-5",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5-nano",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-5-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gemini-2.5-flash-lite",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-5-codex",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "claude-sonnet-4",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-opus-4",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "o4-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-4o",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "o3-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "o4-mini-deep-research",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "o3",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "o3-deep-research",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4.1",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4.1-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4.1-nano",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-sonnet-3.7",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-haiku-3.5",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gemini-2.0-flash",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gemini-2.0-flash-lite",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "o1",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_required": true,
+    "reasoning_effort": true
+  },
+  {
+    "id": "o1-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "gpt-4o-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "o3-mini",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_effort": true
+  },
+  {
+    "id": "o3-mini-high",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning_required": true
+  },
+  {
+    "id": "mistral-medium",
+    "owned_by": "Mistral",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4o-search",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4o-mini-search",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "veo-3.1",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "veo-3.1-fast",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "sora-2-pro",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "sora-2",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "veo-3",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "veo-3-fast",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "veo-2",
+    "owned_by": "Google",
+    "supported_endpoints": [
+      "/v1/videos"
+    ],
+    "output_modalities": [
+      "video"
+    ]
+  },
+  {
+    "id": "mistral-small-3",
+    "owned_by": "Mistral",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "mistral-large-2",
+    "owned_by": "Mistral",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-3.5-turbo",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4o-aug",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4-classic-0314",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4-classic",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "solar-pro-2",
+    "owned_by": "Upstage",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-4-turbo",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-3.5-turbo-instruct",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "gpt-3.5-turbo-raw",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "claude-haiku-3",
+    "owned_by": "Anthropic",
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  }
+]

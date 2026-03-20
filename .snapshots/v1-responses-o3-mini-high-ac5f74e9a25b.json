@@ -23,34 +23,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1450",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDJjMDI5Yjc1OGQzZWFmNjAxNjk4NjBkZTZiYjVjODE5ZmE1YTM0YTJlNjZjNWFlYzY=",
-      "created_at": 1770393062,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDIxMmJjMDllYjE2NDllMzAxNjliZDUzZmMyNTQ4ODE5N2EzMTdlNzEwZDFlNTU0YzY=",
+      "created_at": 1774015484,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_02c029b758d3eaf60169860de7ea58819f8eaf806e225f65c3",
+          "id": "rs_0212bc09eb1649e30169bd53fc67c48197b4e685efe2733f9a",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_02c029b758d3eaf60169860de828d8819fae8ebd2d17180119",
+          "id": "msg_0212bc09eb1649e30169bd53fd350481979988f032efd8517b",
           "content": [
             {
               "annotations": [],
-              "text": "7 * 8 equals 56.",
+              "text": "7 multiplied by 8 equals 56.",
               "type": "output_text",
               "logprobs": []
             }
@@ -66,7 +69,8 @@
       "tools": [],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -81,18 +85,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 73,
+        "output_tokens": 176,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 87
+        "total_tokens": 190
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393066,
+      "completed_at": 1774015485,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

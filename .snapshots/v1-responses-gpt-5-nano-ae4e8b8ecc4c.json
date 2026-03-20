@@ -1,7 +1,7 @@
 {
   "key": "v1-responses-gpt-5-nano-ae4e8b8ecc4c",
   "test": {
-    "name": "generates text with gpt-5-nano",
+    "name": "generates text with o4-mini",
     "file": "tests/integration/openai.test.ts"
   },
   "request": {
@@ -23,34 +23,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "10972",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDdkZDdiY2JmZjVkYjQxNTAxNjk4NjBkOTNmMzc4ODFhMDkyZTY3OTJmZjcyMWNlYTI=",
-      "created_at": 1770392979,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQ3OGRlOTg1NmE2Mzc4YzAxNjliZDUzOTQwNjQ4ODE5MGFhNmZhNzFiMzllNjY3OTk=",
+      "created_at": 1774015380,
       "metadata": {},
       "model": "gpt-5-nano-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_07dd7bcbff5db4150169860d942bd881a0bedd8d299bc5e5f7",
+          "id": "rs_0d78de9856a6378c0169bd5394353481908dcd3f38a9550e48",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_07dd7bcbff5db4150169860d9adbf481a0aaa56cb279c749d9",
+          "id": "msg_0d78de9856a6378c0169bd539eac2081908bb9f2e985233aad",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend",
+              "text": "Hello there friend",
               "type": "output_text",
               "logprobs": []
             }
@@ -66,7 +69,8 @@
       "tools": [],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -81,18 +85,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 781,
+        "output_tokens": 916,
         "output_tokens_details": {
-          "reasoning_tokens": 768
+          "reasoning_tokens": 896
         },
-        "total_tokens": 794
+        "total_tokens": 929
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392987,
+      "completed_at": 1774015390,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

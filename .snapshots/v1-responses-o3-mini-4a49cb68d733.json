@@ -23,30 +23,33 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "2227",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGJlNjYxNTFiYjliMWViODAxNjk4NjBkZGQxY2E4ODFhMjhkOWQwM2I4YTNjOGU3OTM=",
-      "created_at": 1770393053,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDNiMDkzODE3MjhhZWZjZDAxNjliZDUzZjUwNmRjODE5MWE2MWZlNDVmMDljMWZmMmE=",
+      "created_at": 1774015477,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_0be66151bb9b1eb80169860dde763081a2b7a00b3e07d86ffa",
+          "id": "rs_03b09381728aefcd0169bd53f556488191987c148983ca2ac7",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0be66151bb9b1eb80169860ddebbb081a2bbc0e82cb9796a7c",
+          "id": "msg_03b09381728aefcd0169bd53f6ce708191afe4998748fbeee3",
           "content": [
             {
               "annotations": [],
@@ -66,7 +69,8 @@
       "tools": [],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -81,18 +85,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 74,
+        "output_tokens": 200,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 88
+        "total_tokens": 214
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393054,
+      "completed_at": 1774015479,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

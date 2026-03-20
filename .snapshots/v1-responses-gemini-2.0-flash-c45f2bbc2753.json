@@ -1,12 +1,12 @@
 {
-  "key": "v1-responses-gemini-3-flash-3f21afa763f1",
+  "key": "v1-responses-gemini-2.0-flash-c45f2bbc2753",
   "test": {
-    "name": "handles tool calling with gemini-3-flash",
+    "name": "handles tool calling with gemini-2.0-flash",
     "file": "tests/integration/google.test.ts"
   },
   "request": {
     "body": {
-      "model": "gemini-3-flash",
+      "model": "gemini-2.0-flash",
       "input": [
         {
           "role": "user",
@@ -52,22 +52,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1185",
+      "openai-processing-ms": "640",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOi1rVzdhWW1nRHZTdmlMc1BzNnI5cUFz",
-      "created_at": 1773880826,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjRGSzlhZFBGQmNUMnlPZ1AwSWJWTVE=",
+      "created_at": 1774015199,
       "metadata": {},
-      "model": "gemini-3-flash-preview",
+      "model": "gemini-2.0-flash-001",
       "object": "chat.completion",
       "output": [
         {
           "type": "message",
-          "id": "-kW7aYmgDvSviLsPs6r9qAs",
+          "id": "4FK9adPFBcT2yOgP0IbVMQ",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -79,14 +79,11 @@
         },
         {
           "arguments": "{\"location\": \"San Francisco\"}",
-          "call_id": "call_4e263a6f409f48a1a76c59f12624__thought__CtcBAY89a18WfVcb1wSknrZPWTQ94PVOy1XJc8lg//IXFd4MR3zcMU0CfWAGoVlUx8hpEyg+83eHT1HXsHEJNZkzuaFW/VfoSImfTls+czquFdtouKH7RqsjaEnmndf0bqaHIjPDmDX9yHxRqgaUs+pwVxAjJULoUI6KJkiSKpS3M2MspoUXkHXO+19SOsBe89WFVvggs56hymKPqmvamejeO4PkvXpAiUeI80gT6ri9C75gGeAKNzsJ/+ErpvCLjQMObkKI6yXp5l7vJUiJWfnrxPxoA8fDrdI=",
+          "call_id": "call_bf20b8196ec94cc39cbef0d78195",
           "name": "getWeather",
           "type": "function_call",
-          "id": "call_4e263a6f409f48a1a76c59f12624__thought__CtcBAY89a18WfVcb1wSknrZPWTQ94PVOy1XJc8lg//IXFd4MR3zcMU0CfWAGoVlUx8hpEyg+83eHT1HXsHEJNZkzuaFW/VfoSImfTls+czquFdtouKH7RqsjaEnmndf0bqaHIjPDmDX9yHxRqgaUs+pwVxAjJULoUI6KJkiSKpS3M2MspoUXkHXO+19SOsBe89WFVvggs56hymKPqmvamejeO4PkvXpAiUeI80gT6ri9C75gGeAKNzsJ/+ErpvCLjQMObkKI6yXp5l7vJUiJWfnrxPxoA8fDrdI=",
-          "status": "completed",
-          "provider_specific_fields": {
-            "thought_signature": "CtcBAY89a18WfVcb1wSknrZPWTQ94PVOy1XJc8lg//IXFd4MR3zcMU0CfWAGoVlUx8hpEyg+83eHT1HXsHEJNZkzuaFW/VfoSImfTls+czquFdtouKH7RqsjaEnmndf0bqaHIjPDmDX9yHxRqgaUs+pwVxAjJULoUI6KJkiSKpS3M2MspoUXkHXO+19SOsBe89WFVvggs56hymKPqmvamejeO4PkvXpAiUeI80gT6ri9C75gGeAKNzsJ/+ErpvCLjQMObkKI6yXp5l7vJUiJWfnrxPxoA8fDrdI="
-          }
+          "id": "call_bf20b8196ec94cc39cbef0d78195",
+          "status": "completed"
         }
       ],
       "parallel_tool_calls": false,
@@ -101,12 +98,12 @@
           "cached_tokens": 0,
           "text_tokens": 32
         },
-        "output_tokens": 47,
+        "output_tokens": 5,
         "output_tokens_details": {
-          "reasoning_tokens": 38,
-          "text_tokens": 9
+          "reasoning_tokens": 0,
+          "text_tokens": 5
         },
-        "total_tokens": 79
+        "total_tokens": 37
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"

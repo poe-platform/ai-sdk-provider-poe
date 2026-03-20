@@ -23,29 +23,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "572",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGU2ZTZkYjgyYTE3MzEwMzAxNjk4NjBkOWRiNzFjODE5ZjllZTM3YjcwNmUyYjQ3MDU=",
-      "created_at": 1770392989,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk3MmMxNWEzYWE0NjJiZDAxNjliZDUzOWE0NDNjODFhMmFlZWY3NjQ1NWMzMmJiOWE=",
+      "created_at": 1774015386,
       "metadata": {},
       "model": "gpt-5-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "msg_0e6e6db82a1731030169860d9dec88819fa926f261f457fe91",
+          "id": "msg_0972c15a3aa462bd0169bd539aade481a29c738860598fa1b4",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend!",
+              "text": "Hello, my friend.",
               "type": "output_text",
               "logprobs": []
             }
@@ -60,7 +63,10 @@
       "tool_choice": "auto",
       "tools": [],
       "top_p": 1,
-      "reasoning": {},
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
       "status": "completed",
       "text": {
         "format": {
@@ -85,7 +91,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770392989,
+      "completed_at": 1774015386,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

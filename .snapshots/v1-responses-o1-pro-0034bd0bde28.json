@@ -45,34 +45,37 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "14009",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGRhZmUxY2RlODMyZTEyNjAxNjk4NjBlMTQ2ZmMwODE5M2IzNGVhNmFjMWM1NGZjNGQ=",
-      "created_at": 1770393108,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGVlODJmNzYzNzljOTY0YzAxNjliZDU0MWNlYzg4ODE5NGIyYjE1NzU3NTg2YWNmMWU=",
+      "created_at": 1774015516,
       "metadata": {},
       "model": "o1-pro-2025-03-19",
       "object": "response",
       "output": [
         {
-          "id": "rs_0dafe1cde832e1260169860e2593108193ba408826f056019e",
+          "id": "rs_0ee82f76379c964c0169bd542a99848194821f2f107fc8b2d6",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_msqYfC7limK242x1Wlx3g3Lr",
+          "arguments": "{\n  \"location\": \"San Francisco\"\n}",
+          "call_id": "call_Wjmo9eanTwZOFIFZbDQw6KO8",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0dafe1cde832e1260169860e259488819386fdb1f2059541b3",
+          "id": "fc_0ee82f76379c964c0169bd542a9e108194a7432a249c53c300",
           "status": "completed"
         }
       ],
@@ -102,7 +105,8 @@
       ],
       "top_p": 1,
       "reasoning": {
-        "effort": "medium"
+        "effort": "medium",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -117,18 +121,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 16,
+        "output_tokens": 167,
         "output_tokens_details": {
-          "reasoning_tokens": 0
+          "reasoning_tokens": 64
         },
-        "total_tokens": 79
+        "total_tokens": 230
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770393125,
+      "completed_at": 1774015530,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

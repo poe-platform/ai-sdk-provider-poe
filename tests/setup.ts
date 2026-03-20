@@ -13,6 +13,8 @@ vi.mock("@ai-sdk/provider-utils", async (importOriginal) => {
   };
 });
 
+// Routing cache is seeded from src/data/bundled-routing.json at module load
+
 beforeEach(({ task }) => {
   const tags: string[] = [task.tags ?? []].flat();
 

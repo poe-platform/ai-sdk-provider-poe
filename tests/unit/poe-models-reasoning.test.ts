@@ -5,19 +5,23 @@ import { fetchPoeModels } from "../../src/poe-models.js";
  * Each model's expected reasoning support, derived from the model investigation table.
  * "partial" effort is mapped to false (not reliably available via Poe).
  */
+const R = ["/v1/responses", "/v1/chat/completions"];
+const C = ["/v1/chat/completions"];
+
 const MODELS: {
   id: string;
   owned_by: string;
   effort: boolean;
   budget: boolean;
+  supported_endpoints?: string[];
 }[] = [
   // Google
-  { id: "nano-banana-cc", owned_by: "Google", effort: false, budget: false },
-  { id: "gemini-3-flash", owned_by: "Google", effort: true, budget: false },
-  { id: "gemini-3.1-pro", owned_by: "Google", effort: true, budget: false },
-  { id: "gemini-3.1-pro", owned_by: "Google", effort: true, budget: false },
-  { id: "gemini-2.5-flash-lite", owned_by: "Google", effort: false, budget: true },
-  { id: "nano-banana-pro-cc", owned_by: "Google", effort: false, budget: false },
+  { id: "nano-banana-cc", owned_by: "Google", effort: false, budget: false, supported_endpoints: C },
+  { id: "gemini-3-flash", owned_by: "Google", effort: true, budget: false, supported_endpoints: R },
+  { id: "gemini-3.1-pro", owned_by: "Google", effort: true, budget: false, supported_endpoints: R },
+  { id: "gemini-3.1-pro", owned_by: "Google", effort: true, budget: false, supported_endpoints: R },
+  { id: "gemini-2.5-flash-lite", owned_by: "Google", effort: false, budget: true, supported_endpoints: C },
+  { id: "nano-banana-pro-cc", owned_by: "Google", effort: false, budget: false, supported_endpoints: C },
 
   // Anthropic
   { id: "claude-haiku-3", owned_by: "Anthropic", effort: false, budget: false },
@@ -28,32 +32,32 @@ const MODELS: {
   { id: "claude-sonnet-4", owned_by: "Anthropic", effort: false, budget: true },
 
   // OpenAI
-  { id: "gpt-5.2", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5.2-codex", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5.2-pro", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5.1-instant", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5.1-codex", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5.1-codex-mini", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5-chat", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-5-nano", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-5-codex", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "gpt-4o", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4o-search", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4o-aug", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4.1", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4.1-mini", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4.1-nano", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4-classic", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-4-turbo", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-3.5-turbo", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-3.5-turbo-raw", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "gpt-3.5-turbo-instruct", owned_by: "OpenAI", effort: false, budget: false },
-  { id: "o3-pro", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "o3", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "o3-mini", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "o3-mini-high", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "o4-mini-deep-research", owned_by: "OpenAI", effort: true, budget: false },
-  { id: "o1-pro", owned_by: "OpenAI", effort: true, budget: false },
+  { id: "gpt-5.2", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5.2-codex", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5.2-pro", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5.1-instant", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5.1-codex", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5.1-codex-mini", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5-chat", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-5-nano", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-5-codex", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "gpt-4o", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4o-search", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4o-aug", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4.1", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4.1-mini", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4.1-nano", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4-classic", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-4-turbo", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-3.5-turbo", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-3.5-turbo-raw", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "gpt-3.5-turbo-instruct", owned_by: "OpenAI", effort: false, budget: false, supported_endpoints: C },
+  { id: "o3-pro", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "o3", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "o3-mini", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "o3-mini-high", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "o4-mini-deep-research", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
+  { id: "o1-pro", owned_by: "OpenAI", effort: true, budget: false, supported_endpoints: R },
 
   // XAI
   { id: "grok-4", owned_by: "XAI", effort: false, budget: false },
@@ -98,11 +102,11 @@ describe("fetchPoeModels reasoning capabilities", () => {
 
   it.each(MODELS)(
     "$id ($owned_by): effort=$effort, budget=$budget",
-    async ({ id, owned_by, effort, budget }) => {
-      // Mock API returns only basic fields — no reasoning hints.
-      // fetchPoeModels must derive reasoning support from heuristics.
+    async ({ id, owned_by, effort, budget, supported_endpoints }) => {
+      // Mock API returns basic fields + supported_endpoints — no explicit reasoning hints.
+      // fetchPoeModels derives reasoning support from supported_endpoints + heuristics.
       const fetch = mockFetch([
-        { id, object: "model", created: 1, owned_by },
+        { id, object: "model", created: 1, owned_by, ...(supported_endpoints && { supported_endpoints }) },
       ]);
 
       const [model] = await fetchPoeModels({ fetch });

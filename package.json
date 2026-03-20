@@ -22,6 +22,7 @@
     "snapshots:delete": "tsx scripts/snapshots.ts delete",
     "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale",
     "verify-model": "tsx scripts/verify-model.ts",
+    "update-routing": "tsx scripts/update-bundled-routing.ts",
     "prepare": "husky",
     "secrets": "trufflehog filesystem . --no-update --fail --exclude-paths=.trufflehogignore"
   },

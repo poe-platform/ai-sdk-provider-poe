@@ -27,29 +27,32 @@
   "response": {
     "status": 200,
     "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "2176",
+      "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDhhNWIyOGQ0NDZjNWYwZTAxNjk4NjU1ZDYwY2Y4ODE5ZmIzZjBjMDQwY2ZkNjA3NGQ=",
-      "created_at": 1770411478,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDRlNDg0MjgwNWU4OTU3ZjAxNjliZDU0NGQwYzQ0ODE5MWFkYTlkNGIzNTI4NGQ0NGE=",
+      "created_at": 1774015565,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_08a5b28d446c5f0e01698655d6d174819f93d44829e1a825db",
+          "id": "msg_04e4842805e8957f0169bd544e26dc81918f518fc529d73274",
           "content": [
             {
               "annotations": [],
-              "text": "A Poe promotional banner announcing “Now available: Claude Opus 4.6,” showing several AI app icons (e.g., GPT-5.2 Codex, Gemini, Kimi, Runway, Grok, ElevenLabs) and “poe.com.”",
+              "text": "A Poe promotional banner announcing “Now available: Claude Opus 4.6,” with a row of AI model/app icons (e.g., GPT, Gemini, Kimi, Runway, Grok, ElevenLabs) and “poe.com.”",
               "type": "output_text",
               "logprobs": []
             }
@@ -65,7 +68,8 @@
       "tools": [],
       "top_p": 0.98,
       "reasoning": {
-        "effort": "none"
+        "effort": "none",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -78,20 +82,20 @@
       "usage": {
         "input_tokens": 1825,
         "input_tokens_details": {
-          "cached_tokens": 0
+          "cached_tokens": 1408
         },
-        "output_tokens": 58,
+        "output_tokens": 55,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 1883
+        "total_tokens": 1880
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1770411480,
+      "completed_at": 1774015567,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

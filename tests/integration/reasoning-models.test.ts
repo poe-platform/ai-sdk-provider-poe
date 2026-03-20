@@ -141,7 +141,7 @@ describe("anthropic additional models", () => {
   }
 });
 
-// --- Google (gemini-3.1-pro not in GOOGLE_MODELS) ---
+// --- Google ---
 
 describe("google additional models", () => {
   it("generates text with gemini-3.1-pro", SLOW, async () => {

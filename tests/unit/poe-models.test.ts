@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { fetchPoeModels, POE_DEFAULT_BASE_URL } from "../../src/poe-models.js";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { fetchPoeModels, POE_DEFAULT_BASE_URL, getRoutingMap, _resetRoutingCache } from "../../src/poe-models.js";
 
 describe("POE_DEFAULT_BASE_URL", () => {
   it("is the expected value", () => {
@@ -10,6 +10,11 @@ describe("POE_DEFAULT_BASE_URL", () => {
 describe("fetchPoeModels", () => {
   beforeEach(() => {
     vi.stubEnv("POE_API_KEY", "test-key");
+    _resetRoutingCache();
+  });
+
+  afterEach(() => {
+    _resetRoutingCache();
   });
 
   const mockFetch = (data: unknown[]) =>
@@ -137,6 +142,52 @@ describe("fetchPoeModels", () => {
     expect(models[0].supportsReasoningBudget).toBeUndefined();
     expect(models[0].supportsReasoningEffort).toBeUndefined();
     expect(models[0].pricing).toBeUndefined();
+  });
+
+  it("maps supported_endpoints when present", async () => {
+    const fetch = mockFetch([
+      {
+        id: "gpt-5.2",
+        object: "model",
+        created: 1,
+        owned_by: "OpenAI",
+        supported_endpoints: ["/v1/responses", "/v1/chat/completions"],
+      },
+    ]);
+
+    const models = await fetchPoeModels({ fetch });
+    expect(models[0].supportedEndpoints).toEqual(["/v1/responses", "/v1/chat/completions"]);
+  });
+
+  it("omits supportedEndpoints when missing", async () => {
+    const fetch = mockFetch([
+      { id: "bare-model", object: "model", created: 1 },
+    ]);
+
+    const models = await fetchPoeModels({ fetch });
+    expect(models[0].supportedEndpoints).toBeUndefined();
+  });
+
+  it("omits supportedEndpoints when empty array", async () => {
+    const fetch = mockFetch([
+      { id: "bare-model", object: "model", created: 1, supported_endpoints: [] },
+    ]);
+
+    const models = await fetchPoeModels({ fetch });
+    expect(models[0].supportedEndpoints).toBeUndefined();
+  });
+
+  it("populates routing cache on successful fetch", async () => {
+    const fetch = mockFetch([
+      { id: "gpt-5.2", object: "model", created: 1, owned_by: "OpenAI", supported_endpoints: ["/v1/responses"] },
+      { id: "gpt-4o", object: "model", created: 1, owned_by: "OpenAI", supported_endpoints: ["/v1/chat/completions"] },
+    ]);
+
+    await fetchPoeModels({ fetch });
+    const map = getRoutingMap();
+    expect(map).not.toBeNull();
+    expect(map!.get("gpt-5.2")).toEqual(["/v1/responses"]);
+    expect(map!.get("gpt-4o")).toEqual(["/v1/chat/completions"]);
   });
 
   it("maps reasoning effort as string array", async () => {
