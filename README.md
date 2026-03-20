@@ -32,37 +32,37 @@ const { text } = await generateText({
 
 ## Model Routing
 
-Models are specified as `provider/model-id`. The prefix determines the API route:
+Models are specified as `provider/model-id`. Routing is driven by the Poe `/v1/models` API — each model declares its `supported_endpoints`, and the provider picks the right backend automatically.
 
 | Prefix | Route | Examples |
 |---|---|---|
-| `anthropic/` | Anthropic Messages API | `claude-sonnet-4`, `claude-opus-4.5`, `claude-haiku-4.5` |
-| `openai/` | OpenAI Responses or Chat API | `gpt-5.2`, `o3`, `gpt-4o` |
-| `google/` | OpenAI Responses or Chat API | `gemini-3-flash`, `gemini-2.5-pro` |
-| No prefix | OpenAI Chat Completions API | `grok-3-mini`, `Kimi-K2.5`, `glm-5` |
+| `anthropic/` | Anthropic Messages API | `claude-sonnet-4`, `claude-opus-4.5` |
+| `openai/`, `google/`, or no prefix | OpenAI Responses or Chat API | `gpt-5.2`, `o3`, `gemini-3-flash`, `grok-3-mini` |
 
-Within `openai/` and `google/`, some models use the Responses API (reasoning-capable) and others use Chat Completions. This is handled automatically.
+For non-Anthropic models, the first entry in `supported_endpoints` determines the API:
+
+- `/v1/responses` → OpenAI Responses API (reasoning-capable models)
+- `/v1/chat/completions` → OpenAI Chat Completions API
+
+This is resolved at runtime from a bundled model catalog that ships with the package. On provider creation, a background fetch to `/v1/models` refreshes the cache so newly added models are picked up without a package update.
 
 ```typescript
 // Anthropic — Messages API with thinking support
 poe('anthropic/claude-sonnet-4')
-poe('anthropic/claude-opus-4.5')
 
 // OpenAI — Responses API (reasoning models)
 poe('openai/gpt-5.2')
 poe('openai/o3')
 
-// OpenAI — Chat Completions (legacy models)
+// OpenAI — Chat Completions
 poe('openai/gpt-4o')
-poe('openai/gpt-4-turbo')
 
-// Google — Responses API
+// Google — routed via supported_endpoints
 poe('google/gemini-3-flash')
 
-// Other providers (no prefix, chat completions)
+// Other providers (routed via supported_endpoints, fallback: chat completions)
 poe('grok-3-mini')
 poe('glm-5')
-poe('kimi-k2-thinking')
 ```
 
 For the full list of models, visit [poe.com/api/models](https://poe.com/api/models) or call `fetchPoeModels()`.
@@ -126,7 +126,7 @@ const { object } = await generateObject({
 
 ## Model Discovery
 
-Fetch available models and their capabilities at runtime:
+`fetchPoeModels()` calls the Poe `/v1/models` endpoint and returns model metadata including capabilities, pricing, and supported endpoints. This is the same API used internally for routing.
 
 ```typescript
 import { fetchPoeModels } from 'ai-sdk-provider-poe';
@@ -135,9 +135,9 @@ const models = await fetchPoeModels();
 
 for (const model of models) {
   console.log(model.id);                    // "anthropic/claude-sonnet-4"
+  console.log(model.supportedEndpoints);    // ["/v1/responses", "/v1/chat/completions"]
   console.log(model.contextWindow);         // 200000
   console.log(model.supportsReasoningBudget); // true
-  console.log(model.supportsReasoningEffort); // undefined
   console.log(model.pricing);               // { inputPerMillion: 3, ... }
 }
 ```
@@ -155,6 +155,7 @@ Each model includes:
 | `supportsPromptCache` | `boolean` | Prompt caching support |
 | `supportsReasoningBudget` | `boolean?` | Thinking budget support (Anthropic) |
 | `supportsReasoningEffort` | `boolean \| string[]?` | Reasoning effort support (OpenAI) |
+| `supportedEndpoints` | `string[]?` | API endpoints this model supports |
 | `pricing` | `object?` | Per-million token pricing |
 
 Pass options to customize the request:

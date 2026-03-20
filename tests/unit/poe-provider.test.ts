@@ -68,6 +68,15 @@ describe("createPoe", () => {
     expect(model).toBeDefined();
   });
 
+  it("routes unknown model to chat completions even when /v1/models fails", () => {
+    const poe = createPoe({
+      fetch: () => Promise.reject(new Error("network error")),
+    });
+    const model = poe("brand-new-model-not-in-bundled");
+    expect(model.provider).toBe("openai.chat");
+    expect(model.modelId).toBe("brand-new-model-not-in-bundled");
+  });
+
   it("throws when called with new keyword", () => {
     const poe = createPoe();
     expect(() => new (poe as any)("anthropic/claude-sonnet-4-20250514")).toThrow(
@@ -154,6 +163,21 @@ describe("resolveProvider with routing cache", () => {
     // No cache populated
     resolveProvider("openai/gpt-5.2");
     expect(refetch).not.toHaveBeenCalled();
+  });
+
+  it("falls back to chat completions when model missing from cache and refetch fails", async () => {
+    const refetch = vi.fn().mockRejectedValue(new Error("API down"));
+    setRefetchFn(refetch);
+    updateRoutingMap([
+      { id: "gpt-5.2", supported_endpoints: ["/v1/responses"] },
+    ]);
+
+    // Unknown model — not in bundled or API cache, and refetch will fail
+    const result = resolveProvider("openai/totally-new-model");
+    expect(result).toEqual({ provider: "openai-chat", model: "totally-new-model" });
+
+    // Refetch fires but its failure doesn't break anything
+    await vi.waitFor(() => expect(refetch).toHaveBeenCalledOnce());
   });
 
   it("dedupes concurrent refetches", async () => {
