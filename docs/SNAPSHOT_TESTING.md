@@ -62,8 +62,7 @@ The global setup file:
 1. Loads `.env` via `dotenv/config`
 2. Mocks `loadApiKey` from `@ai-sdk/provider-utils` (real key in record mode,
    `"test-api-key"` in playback)
-3. Skips tests gated by `stage:alpha` / `stage:beta` when `RELEASE_STAGE` is too low
-4. Applies per-test snapshot tag overrides in `beforeEach` / `afterEach`
+3. Applies per-test snapshot tag overrides in `beforeEach` / `afterEach`
 5. Persists accessed snapshot keys in `afterAll` for stale detection
 
 ## Configuration
@@ -76,7 +75,6 @@ The global setup file:
 | `POE_SNAPSHOT_DIR`                       | directory path                           | `.snapshots` |
 | `POE_SNAPSHOT_MISS`                      | `error`, `warn`, `passthrough`, `record` | `error`      |
 | `POE_DANGEROUSLY_ALLOW_SENSITIVE_HEADERS`| `true`                                   | *(unset)*    |
-| `RELEASE_STAGE`                          | `stable`, `beta`, `alpha`                | `alpha` via `npm test` |
 
 ### Vitest tags
 
@@ -96,20 +94,6 @@ Control snapshot recording/miss behavior per-test:
 
 `snapshot:record` sets record mode for the test (real API key, save response).
 `snapshot:miss-record` plays back existing snapshots but records missing ones.
-Neither auto-skips — use a stage tag to gate when the test runs.
-
-#### Stage tags
-
-Gate tests by release stage (`RELEASE_STAGE` env variable):
-
-| Tag            | Runs when                              | Skipped in stable? |
-|----------------|----------------------------------------|--------------------|
-| `stage:alpha`  | `RELEASE_STAGE=alpha`                  | **Yes**            |
-| `stage:beta`   | `RELEASE_STAGE=beta` or `alpha`        | **Yes**            |
-| *(no tag)*     | always                                 | No                 |
-
-Stage hierarchy: `stable` < `beta` < `alpha`. A test tagged `stage:beta` runs
-in beta and alpha but is skipped in stable.
 
 #### Timeout tags
 
@@ -120,31 +104,22 @@ Extended timeouts for slow operations:
 | `timeout:image`  | 5 minutes | Image generation  |
 | `timeout:video`  | 10 minutes| Video generation  |
 
-There are two complementary stage gating mechanisms:
-
-- **File-based**: `*.beta.test.ts` and `*.alpha.test.ts` files are excluded by
-  `vitest.config.ts` based on `RELEASE_STAGE`. Use this when an entire test
-  file is stage-specific.
-- **Tag-based**: `stage:alpha` / `stage:beta` tags on individual tests, handled
-  in `setup.ts` `beforeEach`. Use this for per-test gating within a shared file.
-
 #### Combining tags
 
-Tags compose naturally. Use stage tags for gating and snapshot tags for mode:
+Tags compose naturally:
 
 ```ts
 it("generates image with Nano-Banana", {
   timeout: 300_000,
-  tags: ["stage:alpha", "snapshot:record"],
+  tags: ["snapshot:record"],
 }, async () => {
-  // skipped in stable; records when run with RELEASE_STAGE=alpha
+  // records snapshot against live API
 });
 ```
 
 Run only tagged tests from the CLI:
 
 ```sh
-npx vitest --tag stage:alpha        # run alpha-gated tests
 npx vitest --tag snapshot:record    # run record-mode tests
 ```
 
@@ -158,7 +133,6 @@ Tag resolution happens in `tests/setup.ts` `beforeEach`:
 ```
 vitest runs test
   -> beforeEach reads task.tags
-  -> stage:alpha / stage:beta -> skip() if RELEASE_STAGE too low
   -> parseTagOverrides(tags) returns { mode?, onMiss? }
   -> SnapshotFetch.setModeOverride() / .setMissOverride()
   -> loadApiKey mock switches to real key if mode=record
@@ -166,7 +140,7 @@ vitest runs test
 ```
 
 The `SNAPSHOT_TAGS` constant in `snapshot-config.ts` is the single source of
-truth for snapshot tag effects. Stage tags are handled directly in `setup.ts`.
+truth for snapshot tag effects.
 
 ## Recording snapshots
 
@@ -174,13 +148,12 @@ Choose **one** method — do not combine env variable with tags.
 
 ### Option 1: per-test tags (preferred for individual tests)
 
-Use `snapshot:record` tag to record a single test. Combine with a stage tag to
-gate when the test runs:
+Use `snapshot:record` tag to record a single test:
 
 ```ts
 it("generates text with Nano-Banana", {
   timeout: 300_000,
-  tags: ["stage:alpha", "snapshot:record"],
+  tags: ["snapshot:record"],
 }, async () => {
   const { text } = await generateText({
     model: poe("google/Nano-Banana"),
@@ -193,10 +166,9 @@ it("generates text with Nano-Banana", {
 Record:
 
 ```sh
-RELEASE_STAGE=alpha npx vitest --tag snapshot:record --run
+npx vitest --tag snapshot:record --run
 ```
 
-The test is skipped in stable/beta and only runs when the stage allows it.
 After recording, remove the `snapshot:record` tag and commit both the test
 and snapshot files.
 
@@ -240,9 +212,9 @@ during each test run.
 ## Architecture
 
 ```
-vitest.config.ts                # tag declarations, timeout, stage excludes
+vitest.config.ts                # tag declarations, timeout
 tests/
-  setup.ts                      # global setup, mock, tag wiring, stage gating
+  setup.ts                      # global setup, mock, tag wiring
   helpers/
     snapshot-config.ts          # types, env parsing, SNAPSHOT_TAGS constant
     snapshot-fetch.ts           # SnapshotFetch: record/playback/overrides

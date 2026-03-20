@@ -45,7 +45,7 @@
       "@semantic-release/exec",
       {
         "prepareCmd": "npm run build",
-        "publishCmd": "npx tsx scripts/publish-release-stages.ts ${nextRelease.version}"
+        "publishCmd": "npx tsx scripts/publish.ts ${nextRelease.version}"
       }
     ],
     [

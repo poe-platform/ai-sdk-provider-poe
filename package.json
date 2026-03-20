@@ -14,7 +14,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --noEmit && tsx scripts/build-release-stages.ts",
+    "build": "tsc --noEmit && tsx scripts/build.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "snapshots:list": "tsx scripts/snapshots.ts list",

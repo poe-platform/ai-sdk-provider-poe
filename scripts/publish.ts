@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 const version = process.argv[2];
 if (!version) {
-  console.error("Usage: tsx scripts/publish-release-stages.ts <version>");
+  console.error("Usage: tsx scripts/publish.ts <version>");
   process.exit(1);
 }
 

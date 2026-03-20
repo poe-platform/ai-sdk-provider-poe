@@ -47,7 +47,6 @@ npm run snapshots:delete:stale    # Delete unused snapshots
 
 See also:
 - [Snapshot Testing](docs/SNAPSHOT_TESTING.md) - Recording/playback system details
-- [Release Stages](docs/RELEASE_STAGES.md) - Alpha/beta feature gating
 
 ## Architecture
 
@@ -59,7 +58,7 @@ See also:
 |--------------|-----------|-----|
 | `anthropic/` | @ai-sdk/anthropic | Messages |
 | `openai/` | @ai-sdk/openai | Responses (default) or Chat |
-| `google/` | @ai-sdk/openai | Chat (stable) or Responses (alpha) |
+| `google/` | @ai-sdk/openai | Chat or Responses |
 | No prefix | @ai-sdk/openai | Chat |
 
 Providers are lazy-loaded and cached. `new poe()` throws — use `poe()` or `createPoe()`.
@@ -79,16 +78,6 @@ export const OPENAI_MODELS = {
 
 Tests auto-generate from these registries — adding a model here creates tests automatically.
 
-### Release Stages
-
-Three stages with compile-time injection:
-
-- **Build**: esbuild replaces `__RELEASE_STAGE__` with `"stable"`, `"beta"`, or `"alpha"`
-- **Runtime**: Dead code elimination removes gated features from lower stages
-- **Test**: `RELEASE_STAGE` env var controls which tests run
-
-Alpha-only code won't exist in stable builds — it's removed at compile time.
-
 ## Key Files
 
 | File | Purpose |
@@ -96,7 +85,6 @@ Alpha-only code won't exist in stable builds — it's removed at compile time.
 | `src/poe-provider.ts` | Provider routing logic |
 | `src/openai-models.ts` | OpenAI model registry |
 | `src/google-models.ts` | Google model registry |
-| `src/release-stage.ts` | Stage detection helpers |
 | `tests/setup.ts` | Global test setup, API key mocking |
 | `tests/helpers/snapshot-fetch.ts` | HTTP record/playback |
 
@@ -114,22 +102,9 @@ Always commit `.snapshots/*.json` with your test changes. Snapshots are the reco
 
 If you see auth errors in record mode, check your `.env` file.
 
-### Stage tags must be explicit
-
-Tests tagged `stage:alpha` are silently skipped in stable/beta. If a test disappears, check its tags.
-
 ### Snapshot key collisions
 
 Keys are `{path}-{model}-{hash}`. Two tests with identical requests overwrite each other. Vary prompts to avoid this.
-
-### Google routing differs by stage
-
-```typescript
-// In stable: uses chat API
-// In alpha: uses responses API
-if (isAlphaStage()) return getOpenAIProvider().responses(model);
-return getOpenAIProvider().chat(model);
-```
 
 ### Sensitive headers stripped at record time
 
@@ -142,4 +117,3 @@ Snapshots sanitize headers (`set-cookie`, `x-request-id`, etc.). Can't recover t
 | `POE_API_KEY` | — | Required for record mode |
 | `POE_SNAPSHOT_MODE` | `playback` | `record` or `playback` |
 | `POE_SNAPSHOT_MISS` | `error` | `error`, `warn`, or `passthrough` |
-| `RELEASE_STAGE` | `alpha` (tests) | `stable`, `beta`, or `alpha` |
