@@ -15,7 +15,11 @@ interface ApiModel {
   supported_endpoints?: string[];
   supported_features?: string[];
   architecture?: { output_modalities?: string[] };
-  reasoning?: { required?: boolean; supports_reasoning_effort?: boolean };
+  reasoning?: {
+    budget?: { max_tokens: number; min_tokens: number } | null;
+    required?: boolean;
+    supports_reasoning_effort?: boolean | string[];
+  };
 }
 
 const res = await fetch(API_URL);
@@ -34,8 +38,7 @@ const models = data
     supported_endpoints: m.supported_endpoints,
     ...(m.supported_features?.length && { supported_features: m.supported_features }),
     ...(m.architecture?.output_modalities?.length && { output_modalities: m.architecture.output_modalities }),
-    ...(m.reasoning?.required && { reasoning_required: true }),
-    ...(m.reasoning?.supports_reasoning_effort && { reasoning_effort: true }),
+    ...(m.reasoning && { reasoning: m.reasoning }),
   }));
 
 const { writeFile, mkdir } = await import("node:fs/promises");

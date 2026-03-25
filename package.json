@@ -8,6 +8,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./code": {
+      "types": "./dist/code.d.ts",
+      "import": "./dist/code.js"
     }
   },
   "files": [
@@ -23,6 +27,7 @@
     "snapshots:delete:stale": "tsx scripts/snapshots.ts delete:stale",
     "verify-model": "tsx scripts/verify-model.ts",
     "update-routing": "tsx scripts/update-bundled-routing.ts",
+    "probe": "tsx scripts/probe-workarounds.ts",
     "prepare": "husky",
     "secrets": "trufflehog filesystem . --no-update --fail --exclude-paths=.trufflehogignore"
   },

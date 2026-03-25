@@ -4,15 +4,12 @@ export interface ModelOverride {
 }
 
 export const MODEL_OVERRIDES: Record<string, ModelOverride> = {
-  // Poe bug: output_text missing text field on tool call responses
-  "gemini-3.1-pro":        { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-3-flash":        { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-2.5-pro":        { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-2.5-flash":      { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-2.5-flash-lite": { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-2.0-flash":      { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-2.0-flash-lite": { skipTools: "Poe bug: output_text missing text field" },
-  "gemini-3.1-flash-lite": { skipTools: "Poe bug: output_text missing text field" },
+  // Poe bug: model ignores tools via /v1/responses
+  "gemini-2.5-pro":        { skipTools: "model ignores tools via /v1/responses" },
+  "gemini-2.5-flash":      { skipTools: "model ignores tools via /v1/responses" },
+  "gemini-2.5-flash-lite": { skipTools: "model ignores tools via /v1/responses" },
+  "gemini-2.0-flash":      { skipTools: "model ignores tools via /v1/responses" },
+  "gemini-2.0-flash-lite": { skipTools: "model ignores tools via /v1/responses" },
 
   // API reports tools but models reject them
   "gpt-4o-search":           { skipTools: "model rejects tools param" },
