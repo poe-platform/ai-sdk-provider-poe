@@ -13,12 +13,15 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "claude-opus-4.6",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -54,12 +57,15 @@
     "output_modalities": [
       "image"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "claude-sonnet-4.6",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -83,9 +89,11 @@
       "tools"
     ],
     "output_modalities": [
-      "text"
+      "image"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.4-mini",
@@ -99,9 +107,11 @@
       "tools"
     ],
     "output_modalities": [
-      "text"
+      "image"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gemini-3.1-pro",
@@ -116,7 +126,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.4-pro",
@@ -132,7 +144,9 @@
     "output_modalities": [
       "image"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gemini-3.1-flash-lite",
@@ -147,7 +161,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.3-codex",
@@ -162,7 +178,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.3-instant",
@@ -183,6 +201,7 @@
     "id": "claude-haiku-4.5",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -208,7 +227,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gemini-3-flash",
@@ -223,7 +244,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.2-instant",
@@ -241,14 +264,41 @@
     ]
   },
   {
+    "id": "grok-4.1-fast-reasoning",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
     "id": "claude-sonnet-4.5",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
     "supported_features": [
       "web_search",
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "grok-4.1-fast-non-reasoning",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
       "tools"
     ],
     "output_modalities": [
@@ -268,13 +318,14 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
-    "id": "gpt-5.3-codex-spark",
-    "owned_by": "OpenAI",
+    "id": "grok-4",
+    "owned_by": "XAI",
     "supported_endpoints": [
-      "/v1/responses",
       "/v1/chat/completions"
     ],
     "supported_features": [
@@ -282,13 +333,39 @@
     ],
     "output_modalities": [
       "text"
+    ]
+  },
+  {
+    "id": "gpt-image-1.5",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/images"
     ],
-    "reasoning_effort": true
+    "output_modalities": [
+      "image"
+    ]
+  },
+  {
+    "id": "gpt-5.3-codex-spark",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/responses"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "claude-opus-4.5",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -342,7 +419,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.1-instant",
@@ -372,7 +451,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.1",
@@ -388,7 +469,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5-pro",
@@ -404,7 +487,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5-chat",
@@ -425,6 +510,7 @@
     "id": "claude-opus-4.1",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -449,7 +535,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5.1-codex-max",
@@ -464,7 +552,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "nano-banana-pro",
@@ -503,7 +593,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5-nano",
@@ -519,7 +611,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-5-mini",
@@ -535,7 +629,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gemini-2.5-flash-lite",
@@ -564,12 +660,41 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
+  },
+  {
+    "id": "grok-4-fast-non-reasoning",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "grok-4-fast-reasoning",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
   },
   {
     "id": "claude-sonnet-4",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -585,6 +710,7 @@
     "id": "claude-opus-4",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -609,7 +735,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-4o",
@@ -638,7 +766,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "o4-mini-deep-research",
@@ -656,6 +786,35 @@
     ]
   },
   {
+    "id": "grok-3",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
+    "id": "grok-3-mini",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ],
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
+  },
+  {
     "id": "o3",
     "owned_by": "OpenAI",
     "supported_endpoints": [
@@ -668,7 +827,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "o3-deep-research",
@@ -731,6 +892,7 @@
     "id": "claude-sonnet-3.7",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -746,6 +908,7 @@
     "id": "claude-haiku-3.5",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
@@ -798,8 +961,10 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_required": true,
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true,
+      "required": true
+    }
   },
   {
     "id": "o1-pro",
@@ -815,7 +980,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "gpt-4o-mini",
@@ -844,7 +1011,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_effort": true
+    "reasoning": {
+      "supports_reasoning_effort": true
+    }
   },
   {
     "id": "o3-mini-high",
@@ -859,7 +1028,9 @@
     "output_modalities": [
       "text"
     ],
-    "reasoning_required": true
+    "reasoning": {
+      "required": true
+    }
   },
   {
     "id": "mistral-medium",
@@ -895,6 +1066,16 @@
     ],
     "output_modalities": [
       "text"
+    ]
+  },
+  {
+    "id": "gpt-image-1",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/images"
+    ],
+    "output_modalities": [
+      "image"
     ]
   },
   {
@@ -958,6 +1139,19 @@
     ]
   },
   {
+    "id": "grok-code-fast-1",
+    "owned_by": "XAI",
+    "supported_endpoints": [
+      "/v1/chat/completions"
+    ],
+    "supported_features": [
+      "tools"
+    ],
+    "output_modalities": [
+      "text"
+    ]
+  },
+  {
     "id": "veo-2",
     "owned_by": "Google",
     "supported_endpoints": [
@@ -985,6 +1179,16 @@
     ],
     "output_modalities": [
       "text"
+    ]
+  },
+  {
+    "id": "dall-e-3",
+    "owned_by": "OpenAI",
+    "supported_endpoints": [
+      "/v1/images"
+    ],
+    "output_modalities": [
+      "image"
     ]
   },
   {
@@ -1093,6 +1297,7 @@
     "id": "claude-haiku-3",
     "owned_by": "Anthropic",
     "supported_endpoints": [
+      "/v1/messages",
       "/v1/responses",
       "/v1/chat/completions"
     ],
