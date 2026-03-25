@@ -1,8 +1,8 @@
 {
   "key": "v1-messages-claude-haiku-4.5-8fe0f4ed9698",
   "test": {
-    "name": "uses thinking with claude-haiku-4.5",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "name": "claude-haiku-4.5 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -32,7 +32,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-19T00:51:56Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:46:59Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -43,14 +43,14 @@
     },
     "body": {
       "model": "claude-haiku-4-5-20251001",
-      "id": "req_poe_19933724d99441299dc1412cb518f84d",
+      "id": "req_poe_f4695222692e46749fb281724df81030",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
-          "thinking": "This is a straightforward arithmetic question. 7 * 8 = 56.",
-          "signature": "EuQBCkgICxABGAIqQFQ6rqRLslPgKadoqdIDuN2SRWiqQRhMSZ/hC31d08LjOBcyT2rYVbM+9OOcMCi1YLsxv75hVerMwexN3jZHT6wSDPfFzdOeVo68bpzsEhoMZ5RkGMpODVPFZZP5IjDJcsi673H7+FOeIUKnG8yngW358Mpfq3W8E0Pw1ainH86aD5RtAKyNya+lMWjuutAqSp6qtng5DFGOtx0QmmjQohaNE0eL+CTAFKr0IKpeYfSluWMsgMJMuypkegQt0QC5mTHKYjP64YR7dxqekQ8Pt0F0XfMqdULhcNn4GAE="
+          "thinking": "This is a simple arithmetic question. 7 * 8 = 56.",
+          "signature": "EtsBCkgIDBACGAIqQPKmXpbvAD90vw8DjUfG3anoZZvJfJFHDosxuLXE2wPjnLrwG64mhNUzAbOS405w98m0WvN0NimZpfLYzOQ2YgESDDs2GvwloPQdS/uLgRoM0wh0zb2g/T9Z2YQWIjAhc6KAHLlss+/sVAZlAOaYL1k8lR75yRvdN5GyKV22fUjBbO+joIX2nMcQ1amZbYAqQQicB7mkwZpFDcIBy/p1gWFwe1h3CTPqp70oNJDXNE6gNRdooSCweos7JsYUL9e3sg90GcOo7zFI7CrPfDe3iEOXGAE="
         },
         {
           "type": "text",
@@ -67,8 +67,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 39,
-        "total_tokens": 84
+        "output_tokens": 38,
+        "total_tokens": 83
       }
     }
   }

@@ -1,0 +1,68 @@
+{
+  "key": "v1-messages-claude-sonnet-4.6-089243b07e23",
+  "test": {
+    "name": "claude-sonnet-4.6 produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4.6",
+      "max_tokens": 4096,
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:47:14Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-6",
+      "id": "req_poe_7b5b90fdb3004043a2f06a723bb49fe8",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "7 * 8 = **56**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 14,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "total_tokens": 30
+      }
+    }
+  }
+}

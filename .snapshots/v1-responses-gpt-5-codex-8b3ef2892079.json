@@ -1,8 +1,8 @@
 {
   "key": "v1-responses-gpt-5-codex-8b3ef2892079",
   "test": {
-    "name": "uses reasoning with gpt-5-codex",
-    "file": "tests/integration/openai.test.ts"
+    "name": "gpt-5-codex produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,26 +30,26 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "759",
+      "openai-processing-ms": "806",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDljZDFlMzk0NzNlMzdiZTAxNjliZDViN2I4MjA0ODE5NGE5NjQ3NWRmZmE0NDg5ZWY=",
-      "created_at": 1774017403,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDQ2OWJiODYzODNiMjc2MDAxNjljNDY2MTljN2Q4ODE5MDhjZTkyNzM1ODBjNGMyNWQ=",
+      "created_at": 1774478873,
       "metadata": {},
       "model": "gpt-5-codex",
       "object": "response",
       "output": [
         {
-          "id": "rs_09cd1e39473e37be0169bd5b7bcb108194a4ab9f5021401313",
+          "id": "rs_0469bb86383b27600169c4661a15b88190a39650c11742f45f",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_09cd1e39473e37be0169bd5b7be6ec8194b6beacf305cd28e9",
+          "id": "msg_0469bb86383b27600169c4661a2a108190a10b1aa9a316ee08",
           "content": [
             {
               "annotations": [],
@@ -85,22 +85,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 23,
+        "output_tokens": 21,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 37
+        "total_tokens": 35
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017404,
+      "completed_at": 1774478874,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

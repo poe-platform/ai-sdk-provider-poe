@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "4814",
+      "openai-processing-ms": "4797",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-8b1fc0b0884ecc1c0ffe80dd",
+      "id": "chatcmpl-9aab6a9d0e0e8dae27c8428b",
       "object": "chat.completion",
-      "created": 1770831833,
+      "created": 1774470698,
       "model": "Grok-4",
       "choices": [
         {
@@ -53,7 +53,7 @@
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 153,
+          "reasoning_tokens": 201,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {

@@ -1,0 +1,77 @@
+{
+  "key": "v1-messages-claude-opus-4.6-333c0d3199cd",
+  "test": {
+    "name": "claude-opus-4.6 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4.6",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:46:55Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-6",
+      "id": "req_poe_36929805993e4cca8b62344c5e30b151",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "56",
+          "signature": "ErsBClcIDBgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxMg9jbGF1ZGUtb3B1cy00LTYSDNDTtXxT778+b2IHhRoM/gHcjN+ccGQHA2rBIjD86FPzRJFWcZ6FjVWAQ0QysJVB2VOfUX5jI+4Ac40E0AwDGNQGVZ4Kb+mSg9H1rzkqEkXIX/V2oXwqYc9xISUs/a8z3xgB"
+        },
+        {
+          "type": "text",
+          "text": "7 * 8 = **56**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 45,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 22,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "total_tokens": 67
+      }
+    }
+  }
+}

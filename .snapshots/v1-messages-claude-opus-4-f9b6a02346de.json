@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-opus-4-f9b6a02346de",
+  "test": {
+    "name": "claude-opus-4 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:47:06Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-20250514",
+      "id": "req_poe_a74e89ae73694d1b924941d7509c45e7",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "This is a simple multiplication problem. 7 * 8 = 56.",
+          "signature": "Et4BCkgIDBACGAIqQF/9FCA05F2u3YY4PBcmRAvUZd8XgwioxpF5QsyCdipLKmDxZiDwE/15mX10HkVuhM0b3PNhTd5W9PhSHeNi7rwSDMEeGvTc8V44Za1MVBoMfddK+6Z9Q9Ng7Fy5IjC71yXKMHKQVWOUyrMaCtiSYT3SkWRb7uRfov7iIXnT88TXCslysfV9b73qgrMaqYsqROz60064P7BElvGSsaXapQJwqcKW5MV0Zsdmz7B1NPi5wuIqF52v2b89HshU5g8a0/Mrk8NUhV8PA+T7lhlo5RRSaW+rGAE="
+        },
+        {
+          "type": "text",
+          "text": "7 * 8 = 56"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 45,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "total_tokens": 83
+      }
+    }
+  }
+}

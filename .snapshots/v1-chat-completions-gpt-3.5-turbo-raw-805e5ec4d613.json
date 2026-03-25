@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "520",
+      "openai-processing-ms": "492",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-49313e64bc0870d66a830438",
+      "id": "chatcmpl-34fcfe44b6aa8bf794295688",
       "object": "chat.completion",
-      "created": 1770393170,
+      "created": 1774471088,
       "model": "gpt-3.5-turbo-raw",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Greetings, hi there!"
+            "content": "Greetings, fellow humans!"
           },
           "finish_reason": "stop"
         }

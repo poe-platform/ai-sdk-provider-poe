@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "473",
+      "openai-processing-ms": "2077",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-8e1a11c89a1c751600ea3453",
+      "id": "chatcmpl-4d00488372e2a2cb01e9188b",
       "object": "chat.completion",
-      "created": 1773881513,
+      "created": 1774471700,
       "model": "llama-3.1-8b-cs",
       "choices": [
         {

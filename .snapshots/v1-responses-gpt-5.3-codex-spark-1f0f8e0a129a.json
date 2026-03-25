@@ -1,8 +1,8 @@
 {
   "key": "v1-responses-gpt-5.3-codex-spark-1f0f8e0a129a",
   "test": {
-    "name": "uses reasoning with gpt-5.3-codex-spark",
-    "file": "tests/integration/openai.test.ts"
+    "name": "gpt-5.3-codex-spark produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,30 +30,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1786",
+      "openai-processing-ms": "1970",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDQwYjMzMWY4MGZiZmIzODAxNjliZDViNjY5ODZjODE5NDk5ODBiZjZiOTU1MjcxMWU=",
-      "created_at": 1774017382,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGFmMmRjMjhiOGZkN2E5MTAxNjljNDY2MDM1MmE0ODE5MGE5ZGY3NDM5ZGNmYTdlNWM=",
+      "created_at": 1774478851,
       "metadata": {},
       "model": "gpt-5.3-codex-spark-preview",
       "object": "response",
       "output": [
         {
-          "id": "rs_040b331f80fbfb380169bd5b66f5bc8194a32e10fdc1d7caa3",
+          "id": "rs_0af2dc28b8fd7a910169c46603a1fc8190a60ae053edb5aaab",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_040b331f80fbfb380169bd5b66fc888194a466417f81e8a99b",
+          "id": "msg_0af2dc28b8fd7a910169c46603a4e08190bffbf4b3b3ad689b",
           "content": [
             {
               "annotations": [],
-              "text": "7 × 8 = **56**.",
+              "text": "\\(7 \\times 8 = 56\\).",
               "type": "output_text",
               "logprobs": []
             }
@@ -86,22 +86,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 48,
+        "output_tokens": 43,
         "output_tokens_details": {
-          "reasoning_tokens": 33
+          "reasoning_tokens": 26
         },
-        "total_tokens": 62
+        "total_tokens": 57
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017384,
+      "completed_at": 1774478853,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

@@ -1,0 +1,51 @@
+{
+  "key": "v1-messages-claude-haiku-3.5-9679fe2a5bc5",
+  "test": {
+    "name": "claude-haiku-3.5 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-haiku-3.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:47:09Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-length": "261",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+    },
+    "body": {
+      "type": "error",
+      "error": {
+        "type": "invalid_request_error",
+        "message": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"'claude-3-5-haiku-20241022' does not support thinking.\"},\"request_id\":\"req_vrtx_011CZQcSsBtTpbFsN13VFPNk\"}"
+      }
+    }
+  }
+}

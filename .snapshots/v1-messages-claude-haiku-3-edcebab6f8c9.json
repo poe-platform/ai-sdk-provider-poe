@@ -28,7 +28,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-19T00:51:54Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:48:21Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -39,13 +39,13 @@
     },
     "body": {
       "model": "claude-3-haiku-20240307",
-      "id": "req_poe_8524819296bc46a2bab32a04358cd625",
+      "id": "req_poe_744da8c580844a4fb97156353c2bddce",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Hello, how are?"
+          "text": "Hello there, you."
         }
       ],
       "stop_reason": "end_turn",

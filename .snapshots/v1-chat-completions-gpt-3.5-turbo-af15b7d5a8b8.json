@@ -49,16 +49,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1495",
+      "openai-processing-ms": "664",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-a3e7f2156a6f5e80a7f6dbb0",
+      "id": "chatcmpl-79ba30d83dc7825ed3bd4e7f",
       "object": "chat.completion",
-      "created": 1770393169,
+      "created": 1774471079,
       "model": "gpt-3.5-turbo",
       "choices": [
         {
@@ -68,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "call_urHeHizCLhb3mrNkaXfoJFvC",
+                "id": "call_5UoX792ptpccNHUrWzXMyz28",
                 "type": "function",
                 "function": {
                   "name": "getWeather",

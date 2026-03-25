@@ -32,7 +32,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:52Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:22Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -43,14 +43,14 @@
     },
     "body": {
       "model": "claude-opus-4-6",
-      "id": "req_poe_2dbad9ff94c945839a8909fe9a59e76c",
+      "id": "req_poe_63bba26a2aba4fdba55ff94b7b035fde",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
           "thinking": "56",
-          "signature": "EqoBCkYICxgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxEgwgCMHrPTr4jJCI6m0aDMxQaqMXB6d/ovatRyIwrhqsRibniUm2jYbH20gu2GYYiJUupilTRx16RgMcovhqw9pXH1L5kEUUdGUdU/UoKhL9VcZINWsNYF6Na11PfR4kXtMYAQ=="
+          "signature": "ErsBClcIDBgCKkDqzdwYJV2F21eDvUnEtv7+ZznUT4YN5qe4J02VN0eNqPAAA92opEpP/W6GWu8nQNjIxodegjX4S+UG600pgkQxMg9jbGF1ZGUtb3B1cy00LTYSDL97A5wz/D6T7DLAoxoMU+nVKa2w6OhExb+cIjCZ8nZYmbfjJft83qDF15BGkqxQV4VP/lzHwnIqXevV24eFFmD7lxuPbrAyNymwvUgqEkGUnCXVUDXgiMRaxHNV7ceBVhgB"
         },
         {
           "type": "text",
@@ -69,7 +69,8 @@
         },
         "output_tokens": 22,
         "service_tier": "standard",
-        "inference_geo": "global"
+        "inference_geo": "global",
+        "total_tokens": 67
       }
     }
   }

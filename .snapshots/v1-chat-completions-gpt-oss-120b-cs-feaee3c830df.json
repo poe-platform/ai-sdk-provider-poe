@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "852",
+      "openai-processing-ms": "517",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-51a6e41a54c7bf9f7d03497b",
+      "id": "chatcmpl-0441b717f42b7c8f29f5f4fa",
       "object": "chat.completion",
-      "created": 1773881513,
+      "created": 1774471698,
       "model": "gpt-oss-120b-cs",
       "choices": [
         {
@@ -42,16 +42,16 @@
           "message": {
             "role": "assistant",
             "content": "Hello dear friend",
-            "reasoning_content": "The user wants: \"Say hello in exactly 3 words\". So we need to produce a greeting that uses exactly three words, e.g., \"Hello, dear friend\". That's three words? Actually \"Hello,\" counts as a word, \"dear\" second, \"friend\" third. That's three words. Or \"Hello there, friend\". That's three words? \"Hello\", \"there\", \"friend\" = three. The user didn't ask for extra explanation, just the phrase. So answer with three-word greeting. Ensure output exactly three words, no extra punctuation not counting as extra words? Punctuation shouldn't count as words. So \"Hello dear friend\" is three words. Provide that.\n\nWe need to not add extra text. So just output \"Hello dear friend\".",
-            "reasoning": "The user wants: \"Say hello in exactly 3 words\". So we need to produce a greeting that uses exactly three words, e.g., \"Hello, dear friend\". That's three words? Actually \"Hello,\" counts as a word, \"dear\" second, \"friend\" third. That's three words. Or \"Hello there, friend\". That's three words? \"Hello\", \"there\", \"friend\" = three. The user didn't ask for extra explanation, just the phrase. So answer with three-word greeting. Ensure output exactly three words, no extra punctuation not counting as extra words? Punctuation shouldn't count as words. So \"Hello dear friend\" is three words. Provide that.\n\nWe need to not add extra text. So just output \"Hello dear friend\"."
+            "reasoning_content": "The user: \"Say hello in exactly 3 words\". They want a response that says hello in exactly three words. So perhaps \"Hello, dear friend!\" That's three words? Count: \"Hello,\" (counts as Hello) that's one word, \"dear\" second, \"friend!\" third. That's three words. However punctuation might affect counting but typical counting: words separated by spaces. So \"Hello dear friend\" is three words. Or \"Hello there, friend!\" that's three words? \"Hello\" \"there,\" \"friend!\" that's three. Provide exactly three words. Use minimal. So answer: \"Hello dear friend\". That's three words. Provide that.",
+            "reasoning": "The user: \"Say hello in exactly 3 words\". They want a response that says hello in exactly three words. So perhaps \"Hello, dear friend!\" That's three words? Count: \"Hello,\" (counts as Hello) that's one word, \"dear\" second, \"friend!\" third. That's three words. However punctuation might affect counting but typical counting: words separated by spaces. So \"Hello dear friend\" is three words. Or \"Hello there, friend!\" that's three words? \"Hello\" \"there,\" \"friend!\" that's three. Provide exactly three words. Use minimal. So answer: \"Hello dear friend\". That's three words. Provide that."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 169,
+        "completion_tokens": 148,
         "prompt_tokens": 74,
-        "total_tokens": 243,
+        "total_tokens": 222,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,

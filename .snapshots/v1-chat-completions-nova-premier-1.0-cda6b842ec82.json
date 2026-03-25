@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "2836",
+      "openai-processing-ms": "3882",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-eea8559efe622ee2da29a27d",
+      "id": "chatcmpl-d63cb1a348cde1501c40b8b7",
       "object": "chat.completion",
-      "created": 1773881502,
+      "created": 1774471667,
       "model": "nova-premier-1.0",
       "choices": [
         {
@@ -42,20 +42,20 @@
           "message": {
             "role": "assistant",
             "content": "\nHi there friend",
-            "reasoning_content": "\n- The user wants a 3-word hello. \n- \"Hi there friend\" and \"Hello dear user\" work.\n- \"Hi to you\" also fits. \n- Must pick one valid option. \"Hello dear user\" is too formal. \"Hi there friend\" sounds friendly.\n",
-            "reasoning": "\n- The user wants a 3-word hello. \n- \"Hi there friend\" and \"Hello dear user\" work.\n- \"Hi to you\" also fits. \n- Must pick one valid option. \"Hello dear user\" is too formal. \"Hi there friend\" sounds friendly.\n"
+            "reasoning_content": "\n- The user requests a hello message using exactly 3 words. \n- Common greetings include \"Hello there\" (too long) or \"Hi there\" (valid). \n- Must confirm the total word count strictly equals three. \n- \"Hello world\" is another candidate, but \"Hi friend\" also fits and is friendly. \n- The key is adhering to the exact requirement of three words.\n",
+            "reasoning": "\n- The user requests a hello message using exactly 3 words. \n- Common greetings include \"Hello there\" (too long) or \"Hi there\" (valid). \n- Must confirm the total word count strictly equals three. \n- \"Hello world\" is another candidate, but \"Hi friend\" also fits and is friendly. \n- The key is adhering to the exact requirement of three words.\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 83,
+        "completion_tokens": 105,
         "prompt_tokens": 117,
-        "total_tokens": 200,
+        "total_tokens": 222,
         "completion_tokens_details": null,
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 115
+          "cached_tokens": 0
         }
       }
     }

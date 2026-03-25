@@ -52,25 +52,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "549",
+      "openai-processing-ms": "467",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDBjMTJkZjEyY2I4MmU4ODAxNjliZDUzOWFmM2MwODE5NmIyZTFhYzViN2Q5MGJjZTA=",
-      "created_at": 1774015386,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGVhMTYzZDlmOWUxZGU5YTAxNjljNDQ2NGQwZDUwODE5NDgzYmNmOGNhZDI1NzkzYWY=",
+      "created_at": 1774470733,
       "metadata": {},
       "model": "gpt-5-chat-latest",
       "object": "response",
       "output": [
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_2rm0vdj01q0cxHDri5Wa41Hd",
+          "call_id": "call_oHWB5EnPwalGJOU6Ggn89rFC",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_00c12df12cb82e880169bd539b527881969d7df8fbab483cad",
+          "id": "fc_0ea163d9f9e1de9a0169c4464d5b3c819492d89dec04997b21",
           "status": "completed"
         }
       ],
@@ -127,11 +127,19 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015387,
+      "completed_at": 1774470733,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

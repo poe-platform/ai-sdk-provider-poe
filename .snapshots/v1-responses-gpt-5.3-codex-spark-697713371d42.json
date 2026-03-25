@@ -30,30 +30,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "763",
+      "openai-processing-ms": "800",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDRlNzAyMzA2N2ZmMWVlYzAxNjliZDViNjRmMDg4ODE5ZDlhZmYyY2IyZTI1MmIzZjU=",
-      "created_at": 1774017380,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGVjZjQ3YzA2MWU3ZDYxMjAxNjljNDQ2M2YxZGRjODE5MWI0ODFjN2ZlYzZjMWM0NTM=",
+      "created_at": 1774470719,
       "metadata": {},
       "model": "gpt-5.3-codex-spark-preview",
       "object": "response",
       "output": [
         {
-          "id": "rs_04e7023067ff1eec0169bd5b6557f8819daeedb71999475f33",
+          "id": "rs_0ecf47c061e7d6120169c4463f82848191a827cc0b9d56ddf2",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_04e7023067ff1eec0169bd5b656ea4819dbcb047440939d09d",
+          "id": "msg_0ecf47c061e7d6120169c4463fa3a481919551622d61cbe632",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend",
+              "text": "Hello there everyone",
               "type": "output_text",
               "logprobs": []
             }
@@ -86,22 +86,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 112,
+        "output_tokens": 262,
         "output_tokens_details": {
-          "reasoning_tokens": 102
+          "reasoning_tokens": 253
         },
-        "total_tokens": 125
+        "total_tokens": 275
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017381,
+      "completed_at": 1774470719,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

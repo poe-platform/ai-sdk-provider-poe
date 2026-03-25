@@ -30,26 +30,26 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2399",
+      "openai-processing-ms": "3591",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGMyYWY2NjcxODI4MjU4MzAxNjliZDUzMGVlNjcwODE5Yzk1MTc0MmM5YjU0ZmNiNDQ=",
-      "created_at": 1774015246,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDljOTI3Yjk4YTZjYWIxMTAxNjljNDQ2NTBjYjZjODE5Mjg3NTc2MzAyMTZiN2E5YzM=",
+      "created_at": 1774470736,
       "metadata": {},
       "model": "gpt-5.1-codex-max",
       "object": "response",
       "output": [
         {
-          "id": "rs_0c2af667182825830169bd530f1eb4819ca18e3c294d458f15",
+          "id": "rs_09c927b98a6cab110169c446510d108192a12dfe566ec1b7ca",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_0c2af667182825830169bd53110628819c9ed8fbbd45b1b489",
+          "id": "msg_09c927b98a6cab110169c4465400508192b0c4f4a77d139cba",
           "content": [
             {
               "annotations": [],
@@ -85,22 +85,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 276,
+        "output_tokens": 455,
         "output_tokens_details": {
-          "reasoning_tokens": 256
+          "reasoning_tokens": 384
         },
-        "total_tokens": 289
+        "total_tokens": 468
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015249,
+      "completed_at": 1774470740,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

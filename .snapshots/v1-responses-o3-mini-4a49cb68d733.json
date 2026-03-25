@@ -1,8 +1,8 @@
 {
   "key": "v1-responses-o3-mini-4a49cb68d733",
   "test": {
-    "name": "uses reasoning with o3-mini",
-    "file": "tests/integration/openai.test.ts"
+    "name": "o3-mini produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,26 +30,26 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2227",
+      "openai-processing-ms": "2640",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDNiMDkzODE3MjhhZWZjZDAxNjliZDUzZjUwNmRjODE5MWE2MWZlNDVmMDljMWZmMmE=",
-      "created_at": 1774015477,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDk2NzBlNjVjODNhNTNkNjAxNjljNDY2MmMxZDJjODE5NmI5YTgzNzE1NDk5ODA3ODA=",
+      "created_at": 1774478892,
       "metadata": {},
       "model": "o3-mini-2025-01-31",
       "object": "response",
       "output": [
         {
-          "id": "rs_03b09381728aefcd0169bd53f556488191987c148983ca2ac7",
+          "id": "rs_09670e65c83a53d60169c4662cf63881968a82f0a59b2d8bc5",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_03b09381728aefcd0169bd53f6ce708191afe4998748fbeee3",
+          "id": "msg_09670e65c83a53d60169c4662e5e9c8196b709b21d75a09acf",
           "content": [
             {
               "annotations": [],
@@ -85,22 +85,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 200,
+        "output_tokens": 277,
         "output_tokens_details": {
-          "reasoning_tokens": 64
+          "reasoning_tokens": 128
         },
-        "total_tokens": 214
+        "total_tokens": 291
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015479,
+      "completed_at": 1774478894,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

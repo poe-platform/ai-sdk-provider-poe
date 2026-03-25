@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1732",
+      "openai-processing-ms": "3710",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDMyYjQzYjUzOTE2ODk2NTAxNjliZDUzMWM3MjQ4ODE5MmI5MmNmMzkzNzMwNjIxNjk=",
-      "created_at": 1774015260,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDViZDFiOTBhMDZkMWFjYTAxNjljNDQ2NWMwYjgwODE5MTg0YjhkZWZiYWUwNDExMWE=",
+      "created_at": 1774470748,
       "metadata": {},
       "model": "gpt-5-2025-08-07",
       "object": "response",
       "output": [
         {
-          "id": "rs_032b43b5391689650169bd531cc8ac819297ade3d45a7dddc3",
+          "id": "rs_05bd1b90a06d1aca0169c4465c635c8191977cc8f78b02facf",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_8ZICtZwQ04HvJ8vNyNN8ZIij",
+          "call_id": "call_pKQBRa0FnM1Lw6vpvcxHxy7O",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_032b43b5391689650169bd531dc69081929e262e14a70c6692",
+          "id": "fc_05bd1b90a06d1aca0169c4465f58d081919601fef3a953e098",
           "status": "completed"
         }
       ],
@@ -121,22 +121,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 104,
+        "output_tokens": 126,
         "output_tokens_details": {
           "reasoning_tokens": 64
         },
-        "total_tokens": 170
+        "total_tokens": 192
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015262,
+      "completed_at": 1774470751,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

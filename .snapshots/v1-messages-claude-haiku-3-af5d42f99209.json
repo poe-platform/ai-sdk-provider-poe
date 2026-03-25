@@ -1,0 +1,66 @@
+{
+  "key": "v1-messages-claude-haiku-3-af5d42f99209",
+  "test": {
+    "name": "claude-haiku-3 produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-haiku-3",
+      "max_tokens": 4096,
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is 7 * 8?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:48:18Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-3-haiku-20240307",
+      "id": "req_poe_f2a0d6c908404f358e15ec201556e51a",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "56."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6,
+        "total_tokens": 22
+      }
+    }
+  }
+}

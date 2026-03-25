@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1537",
+      "openai-processing-ms": "974",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQ0MDQ3NzU1OTllODI5NzAxNjliZDUzMDE3NmZjODE5Y2IxN2NiYzQyNzA3YTRhZGU=",
-      "created_at": 1774015233,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDEwNmU0NjI3Zjk5MDkyYjAxNjljNDQ2MWI0ODkwODE5NzlmNTBjNDFhYWMyN2Y0YTI=",
+      "created_at": 1774470683,
       "metadata": {},
       "model": "gpt-5.2-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_0d404775599e82970169bd5301d8e8819ca685279b20add55e",
+          "id": "rs_0106e4627f99092b0169c4461b91c4819792da5ff8396c0ec6",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_GAYQDjuhuGcLYIvLvpjWY0XE",
+          "call_id": "call_B69kA3iWPxD1cMQgwgTKufrl",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0d404775599e82970169bd5302a3ac819c810b8fa454fcd919",
+          "id": "fc_0106e4627f99092b0169c4461bce148197ad33e1bfa3936997",
           "status": "completed"
         }
       ],
@@ -121,22 +121,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 51,
+        "output_tokens": 29,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 117
+        "total_tokens": 95
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015234,
+      "completed_at": 1774470684,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

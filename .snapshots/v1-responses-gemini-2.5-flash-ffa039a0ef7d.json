@@ -2,7 +2,7 @@
   "key": "v1-responses-gemini-2.5-flash-ffa039a0ef7d",
   "test": {
     "name": "generates text with gemini-2.5-flash",
-    "file": "tests/integration/google.test.ts"
+    "file": "src/poe-provider.google.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,29 +30,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "824",
+      "openai-processing-ms": "1268",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjNGSzlhYnIxRGNDR3h0VVAxcHVFMFFJ",
-      "created_at": 1774015196,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnRHekVhYXlRRHIya29NOFBvTWFmNEFv",
+      "created_at": 1774480564,
       "metadata": {},
       "model": "gemini-2.5-flash",
-      "object": "chat.completion",
+      "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "3FK9abr1DcCGxtUP1puE0QI",
+          "id": "tGzEaayQDr2koM8PoMaf4Ao",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Hello there!",
-              "annotations": []
+              "text": "Well hello there.",
+              "annotations": [],
+              "logprobs": []
             }
           ]
         }
@@ -62,23 +63,45 @@
       "tool_choice": "auto",
       "tools": [],
       "status": "completed",
-      "text": {},
+      "text": {
+        "format": {
+          "type": "text"
+        }
+      },
       "usage": {
         "input_tokens": 7,
         "input_tokens_details": {
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 27,
+        "output_tokens": 148,
         "output_tokens_details": {
-          "reasoning_tokens": 24,
-          "text_tokens": 3
+          "reasoning_tokens": 144,
+          "text_tokens": 4
         },
-        "total_tokens": 34
+        "total_tokens": 155
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
-      }
+      },
+      "completed_at": 1774480564,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "reasoning": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null,
+      "background": false,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "store": true,
+      "top_logprobs": 0,
+      "top_p": 1,
+      "truncation": "disabled"
     }
   }
 }

@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1979",
+      "openai-processing-ms": "2243",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGE5MGFkY2I5MThiZjFmZDAxNjliZDUzMDNmYmVjODE5Nzk3ODlhYjdjNGUwMjYyYTQ=",
-      "created_at": 1774015236,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDYxY2RiM2Y3YjNkNTcxZjAxNjljNDQ2MWQ0NWQ0ODE5Nzk2OGU0MzgzNWVjMWJkNzE=",
+      "created_at": 1774470685,
       "metadata": {},
       "model": "gpt-5.2-codex",
       "object": "response",
       "output": [
         {
-          "id": "rs_0a90adcb918bf1fd0169bd530469208197ada0eec5f6c318d9",
+          "id": "rs_061cdb3f7b3d571f0169c4461d9a908197b2ac49448b922199",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_pYeVK5SKCFBRTinx2O0CHdLJ",
+          "call_id": "call_9H0lsi72rqVmcQJ4QcYDbEBq",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0a90adcb918bf1fd0169bd53048cbc81979f93674784870669",
+          "id": "fc_061cdb3f7b3d571f0169c4461dbc008197b93c24a65484ee7b",
           "status": "completed"
         }
       ],
@@ -132,11 +132,19 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015237,
+      "completed_at": 1774470687,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

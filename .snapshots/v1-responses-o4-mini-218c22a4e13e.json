@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1599",
+      "openai-processing-ms": "2743",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGRkNTU5NWZkNzBjMmZiODAxNjliZDUzYTFjMDQ0ODE5ZmJlZWJkNDkzNzA3M2ViMWI=",
-      "created_at": 1774015393,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGY0OWYwN2NhMjMzNzM4ZTAxNjljNDQ2N2I1OTM4ODE5NWEzNzA3ZjZmY2JjMWI1MTE=",
+      "created_at": 1774470779,
       "metadata": {},
       "model": "o4-mini-2025-04-16",
       "object": "response",
       "output": [
         {
-          "id": "rs_0dd5595fd70c2fb80169bd53a20944819fa6babcdfc4f9c3e0",
+          "id": "rs_0f49f07ca233738e0169c4467bdc50819584005117222bf3dc",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_b8qOfQeg5Po7tqqYoeIpJeuB",
+          "call_id": "call_uBwsneZwI2MC29e1vP6OYq0L",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0dd5595fd70c2fb80169bd53a310d4819f87c91bc0c0e28b0f",
+          "id": "fc_0f49f07ca233738e0169c4467dbde081958975ffe90c8cd60e",
           "status": "completed"
         }
       ],
@@ -121,22 +121,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 118,
+        "output_tokens": 253,
         "output_tokens_details": {
-          "reasoning_tokens": 64
+          "reasoning_tokens": 192
         },
-        "total_tokens": 181
+        "total_tokens": 316
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015395,
+      "completed_at": 1774470781,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

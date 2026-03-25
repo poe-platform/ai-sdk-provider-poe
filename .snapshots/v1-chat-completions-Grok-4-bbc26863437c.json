@@ -49,16 +49,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "4551",
+      "openai-processing-ms": "5192",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-37955f2080ff5ddceeeadeac",
+      "id": "chatcmpl-43cb43deacb7b7f1fe711612",
       "object": "chat.completion",
-      "created": 1770831838,
+      "created": 1774470704,
       "model": "Grok-4",
       "choices": [
         {
@@ -68,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "call_66055966",
+                "id": "call_90396736",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -87,12 +87,12 @@
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 217,
+          "reasoning_tokens": 181,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 834
+          "cached_tokens": 677
         }
       }
     }

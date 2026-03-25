@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "10767",
+      "openai-processing-ms": "9821",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-1364fc4c83fce4ab597889a5",
+      "id": "chatcmpl-4f25a3b0904af85c13c9ee16",
       "object": "chat.completion",
-      "created": 1770831883,
+      "created": 1774470765,
       "model": "Imagen-4-Ultra",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/99fc405d0046a066d9b2544c817d00f3fe5cc81f0c9440df227345c40b4da139?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/99fc405d0046a066d9b2544c817d00f3fe5cc81f0c9440df227345c40b4da139?w=1024&h=1024"
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/daa30ce12f47593a28cb5570364a95ac249d137b757fad4dd9a8dec9e19a856a?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/daa30ce12f47593a28cb5570364a95ac249d137b757fad4dd9a8dec9e19a856a?w=1024&h=1024"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 73,
-        "total_tokens": 80
+        "completion_tokens": 71,
+        "total_tokens": 78
       }
     }
   }

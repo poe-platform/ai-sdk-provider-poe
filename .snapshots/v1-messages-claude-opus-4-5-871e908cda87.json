@@ -32,7 +32,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:54Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:25Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -43,14 +43,14 @@
     },
     "body": {
       "model": "claude-opus-4-5-20251101",
-      "id": "req_poe_38cc43cac3d34567ad316a5ce85c1b3e",
+      "id": "req_poe_770d976d1dab44b3bdad529af463dbbb",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
-          "thinking": "This is a simple multiplication question. 7 * 8 = 56.",
-          "signature": "Et0BCkYICxgCKkCZZAKoS0YhRXG6HrVqMVkN787m+NjrL1I5fUCPyBadc3jCcnFsEsa7TwGE84aZetkrtUQGLxAxS75USpnomMl3EgzXnuVOHq12p4J7btoaDF0AIppA2ASVUbVi8iIwE0xBwtL/M/uWYwHISkStN+CW3aZQPokLdnXwpxyxaw+m31W1HL8jCpIV2RUindHXKkVZnuJjmJO+y9iSRKCz3zPe6XtPDSUAaLEkhcnt9KchyBQ7r1LCigCu9w8uDrvscJVJ+BVTJrax+VNxRlUAIsY4L7TYgEkYAQ=="
+          "thinking": "The user is asking for a simple multiplication: 7 * 8.\n\n7 * 8 = 56",
+          "signature": "EuwBCkgIDBACGAIqQI82JQ3p6YvqWN3AZvkCEPO1td4XDT2dXveSGZvDS/4y/7U/P0g9qR2cQEO8+W6+nawu5fHoLB5gfpuyy2nhYnoSDCuLNPBJKAjQpbLY2hoMDdVVrlkOoKy+yjEZIjDzKqAoawNcOcQqGJsHwqUdJdGQveEuse49Hi7gnK1sZKR9Tipm+/Aga8kO6znnHGwqUtGRYeXZi+qZlrtSMQlaCQ1IVBgyw9S5fFiZlv329xbrlxepLcSJ4Qhl43MfJQqzX7+IlFd3anmXQkUFFuKrrXCPo/t1aMxbRzI4kyeaCWZ096AYAQ=="
         },
         {
           "type": "text",
@@ -67,9 +67,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 38,
-        "service_tier": "standard",
-        "inference_geo": "not_available"
+        "output_tokens": 46,
+        "total_tokens": 91
       }
     }
   }

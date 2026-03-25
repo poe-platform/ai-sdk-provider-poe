@@ -51,7 +51,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:49Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:21Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -62,17 +62,17 @@
     },
     "body": {
       "model": "claude-3-5-haiku-20241022",
-      "id": "req_poe_d38743f822fa46ea8b2d5e2d212f7091",
+      "id": "req_poe_6929d556c76d4020b025ca18953c05ff",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "I'll help you get the current weather in San Francisco using the getWeather tool."
+          "text": "I'll help you get the current weather in San Francisco by using the getWeather tool."
         },
         {
           "type": "tool_use",
-          "id": "toolu_vrtx_018qQcwRH5ArrwZtz2PG7oiv",
+          "id": "toolu_vrtx_01DXpxv3kegmRPM7kCJzgEcK",
           "name": "getWeather",
           "input": {
             "location": "San Francisco"
@@ -89,7 +89,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 73
+        "output_tokens": 74,
+        "total_tokens": 453
       }
     }
   }

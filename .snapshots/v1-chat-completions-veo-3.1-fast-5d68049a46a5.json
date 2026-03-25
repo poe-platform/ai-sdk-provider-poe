@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-veo-3.1-fast-5d68049a46a5",
   "test": {
     "name": "generates text with veo-3.1-fast",
-    "file": "tests/integration/google.test.ts"
+    "file": "src/poe-provider.google.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "82637",
+      "openai-processing-ms": "64037",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-4ecc6ac8977947aa3c39b972",
+      "id": "chatcmpl-fde6b5a2f06b19ee718a7326",
       "object": "chat.completion",
-      "created": 1770393143,
+      "created": 1774480734,
       "model": "veo-3.1-fast",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/video/b1fec6ef9d1c6d42a743b10b2206b520e507e9c7cd1cfba9e99dbc3f5b74f2e6"
+            "content": "https://pfst.cf2.poecdn.net/base/video/be325259fd387c93d4a01bf71eedba48a3dc5b12bb9aa0ea23d6de2f9370f691"
           },
           "finish_reason": "stop"
         }

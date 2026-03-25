@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "3009",
+      "openai-processing-ms": "3526",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-7b225561da99e0fc56d55ead",
+      "id": "chatcmpl-cf55b52df9956d22220260f7",
       "object": "chat.completion",
-      "created": 1770393157,
+      "created": 1774470827,
       "model": "gpt-4o-search",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, how are you? "
+            "content": "Hello! How are you? "
           },
           "finish_reason": "stop"
         }

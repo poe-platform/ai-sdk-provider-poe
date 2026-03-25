@@ -1,8 +1,8 @@
 {
   "key": "v1-chat-completions-grok-3-mini-0bb4f1ea5869",
   "test": {
-    "name": "grok-3-mini produces reasoning",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "name": "grok-3-mini produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,42 +25,42 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1773",
+      "openai-processing-ms": "2658",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5188a8433ee36a234169deb1",
+      "id": "chatcmpl-b418182be09b40cc3469c60b",
       "object": "chat.completion",
-      "created": 1773881476,
+      "created": 1774478882,
       "model": "grok-3-mini",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "7 multiplied by 8 equals 56.",
-            "reasoning_content": "First, the user asked, \"What is 7 * 8?\" This is a straightforward multiplication question. 7 multiplied by 8 equals 56.\n\nAs an AI, I should respond helpfully and accurately. Since this is a simple math question, I don't need to overcomplicate it.\n\nI could just say, \"7 multiplied by 8 is 56.\" But to make it more engaging, I might add a bit more, like explaining the calculation briefly.\n\nThe user might be testing basic functionality, so keeping it simple is fine.\n\nFinally, ensure the response is clear and direct.",
-            "reasoning": "First, the user asked, \"What is 7 * 8?\" This is a straightforward multiplication question. 7 multiplied by 8 equals 56.\n\nAs an AI, I should respond helpfully and accurately. Since this is a simple math question, I don't need to overcomplicate it.\n\nI could just say, \"7 multiplied by 8 is 56.\" But to make it more engaging, I might add a bit more, like explaining the calculation briefly.\n\nThe user might be testing basic functionality, so keeping it simple is fine.\n\nFinally, ensure the response is clear and direct."
+            "content": "7 multiplied by 8 equals 56. 😊",
+            "reasoning_content": "First, the user asked, \"What is 7 * 8?\" This is a simple multiplication question. 7 multiplied by 8 equals 56.\n\nI need to remember my role as Grok, an AI created by xAI. I'm supposed to be helpful and maximally truthful. So, I should answer accurately and directly.\n\nSince this is straightforward, I don't need to overcomplicate it. Just provide the answer clearly.\n\nI could add a bit of context or make it engaging, as I'm designed to be fun and helpful. For example, I could say something like, \"Sure, let's do this math problem together!\" but I should keep it concise unless specified.\n\nFinally, structure the response: Start with the answer, then maybe explain if needed, but for such a basic question, the answer alone might suffice.\n\nResponse: \"7 multiplied by 8 is 56.\"",
+            "reasoning": "First, the user asked, \"What is 7 * 8?\" This is a simple multiplication question. 7 multiplied by 8 equals 56.\n\nI need to remember my role as Grok, an AI created by xAI. I'm supposed to be helpful and maximally truthful. So, I should answer accurately and directly.\n\nSince this is straightforward, I don't need to overcomplicate it. Just provide the answer clearly.\n\nI could add a bit of context or make it engaging, as I'm designed to be fun and helpful. For example, I could say something like, \"Sure, let's do this math problem together!\" but I should keep it concise unless specified.\n\nFinally, structure the response: Start with the answer, then maybe explain if needed, but for such a basic question, the answer alone might suffice.\n\nResponse: \"7 multiplied by 8 is 56.\""
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 9,
+        "completion_tokens": 11,
         "prompt_tokens": 15,
-        "total_tokens": 24,
+        "total_tokens": 26,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 121,
+          "reasoning_tokens": 178,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 14
+          "cached_tokens": 5
         }
       }
     }

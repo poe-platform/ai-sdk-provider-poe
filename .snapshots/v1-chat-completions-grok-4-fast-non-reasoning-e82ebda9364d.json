@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "714",
+      "openai-processing-ms": "3411",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-3ecb2d26581b2484eca72dab",
+      "id": "chatcmpl-841878cbd792a7ccdf715635",
       "object": "chat.completion",
-      "created": 1773881464,
+      "created": 1774471628,
       "model": "grok-4-fast-non-reasoning",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, how are you?"
+            "content": "Hello there friend!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 6,
+        "completion_tokens": 4,
         "prompt_tokens": 175,
-        "total_tokens": 181,
+        "total_tokens": 179,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
@@ -58,7 +58,7 @@
         },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 174
+          "cached_tokens": 162
         }
       }
     }

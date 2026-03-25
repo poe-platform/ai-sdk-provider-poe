@@ -1,8 +1,8 @@
 {
   "key": "v1-messages-claude-opus-4.1-1693db866d88",
   "test": {
-    "name": "uses thinking with claude-opus-4.1",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "name": "claude-opus-4.1 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -32,7 +32,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-19T00:52:10Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T22:47:02Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -43,18 +43,18 @@
     },
     "body": {
       "model": "claude-opus-4-1-20250805",
-      "id": "req_poe_50bc476a7ea643d198c563fb08e68561",
+      "id": "req_poe_3a9c46efbbac41808716f594f5a238d0",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "thinking",
-          "thinking": "This is a straightforward multiplication problem. 7 * 8 = 56.",
-          "signature": "EucBCkgICxABGAIqQCNpuRfu2dk24o3blmdLybBGXpFGfVBepX71UlQIjTQmcdGj73TxXjDOD/9pn7fgKrmZZAB7LD53k9Z6tJNvX0ESDHegqE+/D/h3ibQcGRoMhTrDBNTQvkAff955IjAw230BNgTuPy0y3VELkHmnjlcrFM7g5rnpPEPRegk0jq4Qlazvwuz+Ev8Rci/Yvu8qTYNK1uENyZP2RuGmrZoruT+UEOEKszHIR7G/rzMSWvNu/RmxNutLXFH4n6ENZ6M/kz+de9eGtnvqikvmXkcMKRDxxoSFqw7TrBgMI6BcGAE="
+          "thinking": "This is a simple multiplication problem. 7 × 8 = 56.",
+          "signature": "Et8BCkgIDBACGAIqQIZ+xt1KFIHHjR3gJc/wQtBennJfzKivbGjJbK/hW22CX0WpVuvxR2n6dj9/3mBfJC1yRkvS0D/ix2p7RHZgSC0SDNqpolHXU7xqKPLx3BoMpKBwH/zuRVwzr+SOIjBKcjrXMZz7fNXGU786Y5aTwZC2WRL9v/9+9zWCBj/fpY+EiOcdCbfu1kyo/WDVu9gqRbN905sHb56OvbABWLDj4EjxMMyx41bXizV7vPWa10iMe8EyW+GdZIoCKHpfNccSmmcSd9U0L6gc1C2CZExeAyfID1b1mRgB"
         },
         {
           "type": "text",
-          "text": "7 * 8 = 56"
+          "text": "7 × 8 = 56"
         }
       ],
       "stop_reason": "end_turn",
@@ -63,8 +63,12 @@
         "input_tokens": 45,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 0,
-        "output_tokens": 39,
-        "total_tokens": 84
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "total_tokens": 83
       }
     }
   }

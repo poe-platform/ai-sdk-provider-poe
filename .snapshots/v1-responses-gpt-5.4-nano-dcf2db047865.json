@@ -30,25 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "513",
+      "openai-processing-ms": "441",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM3MTU0NTkxMWQyMzQ0MTAxNjliZDViMzlkY2MwODE5ZThkMjM2Zjk3ZGE2MjhhYjk=",
-      "created_at": 1774017337,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDdhZGM4NTcwNWY2NDNjNTAxNjljNDQ2MGMwZDc0ODFhMjhlOWY0NDliYWQ1NjU1ZGI=",
+      "created_at": 1774470668,
       "metadata": {},
       "model": "gpt-5.4-nano-2026-03-17",
       "object": "response",
       "output": [
         {
-          "id": "msg_0c71545911d234410169bd5b3a14c4819ea1ead81f5bfdb100",
+          "id": "msg_07adc85705f643c50169c4460c3b2881a2885a6e1494e78863",
           "content": [
             {
               "annotations": [],
-              "text": "Hello there, friend.",
+              "text": "Hello there friend",
               "type": "output_text",
               "logprobs": []
             }
@@ -81,22 +81,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 9,
+        "output_tokens": 7,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 22
+        "total_tokens": 20
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017338,
+      "completed_at": 1774470668,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

@@ -25,33 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "4077",
+      "openai-processing-ms": "15024",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-50023fdace2def9faa68835d",
+      "id": "chatcmpl-06dec5755c8e65567ccf1ba2",
       "object": "chat.completion",
-      "created": 1773881512,
+      "created": 1774471695,
       "model": "magistral-medium-2509-thinking",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Greetings to you",
-            "reasoning_content": "Ok, the user wants me to say hello in exactly three words. So, \"Hello, how are you?\" is too long. Maybe \"Hi there!\" but that's two words. Hmm, what about \"Hello, world!\"? No, that's two words too. Wait, \"Hello there\" is two words. Maybe \"Hello, friend!\"? Still two. Oh, \"Hello, hello, hello\" is three words but that's weird. Maybe \"Greetings to you\" is three words. Yes, that works.",
-            "reasoning": "Ok, the user wants me to say hello in exactly three words. So, \"Hello, how are you?\" is too long. Maybe \"Hi there!\" but that's two words. Hmm, what about \"Hello, world!\"? No, that's two words too. Wait, \"Hello there\" is two words. Maybe \"Hello, friend!\"? Still two. Oh, \"Hello, hello, hello\" is three words but that's weird. Maybe \"Greetings to you\" is three words. Yes, that works."
+            "content": "Hello to you",
+            "reasoning_content": "Okay, the user wants me to say hello in exactly 3 words. So, I need to think of a phrase that means hello and has exactly 3 words. Let's see... \"Hello, how are you?\" That's 5 words. \"Hi there!\" That's 2 words. \"Hello there!\" That's 2 words. \"Greetings to you!\" That's 3 words. But is that exactly 3 words? Let's count: \"Greetings to you!\" is actually 3 words: Greetings, to, you. But does \"Greetings to you\" count as hello? Maybe, but it's a bit formal. What about \"Hi, nice day\"? That's 3 words but doesn't really mean hello. \"Hello, friend!\" That's 2 words. \"Hello there, friend!\" That's 4 words. Hmm. Maybe \"Hello to you\" is the best fit. It's 3 words and means hello. But is there a more common way to say hello in 3 words? \"How are you?\" is 3 words but it's more of a question. \"Nice to meet you\" is 4 words. \"Good to see you\" is 5 words. Maybe \"Hello to you\" is the best option. But let's see if we can find a better one. \"Hi, how's it going?\" That's 5 words. \"Hey, what's up?\" That's 3 words but it's more casual. \"Hey there, you\" is 3 words but doesn't make much sense. Maybe \"Hello to you\" is the best we can do. Alternatively, \"Hi there, friend\" is 3 words but adds \"friend\" which isn't necessary. Maybe just \"Hello to you\" is best. Or perhaps \"Greetings to you\" is acceptable. But to keep it simple, maybe \"Hi there!\" is 2 words. Hmm. The user wants exactly 3 words. So \"Hello to you\" is 3 words. Let's go with that.",
+            "reasoning": "Okay, the user wants me to say hello in exactly 3 words. So, I need to think of a phrase that means hello and has exactly 3 words. Let's see... \"Hello, how are you?\" That's 5 words. \"Hi there!\" That's 2 words. \"Hello there!\" That's 2 words. \"Greetings to you!\" That's 3 words. But is that exactly 3 words? Let's count: \"Greetings to you!\" is actually 3 words: Greetings, to, you. But does \"Greetings to you\" count as hello? Maybe, but it's a bit formal. What about \"Hi, nice day\"? That's 3 words but doesn't really mean hello. \"Hello, friend!\" That's 2 words. \"Hello there, friend!\" That's 4 words. Hmm. Maybe \"Hello to you\" is the best fit. It's 3 words and means hello. But is there a more common way to say hello in 3 words? \"How are you?\" is 3 words but it's more of a question. \"Nice to meet you\" is 4 words. \"Good to see you\" is 5 words. Maybe \"Hello to you\" is the best option. But let's see if we can find a better one. \"Hi, how's it going?\" That's 5 words. \"Hey, what's up?\" That's 3 words but it's more casual. \"Hey there, you\" is 3 words but doesn't make much sense. Maybe \"Hello to you\" is the best we can do. Alternatively, \"Hi there, friend\" is 3 words but adds \"friend\" which isn't necessary. Maybe just \"Hello to you\" is best. Or perhaps \"Greetings to you\" is acceptable. But to keep it simple, maybe \"Hi there!\" is 2 words. Hmm. The user wants exactly 3 words. So \"Hello to you\" is 3 words. Let's go with that."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 118,
+        "completion_tokens": 436,
         "prompt_tokens": 10,
-        "total_tokens": 128,
+        "total_tokens": 446,
         "completion_tokens_details": null,
         "prompt_tokens_details": {
           "audio_tokens": null,

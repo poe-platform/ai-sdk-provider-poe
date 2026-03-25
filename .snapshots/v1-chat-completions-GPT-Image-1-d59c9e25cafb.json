@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "27943",
+      "openai-processing-ms": "32973",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-1edf3f16b26d7726ab08d37d",
+      "id": "chatcmpl-c7d61e26604b164f4fa3e772",
       "object": "chat.completion",
-      "created": 1770831916,
+      "created": 1774470804,
       "model": "GPT-Image-1",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words.png](https://pfst.cf2.poecdn.net/base/image/bcb9584666d1a1e44630b3983b8be246b6ed1df06248562f83b7c0e42256435b?w=1024&h=1024)\n\nhttps://pfst.cf2.poecdn.net/base/image/bcb9584666d1a1e44630b3983b8be246b6ed1df06248562f83b7c0e42256435b?w=1024&h=1024"
+            "content": "![Say hello in exactly 3 words.png](https://pfst.cf2.poecdn.net/base/image/5eeb5b162a9d1db11299292b8213d564c2c2ccfe403bbb8db2ffc44c497b662d?w=1024&h=1024)\n\nhttps://pfst.cf2.poecdn.net/base/image/5eeb5b162a9d1db11299292b8213d564c2c2ccfe403bbb8db2ffc44c497b662d?w=1024&h=1024"
           },
           "finish_reason": "stop"
         }

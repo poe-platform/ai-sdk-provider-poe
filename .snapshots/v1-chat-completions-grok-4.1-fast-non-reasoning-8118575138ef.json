@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "422",
+      "openai-processing-ms": "876",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-3c88b97f135a9b3bf905bac7",
+      "id": "chatcmpl-1e2b660a59895475b9988c46",
       "object": "chat.completion",
-      "created": 1773881463,
+      "created": 1774471624,
       "model": "grok-4.1-fast-non-reasoning",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, world!"
+            "content": "Hello, there!"
           },
           "finish_reason": "stop"
         }
@@ -58,7 +58,7 @@
         },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 174
+          "cached_tokens": 161
         }
       }
     }

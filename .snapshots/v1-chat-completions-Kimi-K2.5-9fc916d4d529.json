@@ -49,23 +49,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "3918",
+      "openai-processing-ms": "1696",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-db6c34b047d2ce9ef1982d8e",
+      "id": "chatcmpl-54998fcb083dfda7aac4b726",
       "object": "chat.completion",
-      "created": 1770392799,
+      "created": 1774470668,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "I'll get the weather for San Francisco using the getWeather tool.",
+            "content": "I'll get the current weather for San Francisco using the getWeather tool.",
             "tool_calls": [
               {
                 "id": "getWeather:0",
@@ -81,9 +81,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 32,
+        "completion_tokens": 33,
         "prompt_tokens": 71,
-        "total_tokens": 103,
+        "total_tokens": 104,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "2458",
+      "openai-processing-ms": "1405",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-ff4a59fc9fb197afe0e65306",
+      "id": "chatcmpl-4c31385ea686859fd5eb7085",
       "object": "chat.completion",
-      "created": 1770392795,
+      "created": 1774470666,
       "model": "Kimi-K2.5",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there friend"
+            "content": "Hello there, friend."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 6,
+        "completion_tokens": 8,
         "prompt_tokens": 14,
-        "total_tokens": 20,
+        "total_tokens": 22,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

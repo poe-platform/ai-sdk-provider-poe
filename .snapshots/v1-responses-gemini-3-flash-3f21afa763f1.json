@@ -1,0 +1,139 @@
+{
+  "key": "v1-responses-gemini-3-flash-3f21afa763f1",
+  "test": {
+    "name": "handles tool calling with gemini-3-flash",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "What is the weather in San Francisco? Use the getWeather tool."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "name": "getWeather",
+          "description": "Get the current weather for a location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city to get weather for"
+              }
+            },
+            "required": [
+              "location"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1755",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlVXN0VhY21vT0pQQXVlVVA0X2FXMFFr",
+      "created_at": 1774480977,
+      "metadata": {},
+      "model": "gemini-3-flash-preview",
+      "object": "response",
+      "output": [
+        {
+          "type": "message",
+          "id": "UW7EacmoOJPAueUP4_aW0Qk",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "annotations": [],
+              "logprobs": []
+            }
+          ]
+        },
+        {
+          "arguments": "{\"location\": \"San Francisco\"}",
+          "call_id": "call_f87ff1dc79e743a0894658d87267__thought__CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw==",
+          "name": "getWeather",
+          "type": "function_call",
+          "id": "call_f87ff1dc79e743a0894658d87267__thought__CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw==",
+          "status": "completed",
+          "provider_specific_fields": {
+            "thought_signature": "CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw=="
+          }
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        }
+      },
+      "usage": {
+        "input_tokens": 32,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 32
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 38,
+          "text_tokens": 9
+        },
+        "total_tokens": 79
+      },
+      "provider_specific_fields": {
+        "traffic_type": "ON_DEMAND"
+      },
+      "completed_at": 1774480977,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "reasoning": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null,
+      "background": false,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "store": true,
+      "top_logprobs": 0,
+      "top_p": 1,
+      "truncation": "disabled"
+    }
+  }
+}

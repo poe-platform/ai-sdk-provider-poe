@@ -1,8 +1,8 @@
 {
   "key": "v1-responses-gpt-5.2-6e7241e58352",
   "test": {
-    "name": "uses reasoning with gpt-5.2",
-    "file": "tests/integration/openai.test.ts"
+    "name": "gpt-5.2 produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,25 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "738",
+      "openai-processing-ms": "1279",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGUwNzNjMzE0NWU0M2ExZjAxNjliZDViNjMxOWIwODFhMGExNjkwNjhhZDQ4YTExMzY=",
-      "created_at": 1774017379,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGViODVjZjU1YWZkNWM0ZTAxNjljNDY1ZmM2MGUwODFhMmE5ODY0ZTQxMTc4NTkxZmQ=",
+      "created_at": 1774478844,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_0e073c3145e43a1f0169bd5b63758481a09951daf19b757970",
+          "id": "msg_0eb85cf55afd5c4e0169c465fd451881a2b470e88d94b282cc",
           "content": [
             {
               "annotations": [],
-              "text": "7 × 8 = **56**.",
+              "text": "7 * 8 = 56.",
               "type": "output_text",
               "logprobs": []
             }
@@ -80,22 +80,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 13,
+        "output_tokens": 12,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 27
+        "total_tokens": 26
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017379,
+      "completed_at": 1774478845,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

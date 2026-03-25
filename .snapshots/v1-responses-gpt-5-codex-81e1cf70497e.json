@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "744",
+      "openai-processing-ms": "928",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDczYTc4ZWVjMDQ1YTNjYjAxNjliZDUzOWM5MDYwODFhMGEzYTMyZTg3ZGNlNjRiNWI=",
-      "created_at": 1774015388,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM1YTJlNTJlY2MyZmExMjAxNjljNDQ2NzU4ZDVjODE5MGE2ODY1YTFlZDM5NzdkOTg=",
+      "created_at": 1774470773,
       "metadata": {},
       "model": "gpt-5-codex",
       "object": "response",
       "output": [
         {
-          "id": "rs_073a78eec045a3cb0169bd539ccbd481a0bf00c148d17e9fce",
+          "id": "rs_0c5a2e52ecc2fa120169c44675e6208190be23d961503063a0",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_H5p1cf12sQ6MawXBdtrXEwYs",
+          "call_id": "call_8GezNfaf7UX7UVZkQyCGGfSw",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_073a78eec045a3cb0169bd539cfcac81a095ae9a4ae69ce50e",
+          "id": "fc_0c5a2e52ecc2fa120169c446761c708190bdd5d834f1f390c8",
           "status": "completed"
         }
       ],
@@ -121,22 +121,30 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 36,
+        "output_tokens": 29,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 102
+        "total_tokens": 95
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015389,
+      "completed_at": 1774470774,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

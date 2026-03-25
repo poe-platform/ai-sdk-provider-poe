@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "625",
+      "openai-processing-ms": "1615",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-6a2d70c4f03b9e0f30ec80cf",
+      "id": "chatcmpl-68836fd77bdc6e164049e4c8",
       "object": "chat.completion",
-      "created": 1770393167,
+      "created": 1774471083,
       "model": "gpt-4-classic-0314",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello to you!"
+            "content": "Hello, howdy, hi."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
+        "completion_tokens": 7,
         "prompt_tokens": 14,
-        "total_tokens": 18,
+        "total_tokens": 21,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,

@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "836",
+      "openai-processing-ms": "956",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-f6ee22adc264061d2c66af7b",
+      "id": "chatcmpl-9e64753e08ff5aaeb3833e38",
       "object": "chat.completion",
-      "created": 1770393164,
+      "created": 1774471084,
       "model": "gpt-4-classic",
       "choices": [
         {

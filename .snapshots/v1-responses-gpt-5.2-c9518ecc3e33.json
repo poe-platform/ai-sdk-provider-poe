@@ -34,25 +34,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2176",
+      "openai-processing-ms": "1857",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDRlNDg0MjgwNWU4OTU3ZjAxNjliZDU0NGQwYzQ0ODE5MWFkYTlkNGIzNTI4NGQ0NGE=",
-      "created_at": 1774015565,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQ0MWZhYjMyMzViZDc4ODAxNjljNDQ3YjRkMTdjODE5Nzg0YmY4MGVjOWM2ZDA5Y2E=",
+      "created_at": 1774471093,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_04e4842805e8957f0169bd544e26dc81918f518fc529d73274",
+          "id": "msg_0d41fab3235bd7880169c447b5c23c81979a0334eaed541064",
           "content": [
             {
               "annotations": [],
-              "text": "A Poe promotional banner announcing “Now available: Claude Opus 4.6,” with a row of AI model/app icons (e.g., GPT, Gemini, Kimi, Runway, Grok, ElevenLabs) and “poe.com.”",
+              "text": "A promo graphic for Poe announcing “Now available: Claude Opus 4.6,” showing several AI model icons (e.g., GPT, Gemini, Kimi, Runway, Claude) and the poe.com link.",
               "type": "output_text",
               "logprobs": []
             }
@@ -82,24 +82,32 @@
       "usage": {
         "input_tokens": 1825,
         "input_tokens_details": {
-          "cached_tokens": 1408
+          "cached_tokens": 0
         },
-        "output_tokens": 55,
+        "output_tokens": 49,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 1880
+        "total_tokens": 1874
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774015567,
+      "completed_at": 1774471094,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "key": "v1-responses-gpt-5.4-9f32556b16bc",
   "test": {
-    "name": "uses reasoning with gpt-5.4",
-    "file": "tests/integration/openai.test.ts"
+    "name": "gpt-5.4 produces reasoning with effort",
+    "file": "src/code/reasoning.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,21 +30,21 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "798",
+      "openai-processing-ms": "911",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGIyMzZmZTNmMmE0NmEwMzAxNjliZDViMzkwMDRjODE5NmFjMzRlNWNhMDdjZmZlMmE=",
-      "created_at": 1774017337,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGFiM2E4MWRjMTIxOTYyZjAxNjljNDY1ZjEyOWFjODFhMDlhYzVlNGUyMjEzOGNmYzU=",
+      "created_at": 1774478833,
       "metadata": {},
       "model": "gpt-5.4-2026-03-05",
       "object": "response",
       "output": [
         {
-          "id": "msg_0b236fe3f2a46a030169bd5b3966908196935957f7794d886c",
+          "id": "msg_0ab3a81dc121962f0169c465f1818081a08fd8601499cd7f6d",
           "content": [
             {
               "annotations": [],
@@ -92,11 +92,19 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774017337,
+      "completed_at": 1774478833,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
-      "top_logprobs": 0
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
     }
   }
 }

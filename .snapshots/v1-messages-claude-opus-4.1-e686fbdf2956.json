@@ -28,7 +28,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-19T00:52:06Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:48:28Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -39,13 +39,13 @@
     },
     "body": {
       "model": "claude-opus-4-1-20250805",
-      "id": "req_poe_52202e4dd13a49ca98859b53dbc8833d",
+      "id": "req_poe_a387e5a5663b47098dd46ae64e06d463",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Hello to you."
+          "text": "Hello to you!"
         }
       ],
       "stop_reason": "end_turn",
@@ -54,6 +54,10 @@
         "input_tokens": 15,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
         "output_tokens": 7,
         "total_tokens": 22
       }

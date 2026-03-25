@@ -24,71 +24,43 @@
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
-      "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1685",
+      "content-type": "application/json",
+      "openai-processing-ms": "1899",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-d3f6733c-9598-4e16-874a-a219650cb128",
-      "created": 1773880809,
-      "model": "gpt-4o-mini-search-preview-2025-03-11",
+      "id": "chatcmpl-d348c2ba8509c74d94228416",
       "object": "chat.completion",
-      "system_fingerprint": "",
+      "created": 1774470829,
+      "model": "gpt-4o-mini-search",
       "choices": [
         {
-          "finish_reason": "stop",
           "index": 0,
           "message": {
-            "content": "In English, \"hello\" is a common greeting. In Italian, \"ciao\" serves as both \"hello\" and \"goodbye.\" ([en.wikipedia.org](https://en.wikipedia.org/wiki/Ciao?utm_source=openai)) In Arabic, \"as-salāmu ʿalaykum\" translates to \"peace be upon you,\" used as a greeting. ([bearmt.org](https://www.bearmt.org/uploads/2/6/2/8/26284832/grade-3-5.pdf?utm_source=openai)) ",
             "role": "assistant",
-            "tool_calls": null,
-            "function_call": null,
-            "provider_specific_fields": {
-              "refusal": null
-            },
-            "annotations": [
-              {
-                "type": "url_citation",
-                "url_citation": {
-                  "end_index": 173,
-                  "start_index": 99,
-                  "title": "Ciao",
-                  "url": "https://en.wikipedia.org/wiki/Ciao?utm_source=openai"
-                }
-              },
-              {
-                "type": "url_citation",
-                "url_citation": {
-                  "end_index": 356,
-                  "start_index": 261,
-                  "title": "GRADE LEVEL: 3-5",
-                  "url": "https://www.bearmt.org/uploads/2/6/2/8/26284832/grade-3-5.pdf?utm_source=openai"
-                }
-              }
-            ]
+            "content": "\"Hello, hello, hello\" is a three-word greeting. This phrase is notably used in the title of a 1979 song by the American rock band New England. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Hello%2C_Hello%2C_Hello?utm_source=openai)) "
           },
-          "provider_specific_fields": {}
+          "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 115,
+        "completion_tokens": 65,
         "prompt_tokens": 7,
-        "total_tokens": 122,
+        "total_tokens": 72,
         "completion_tokens_details": {
-          "accepted_prediction_tokens": 0,
-          "audio_tokens": 0,
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
           "reasoning_tokens": 0,
-          "rejected_prediction_tokens": 0
+          "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {
-          "audio_tokens": 0,
+          "audio_tokens": null,
           "cached_tokens": 0
         }
-      },
-      "service_tier": null
+      }
     }
   }
 }

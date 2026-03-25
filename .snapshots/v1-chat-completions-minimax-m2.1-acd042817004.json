@@ -25,40 +25,38 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "10179",
+      "openai-processing-ms": "3865",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-953f87c31d620334660911c4",
+      "id": "chatcmpl-666d302f88db2a4095141c59",
       "object": "chat.completion",
-      "created": 1773881499,
+      "created": 1774471663,
       "model": "minimax-m2.1",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "\n\nHello, my friend",
-            "reasoning_content": "\nWe need to respond to the user request: \"Say hello in exactly 3 words\". The user wants the assistant to say \"hello\" in exactly three words. That is a phrase like \"Hello there, friend!\" that's three words? \"Hello there friend\" is three words (Hello, there, friend). Or \"Hello, my friend\" is also three words? That would be \"Hello my friend\". Let's count: Hello (1), my (2), friend (3). That's three words. But does it need to be exactly 3 words, not counting punctuation? The user says \"Say hello in exactly 3 words\". So we need to produce exactly three words that together convey a greeting (like \"Hello, my friend\") but it's okay to have punctuation? The punctuation shouldn't be counted as a word. So \"Hello my friend\" is three words. That fits. The request is straightforward. So respond with three words greeting: \"Hello, my friend\" is three words? Let's count: \"Hello,\" is a word, \"my\" is second, \"friend\" is third. The comma is attached to Hello but it's fine. That's three words. Or we can do \"Hi there, friend!\" That's three words: \"Hi\", \"there,\" \"friend!\" That's three words (including punctuation). Should be fine. We'll respond with exactly three words. We must ensure we don't add extra words, including in the explanation. The user only wants the greeting. So we will output just the three-word greeting.\n\nThus answer: \"Hello my friend\". Or \"Hi there friend\". Let's pick \"Hello my friend\". That is exactly three words. Or \"Hello, my friend\". Let's count: \"Hello,\" is one word (the comma doesn't count as separate). \"my\" second, \"friend\" third. That's three. So final: \"Hello, my friend\". But there is a comma after Hello, but it's still a word.\n\nGiven no extra content, I should just output \"Hello, my friend\". That is three words: Hello, my, friend. The punctuation does not change that.\n\nI'll output just that.\n",
-            "reasoning": "\nWe need to respond to the user request: \"Say hello in exactly 3 words\". The user wants the assistant to say \"hello\" in exactly three words. That is a phrase like \"Hello there, friend!\" that's three words? \"Hello there friend\" is three words (Hello, there, friend). Or \"Hello, my friend\" is also three words? That would be \"Hello my friend\". Let's count: Hello (1), my (2), friend (3). That's three words. But does it need to be exactly 3 words, not counting punctuation? The user says \"Say hello in exactly 3 words\". So we need to produce exactly three words that together convey a greeting (like \"Hello, my friend\") but it's okay to have punctuation? The punctuation shouldn't be counted as a word. So \"Hello my friend\" is three words. That fits. The request is straightforward. So respond with three words greeting: \"Hello, my friend\" is three words? Let's count: \"Hello,\" is a word, \"my\" is second, \"friend\" is third. The comma is attached to Hello but it's fine. That's three words. Or we can do \"Hi there, friend!\" That's three words: \"Hi\", \"there,\" \"friend!\" That's three words (including punctuation). Should be fine. We'll respond with exactly three words. We must ensure we don't add extra words, including in the explanation. The user only wants the greeting. So we will output just the three-word greeting.\n\nThus answer: \"Hello my friend\". Or \"Hi there friend\". Let's pick \"Hello my friend\". That is exactly three words. Or \"Hello, my friend\". Let's count: \"Hello,\" is one word (the comma doesn't count as separate). \"my\" second, \"friend\" third. That's three. So final: \"Hello, my friend\". But there is a comma after Hello, but it's still a word.\n\nGiven no extra content, I should just output \"Hello, my friend\". That is three words: Hello, my, friend. The punctuation does not change that.\n\nI'll output just that.\n"
+            "content": "\n\nHello there, friend",
+            "reasoning_content": "The user wants me to say hello in exactly 3 words. Let me think of a 3-word greeting:\n\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you\" (4 words)\n- \"Hello, good friend\" (3 words)\n- \"Hey there, buddy\" (3 words)\n\nI'll go with \"Hello there, friend\" - that's exactly 3 words.",
+            "reasoning": "The user wants me to say hello in exactly 3 words. Let me think of a 3-word greeting:\n\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you\" (4 words)\n- \"Hello, good friend\" (3 words)\n- \"Hey there, buddy\" (3 words)\n\nI'll go with \"Hello there, friend\" - that's exactly 3 words."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 442,
-        "prompt_tokens": 43,
-        "total_tokens": 485,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
+        "completion_tokens": 91,
+        "prompt_tokens": 45,
+        "total_tokens": 136,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
           "audio_tokens": null,
-          "reasoning_tokens": 437,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": null
+          "cached_tokens": 32
+        }
       }
     }
   }

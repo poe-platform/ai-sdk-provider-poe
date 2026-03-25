@@ -39,8 +39,8 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
-      "anthropic-ratelimit-requests-remaining": "498",
-      "anthropic-ratelimit-requests-reset": "2026-02-06T15:46:34Z",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-25T20:47:05Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -51,13 +51,13 @@
     },
     "body": {
       "model": "claude-opus-4-5-20251101",
-      "id": "req_poe_2d03d2ac98724e569c9495a6858fce4e",
+      "id": "req_poe_d7c5dfe376ab4492b43e258ddbb19599",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and the symmetry operations (such as glide plane reflections and screw axis rotations) that define their asymmetric units."
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and employing principles from Bravais lattice theory and point group symmetry operations to analyze asymmetric units defined by glide plane reflections and screw axis rotations."
         }
       ],
       "stop_reason": "end_turn",
@@ -70,9 +70,8 @@
           "ephemeral_5m_input_tokens": 4487,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 62,
-        "service_tier": "standard",
-        "inference_geo": "not_available"
+        "output_tokens": 72,
+        "total_tokens": 75
       }
     }
   }

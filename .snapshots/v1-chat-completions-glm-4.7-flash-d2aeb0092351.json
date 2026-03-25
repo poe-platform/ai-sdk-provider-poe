@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "903",
+      "openai-processing-ms": "1375",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-d54ddbd0c3e33e8a396c76e9",
+      "id": "chatcmpl-161422908740bc0d6c0c90be",
       "object": "chat.completion",
-      "created": 1773881479,
+      "created": 1774471648,
       "model": "glm-4.7-flash",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there."
+            "content": "Hello world"
           },
           "finish_reason": "stop"
         }
@@ -50,10 +50,15 @@
         "completion_tokens": 3,
         "prompt_tokens": 12,
         "total_tokens": 15,
-        "completion_tokens_details": null,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
         "prompt_tokens_details": {
           "audio_tokens": null,
-          "cached_tokens": 0
+          "cached_tokens": 2
         }
       }
     }
