@@ -1,11 +1,12 @@
-import { configDefaults, defineConfig } from "vitest/config";
+import { defineConfig } from "vitest/config";
 
 const cliTags = process.argv.flatMap((a: string, i: number, arr: string[]) => a === "--tag" ? [arr[i + 1]] : []);
 const isRecordMode = process.env.POE_SNAPSHOT_MODE === "record" || cliTags.includes("snapshot:record");
 
 export default defineConfig({
   test: {
-    setupFiles: ["./tests/setup.ts"],
+    include: ["src/**/*.test.ts"],
+    setupFiles: ["./src/test/setup.ts"],
     testTimeout: isRecordMode ? 120000 : 5000,
     tags: [
       { name: "snapshot:record", description: "Record snapshot against live API", timeout: 120_000 },

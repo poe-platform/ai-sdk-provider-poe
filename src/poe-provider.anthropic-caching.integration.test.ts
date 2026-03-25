@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { generateText, type ModelMessage } from "ai";
-import { createPoe } from "../../src/poe-provider.js";
-import { getSnapshotFetch } from "../helpers/index.js";
-import { SYSTEM_PROMPT_LARGE, USER_MESSAGES } from "../fixtures/prompt-caching.js";
+import { createPoe } from "./poe-provider.js";
+import { getSnapshotFetch } from "./test/index.js";
+import { SYSTEM_PROMPT_LARGE, USER_MESSAGES } from "./test/fixtures/prompt-caching.js";
 
 const poe = createPoe({
   fetch: getSnapshotFetch(),

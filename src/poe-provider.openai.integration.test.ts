@@ -2,12 +2,13 @@ import { describe, it, expect } from "vitest";
 import { generateText, tool } from "ai";
 import { z } from "zod";
 import { readFileSync } from "fs";
-import { createPoe } from "../../src/poe-provider.js";
-import { getTestModels } from "../../src/poe-models.js";
-import { getSnapshotFetch } from "../helpers/index.js";
+import { createPoe } from "./poe-provider.js";
+import { getStoredModels } from "./poe-models.js";
+import { MODEL_OVERRIDES } from "./model-overrides.js";
+import { getSnapshotFetch } from "./test/index.js";
 
 const bannerImage = readFileSync(
-  new URL("../fixtures/banner.jpg", import.meta.url)
+  new URL("./test/fixtures/banner.jpg", import.meta.url)
 );
 
 const poe = createPoe({
@@ -15,23 +16,31 @@ const poe = createPoe({
 });
 
 describe("openai provider", () => {
-  for (const model of getTestModels("OpenAI")) {
-    describe(model.id, () => {
-      const run = model.skip ? it.skip : it;
-      const opts = model.tags.length ? { tags: model.tags } : {};
+  for (const m of getStoredModels().filter(m => m.owned_by === "OpenAI")) {
+    describe(m.id, () => {
+      const override = MODEL_OVERRIDES[m.id];
+      const run = override?.skip ? it.skip : it;
+      const hasTools = (m.supported_features?.includes("tools") ?? false) && !override?.skipTools;
+      const hasReasoning = !!m.reasoning_effort;
+      const outputMods = m.output_modalities ?? [];
+      const tags: string[] = [];
+      if (outputMods.includes("video")) tags.push("timeout:video");
+      else if (outputMods.includes("image") && !outputMods.includes("text")) tags.push("timeout:image");
+      else if (hasReasoning) tags.push("timeout:reasoning");
+      const opts = tags.length ? { tags } : {};
 
-      run(`generates text with ${model.id}`, opts, async () => {
+      run(`generates text with ${m.id}`, opts, async () => {
         const { text } = await generateText({
-          model: poe(`openai/${model.id}`),
+          model: poe(`openai/${m.id}`),
           prompt: "Say hello in exactly 3 words",
         });
         expect(text).toBeTruthy();
       });
 
-      if (model.hasTools) {
-        run(`handles tool calling with ${model.id}`, opts, async () => {
+      if (hasTools) {
+        run(`handles tool calling with ${m.id}`, opts, async () => {
           const { toolCalls } = await generateText({
-            model: poe(`openai/${model.id}`),
+            model: poe(`openai/${m.id}`),
             prompt:
               "What is the weather in San Francisco? Use the getWeather tool.",
             tools: {
@@ -48,10 +57,10 @@ describe("openai provider", () => {
         });
       }
 
-      if (model.hasReasoning) {
-        run(`uses reasoning with ${model.id}`, opts, async () => {
+      if (hasReasoning) {
+        run(`uses reasoning with ${m.id}`, opts, async () => {
           const { text, reasoning } = await generateText({
-            model: poe(`openai/${model.id}`),
+            model: poe(`openai/${m.id}`),
             prompt: "What is 7 * 8?",
           });
 

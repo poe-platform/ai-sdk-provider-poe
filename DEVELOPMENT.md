@@ -23,8 +23,9 @@ npm run secrets    # scan for secrets
 
 ### Structure
 
-- `tests/unit/` - Unit tests with mocked env
-- `tests/integration/` - Snapshot-based integration tests
+- `src/**/*.test.ts` - Tests live beside the code they cover
+- `src/**/*.integration.test.ts` - Snapshot-based integration tests
+- `src/test/` - Shared test setup, snapshot helpers, fixtures, and probes
 
 ### How It Works
 
@@ -85,8 +86,8 @@ Tests auto-generate from these registries — adding a model here creates tests 
 | `src/poe-provider.ts` | Provider routing logic |
 | `src/openai-models.ts` | OpenAI model registry |
 | `src/google-models.ts` | Google model registry |
-| `tests/setup.ts` | Global test setup, API key mocking |
-| `tests/helpers/snapshot-fetch.ts` | HTTP record/playback |
+| `src/test/setup.ts` | Global test setup, API key mocking |
+| `src/test/snapshot-fetch.ts` | HTTP record/playback |
 
 ## Gotchas
 
@@ -96,7 +97,7 @@ Always commit `.snapshots/*.json` with your test changes. Snapshots are the reco
 
 ### API key mocking in tests
 
-`tests/setup.ts` mocks `loadApiKey`:
+`src/test/setup.ts` mocks `loadApiKey`:
 - **Playback mode**: Returns `"test-api-key"` (no real key needed)
 - **Record mode**: Uses real `POE_API_KEY` from env
 

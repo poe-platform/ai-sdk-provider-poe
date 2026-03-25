@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { generateText, tool } from "ai";
 import { z } from "zod";
-import { createPoe } from "../../src/poe-provider.js";
-import { getSnapshotFetch } from "../helpers/index.js";
+import { createPoe } from "./poe-provider.js";
+import { getSnapshotFetch } from "./test/index.js";
 
 const poe = createPoe({
   fetch: getSnapshotFetch(),

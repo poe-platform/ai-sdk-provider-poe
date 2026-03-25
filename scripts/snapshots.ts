@@ -5,7 +5,7 @@ import {
   deleteSnapshots,
   findStaleSnapshots,
   pruneSnapshots
-} from "../tests/helpers/snapshot-store.js";
+} from "../src/test/snapshot-store.js";
 
 const MAX_AGE_MS = 10 * 60 * 1000;
 

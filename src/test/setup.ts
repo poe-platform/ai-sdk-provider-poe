@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { vi, afterAll, beforeEach, afterEach } from "vitest";
-import { getSnapshotFetch, parseTagOverrides, persistAccessedKeys } from "./helpers/index.js";
+import { getSnapshotFetch, parseTagOverrides, persistAccessedKeys } from "./index.js";
 
 // Use real API key when available (.env or env var), mock key only for CI playback
 vi.mock("@ai-sdk/provider-utils", async (importOriginal) => {

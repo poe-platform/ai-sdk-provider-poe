@@ -55,7 +55,7 @@ from snapshots by default. To include all headers for debugging:
 POE_DANGEROUSLY_ALLOW_SENSITIVE_HEADERS=true POE_SNAPSHOT_MODE=record npm test
 ```
 
-### Test setup (`tests/setup.ts`)
+### Test setup (`src/test/setup.ts`)
 
 The global setup file:
 
@@ -128,7 +128,7 @@ from 5 s to 120 s automatically.
 
 ### How tags propagate
 
-Tag resolution happens in `tests/setup.ts` `beforeEach`:
+Tag resolution happens in `src/test/setup.ts` `beforeEach`:
 
 ```
 vitest runs test
@@ -177,7 +177,7 @@ and snapshot files.
 Use `POE_SNAPSHOT_MODE=record` to record all tests in a file:
 
 ```sh
-POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/google.test.ts
+POE_SNAPSHOT_MODE=record npm test -- --run src/poe-provider.google.integration.test.ts
 ```
 
 This records every test in the file. Use this when adding multiple tests at
@@ -213,18 +213,18 @@ during each test run.
 
 ```
 vitest.config.ts                # tag declarations, timeout
-tests/
-  setup.ts                      # global setup, mock, tag wiring
-  helpers/
+src/
+  *.test.ts                     # unit tests beside source
+  *.integration.test.ts         # integration tests beside source
+  code/
+    *.integration.test.ts       # nested integration tests beside source
+  test/
+    setup.ts                    # global setup, mock, tag wiring
     snapshot-config.ts          # types, env parsing, SNAPSHOT_TAGS constant
     snapshot-fetch.ts           # SnapshotFetch: record/playback/overrides
     snapshot-store.ts           # list/delete/prune utilities
     test-client.ts              # singleton getSnapshotFetch()
     index.ts                    # barrel exports
-  integration/
-    *.test.ts                   # integration tests
-  unit/
-    *.test.ts                   # unit tests (mock fetch, no snapshots)
 .snapshots/
   *.json                        # recorded HTTP snapshots
   .accessed-keys.json           # keys accessed in last test run
@@ -232,6 +232,6 @@ tests/
 
 ### Adding a new tag
 
-1. Add it to `SNAPSHOT_TAGS` in `tests/helpers/snapshot-config.ts`
+1. Add it to `SNAPSHOT_TAGS` in `src/test/snapshot-config.ts`
 2. Declare it in `test.tags` in `vitest.config.ts` (required by vitest 4.1+)
-3. Handle it in `tests/setup.ts` `beforeEach` if needed
+3. Handle it in `src/test/setup.ts` `beforeEach` if needed

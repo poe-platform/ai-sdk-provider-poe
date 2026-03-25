@@ -1,6 +1,18 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { createPoe } from "../../src/poe-provider.js";
-import { updateRoutingMap, _resetRoutingCache, setRefetchFn, resolveProvider } from "../../src/poe-models.js";
+import { createPoe } from "./poe-provider.js";
+import { fetchPoeModels, _resetModelCache, setRefetchFn, resolveProvider } from "./poe-models.js";
+
+const mockFetch = (data: unknown[]) =>
+  vi.fn().mockResolvedValue({
+    ok: true,
+    json: async () => ({ data }),
+  }) as unknown as typeof globalThis.fetch;
+
+/** Populate model store with given endpoint mappings. */
+async function seedModels(entries: { id: string; supported_endpoints?: string[] }[]) {
+  const data = entries.map(e => ({ ...e, object: "model", created: 1 }));
+  await fetchPoeModels({ fetch: mockFetch(data) });
+}
 
 describe("createPoe", () => {
   beforeEach(() => {
@@ -21,7 +33,7 @@ describe("createPoe", () => {
   });
 
   it("routes openai/* to chat completions when cache is cold", () => {
-    _resetRoutingCache();
+    _resetModelCache();
     const poe = createPoe();
     const model = poe("openai/gpt-5.2");
     expect(model.provider).toBe("openai.chat");
@@ -85,38 +97,38 @@ describe("createPoe", () => {
   });
 });
 
-describe("resolveProvider with routing cache", () => {
+describe("resolveProvider with model store", () => {
   beforeEach(() => {
-    _resetRoutingCache();
+    _resetModelCache();
   });
 
   afterEach(() => {
-    _resetRoutingCache();
+    _resetModelCache();
   });
 
-  it("routes via /v1/responses when cache says so", () => {
-    updateRoutingMap([
+  it("routes via /v1/responses when store says so", async () => {
+    await seedModels([
       { id: "gpt-5.2", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
     ]);
     expect(resolveProvider("openai/gpt-5.2")).toEqual({ provider: "openai-responses", model: "gpt-5.2" });
   });
 
-  it("routes via /v1/chat/completions only", () => {
-    updateRoutingMap([
+  it("routes via /v1/chat/completions only", async () => {
+    await seedModels([
       { id: "gpt-4o", supported_endpoints: ["/v1/chat/completions"] },
     ]);
     expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-chat", model: "gpt-4o" });
   });
 
-  it("routes empty supported_endpoints to chat completions", () => {
-    updateRoutingMap([
+  it("routes empty supported_endpoints to chat completions", async () => {
+    await seedModels([
       { id: "gpt-old", supported_endpoints: [] },
     ]);
     expect(resolveProvider("openai/gpt-old")).toEqual({ provider: "openai-chat", model: "gpt-old" });
   });
 
-  it("uses first endpoint when both are supported", () => {
-    updateRoutingMap([
+  it("uses first endpoint when both are supported", async () => {
+    await seedModels([
       { id: "model-a", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
       { id: "model-b", supported_endpoints: ["/v1/chat/completions", "/v1/responses"] },
     ]);
@@ -124,23 +136,28 @@ describe("resolveProvider with routing cache", () => {
     expect(resolveProvider("openai/model-b")).toEqual({ provider: "openai-chat", model: "model-b" });
   });
 
-  it("API overrides hardcoded set", () => {
-    // gpt-4o is in OPENAI_CHAT_ONLY, but API says /v1/responses
-    updateRoutingMap([
+  it("API overrides bundled data", async () => {
+    await seedModels([
       { id: "gpt-4o", supported_endpoints: ["/v1/responses"] },
     ]);
     expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-responses", model: "gpt-4o" });
   });
 
-  it("anthropic prefix always routes to anthropic regardless of endpoints", () => {
-    updateRoutingMap([
+  it("routes via /v1/messages to anthropic provider", async () => {
+    await seedModels([
+      { id: "claude-sonnet-4", supported_endpoints: ["/v1/messages", "/v1/responses", "/v1/chat/completions"] },
+    ]);
+    expect(resolveProvider("claude-sonnet-4")).toEqual({ provider: "anthropic", model: "claude-sonnet-4" });
+  });
+
+  it("anthropic prefix always routes to anthropic regardless of endpoints", async () => {
+    await seedModels([
       { id: "claude-sonnet-4", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
     ]);
     expect(resolveProvider("anthropic/claude-sonnet-4")).toEqual({ provider: "anthropic", model: "claude-sonnet-4" });
   });
 
   it("falls back to chat completions when cache is cold", () => {
-    // No updateRoutingMap called — cache is null, everything defaults to chat
     expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-chat", model: "gpt-4o" });
     expect(resolveProvider("openai/gpt-5.2")).toEqual({ provider: "openai-chat", model: "gpt-5.2" });
   });
@@ -148,11 +165,10 @@ describe("resolveProvider with routing cache", () => {
   it("triggers background refetch on cache miss", async () => {
     const refetch = vi.fn().mockResolvedValue(undefined);
     setRefetchFn(refetch);
-    updateRoutingMap([
+    await seedModels([
       { id: "gpt-5.2", supported_endpoints: ["/v1/responses"] },
     ]);
 
-    // Unknown model — not in cache
     resolveProvider("openai/brand-new-model");
     await vi.waitFor(() => expect(refetch).toHaveBeenCalledOnce());
   });
@@ -160,23 +176,19 @@ describe("resolveProvider with routing cache", () => {
   it("does not trigger refetch when cache is cold", () => {
     const refetch = vi.fn().mockResolvedValue(undefined);
     setRefetchFn(refetch);
-    // No cache populated
     resolveProvider("openai/gpt-5.2");
     expect(refetch).not.toHaveBeenCalled();
   });
 
-  it("falls back to chat completions when model missing from cache and refetch fails", async () => {
+  it("falls back to chat completions when model missing and refetch fails", async () => {
     const refetch = vi.fn().mockRejectedValue(new Error("API down"));
     setRefetchFn(refetch);
-    updateRoutingMap([
+    await seedModels([
       { id: "gpt-5.2", supported_endpoints: ["/v1/responses"] },
     ]);
 
-    // Unknown model — not in bundled or API cache, and refetch will fail
     const result = resolveProvider("openai/totally-new-model");
     expect(result).toEqual({ provider: "openai-chat", model: "totally-new-model" });
-
-    // Refetch fires but its failure doesn't break anything
     await vi.waitFor(() => expect(refetch).toHaveBeenCalledOnce());
   });
 
@@ -184,7 +196,7 @@ describe("resolveProvider with routing cache", () => {
     let resolve: () => void;
     const refetch = vi.fn().mockImplementation(() => new Promise<void>(r => { resolve = r; }));
     setRefetchFn(refetch);
-    updateRoutingMap([]);
+    await seedModels([{ id: "existing", supported_endpoints: ["/v1/chat/completions"] }]);
 
     resolveProvider("openai/unknown-1");
     resolveProvider("openai/unknown-2");

@@ -162,7 +162,7 @@ async function recordSnapshot(
   const test = getCurrentTest();
   const testContext: TestContext | undefined = test ? {
     name: test.name,
-    file: test.file?.name?.replace(/^.*[/\\]tests[/\\]/, "tests/") ?? "unknown",
+    file: normalizeTestFile(test.file?.name),
   } : undefined;
 
   const snapshot: FetchSnapshot = {
@@ -255,7 +255,7 @@ async function handleMiss(
     if (recordCommand) {
       recordHints.push(`POE_SNAPSHOT_MODE=record ${recordCommand}`);
 
-      const inferredTestFile = inferIntegrationTestFileFromStack(new Error().stack ?? "");
+      const inferredTestFile = inferTestFileFromStack(new Error().stack ?? "");
       if (inferredTestFile && !recordCommand.includes("--")) {
         recordHints.push(
           `POE_SNAPSHOT_MODE=record ${recordCommand} -- --run ${shellQuote(inferredTestFile)}`
@@ -350,8 +350,12 @@ function inferExtraArgsFromLifecycleScript(script: string, argvTail: string[]): 
   return argvTail.slice(startIndex);
 }
 
-function inferIntegrationTestFileFromStack(stack: string): string | null {
-  const match = stack.match(/tests\/integration\/[^\s):]+\.test\.(?:ts|js|tsx|jsx)/);
+function normalizeTestFile(file: string | undefined): string {
+  return file?.replace(/^.*[/\\](src|tests)[/\\]/, "$1/") ?? "unknown";
+}
+
+function inferTestFileFromStack(stack: string): string | null {
+  const match = stack.match(/(?:src|tests)\/[^\s):]+\.test\.(?:ts|js|tsx|jsx)/);
   return match?.[0] ?? null;
 }
 

@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { createSnapshotFetch, SnapshotMissingError } from "../helpers/snapshot-fetch.js";
-import { parseTagOverrides } from "../helpers/snapshot-config.js";
+import { createSnapshotFetch, SnapshotMissingError } from "./snapshot-fetch.js";
+import { parseTagOverrides } from "./snapshot-config.js";
 
 describe("parseTagOverrides", () => {
   it("returns empty overrides for unrecognized tags", () => {
@@ -111,7 +111,7 @@ describe("SnapshotMissingError", () => {
   it("includes a record hint based on the current npm command", async () => {
     vi.stubEnv(
       "npm_config_argv",
-      JSON.stringify({ original: ["test", "--", "--run", "tests/integration/other.test.ts"] })
+      JSON.stringify({ original: ["test", "--", "--run", "src/poe-provider.other.integration.test.ts"] })
     );
     vi.stubEnv("npm_config_user_agent", "npm/10.0.0 node/v20.0.0 darwin x64");
 
@@ -129,7 +129,7 @@ describe("SnapshotMissingError", () => {
     } catch (error) {
       expect(error).toBeInstanceOf(SnapshotMissingError);
       expect((error as Error).message).toContain(
-        "POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/other.test.ts"
+        "POE_SNAPSHOT_MODE=record npm test -- --run src/poe-provider.other.integration.test.ts"
       );
     }
   });
@@ -140,7 +140,7 @@ describe("SnapshotMissingError", () => {
     vi.stubEnv("npm_config_user_agent", "npm/10.0.0 node/v20.0.0 darwin x64");
 
     const originalArgv = process.argv;
-    process.argv = ["node", "/path/to/vitest.mjs", "run", "--run", "tests/integration/google.test.ts"];
+    process.argv = ["node", "/path/to/vitest.mjs", "run", "--run", "src/poe-provider.google.integration.test.ts"];
 
     try {
       const snapshotFetch = createSnapshotFetch({
@@ -156,7 +156,7 @@ describe("SnapshotMissingError", () => {
     } catch (error) {
       expect(error).toBeInstanceOf(SnapshotMissingError);
       expect((error as Error).message).toContain(
-        "POE_SNAPSHOT_MODE=record npm test -- --run tests/integration/google.test.ts"
+        "POE_SNAPSHOT_MODE=record npm test -- --run src/poe-provider.google.integration.test.ts"
       );
     } finally {
       process.argv = originalArgv;
