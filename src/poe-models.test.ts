@@ -10,7 +10,7 @@ describe("POE_DEFAULT_BASE_URL", () => {
 describe("fetchPoeModels", () => {
   beforeEach(() => {
     vi.stubEnv("POE_API_KEY", "test-key");
-    _resetModelCache();
+    _resetModelCache(true);
   });
 
   afterEach(() => {

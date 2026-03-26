@@ -33,11 +33,15 @@ describe("createPoe", () => {
   });
 
   it("routes openai/* to chat completions when cache is cold", () => {
-    _resetModelCache();
-    const poe = createPoe();
-    const model = poe("openai/gpt-5.2");
-    expect(model.provider).toBe("openai.chat");
-    expect(model.modelId).toBe("gpt-5.2");
+    _resetModelCache(true);
+    try {
+      const poe = createPoe();
+      const model = poe("openai/gpt-5.2");
+      expect(model.provider).toBe("openai.chat");
+      expect(model.modelId).toBe("gpt-5.2");
+    } finally {
+      _resetModelCache();
+    }
   });
 
   it.skip("routes google/* to openai responses provider, stripping prefix", () => {
@@ -99,7 +103,7 @@ describe("createPoe", () => {
 
 describe("resolveProvider with model store", () => {
   beforeEach(() => {
-    _resetModelCache();
+    _resetModelCache(true);
   });
 
   afterEach(() => {

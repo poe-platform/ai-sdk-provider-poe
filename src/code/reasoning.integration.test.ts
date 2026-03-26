@@ -3,7 +3,11 @@ import { generateText } from "ai";
 import { createPoe } from "../poe-provider.js";
 import { MODEL_OVERRIDES } from "../model-overrides.js";
 import { getModels } from "./models.js";
+import { _resetModelCache } from "../poe-models.js";
 import { getSnapshotFetch } from "../test/index.js";
+
+// Ensure bundled routing is loaded (guards against shared-thread cache clearing)
+_resetModelCache();
 
 const poe = createPoe({
   fetch: getSnapshotFetch(),

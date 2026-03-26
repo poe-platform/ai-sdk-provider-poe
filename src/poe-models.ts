@@ -62,9 +62,10 @@ function triggerBackgroundRefetch(): void {
   refetchFn().catch(() => {}).finally(() => { refetchInFlight = false; });
 }
 
-/** @internal — for tests only */
-export function _resetModelCache(): void {
+/** @internal — for tests only. Optionally clears vs restores bundled data. */
+export function _resetModelCache(clear = false): void {
   models = new Map();
+  if (!clear) for (const m of bundledRouting) models.set(m.id, m as PoeApiModel);
   refetchInFlight = false;
   refetchFn = null;
 }

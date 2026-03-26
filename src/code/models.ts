@@ -72,7 +72,14 @@ export function getModel(id: string): PoeModelInfo | undefined {
   return raw ? withCodeWorkarounds(toModelInfo(raw)) : undefined;
 }
 
-/** Return enriched info for all stored models. */
+function isCodeCapable(m: PoeApiModel): boolean {
+  return (
+    m.output_modalities?.includes("text") === true &&
+    m.supported_features?.includes("tools") === true
+  );
+}
+
+/** Return enriched info for all code-capable models (text I/O + tool use). */
 export function getModels(): PoeModelInfo[] {
-  return getStoredModels().map(toModelInfo).map(withCodeWorkarounds);
+  return getStoredModels().filter(isCodeCapable).map(toModelInfo).map(withCodeWorkarounds);
 }
