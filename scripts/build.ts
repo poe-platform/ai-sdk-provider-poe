@@ -15,7 +15,7 @@ const shared: esbuild.BuildOptions = {
 
 await Promise.all([
   esbuild.build({ ...shared, entryPoints: ["src/index.ts"], outfile: "dist/index.js" }),
-  esbuild.build({ ...shared, entryPoints: ["src/code/index.ts"], outfile: "dist/code.js" }),
+  esbuild.build({ ...shared, entryPoints: ["src/code.ts"], outfile: "dist/code.js" }),
 ]);
 
 execSync("npx tsc --declaration --emitDeclarationOnly --outDir dist", { stdio: "inherit" });
