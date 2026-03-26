@@ -128,11 +128,11 @@ describe("fetchPoeModels", () => {
         object: "model",
         created: 1,
         owned_by: "OpenAI",
-        supports_reasoning_effort: ["low", "medium", "high"],
+        reasoning: { supports_reasoning_effort: ["low", "medium", "high"] },
       },
     ]);
 
     const models = await fetchPoeModels({ fetch });
-    expect(models[0].supports_reasoning_effort).toEqual(["low", "medium", "high"]);
+    expect(models[0].reasoning?.supports_reasoning_effort).toEqual(["low", "medium", "high"]);
   });
 });

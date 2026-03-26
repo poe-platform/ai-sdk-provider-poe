@@ -25,25 +25,13 @@ export interface PoeModelInfo {
   };
 }
 
-const OWNER_PREFIX: Record<string, string> = {
-  Anthropic: "anthropic",
-  OpenAI: "openai",
-  Google: "google",
-};
-
-function prefixId(rawId: string, ownedBy?: string): string {
-  const prefix = ownedBy ? OWNER_PREFIX[ownedBy] : undefined;
-  return prefix ? `${prefix}/${rawId}` : rawId;
-}
-
 function toModelInfo(m: PoeApiModel): PoeModelInfo {
-  const id = prefixId(m.id, m.owned_by);
 
   const budget = m.reasoning?.budget != null;
   const effort = m.reasoning?.supports_reasoning_effort;
 
   return {
-    id,
+    id: m.id,
     rawId: m.id,
     ownedBy: m.owned_by,
     displayName: m.display_name,

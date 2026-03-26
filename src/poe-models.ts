@@ -29,14 +29,68 @@ export interface PoeApiModel {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type RawApiModel = Record<string, any>;
+
 interface PoeApiModelsResponse {
-  data: PoeApiModel[];
+  data: RawApiModel[];
+}
+
+/** Convert per-token price string to per-million-token number. */
+function toPerMillion(v?: string | number | null): number | undefined {
+  if (v == null) return undefined;
+  const n = (typeof v === "number" ? v : parseFloat(v)) * 1_000_000;
+  return Number.isFinite(n) ? Math.round(n * 100) / 100 : undefined;
+}
+
+/** Normalize a raw API model into the canonical PoeApiModel shape. */
+function normalizeModel(raw: RawApiModel): PoeApiModel {
+  const cw = raw.context_window;
+  const contextWindow = typeof cw === "object" && cw ? cw.context_length : (typeof cw === "number" ? cw : undefined);
+  const maxOutput = typeof cw === "object" && cw ? (cw.max_output_tokens ?? undefined) : raw.max_output_tokens;
+
+  const p = raw.pricing;
+  const inputPerMillion = toPerMillion(p?.input_per_million ?? p?.prompt);
+  const outputPerMillion = toPerMillion(p?.output_per_million ?? p?.completion);
+  const cacheReadPerMillion = toPerMillion(p?.cache_read_per_million ?? p?.input_cache_read);
+  const cacheWritePerMillion = toPerMillion(p?.cache_write_per_million ?? p?.input_cache_write);
+
+  return {
+    id: raw.id,
+    ...(raw.object && { object: raw.object }),
+    ...(raw.created && { created: raw.created }),
+    ...(raw.owned_by && { owned_by: raw.owned_by }),
+    ...(raw.display_name && { display_name: raw.display_name }),
+    ...(contextWindow && { context_window: contextWindow }),
+    ...(maxOutput && { max_output_tokens: maxOutput }),
+    ...((raw.supports_images || raw.architecture?.input_modalities?.includes("image")) && { supports_images: true }),
+    ...((raw.supports_prompt_cache || cacheReadPerMillion != null) && { supports_prompt_cache: true }),
+    ...(raw.supported_endpoints?.length && { supported_endpoints: raw.supported_endpoints }),
+    ...(raw.supported_features?.length && { supported_features: raw.supported_features }),
+    ...(raw.output_modalities?.length
+      ? { output_modalities: raw.output_modalities }
+      : raw.architecture?.output_modalities?.length && { output_modalities: raw.architecture.output_modalities }),
+    ...(raw.reasoning && { reasoning: raw.reasoning }),
+    ...((inputPerMillion != null || outputPerMillion != null) && {
+      pricing: {
+        ...(inputPerMillion != null && { input_per_million: inputPerMillion }),
+        ...(outputPerMillion != null && { output_per_million: outputPerMillion }),
+        ...(cacheReadPerMillion != null && { cache_read_per_million: cacheReadPerMillion }),
+        ...(cacheWritePerMillion != null && { cache_write_per_million: cacheWritePerMillion }),
+      },
+    }),
+  };
 }
 
 // --- Model store ---
 
-let models: Map<string, PoeApiModel> = new Map();
-for (const m of bundledRouting) models.set(m.id, m as PoeApiModel);
+function loadBundled(): Map<string, PoeApiModel> {
+  const map = new Map<string, PoeApiModel>();
+  for (const m of bundledRouting) map.set(m.id, normalizeModel(m as RawApiModel));
+  return map;
+}
+
+let models: Map<string, PoeApiModel> = loadBundled();
 
 let refetchInFlight = false;
 let refetchFn: (() => Promise<void>) | null = null;
@@ -65,7 +119,7 @@ function triggerBackgroundRefetch(): void {
 /** @internal — for tests only. Optionally clears vs restores bundled data. */
 export function _resetModelCache(clear = false): void {
   models = new Map();
-  if (!clear) for (const m of bundledRouting) models.set(m.id, m as PoeApiModel);
+  if (!clear) models = loadBundled();
   refetchInFlight = false;
   refetchFn = null;
 }
@@ -118,7 +172,8 @@ export async function fetchPoeModels(options: {
   }
 
   const body = (await response.json()) as PoeApiModelsResponse;
+  const normalized = body.data.map(normalizeModel);
   models = new Map();
-  for (const m of body.data) models.set(m.id, m);
-  return body.data;
+  for (const m of normalized) models.set(m.id, m);
+  return normalized;
 }
