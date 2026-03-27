@@ -43,6 +43,17 @@ function toPerMillion(v?: string | number | null): number | undefined {
   return Number.isFinite(n) ? Math.round(n * 100) / 100 : undefined;
 }
 
+/**
+ * Models whose API output_modalities are missing "text".
+ * Safe to keep after the upstream fix — the workaround is a no-op when "text" is already present.
+ */
+const MISSING_TEXT_OUTPUT: Set<string> = new Set([
+  "gpt-5.4",
+  "gpt-5.4-mini",
+  "gpt-5.4-nano",
+  "gpt-5.4-pro",
+]);
+
 /** Normalize a raw API model into the canonical PoeApiModel shape. */
 function normalizeModel(raw: RawApiModel): PoeApiModel {
   const cw = raw.context_window;
@@ -50,10 +61,12 @@ function normalizeModel(raw: RawApiModel): PoeApiModel {
   const maxOutput = typeof cw === "object" && cw ? (cw.max_output_tokens ?? undefined) : raw.max_output_tokens;
 
   const p = raw.pricing;
-  const inputPerMillion = toPerMillion(p?.input_per_million ?? p?.prompt);
-  const outputPerMillion = toPerMillion(p?.output_per_million ?? p?.completion);
-  const cacheReadPerMillion = toPerMillion(p?.cache_read_per_million ?? p?.input_cache_read);
-  const cacheWritePerMillion = toPerMillion(p?.cache_write_per_million ?? p?.input_cache_write);
+  // Fields named *_per_million are already per-million-token prices;
+  // legacy per-token fields (prompt, completion, …) need conversion.
+  const inputPerMillion = p?.input_per_million ?? toPerMillion(p?.prompt);
+  const outputPerMillion = p?.output_per_million ?? toPerMillion(p?.completion);
+  const cacheReadPerMillion = p?.cache_read_per_million ?? toPerMillion(p?.input_cache_read);
+  const cacheWritePerMillion = p?.cache_write_per_million ?? toPerMillion(p?.input_cache_write);
 
   return {
     id: raw.id,
@@ -67,9 +80,13 @@ function normalizeModel(raw: RawApiModel): PoeApiModel {
     ...((raw.supports_prompt_cache || cacheReadPerMillion != null) && { supports_prompt_cache: true }),
     ...(raw.supported_endpoints?.length && { supported_endpoints: raw.supported_endpoints }),
     ...(raw.supported_features?.length && { supported_features: raw.supported_features }),
-    ...(raw.output_modalities?.length
-      ? { output_modalities: raw.output_modalities }
-      : raw.architecture?.output_modalities?.length && { output_modalities: raw.architecture.output_modalities }),
+    ...(() => {
+      const om: string[] | undefined = raw.output_modalities?.length
+        ? raw.output_modalities
+        : raw.architecture?.output_modalities?.length ? raw.architecture.output_modalities : undefined;
+      if (om && MISSING_TEXT_OUTPUT.has(raw.id) && !om.includes("text")) return { output_modalities: ["text", ...om] };
+      return om?.length ? { output_modalities: om } : {};
+    })(),
     ...(raw.reasoning && { reasoning: raw.reasoning }),
     ...((inputPerMillion != null || outputPerMillion != null) && {
       pricing: {
@@ -131,16 +148,24 @@ export type EffectiveProvider = "anthropic" | "openai-responses" | "openai-chat"
 export function resolveProvider(modelId: string): { provider: EffectiveProvider; model: string } {
   const [prefix, ...rest] = modelId.split("/");
   const model = rest.length ? rest.join("/") : prefix;
+  const stored = models.get(model);
 
   if (prefix === "anthropic" && rest.length) return { provider: "anthropic", model };
 
-  const stored = models.get(model);
   const endpoints = stored?.supported_endpoints;
   if (endpoints?.length) {
-    if (endpoints[0] === "/v1/messages") return { provider: "anthropic", model };
-    if (endpoints[0] === "/v1/responses") return { provider: "openai-responses", model };
+    if (endpoints.includes("/v1/messages")) return { provider: "anthropic", model };
+    // Prefer chat completions for Google models — the openai-compatible provider
+    // flushes unfinished tool calls on stream end, unlike @ai-sdk/openai responses.
+    if (stored?.owned_by === "Google" && endpoints.includes("/v1/chat/completions")) {
+      return { provider: "openai-chat", model };
+    }
+    if (endpoints.includes("/v1/responses")) return { provider: "openai-responses", model };
     return { provider: "openai-chat", model };
   }
+
+  // google/ prefix without endpoint data → chat completions
+  if (prefix === "google" && rest.length) return { provider: "openai-chat", model };
 
   // Model not in store → background refetch
   if (models.size > 0 && !stored) triggerBackgroundRefetch();

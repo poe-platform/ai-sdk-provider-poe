@@ -5646,55 +5646,6 @@
     "parameters": []
   },
   {
-    "id": "gpt-4-classic-0314",
-    "object": "model",
-    "created": 1724707714433,
-    "description": "OpenAI's GPT-4 model. Powered by gpt-4-0314 (non-Turbo) for text input and gpt-4o for image input. For most use cases, https://poe.com/GPT-4o will perform significantly better.",
-    "owned_by": "OpenAI",
-    "root": "gpt-4-classic-0314",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "modality": "text,image->text"
-    },
-    "supported_features": [
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.000027",
-      "completion": "0.000054",
-      "image": null,
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 8192,
-      "max_output_tokens": 4096
-    },
-    "context_length": 8192,
-    "metadata": {
-      "display_name": "GPT-4-Classic-0314",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3021-200-dcfzihobnwryuqkyuxizckytkuoplihu.jpeg",
-        "alt": "GPT-4-Classic-0314 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-4-classic-0314"
-    },
-    "reasoning": null,
-    "parameters": []
-  },
-  {
     "id": "solar-pro-2",
     "object": "model",
     "created": 1694610718864,
