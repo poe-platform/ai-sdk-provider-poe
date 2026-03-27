@@ -22,7 +22,6 @@ const { data } = (await res.json()) as { data: Record<string, unknown>[] };
 
 const models = data.map((m) => applyWorkarounds(m)).filter((m): m is Record<string, unknown> => {
   if (m === null) return false;
-  if (m.owned_by === "Poe") return false;
   const arch = m.architecture as { output_modalities?: string[] } | undefined;
   const features = m.supported_features as string[] | undefined;
   return !!(arch?.output_modalities?.includes("text") && features?.includes("tools"));

@@ -322,9 +322,9 @@ describe("google additional models", () => {
 });
 
 describe("prefixless reasoning models", () => {
-  it("returns text with assistant when reasoning options are provided", OPTS, async () => {
+  it("returns text with gpt-5.2 when reasoning options are provided", OPTS, async () => {
     const { text } = await generateText({
-      model: poe("assistant"),
+      model: poe("gpt-5.2"),
       prompt: REASONING_PROMPT,
       providerOptions: {
         poe: {

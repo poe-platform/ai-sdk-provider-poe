@@ -1,10 +1,12 @@
 export type { RawModel, ModelDefinitionWorkaround } from "./types.js";
 
 import type { RawModel, ModelDefinitionWorkaround } from "./types.js";
+import { skipPoeOwned } from "./skip-poe-owned.js";
 import { addMissingTextOutput } from "./add-missing-text-output.js";
 import { geminiPreferChatCompletions } from "./gemini-prefer-chat-completions.js";
 
 const workarounds: ModelDefinitionWorkaround[] = [
+  skipPoeOwned,
   addMissingTextOutput,
   geminiPreferChatCompletions,
 ];

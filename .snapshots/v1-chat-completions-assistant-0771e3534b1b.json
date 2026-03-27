@@ -1,0 +1,41 @@
+{
+  "key": "v1-chat-completions-assistant-0771e3534b1b",
+  "test": {
+    "name": "returns text with assistant when reasoning options are provided",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "assistant",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-length": "171",
+      "content-type": "application/json",
+      "openai-processing-ms": "284",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+    },
+    "body": {
+      "error": {
+        "message": "Unsupported value: 'high' is not supported with the 'gpt-5.2-chat-latest' model. Supported values are: 'medium'.",
+        "type": "invalid_request_error"
+      }
+    }
+  }
+}
