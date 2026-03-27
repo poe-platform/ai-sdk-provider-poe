@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { getModel, getModels } from "./models.js";
+import { poeDefaultModelId, getPoeDefaultModelInfo } from "./index.js";
 
 describe("getModels", () => {
   const models = getModels();
@@ -23,6 +24,24 @@ describe("getModels", () => {
   it("includes text+tools models", () => {
     expect(ids).toContain("claude-opus-4.6");
     expect(ids).toContain("glm-5");
+  });
+});
+
+describe("getPoeDefaultModelInfo", () => {
+  it("resolves default model from bundled data", () => {
+    const info = getPoeDefaultModelInfo();
+    expect(info.contextWindow).toBeGreaterThan(0);
+    expect(info.maxTokens).toBeGreaterThan(0);
+    expect(info.supportsImages).toBe(true);
+  });
+
+  it("accepts a custom model id", () => {
+    const info = getPoeDefaultModelInfo("claude-sonnet-4.6");
+    expect(info.contextWindow).toBe(983_040);
+  });
+
+  it("throws for unknown model", () => {
+    expect(() => getPoeDefaultModelInfo("nonexistent")).toThrow("Unknown model");
   });
 });
 
