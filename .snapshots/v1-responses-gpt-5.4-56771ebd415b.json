@@ -1,7 +1,7 @@
 {
-  "key": "v1-responses-gpt-5.4-2071008da4a1",
+  "key": "v1-responses-gpt-5.4-56771ebd415b",
   "test": {
-    "name": "returns reasoning text with openai/gpt-5.4",
+    "name": "generates text with gpt-5.4",
     "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
@@ -13,15 +13,11 @@
           "content": [
             {
               "type": "input_text",
-              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+              "text": "Say hello in exactly 3 words"
             }
           ]
         }
-      ],
-      "reasoning": {
-        "effort": "high",
-        "summary": "auto"
-      }
+      ]
     }
   },
   "response": {
@@ -34,35 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "5089",
+      "openai-processing-ms": "1192",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDBiNWQ4ZmIwNzZmNGFkZDAxNjljNmI0OTQ5NmRjODFhMGE4NGVjMzA4ZTcwZmYwNzg=",
-      "created_at": 1774630036,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDJjZjYzMzE2ODk0MjkyYzAxNjljNmI0NmY3M2NjODE5MDkzNTY2MDViMjE1NGM2ZTU=",
+      "created_at": 1774629999,
       "metadata": {},
       "model": "gpt-5.4-2026-03-05",
       "object": "response",
       "output": [
         {
-          "id": "rs_00b5d8fb076f4add0169c6b494ef8c81a093da0e9a58dddaab",
-          "summary": [
-            {
-              "text": "**Explaining arithmetic reasoning**\n\nThe user asked me to solve 17 * 19 step by step. This is a straightforward arithmetic problem. I need to comply with the request for reasoning, which means I should briefly explain how I arrive at the final answer. I can break it down into smaller steps, ensuring clarity while keeping it concise. It's totally fine to provide this explanation without revealing any internal processes. I'll make sure to place the final answer on a separate line.",
-              "type": "summary_text"
-            }
-          ],
-          "type": "reasoning"
-        },
-        {
-          "id": "msg_00b5d8fb076f4add0169c6b499475081a0ab097bf12a4c448d",
+          "id": "msg_02cf63316894292c0169c6b47033ac81908904e29c103b959f",
           "content": [
             {
               "annotations": [],
-              "text": "Compute it as:\n\n17 × 19 = 17 × (20 − 1)  \n= 17 × 20 − 17  \n= 340 − 17  \n= 323\n\n323",
+              "text": "Hello to you",
               "type": "output_text",
               "logprobs": []
             }
@@ -79,8 +65,8 @@
       "tools": [],
       "top_p": 0.98,
       "reasoning": {
-        "effort": "high",
-        "summary": "detailed"
+        "effort": "none",
+        "summary": null
       },
       "status": "completed",
       "text": {
@@ -91,22 +77,22 @@
       },
       "truncation": "disabled",
       "usage": {
-        "input_tokens": 35,
+        "input_tokens": 13,
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 157,
+        "output_tokens": 7,
         "output_tokens_details": {
-          "reasoning_tokens": 110
+          "reasoning_tokens": 0
         },
-        "total_tokens": 192
+        "total_tokens": 20
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774630041,
+      "completed_at": 1774630000,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",
