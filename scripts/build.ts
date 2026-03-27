@@ -8,7 +8,10 @@ const shared: esbuild.BuildOptions = {
   bundle: true,
   platform: "node",
   format: "esm",
-  external: Object.keys(pkg.dependencies || {}),
+  external: [
+    ...Object.keys(pkg.dependencies || {}),
+    ...Object.keys(pkg.peerDependencies || {}),
+  ],
   minify: false,
   sourcemap: true,
 };

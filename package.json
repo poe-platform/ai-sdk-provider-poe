@@ -28,14 +28,20 @@
     "verify-model": "tsx scripts/verify-model.ts",
     "update-routing": "tsx scripts/update-bundled-routing.ts",
     "probe": "tsx scripts/probe-workarounds.ts",
+    "dev:models": "tsx scripts/dev-models.ts",
+    "code:fetch_poe_model": "tsx scripts/fetch-poe-model.ts",
     "prepare": "husky",
     "secrets": "trufflehog filesystem . --no-update --fail --exclude-paths=.trufflehogignore"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^3.0.37",
-    "@ai-sdk/openai": "^3.0.25",
-    "@ai-sdk/provider": "^3.0.7",
-    "@ai-sdk/provider-utils": "^4.0.13"
+    "@ai-sdk/anthropic": "3.0.42",
+    "@ai-sdk/openai": "3.0.27",
+    "@ai-sdk/openai-compatible": "^2.0.37",
+    "@ai-sdk/provider": "3.0.8",
+    "@ai-sdk/provider-utils": "4.0.14"
+  },
+  "peerDependencies": {
+    "ai": ">=6.0.0"
   },
   "devDependencies": {
     "@semantic-release/exec": "^7.1.0",
