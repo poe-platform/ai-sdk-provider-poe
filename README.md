@@ -113,14 +113,7 @@ const { text } = await generateText({
 
 ## Model Routing
 
-Models are specified as `provider/model-id`. Routing is resolved from a bundled catalog refreshed at runtime via `/v1/models`.
-
-| Prefix | Route | Examples |
-|---|---|---|
-| `anthropic/` | Anthropic Messages API | `claude-sonnet-4`, `claude-opus-4.6` |
-| `openai/` | OpenAI Responses or Chat API | `gpt-5.4`, `o3` |
-| `google/` | OpenAI Chat Completions API | `gemini-3.1-pro`, `gemini-3-flash` |
-| _(none)_ | Auto from `supported_endpoints` | `grok-4-fast-reasoning`, `glm-5` |
+Routing is resolved automatically from each model's `supported_endpoints`. The model catalog is bundled and refreshed at runtime via `/v1/models`.
 
 For the full model list, visit [poe.com/api/models](https://poe.com/api/models).
 

@@ -145,32 +145,44 @@ export function _resetModelCache(clear = false): void {
 
 export type EffectiveProvider = "anthropic" | "openai-responses" | "openai-chat";
 
+function resolveFromStore(model: string): { provider: EffectiveProvider; model: string } | undefined {
+  const stored = models.get(model);
+  const endpoint = stored?.supported_endpoints?.[0];
+  if (!endpoint) return undefined;
+  if (endpoint === "/v1/messages") return { provider: "anthropic", model };
+  // Google models must use chat completions — the openai-compatible provider
+  // flushes unfinished tool calls on stream end, unlike @ai-sdk/openai responses.
+  if (stored?.owned_by === "Google") return { provider: "openai-chat", model };
+  if (endpoint === "/v1/responses") return { provider: "openai-responses", model };
+  return { provider: "openai-chat", model };
+}
+
+/** Rule-based fallback when model is not in the store. */
+const RULES: [RegExp, EffectiveProvider][] = [
+  [/^claude-(sonnet|opus|haiku)/, "anthropic"],
+  [/^gpt-\d/, "openai-responses"],
+  [/^o\d/, "openai-responses"],
+  [/^gemini-/, "openai-chat"],
+];
+
+export function resolveByRule(model: string): EffectiveProvider {
+  for (const [re, provider] of RULES) {
+    if (re.test(model)) return provider;
+  }
+  return "openai-chat";
+}
+
 export function resolveProvider(modelId: string): { provider: EffectiveProvider; model: string } {
   const [prefix, ...rest] = modelId.split("/");
   const model = rest.length ? rest.join("/") : prefix;
-  const stored = models.get(model);
 
-  if (prefix === "anthropic" && rest.length) return { provider: "anthropic", model };
+  const hit = resolveFromStore(model);
+  if (hit) return hit;
 
-  const endpoints = stored?.supported_endpoints;
-  if (endpoints?.length) {
-    if (endpoints.includes("/v1/messages")) return { provider: "anthropic", model };
-    // Prefer chat completions for Google models — the openai-compatible provider
-    // flushes unfinished tool calls on stream end, unlike @ai-sdk/openai responses.
-    if (stored?.owned_by === "Google" && endpoints.includes("/v1/chat/completions")) {
-      return { provider: "openai-chat", model };
-    }
-    if (endpoints.includes("/v1/responses")) return { provider: "openai-responses", model };
-    return { provider: "openai-chat", model };
-  }
+  // Model not in store → background refetch, fall back to rules
+  if (models.size > 0 && !models.has(model)) triggerBackgroundRefetch();
 
-  // google/ prefix without endpoint data → chat completions
-  if (prefix === "google" && rest.length) return { provider: "openai-chat", model };
-
-  // Model not in store → background refetch
-  if (models.size > 0 && !stored) triggerBackgroundRefetch();
-
-  return { provider: "openai-chat", model };
+  return { provider: resolveByRule(model), model };
 }
 
 // --- Fetch ---

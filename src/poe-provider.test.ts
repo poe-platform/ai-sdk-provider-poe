@@ -40,12 +40,12 @@ describe("createPoe", () => {
     expect(model.modelId).toBe("claude-sonnet-4-20250514");
   });
 
-  it("routes openai/* to chat completions when cache is cold", () => {
+  it("routes openai/* via rules when cache is cold", () => {
     _resetModelCache(true);
     try {
       const poe = createPoe();
       const model = poe("openai/gpt-5.2");
-      expect(model.provider).toBe("openai.chat");
+      expect(model.provider).toBe("openai.responses");
       expect(model.modelId).toBe("gpt-5.2");
     } finally {
       _resetModelCache();
@@ -132,45 +132,28 @@ describe("resolveProvider with model store", () => {
     expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-chat", model: "gpt-4o" });
   });
 
-  it("routes google/* to chat completions even when store has /v1/responses", async () => {
+  it("routes Google-owned models to chat completions regardless of first endpoint", async () => {
     await seedModels([
       { id: "gemini-3.1-pro", owned_by: "Google", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
     ]);
     expect(resolveProvider("google/gemini-3.1-pro")).toEqual({ provider: "openai-chat", model: "gemini-3.1-pro" });
-  });
-
-  it("routes Google-owned models without prefix to chat completions", async () => {
-    await seedModels([
-      { id: "gemini-3.1-pro", owned_by: "Google", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
-    ]);
     expect(resolveProvider("gemini-3.1-pro")).toEqual({ provider: "openai-chat", model: "gemini-3.1-pro" });
   });
 
-  it("routes google/* to chat completions when store only has /v1/chat/completions", async () => {
-    await seedModels([
-      { id: "gemini-old", owned_by: "Google", supported_endpoints: ["/v1/chat/completions"] },
-    ]);
-    expect(resolveProvider("google/gemini-old")).toEqual({ provider: "openai-chat", model: "gemini-old" });
-  });
-
-  it("routes google/* prefix to chat completions when cache is cold", () => {
-    expect(resolveProvider("google/gemini-unknown")).toEqual({ provider: "openai-chat", model: "gemini-unknown" });
-  });
-
-  it("routes empty supported_endpoints to chat completions", async () => {
+  it("falls back to rules when supported_endpoints is empty", async () => {
     await seedModels([
       { id: "gpt-old", supported_endpoints: [] },
     ]);
     expect(resolveProvider("openai/gpt-old")).toEqual({ provider: "openai-chat", model: "gpt-old" });
   });
 
-  it("prefers responses over chat completions regardless of order", async () => {
+  it("uses first endpoint to determine provider", async () => {
     await seedModels([
       { id: "model-a", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
       { id: "model-b", supported_endpoints: ["/v1/chat/completions", "/v1/responses"] },
     ]);
     expect(resolveProvider("openai/model-a")).toEqual({ provider: "openai-responses", model: "model-a" });
-    expect(resolveProvider("openai/model-b")).toEqual({ provider: "openai-responses", model: "model-b" });
+    expect(resolveProvider("openai/model-b")).toEqual({ provider: "openai-chat", model: "model-b" });
   });
 
   it("API overrides bundled data", async () => {
@@ -187,16 +170,29 @@ describe("resolveProvider with model store", () => {
     expect(resolveProvider("claude-sonnet-4")).toEqual({ provider: "anthropic", model: "claude-sonnet-4" });
   });
 
-  it("anthropic prefix always routes to anthropic regardless of endpoints", async () => {
+  it("strips prefix and uses first endpoint from store", async () => {
     await seedModels([
       { id: "claude-sonnet-4", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
     ]);
-    expect(resolveProvider("anthropic/claude-sonnet-4")).toEqual({ provider: "anthropic", model: "claude-sonnet-4" });
+    expect(resolveProvider("anthropic/claude-sonnet-4")).toEqual({ provider: "openai-responses", model: "claude-sonnet-4" });
   });
 
-  it("falls back to chat completions when cache is cold", () => {
-    expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-chat", model: "gpt-4o" });
-    expect(resolveProvider("openai/gpt-5.2")).toEqual({ provider: "openai-chat", model: "gpt-5.2" });
+  it("routes hypothetical future models via rules when not in store", () => {
+    // Future Anthropic models
+    expect(resolveProvider("claude-sonnet-5")).toEqual({ provider: "anthropic", model: "claude-sonnet-5" });
+    expect(resolveProvider("claude-opus-5")).toEqual({ provider: "anthropic", model: "claude-opus-5" });
+    expect(resolveProvider("claude-haiku-5")).toEqual({ provider: "anthropic", model: "claude-haiku-5" });
+    // Future OpenAI models
+    expect(resolveProvider("gpt-6")).toEqual({ provider: "openai-responses", model: "gpt-6" });
+    expect(resolveProvider("gpt-6-mini")).toEqual({ provider: "openai-responses", model: "gpt-6-mini" });
+    expect(resolveProvider("o4")).toEqual({ provider: "openai-responses", model: "o4" });
+    expect(resolveProvider("o4-mini")).toEqual({ provider: "openai-responses", model: "o4-mini" });
+    // Future Google models
+    expect(resolveProvider("gemini-4-pro")).toEqual({ provider: "openai-chat", model: "gemini-4-pro" });
+    expect(resolveProvider("gemini-4-flash")).toEqual({ provider: "openai-chat", model: "gemini-4-flash" });
+    // Unknown models default to chat completions
+    expect(resolveProvider("some-unknown")).toEqual({ provider: "openai-chat", model: "some-unknown" });
+    expect(resolveProvider("llama-4")).toEqual({ provider: "openai-chat", model: "llama-4" });
   });
 
   it("triggers background refetch on cache miss", async () => {
