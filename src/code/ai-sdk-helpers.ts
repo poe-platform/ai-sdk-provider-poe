@@ -49,11 +49,11 @@ export interface LanguageModelUsageLike {
   outputTokens: number;
   cachedInputTokens?: number;
   reasoningTokens?: number;
-  inputTokenDetails: {
+  inputTokenDetails?: {
     cacheReadTokens?: number;
     cacheWriteTokens?: number;
   };
-  outputTokenDetails: {
+  outputTokenDetails?: {
     reasoningTokens?: number;
   };
   raw?: unknown;
@@ -88,8 +88,11 @@ export function extractUsageMetrics(
   usage: LanguageModelUsageLike,
   providerMetadata?: Record<string, unknown>,
 ): UsageMetrics {
+  const inputTokenDetails = usage.inputTokenDetails ?? {};
+  const outputTokenDetails = usage.outputTokenDetails ?? {};
+
   const cacheReadTokens =
-    usage.inputTokenDetails.cacheReadTokens ??
+    inputTokenDetails.cacheReadTokens ??
     usage.cachedInputTokens ??
     findNumber([providerMetadata, usage.raw], [
       ["cacheReadTokens"],
@@ -101,7 +104,7 @@ export function extractUsageMetrics(
     ]);
 
   const cacheWriteTokens =
-    usage.inputTokenDetails.cacheWriteTokens ??
+    inputTokenDetails.cacheWriteTokens ??
     findNumber([providerMetadata, usage.raw], [
       ["cacheWriteTokens"],
       ["cache_creation_input_tokens"],
@@ -110,7 +113,7 @@ export function extractUsageMetrics(
     ]);
 
   const reasoningTokens =
-    usage.outputTokenDetails.reasoningTokens ??
+    outputTokenDetails.reasoningTokens ??
     usage.reasoningTokens ??
     findNumber([providerMetadata, usage.raw], [
       ["reasoningTokens"],

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getModels } from "./models.js";
+import { getModel, getModels } from "./models.js";
 
 describe("getModels", () => {
   const models = getModels();
@@ -23,5 +23,17 @@ describe("getModels", () => {
   it("includes text+tools models", () => {
     expect(ids).toContain("claude-opus-4.6");
     expect(ids).toContain("assistant");
+  });
+});
+
+describe("getModel", () => {
+  it("returns normalized reasoning capabilities for effort models", () => {
+    const model = getModel("o3");
+    expect(model?.supportsReasoningEffort).toBeTruthy();
+  });
+
+  it("returns normalized reasoning capabilities for budget models", () => {
+    const model = getModel("claude-sonnet-4");
+    expect(model?.supportsReasoningBudget).toBe(true);
   });
 });

@@ -78,4 +78,16 @@ describe("extractUsageMetrics", () => {
     };
     expect(extractUsageMetrics(usage).reasoningTokens).toBe(15);
   });
+
+  it("handles sparse usage objects", () => {
+    expect(
+      extractUsageMetrics({
+        inputTokens: 3,
+        outputTokens: 4,
+      }),
+    ).toEqual({
+      inputTokens: 3,
+      outputTokens: 4,
+    });
+  });
 });
