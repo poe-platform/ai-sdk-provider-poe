@@ -2,8 +2,8 @@ import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { loadApiKey, withoutTrailingSlash } from "@ai-sdk/provider-utils";
 import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
+import { createOpenAICompatible, type OpenAICompatibleProvider } from "@ai-sdk/openai-compatible";
 import { POE_DEFAULT_BASE_URL, resolveProvider, fetchPoeModels, setRefetchFn } from "./poe-models.js";
-
 import { withWorkarounds } from "./workarounds/index.js";
 import { patchingFetch } from "./workarounds/patch-output-text.js";
 
@@ -12,6 +12,14 @@ export interface PoeProviderSettings {
   baseURL?: string;
   headers?: Record<string, string>;
   fetch?: typeof globalThis.fetch;
+}
+
+export interface PoeScopedProviderOptions {
+  reasoningBudgetTokens?: number;
+  reasoningEffort?: string;
+  reasoningSummary?: string;
+  /** Set to `false` to disable automatic Anthropic prompt caching breakpoints. Default: `true`. */
+  cache?: boolean;
 }
 
 export interface PoeProvider {
@@ -30,7 +38,8 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
     });
 
   let anthropicProvider: AnthropicProvider | null = null;
-  let openaiProvider: OpenAIProvider | null = null;
+  let openaiResponsesProvider: OpenAIProvider | null = null;
+  let openaiChatProvider: OpenAICompatibleProvider | null = null;
 
   const getAnthropicProvider = () => {
     if (!anthropicProvider) {
@@ -44,16 +53,33 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
     return anthropicProvider;
   };
 
-  const getOpenAIProvider = () => {
-    if (!openaiProvider) {
-      openaiProvider = createOpenAI({
+  /** @ai-sdk/openai — only used for /v1/responses endpoint */
+  const getOpenAIResponsesProvider = () => {
+    if (!openaiResponsesProvider) {
+      openaiResponsesProvider = createOpenAI({
         baseURL,
         apiKey: getApiKey(),
         headers: options.headers,
         fetch: patchingFetch(options.fetch ?? globalThis.fetch),
       });
     }
-    return openaiProvider;
+    return openaiResponsesProvider;
+  };
+
+  /** @ai-sdk/openai-compatible — used for /v1/chat/completions.
+   *  Flushes unfinished tool calls on stream end (unlike @ai-sdk/openai). */
+  const getOpenAIChatProvider = () => {
+    if (!openaiChatProvider) {
+      openaiChatProvider = createOpenAICompatible({
+        name: "openai",
+        baseURL,
+        apiKey: getApiKey(),
+        headers: options.headers,
+        fetch: options.fetch,
+        supportsStructuredOutputs: true,
+      });
+    }
+    return openaiChatProvider;
   };
 
   const languageModel = (modelId: string): LanguageModelV3 => {
@@ -61,11 +87,11 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
 
     switch (provider) {
       case "anthropic":
-        return getAnthropicProvider()(model);
+        return withWorkarounds(getAnthropicProvider()(model));
       case "openai-responses":
-        return withWorkarounds(getOpenAIProvider().responses(model));
+        return withWorkarounds(getOpenAIResponsesProvider().responses(model));
       case "openai-chat":
-        return getOpenAIProvider().chat(model);
+        return withWorkarounds(getOpenAIChatProvider().chatModel(model));
     }
   };
 
