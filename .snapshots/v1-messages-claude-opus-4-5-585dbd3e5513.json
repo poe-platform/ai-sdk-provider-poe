@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-opus-4-5-585dbd3e5513",
+  "test": {
+    "name": "uses extended thinking with anthropic/claude-opus-4-5",
+    "file": "src/poe-provider.anthropic.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4-5",
+      "max_tokens": 64000,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:27Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_08c95a63c8504fe28b9360b6885b31b0",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19. Let me break this down step by step.\n\nOne way to do this is to use the distributive property:\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nOr I could do:\n17 * 19 = (20 - 3) * 19 = 20 * 19 - 3 * 19 = 380 - 57 = 323\n\nLet me verify with standard multiplication:\n  17\n× 19\n----\n 153  (17 × 9)\n170   (17 × 10)\n----\n323\n\nYes, the answer is 323.",
+          "signature": "Eq0ECkgIDBACGAIqQEcSWLzp5skThWj9OeE0lgxPjVCMXcpLvxtHLJc7JypTXfslPbcIWoyZM3h5nw3V0qjw3m9dcdFQr9oSm/0O48ASDLlSrZCN2vX7PP+vJxoMdbf4n70kkM731mbGIjBVr/TDu7kEw5RBNUm/lBwce5BRRvwIzJmYS2XHblvoAMD6wGC6sQ1k7OfoKJzmXygqkgNY5UJApBsy4qqzRCkRnxc+RQ27YwDmtuxOL6g7a9aFk9q53T3XiFX6BW0ABTpxXT+76tUAEB9PYmuhilRz/K2u0LCWXUTDvo2b7uXooXdSUBssOlfTyKoRX0Ht1y+2V1WjTqrFswWPIby/7WxzcE4i0RAUmbtvkJgiK8keu5VjyAdtAe6NTBMdzB14zLHEtrilQOHxyAR4/IYSMmJnxT3kEXbl1L+7YCuGGGzWK2XRE7je7eGBVWqOOub1C/1VbH4Z/r2n+A0EFeKFra9EO/TW3zWy/nKcj7hzVAhbF4vCOOIdKQiJ9dZXzTgNespfTvq+85bP3knDMXHstQNCJ7p7bbjfhjFqGX88HD309JTtkrDfju1lM3iYdEIIi+VOWq5cIsmFWfgDz6VaoFkWWqcEhAh70GXngP0GtYvws6rv6BEefFp2k8mYI0rlmbSlzKUGbXSgWd3cLmBmJmvY444ARJAua1K6yyCdrqJrQKaBWk4daGMbqZo5yU6hnbjzBBJ9XcH00LANBJlLLdG1VG+Zk5AYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "## Reasoning\n\nI'll break this multiplication into easier parts using the distributive property.\n\nI can rewrite 19 as (20 - 1):\n\n17 × 19 = 17 × (20 - 1)\n\nNow I'll distribute:\n- 17 × 20 = 340\n- 17 × 1 = 17\n\nFinally, subtract:\n340 - 17 = 323\n\n**Answer: 323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 299,
+        "total_tokens": 366
+      }
+    }
+  }
+}

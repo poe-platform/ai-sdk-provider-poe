@@ -1,0 +1,51 @@
+{
+  "key": "v1-messages-claude-haiku-3-7ed1e50b0461",
+  "test": {
+    "name": "uses thinking with claude-haiku-3",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-haiku-3",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:51:50Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-length": "259",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+    },
+    "body": {
+      "type": "error",
+      "error": {
+        "type": "invalid_request_error",
+        "message": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"'claude-3-haiku-20240307' does not support thinking.\"},\"request_id\":\"req_vrtx_011CZSS37hSW7hnA5T33tAHv\"}"
+      }
+    }
+  }
+}

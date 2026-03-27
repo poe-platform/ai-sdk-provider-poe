@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-grok-3-39ba17878382",
   "test": {
     "name": "generates text with grok-3",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,41 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1044",
+      "openai-processing-ms": "994",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-65e67fd8c0b99018af7e0f65",
+      "id": "chatcmpl-63b854cde3c3bcdef2d30916",
       "object": "chat.completion",
-      "created": 1774471629,
+      "created": 1774577496,
       "model": "grok-3",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, how are you?"
+            "content": "Hello, howdy, hi!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 6,
-        "prompt_tokens": 13,
-        "total_tokens": 19,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 2
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 7,
+        "total_tokens": 14
       }
     }
   }

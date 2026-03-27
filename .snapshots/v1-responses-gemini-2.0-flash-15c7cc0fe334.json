@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-2.0-flash-15c7cc0fe334",
-  "test": {
-    "name": "generates text with gemini-2.0-flash",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-2.0-flash",
@@ -30,28 +26,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "616",
+      "openai-processing-ms": "595",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOncyekVhZV82TjVhSHlPZ1BnWVNQLVFN",
-      "created_at": 1774480579,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlI0N0ZhWmowTklxRGgtY1B2b3phaUFZ",
+      "created_at": 1774554695,
       "metadata": {},
       "model": "gemini-2.0-flash-001",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "w2zEae_6N5aHyOgPgYSP-QM",
+          "id": "R47FaZj0NIqDh-cPvozaiAY",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "How do you do?\n",
+              "text": "Hello there!\n",
               "annotations": [],
               "logprobs": []
             }
@@ -74,17 +70,17 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 6,
+        "output_tokens": 4,
         "output_tokens_details": {
           "reasoning_tokens": 0,
-          "text_tokens": 6
+          "text_tokens": 4
         },
-        "total_tokens": 13
+        "total_tokens": 11
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480579,
+      "completed_at": 1774554695,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

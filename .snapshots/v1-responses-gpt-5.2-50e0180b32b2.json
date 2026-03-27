@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.2-50e0180b32b2",
   "test": {
     "name": "handles vision with gpt-5.2",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -34,25 +34,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2082",
+      "openai-processing-ms": "1702",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGI5ZTZjODQ1ODE5NjM5NjAxNjljNDQ3YjJhNGFjODE5Mjk3ZWVlNzUwMTcyOTQ2ZDQ=",
-      "created_at": 1774471090,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGU5MDA0OGVhYTJjYTI4MDAxNjljNWFjNDA5ZWU4ODE5Y2IyOTc5ZmJkMTQ5MDZjZjE=",
+      "created_at": 1774562368,
       "metadata": {},
       "model": "gpt-5.2-2025-12-11",
       "object": "response",
       "output": [
         {
-          "id": "msg_0b9e6c84581963960169c447b376588192abb62e90a39431e4",
+          "id": "msg_0e90048eaa2ca2800169c5ac4140e0819c867125a14d2cef49",
           "content": [
             {
               "annotations": [],
-              "text": "A Poe.com promo graphic announcing “Now available: Claude Opus 4.6,” showing icons for various AI models/tools (e.g., GPT, Gemini, Kimi, Runway, Claude, Grok, ElevenLabs).",
+              "text": "A Poe promotional banner saying “Now available: Claude Opus 4.6,” with icons for various AI tools/models (e.g., GPT-5.2 Codex, Gemini, Runway, Claude) and “poe.com.”",
               "type": "output_text",
               "logprobs": []
             }
@@ -84,18 +84,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 51,
+        "output_tokens": 53,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 1876
+        "total_tokens": 1878
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774471092,
+      "completed_at": 1774562370,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

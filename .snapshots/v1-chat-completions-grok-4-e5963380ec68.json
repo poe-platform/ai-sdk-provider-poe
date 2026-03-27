@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-grok-4-e5963380ec68",
+  "test": {
+    "name": "generates structured output with xai/grok-4",
+    "file": "src/poe-provider.other.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-4",
+      "response_format": {
+        "type": "json_object"
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "Parse this recipe:\n\nBanana Smoothie\n\nIngredients:\n- 2 bananas\n- 1 cup milk\n- 1 tbsp honey\n\nSteps:\n1. Peel bananas\n2. Blend all ingredients\n3. Serve cold"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "4102",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-633d55c584b009f5ba6f3a41",
+      "object": "chat.completion",
+      "created": 1774578512,
+      "model": "grok-4",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"title\":\"Banana Smoothie\",\"ingredients\":[\"2 bananas\",\"1 cup milk\",\"1 tbsp honey\"],\"steps\":[\"Peel bananas\",\"Blend all ingredients\",\"Serve cold\"]}"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 34,
+        "total_tokens": 79
+      }
+    }
+  }
+}

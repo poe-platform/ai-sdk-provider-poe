@@ -1,8 +1,8 @@
 {
   "key": "v1-messages-claude-sonnet-4-20250514-35f6558b2683",
   "test": {
-    "name": "caches tokens on repeated calls with claude-sonnet-4",
-    "file": "tests/integration/anthropic-caching.test.ts"
+    "name": "auto-caches with claude-sonnet-4",
+    "file": "src/workarounds/anthropic-cache.integration.test.ts"
   },
   "request": {
     "body": {
@@ -61,7 +61,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:47:18Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T03:04:26Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -72,27 +72,27 @@
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_ae1ffa4ff09e42dfbc5f3fd826fa0d10",
+      "id": "req_poe_abaa945292ac4708a8e7eb81d8751aa9",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems that incorporates Boltzmann transport coefficients with modified Navier-Stokes approximations for rarefied gas regimes."
+          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems by incorporating Boltzmann transport coefficients with modified Navier-Stokes approximations for rarefied gas regimes."
         }
       ],
       "stop_reason": "end_turn",
       "stop_sequence": null,
       "usage": {
         "input_tokens": 3,
-        "cache_creation_input_tokens": 72,
-        "cache_read_input_tokens": 4487,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4559,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 72,
+          "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 56,
-        "total_tokens": 59
+        "output_tokens": 55,
+        "total_tokens": 58
       }
     }
   }

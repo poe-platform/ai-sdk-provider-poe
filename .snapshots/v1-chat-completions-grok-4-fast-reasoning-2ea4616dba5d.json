@@ -1,0 +1,57 @@
+{
+  "key": "v1-chat-completions-grok-4-fast-reasoning-2ea4616dba5d",
+  "test": {
+    "name": "returns text with grok-4-fast-reasoning when reasoning_effort is provided",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-4-fast-reasoning",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "2517",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-9291032b3a14bc17530093ff",
+      "object": "chat.completion",
+      "created": 1774577519,
+      "model": "grok-4-fast-reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To compute 17 × 19, I can use the difference of squares formula. Note that 17 = 18 - 1 and 19 = 18 + 1, so (18 - 1)(18 + 1) = 18² - 1² = 324 - 1 = 323.\n\nAlternatively, 17 × 20 = 340, then subtract 17 to adjust for multiplying by 19 instead: 340 - 17 = 323.\n\nBoth methods confirm the result.\n\n323"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 107,
+        "total_tokens": 137
+      }
+    }
+  }
+}

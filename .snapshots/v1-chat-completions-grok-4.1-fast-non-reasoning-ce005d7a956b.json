@@ -1,0 +1,90 @@
+{
+  "key": "v1-chat-completions-grok-4.1-fast-non-reasoning-ce005d7a956b",
+  "test": {
+    "name": "handles tool calling with grok-4.1-fast-non-reasoning",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-4.1-fast-non-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1353",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-6dd5302a01ed8b20ed87dd16",
+      "object": "chat.completion",
+      "created": 1774577506,
+      "model": "grok-4.1-fast-non-reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "call_52436649",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
+      }
+    }
+  }
+}

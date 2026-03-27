@@ -1,0 +1,57 @@
+{
+  "key": "v1-chat-completions-gemini-2.0-flash-lite-5c71fbf1e64e",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-2.0-flash-lite",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.0-flash-lite",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1848",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-b542d1b58d9e8ac165261d6d",
+      "object": "chat.completion",
+      "created": 1774579784,
+      "model": "gemini-2.0-flash-lite",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Here's how to solve 17 * 19 step-by-step:\n\n**Reasoning:**\n\nWe can use a method called \"breaking down the numbers\" to make the multiplication easier. We can rewrite 19 as (20 - 1). This allows us to use the distributive property of multiplication: a * (b - c) = (a * b) - (a * c).\n\n1.  **Rewrite the problem:** 17 * 19  becomes  17 * (20 - 1)\n2.  **Distribute:** 17 * (20 - 1)  becomes  (17 * 20) - (17 * 1)\n3.  **Multiply:**\n    *   17 * 20 = 340 (Think of it as 17 * 2, then add a zero)\n    *   17 * 1 = 17\n4.  **Subtract:** 340 - 17 = 323\n\n**Final Answer:**\n323\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 207,
+        "total_tokens": 237
+      }
+    }
+  }
+}

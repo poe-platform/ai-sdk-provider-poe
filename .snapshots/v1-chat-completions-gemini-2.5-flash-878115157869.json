@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-flash-878115157869",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-2.5-flash",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-flash",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "8168",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-9edbdaf58ebfb596fb6b9511",
+      "object": "chat.completion",
+      "created": 1774579709,
+      "model": "gemini-2.5-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Here's my step-by-step reasoning for calculating 17 * 19:\n\n**Reasoning:**\n\nI will use the standard method of long multiplication, breaking down the problem into simpler steps. Alternatively, I could use the distributive property.\n\n**Method 1: Standard Long Multiplication**\n\n1.  **Multiply 17 by the units digit of 19 (which is 9):**\n    *   First, multiply 9 by 7 (the units digit of 17): 9 * 7 = 63. Write down 3 and carry over 6.\n    *   Next, multiply 9 by 1 (the tens digit of 17): 9 * 1 = 9. Add the carried 6: 9 + 6 = 15.\n    *   So, 17 * 9 = 153. This is our first partial product.\n\n2.  **Multiply 17 by the tens digit of 19 (which is 1, representing 10):**\n    *   Since we are multiplying by 10, we first write down a 0 in the units place as a placeholder.\n    *   Now, multiply 1 by 7 (the units digit of 17): 1 * 7 = 7.\n    *   Then, multiply 1 by 1 (the tens digit of 17): 1 * 1 = 1.\n    *   So, 17 * 10 = 170. This is our second partial product.\n\n3.  **Add the partial products:**\n    *   Add the results from step 1 and step 2: 153 + 170.\n    *   153\n    *   + 170\n    *   -----\n    *   323\n\n**Method 2: Using the Distributive Property**\n\n1.  **Rewrite one of the numbers:** We can rewrite 19 as (20 - 1).\n2.  **Apply the distributive property:** So, 17 * 19 becomes 17 * (20 - 1).\n3.  **Distribute the multiplication:** This expands to (17 * 20) - (17 * 1).\n4.  **Perform the multiplications:**\n    *   17 * 20 = 340\n    *   17 * 1 = 17\n5.  **Perform the subtraction:** 340 - 17 = 323.\n\nBoth methods lead to the same result.\n\n---\n\n**Final Answer:**\n323",
+            "reasoning_content": "**Contemplating Multiplication Strategies**\n\nI've been giving some thought to the best approach for multiplying 17 by 19. My initial plan is to use standard multiplication, setting up the problem in the usual format. After that, I intend to provide a step-by-step explanation, detailing the process.\n\n\n**Selecting the Optimal Method**\n\nI'm evaluating different multiplication techniques for 17 times 19. I've broken it down to standard multiplication, the distributive property (in multiple forms), and even the difference of squares approach. My goal is to select the most straightforward method.\n\n\n**Finalizing the Calculation Strategy**\n\nI've finalized my approach: I'll detail standard multiplication first, then offer the distributive property as a quick alternative. I've broken down each method step-by-step to clarify the process, ensuring the explanation is clear and easy to follow. I considered difference of squares, but it's less direct.\n\n\n**Formulating a Concise Summary**\n\nI've considered all the methods. I'll provide a detailed explanation of standard multiplication, broken down step by step for simplicity. Following that, I'll briefly outline the distributive property as a quick alternative. I will ensure clarity, focusing on the standard method.\n\n\n",
+            "reasoning": "**Contemplating Multiplication Strategies**\n\nI've been giving some thought to the best approach for multiplying 17 by 19. My initial plan is to use standard multiplication, setting up the problem in the usual format. After that, I intend to provide a step-by-step explanation, detailing the process.\n\n\n**Selecting the Optimal Method**\n\nI'm evaluating different multiplication techniques for 17 times 19. I've broken it down to standard multiplication, the distributive property (in multiple forms), and even the difference of squares approach. My goal is to select the most straightforward method.\n\n\n**Finalizing the Calculation Strategy**\n\nI've finalized my approach: I'll detail standard multiplication first, then offer the distributive property as a quick alternative. I've broken down each method step-by-step to clarify the process, ensuring the explanation is clear and easy to follow. I considered difference of squares, but it's less direct.\n\n\n**Formulating a Concise Summary**\n\nI've considered all the methods. I'll provide a detailed explanation of standard multiplication, broken down step by step for simplicity. Following that, I'll briefly outline the distributive property as a quick alternative. I will ensure clarity, focusing on the standard method.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 515,
+        "total_tokens": 545
+      }
+    }
+  }
+}

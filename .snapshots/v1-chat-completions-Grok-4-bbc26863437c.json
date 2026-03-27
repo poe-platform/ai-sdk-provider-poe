@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Grok-4-bbc26863437c",
   "test": {
     "name": "handles tool calls with Grok-4",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -49,16 +49,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "5192",
+      "openai-processing-ms": "4654",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-43cb43deacb7b7f1fe711612",
+      "id": "chatcmpl-efca817941daca9a5821bbf1",
       "object": "chat.completion",
-      "created": 1774470704,
+      "created": 1774577724,
       "model": "Grok-4",
       "choices": [
         {
@@ -68,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "call_90396736",
+                "id": "call_31618866",
                 "type": "function",
                 "function": {
                   "name": "getWeather",
@@ -81,19 +81,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 26,
-        "prompt_tokens": 897,
-        "total_tokens": 923,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 181,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 677
-        }
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
       }
     }
   }

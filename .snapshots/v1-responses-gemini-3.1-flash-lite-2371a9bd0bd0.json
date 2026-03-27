@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-3.1-flash-lite-2371a9bd0bd0",
-  "test": {
-    "name": "handles tool calling with gemini-3.1-flash-lite",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-3.1-flash-lite",
@@ -52,22 +48,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "706",
+      "openai-processing-ms": "920",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlZtN0VhZEs2TF9HVW5jRVB5NFQ3eUFJ",
-      "created_at": 1774480982,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOk9JN0ZhWWZWR2JtSDRPVVB0cEh4MFEw",
+      "created_at": 1774554680,
       "metadata": {},
       "model": "gemini-3.1-flash-lite-preview",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "Vm7EadK6L_GUncEPy4T7yAI",
+          "id": "OI7FaYfVGbmH4OUPtpHx0Q0",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -80,13 +76,13 @@
         },
         {
           "arguments": "{\"location\": \"San Francisco\"}",
-          "call_id": "call_83da61a3857142d78286cfb1e0f1__thought__AY89a1/oZEz9MTwkxARchg3+FFrxWd3BDEdKzYQPQ1/xrW4tzc6DxZw+F/g6YxeRO44=",
+          "call_id": "call_2183c01d6da141e9b02ab656dcf1__thought__AY89a19VIBkbsh6lbW3xLhifARjot0yYD0STSkf23E6MBZcu71ELkh/kj9BbXsF0vv4=",
           "name": "getWeather",
           "type": "function_call",
-          "id": "call_83da61a3857142d78286cfb1e0f1__thought__AY89a1/oZEz9MTwkxARchg3+FFrxWd3BDEdKzYQPQ1/xrW4tzc6DxZw+F/g6YxeRO44=",
+          "id": "call_2183c01d6da141e9b02ab656dcf1__thought__AY89a19VIBkbsh6lbW3xLhifARjot0yYD0STSkf23E6MBZcu71ELkh/kj9BbXsF0vv4=",
           "status": "completed",
           "provider_specific_fields": {
-            "thought_signature": "AY89a1/oZEz9MTwkxARchg3+FFrxWd3BDEdKzYQPQ1/xrW4tzc6DxZw+F/g6YxeRO44="
+            "thought_signature": "AY89a19VIBkbsh6lbW3xLhifARjot0yYD0STSkf23E6MBZcu71ELkh/kj9BbXsF0vv4="
           }
         }
       ],
@@ -116,7 +112,7 @@
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480982,
+      "completed_at": 1774554680,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

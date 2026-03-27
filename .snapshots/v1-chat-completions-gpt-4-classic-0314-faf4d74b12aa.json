@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-4-classic-0314-faf4d74b12aa",
   "test": {
     "name": "generates text with gpt-4-classic-0314",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -16,7 +16,7 @@
     }
   },
   "response": {
-    "status": 200,
+    "status": 404,
     "headers": {
       "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
@@ -25,41 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1615",
+      "openai-processing-ms": "179",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-68836fd77bdc6e164049e4c8",
-      "object": "chat.completion",
-      "created": 1774471083,
-      "model": "gpt-4-classic-0314",
-      "choices": [
-        {
-          "index": 0,
-          "message": {
-            "role": "assistant",
-            "content": "Hello, howdy, hi."
-          },
-          "finish_reason": "stop"
-        }
-      ],
-      "usage": {
-        "completion_tokens": 7,
-        "prompt_tokens": 14,
-        "total_tokens": 21,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+      "error": {
+        "message": "The model `gpt-4-0314` does not exist or you do not have access to it.",
+        "type": "invalid_request_error"
       }
     }
   }

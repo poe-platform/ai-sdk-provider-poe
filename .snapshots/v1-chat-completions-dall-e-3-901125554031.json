@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-dall-e-3-901125554031",
   "test": {
     "name": "generates text with dall-e-3",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "15257",
+      "openai-processing-ms": "12584",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-a142c16bfb5d39eaf417d396",
+      "id": "chatcmpl-c1a7c8b28adfc2ac152b53a8",
       "object": "chat.completion",
-      "created": 1774471078,
+      "created": 1774562209,
       "model": "dall-e-3",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words](https://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-yIgAfgjAe1zNKW60Lg8nBuUq.png?st=2026-03-25T19%3A37%3A58Z&se=2026-03-25T21%3A37%3A58Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-03-25T08%3A14%3A26Z&ske=2026-03-26T08%3A14%3A26Z&sks=b&skv=2026-02-06&sig=Pgr4e9Qy6CBAsguWWLtWHRRa/5Sp1P3ZSv5120ze530%3D)\n\nhttps://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-yIgAfgjAe1zNKW60Lg8nBuUq.png?st=2026-03-25T19%3A37%3A58Z&se=2026-03-25T21%3A37%3A58Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=b1a0ae1f-618f-4548-84fd-8b16cacd5485&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-03-25T08%3A14%3A26Z&ske=2026-03-26T08%3A14%3A26Z&sks=b&skv=2026-02-06&sig=Pgr4e9Qy6CBAsguWWLtWHRRa/5Sp1P3ZSv5120ze530%3D"
+            "content": "![Say hello in exactly 3 words](https://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-7d5oSbv146XUSaVza2FA6yga.png?st=2026-03-26T20%3A56%3A49Z&se=2026-03-26T22%3A56%3A49Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-03-26T12%3A32%3A39Z&ske=2026-03-27T12%3A32%3A39Z&sks=b&skv=2026-02-06&sig=fxaa1aGXdOba77K7KAQZjMqnSLAF%2BcfSoSSyHXz6oik%3D)\n\nhttps://oaidalleapiprodscus.blob.core.windows.net/private/org-AUYJIdVT1qdd4RNyWy6jJ5oP/poe-prod-key2/img-7d5oSbv146XUSaVza2FA6yga.png?st=2026-03-26T20%3A56%3A49Z&se=2026-03-26T22%3A56%3A49Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=77e5a8ec-6bd1-4477-8afc-16703a64f029&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-03-26T12%3A32%3A39Z&ske=2026-03-27T12%3A32%3A39Z&sks=b&skv=2026-02-06&sig=fxaa1aGXdOba77K7KAQZjMqnSLAF%2BcfSoSSyHXz6oik%3D"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 276,
-        "total_tokens": 283
+        "completion_tokens": 275,
+        "total_tokens": 282
       }
     }
   }

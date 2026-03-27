@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-3-flash-3f21afa763f1",
-  "test": {
-    "name": "handles tool calling with gemini-3-flash",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-3-flash",
@@ -52,22 +48,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1755",
+      "openai-processing-ms": "1224",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlVXN0VhY21vT0pQQXVlVVA0X2FXMFFr",
-      "created_at": 1774480977,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlBZN0ZhZUd4QmN6VTB2Y1BsTkdVdVFZ",
+      "created_at": 1774554685,
       "metadata": {},
       "model": "gemini-3-flash-preview",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "UW7EacmoOJPAueUP4_aW0Qk",
+          "id": "PY7FaeGxBczU0vcPlNGUuQY",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -80,13 +76,13 @@
         },
         {
           "arguments": "{\"location\": \"San Francisco\"}",
-          "call_id": "call_f87ff1dc79e743a0894658d87267__thought__CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw==",
+          "call_id": "call_17d7517d71de4a8aabd417f64a44__thought__CusBAY89a19/C0itNg5H4NkgMDVea7aS0dNtMtbd0GaqDsb4trm2ho/vEUqULAFa85b+w33kxWAR/CTFC6mKdVi/ZH+9UNrOIz/u7VKIBzyx8Fm2gezT9BlpSMkztfNpm/hffWOPHhnP6jw4gNsHavtcA7u8YdhzWueuqQqhUl/8yZidzo/PF5jA1Np20gPSApTEVVaj0H0KdmIIkyzoeA8B8ypah3wrZwdth7gMvoFHNvzsKzmQjj0vctS5KQj8bumrmjIDvfra9LKZmRcgOQQyk23mHQAoC6sH0BtkmCMxYC3bhUKmigQFzKbiGQ==",
           "name": "getWeather",
           "type": "function_call",
-          "id": "call_f87ff1dc79e743a0894658d87267__thought__CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw==",
+          "id": "call_17d7517d71de4a8aabd417f64a44__thought__CusBAY89a19/C0itNg5H4NkgMDVea7aS0dNtMtbd0GaqDsb4trm2ho/vEUqULAFa85b+w33kxWAR/CTFC6mKdVi/ZH+9UNrOIz/u7VKIBzyx8Fm2gezT9BlpSMkztfNpm/hffWOPHhnP6jw4gNsHavtcA7u8YdhzWueuqQqhUl/8yZidzo/PF5jA1Np20gPSApTEVVaj0H0KdmIIkyzoeA8B8ypah3wrZwdth7gMvoFHNvzsKzmQjj0vctS5KQj8bumrmjIDvfra9LKZmRcgOQQyk23mHQAoC6sH0BtkmCMxYC3bhUKmigQFzKbiGQ==",
           "status": "completed",
           "provider_specific_fields": {
-            "thought_signature": "CtkBAY89a190Z5kgCArfR8BgnJS+eSE2NJhYEg2ZI3B8WHvoKtyyeyipoVkqIa4H1MknHZIC0rDhV7KoEnbj5MmEM1XelBiCB7pAOfxR172do7zER2AsZniK9BQGu5HlVIa1urB5P56A9LAZOHGsCtNi9MSHcXX/D/8t6Y4cFzBun4MLAfmMA+STsJt8ig5EQDhA1jPH6l/IYm7JmHNxn4BzyzIGT8shFfH6iTxzXIGzm/Ljlk4V4YGrPEPzllBpGMuy6svvJy7yVnBW766Ne0rGTB2aYBR3DVQhaw=="
+            "thought_signature": "CusBAY89a19/C0itNg5H4NkgMDVea7aS0dNtMtbd0GaqDsb4trm2ho/vEUqULAFa85b+w33kxWAR/CTFC6mKdVi/ZH+9UNrOIz/u7VKIBzyx8Fm2gezT9BlpSMkztfNpm/hffWOPHhnP6jw4gNsHavtcA7u8YdhzWueuqQqhUl/8yZidzo/PF5jA1Np20gPSApTEVVaj0H0KdmIIkyzoeA8B8ypah3wrZwdth7gMvoFHNvzsKzmQjj0vctS5KQj8bumrmjIDvfra9LKZmRcgOQQyk23mHQAoC6sH0BtkmCMxYC3bhUKmigQFzKbiGQ=="
           }
         }
       ],
@@ -106,17 +102,17 @@
           "cached_tokens": 0,
           "text_tokens": 32
         },
-        "output_tokens": 47,
+        "output_tokens": 51,
         "output_tokens_details": {
-          "reasoning_tokens": 38,
+          "reasoning_tokens": 42,
           "text_tokens": 9
         },
-        "total_tokens": 79
+        "total_tokens": 83
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480977,
+      "completed_at": 1774554685,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

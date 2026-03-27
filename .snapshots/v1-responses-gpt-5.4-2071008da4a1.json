@@ -1,0 +1,124 @@
+{
+  "key": "v1-responses-gpt-5.4-2071008da4a1",
+  "test": {
+    "name": "returns reasoning text with openai/gpt-5.4",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.4",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ],
+      "reasoning": {
+        "effort": "high",
+        "summary": "auto"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "4388",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGFlNjYzNDIwNDBjOTJlZTAxNjljNWFjYzEzZGI0ODE5ZGI0Y2U4Nzk3YzMyMTNiYmY=",
+      "created_at": 1774562497,
+      "metadata": {},
+      "model": "gpt-5.4-2026-03-05",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_0ae66342040c92ee0169c5acc17b04819db8ded5072a4e5c6d",
+          "summary": [
+            {
+              "text": "**Planning arithmetic solution**\n\nThe user wants me to solve 17 times 19 and asks for a step-by-step approach. This is simple arithmetic! I should touch on my reasoning briefly without getting too detailed, so using the distributive property could work here. I'll make sure to keep the solution concise and clear, and then I'll present the final answer on a separate line, as the user requested. Let's get it done!",
+              "type": "summary_text"
+            }
+          ],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_0ae66342040c92ee0169c5acc5543c819d8ff0b7760a3a79cb",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Use the distributive property:\n\n\\(17 \\times 19 = 17 \\times (20 - 1)\\)\n\n\\(= 17 \\times 20 - 17 \\times 1\\)\n\n\\(= 340 - 17\\)\n\n\\(= 323\\)\n\n323",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message",
+          "phase": "final_answer"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 0.98,
+      "reasoning": {
+        "effort": "high",
+        "summary": "detailed"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 35,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 165,
+        "output_tokens_details": {
+          "reasoning_tokens": 102
+        },
+        "total_tokens": 200
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1774562501,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
+    }
+  }
+}

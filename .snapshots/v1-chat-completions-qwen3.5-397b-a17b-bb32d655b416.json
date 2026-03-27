@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-qwen3.5-397b-a17b-bb32d655b416",
   "test": {
     "name": "generates text with qwen3.5-397b-a17b",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "817",
+      "openai-processing-ms": "1299",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-7df928574bbf418593224d33",
+      "id": "chatcmpl-ef028bc067fe5a226ae376ad",
       "object": "chat.completion",
-      "created": 1774471650,
+      "created": 1774577531,
       "model": "qwen3.5-397b-a17b",
       "choices": [
         {
@@ -47,11 +47,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 4,
-        "prompt_tokens": 19,
-        "total_tokens": 23,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": null
+        "prompt_tokens": 7,
+        "completion_tokens": 3,
+        "total_tokens": 10
       }
     }
   }

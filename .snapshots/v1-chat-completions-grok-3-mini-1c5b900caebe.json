@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-grok-3-mini-1c5b900caebe",
+  "test": {
+    "name": "returns text with grok-3-mini when reasoning_effort is provided",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "grok-3-mini",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "8750",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-7015ccd1db14e16eaec70de4",
+      "object": "chat.completion",
+      "created": 1774577516,
+      "model": "grok-3-mini",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To solve the multiplication of 17 by 19, I'll use the standard multiplication method for clarity. This involves breaking down the multiplication into smaller steps and then adding the results.\n\nFirst, multiply 17 by the ones digit of 19, which is 9:\n- 17 * 9 = 153\n\nNext, multiply 17 by the tens digit of 19, which is 1, but since it's in the tens place, we actually multiply by 10:\n- 17 * 10 = 170\n\nNow, add the two results together:\n- 153 + 170 = 323\n\nSo, the calculation is verified as 17 * 19 = 323.\n\nFinal answer:  \n323",
+            "reasoning_content": "First, the user asked me to solve this step by step. The problem is: \"What is 17 * 19?\" I need to explain my reasoning first, and then give the final answer on a separate line.\n\nMy reasoning should be clear and step-by-step. Since this is a multiplication of two numbers, I can use the standard multiplication method.\n\nLet me recall how to multiply 17 by 19:\n\nOne way is to break it down:\n\n17 * 19 = 17 * (20 - 1) = (17 * 20) - (17 * 1) = 340 - 17 = 323\n\nI could also do direct multiplication:\n\n   17\n\nx 19\n\nFirst, multiply 17 by 9: 17 * 9 = 153\n\nThen, multiply 17 by 10 (since 19 has 1 in the tens place): 17 * 10 = 170\n\nAdd them together: 153 + 170 = 323\n\nThat matches.\n\nAnother way: (20 - 3) * 19 = 20*19 - 3*19 = 380 - 57 = 323\n\n17 is 20 - 3, yes.\n\nSo, consistently, I get 323.\n\nI should explain this step by step in my response.\n\nStructure my response:\n\n1. Start with explaining the reasoning: \"To solve 17 multiplied by 19, I can use the standard multiplication algorithm.\"\n\n2. Then, go through the steps.\n\n3. Finally, on a separate line, give the final answer.\n\nThe user said: \"First explain your reasoning, then give the final answer on a separate line.\"\n\nSo, something like:\n\n[Explanation paragraph(s)]\n\n[Blank line]\n\nFinal answer: 323\n\nMake sure it's accurate.\n\nIs there any chance of error? 17 * 19 should indeed be 323. Let me double-check mentally: 10*19=190, 7*19=133, 190+133=323. Yes.\n\nAlright, let's outline the response:\n\n- Explain: I'm going to multiply 17 by 19 using the distributive property or standard method.\n\n- Step 1: Multiply 17 by 9 (the ones digit of 19): 17 * 9 = 153\n\n- Step 2: Multiply 17 by 10 (the tens digit of 19 is 1, so 17 * 1 * 10 = 170)\n\n- Step 3: Add the results: 153 + 170 = 323\n\n- Therefore, the product is 323.\n\nThen, on a separate line: 323\n\nI think that's straightforward.",
+            "reasoning": "First, the user asked me to solve this step by step. The problem is: \"What is 17 * 19?\" I need to explain my reasoning first, and then give the final answer on a separate line.\n\nMy reasoning should be clear and step-by-step. Since this is a multiplication of two numbers, I can use the standard multiplication method.\n\nLet me recall how to multiply 17 by 19:\n\nOne way is to break it down:\n\n17 * 19 = 17 * (20 - 1) = (17 * 20) - (17 * 1) = 340 - 17 = 323\n\nI could also do direct multiplication:\n\n   17\n\nx 19\n\nFirst, multiply 17 by 9: 17 * 9 = 153\n\nThen, multiply 17 by 10 (since 19 has 1 in the tens place): 17 * 10 = 170\n\nAdd them together: 153 + 170 = 323\n\nThat matches.\n\nAnother way: (20 - 3) * 19 = 20*19 - 3*19 = 380 - 57 = 323\n\n17 is 20 - 3, yes.\n\nSo, consistently, I get 323.\n\nI should explain this step by step in my response.\n\nStructure my response:\n\n1. Start with explaining the reasoning: \"To solve 17 multiplied by 19, I can use the standard multiplication algorithm.\"\n\n2. Then, go through the steps.\n\n3. Finally, on a separate line, give the final answer.\n\nThe user said: \"First explain your reasoning, then give the final answer on a separate line.\"\n\nSo, something like:\n\n[Explanation paragraph(s)]\n\n[Blank line]\n\nFinal answer: 323\n\nMake sure it's accurate.\n\nIs there any chance of error? 17 * 19 should indeed be 323. Let me double-check mentally: 10*19=190, 7*19=133, 190+133=323. Yes.\n\nAlright, let's outline the response:\n\n- Explain: I'm going to multiply 17 by 19 using the distributive property or standard method.\n\n- Step 1: Multiply 17 by 9 (the ones digit of 19): 17 * 9 = 153\n\n- Step 2: Multiply 17 by 10 (the tens digit of 19 is 1, so 17 * 1 * 10 = 170)\n\n- Step 3: Add the results: 153 + 170 = 323\n\n- Therefore, the product is 323.\n\nThen, on a separate line: 323\n\nI think that's straightforward."
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 147,
+        "total_tokens": 177
+      }
+    }
+  }
+}

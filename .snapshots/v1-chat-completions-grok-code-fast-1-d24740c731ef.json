@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-grok-code-fast-1-d24740c731ef",
   "test": {
     "name": "generates text with grok-code-fast-1",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,43 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "2990",
+      "openai-processing-ms": "2258",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-dfc6b3d3526f2a87a05d3d35",
+      "id": "chatcmpl-cd85642aedf15a228af6942f",
       "object": "chat.completion",
-      "created": 1774471640,
+      "created": 1774577504,
       "model": "grok-code-fast-1",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello my friend.",
-            "reasoning_content": "First, the user says: \"Say hello in exactly 3 words.\"\n\n\n## Processing user request  \n- The user asked to say hello in exactly 3 words.",
-            "reasoning": "First, the user says: \"Say hello in exactly 3 words.\"\n\n\n## Processing user request  \n- The user asked to say hello in exactly 3 words."
+            "content": "Hello, my friend.",
+            "reasoning_content": "First, the user said: \"Say hello in exactly 3 words.\"\n",
+            "reasoning": "First, the user said: \"Say hello in exactly 3 words.\"\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
-        "prompt_tokens": 211,
-        "total_tokens": 215,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 271,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 210
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 5,
+        "total_tokens": 12
       }
     }
   }

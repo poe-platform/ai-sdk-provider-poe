@@ -1,0 +1,103 @@
+{
+  "key": "v1-responses-gemini-2.5-pro-8b0004fe5992",
+  "request": {
+    "body": {
+      "model": "gemini-2.5-pro",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "14046",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOms0X0ZhZmluQ2RUVjB2Y1A2N09QMEFn",
+      "created_at": 1774555027,
+      "metadata": {},
+      "model": "gemini-2.5-pro",
+      "object": "response",
+      "output": [
+        {
+          "type": "message",
+          "id": "k4_FafinCdTV0vcP67OP0Ag",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Here is the step-by-step reasoning:\n\nTo solve 17 * 19, we can break the problem down into easier parts. A simple way to do this is to think of 19 as (20 - 1). This allows us to multiply 17 by 20, then multiply 17 by 1, and subtract the second result from the first.\n\n**Step 1:** Multiply 17 by 20.\n17 * 20 = 340\n\n**Step 2:** Multiply 17 by 1.\n17 * 1 = 17\n\n**Step 3:** Subtract the result from Step 2 from the result of Step 1.\n340 - 17 = 323\n\n323",
+              "annotations": [],
+              "logprobs": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        }
+      },
+      "usage": {
+        "input_tokens": 31,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 31
+        },
+        "output_tokens": 1655,
+        "output_tokens_details": {
+          "reasoning_tokens": 1483,
+          "text_tokens": 172
+        },
+        "total_tokens": 1686
+      },
+      "provider_specific_fields": {
+        "traffic_type": "ON_DEMAND"
+      },
+      "completed_at": 1774555027,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "reasoning": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null,
+      "background": false,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "store": true,
+      "top_logprobs": 0,
+      "top_p": 1,
+      "truncation": "disabled"
+    }
+  }
+}

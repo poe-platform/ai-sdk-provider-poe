@@ -1,0 +1,57 @@
+{
+  "key": "v1-chat-completions-gemini-2.0-flash-4e526dc8480f",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-2.0-flash",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.0-flash",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1145",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-8c0f73603135eeeaaf8ef437",
+      "object": "chat.completion",
+      "created": 1774579782,
+      "model": "gemini-2.0-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "We can solve 17 * 19 using the distributive property. We can rewrite 19 as (20 - 1). Therefore, 17 * 19 = 17 * (20 - 1).\nUsing the distributive property, this becomes (17 * 20) - (17 * 1).\n17 * 20 = 340.\n17 * 1 = 17.\nSo, 340 - 17 = 323.\n\n323\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 93,
+        "total_tokens": 123
+      }
+    }
+  }
+}

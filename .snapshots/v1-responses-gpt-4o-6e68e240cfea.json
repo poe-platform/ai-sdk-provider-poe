@@ -1,0 +1,109 @@
+{
+  "key": "v1-responses-gpt-4o-6e68e240cfea",
+  "test": {
+    "name": "returns reasoning text with openai/gpt-4o",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-4o",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "3934",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDEyOGU0NGNlNzNjZGI0OTAxNjljNWFkNjU3NGNjODFhMWJhODVhODRmYzVjM2ZiYjY=",
+      "created_at": 1774562661,
+      "metadata": {},
+      "model": "gpt-4o-2024-11-20",
+      "object": "response",
+      "output": [
+        {
+          "id": "msg_0128e44ce73cdb490169c5ad65c2dc81a19c831405dc98b1f6",
+          "content": [
+            {
+              "annotations": [],
+              "text": "To solve \\( 17 \\times 19 \\), we can use distributive property to simplify the calculation step by step.\n\n### Step 1: Break down \\( 19 \\) into two simpler numbers\nWe can break \\( 19 \\) into \\( 20 - 1 \\). This helps avoid directly multiplying the numbers and makes calculations simpler.\n\nSo,\n\\[\n17 \\times 19 = 17 \\times (20 - 1)\n\\]\n\n### Step 2: Apply distributive property\nThe distributive property states:\n\\[\na \\times (b - c) = (a \\times b) - (a \\times c)\n\\]\n\nApplying this to our equation:\n\\[\n17 \\times 19 = (17 \\times 20) - (17 \\times 1)\n\\]\n\n### Step 3: Calculate each term\n1. \\( 17 \\times 20 = 340 \\)  \n   We get this by multiplying \\( 17 \\) by \\( 2 \\) to get \\( 34 \\), then adding a \\( 0 \\) to account for multiplying by \\( 10 \\).\n2. \\( 17 \\times 1 = 17 \\).\n\n### Step 4: Subtract the results\nNow subtract \\( 17 \\) from \\( 340 \\):\n\\[\n340 - 17 = 323\n\\]\n\n---\n\n### Final Answer:\n\\[\n\\boxed{323}\n\\]",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": null,
+        "summary": null
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 36,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 296,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 332
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1774562665,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
+    }
+  }
+}

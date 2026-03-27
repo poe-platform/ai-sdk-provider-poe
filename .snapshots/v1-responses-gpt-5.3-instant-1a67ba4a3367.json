@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.3-instant-1a67ba4a3367",
   "test": {
     "name": "generates text with gpt-5.3-instant",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,26 +30,26 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1070",
+      "openai-processing-ms": "1685",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDE3ZDQ5NGQyY2IzNTlhYzAxNjljNDQ2MTNjY2U0ODFhMThiOWY2ZDY3MGRlYzE3MGI=",
-      "created_at": 1774470675,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDI1NmIwN2M3NThkZjVhMzAxNjljNWFhMTljZWEwODFhMGEyOTRiOGIzYWZmMmJlZDg=",
+      "created_at": 1774561817,
       "metadata": {},
       "model": "gpt-5.3-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "rs_017d494d2cb359ac0169c44614519081a19142dfd43ddfc051",
+          "id": "rs_0256b07c758df5a30169c5aa1a845881a09c840dd45e04d8cf",
           "summary": [],
           "type": "reasoning"
         },
         {
-          "id": "msg_017d494d2cb359ac0169c44614948881a1b411c0b8fd02b731",
+          "id": "msg_0256b07c758df5a30169c5aa1b29a481a0a0281a8b3f41aa13",
           "content": [
             {
               "annotations": [],
@@ -85,18 +85,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 23,
+        "output_tokens": 35,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 36
+        "total_tokens": 48
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470676,
+      "completed_at": 1774561819,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

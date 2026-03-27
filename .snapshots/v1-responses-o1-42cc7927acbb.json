@@ -1,0 +1,127 @@
+{
+  "key": "v1-responses-o1-42cc7927acbb",
+  "test": {
+    "name": "returns reasoning text with openai/o1",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "o1",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ],
+      "reasoning": {
+        "effort": "high",
+        "summary": "auto"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "10070",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDYwY2NiZTdkMWQyYTIwZDAxNjljNWFkNTA3MTY0ODE5NmFkNzZlYWYwMjcxM2Q0YmI=",
+      "created_at": 1774562640,
+      "metadata": {},
+      "model": "o1-2024-12-17",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_060ccbe7d1d2a20d0169c5ad50d5dc8196b18723bc3b48bc3e",
+          "summary": [
+            {
+              "text": "**Calculating 17 times 19**\n\nTo solve 17 multiplied by 19, let's break it down step by step. First, I can calculate 17 times 10, which equals 170. Then, I can find 17 times 9, which equals 153. Finally, I will add these two results together: 170 plus 153 gives me 323.\n\n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Explaining the multiplication of 17 and 19**\n\nI can approach this multiplication in a couple of ways. First, since 19 is 20 minus 1, I can rewrite it as:\n\n1) 17 times 19 = 17 times (20 - 1)\n2) This becomes 17 times 20 minus 17 times 1, which is 340 minus 17, equaling 323.\n\nAlternatively, I can calculate it step by step:\n\n1) 17 times 10 equals 170\n2) 17 times 9 equals 153\n3) Adding those results gives 323.\n\nSo, the final answer is:\n\n323",
+              "type": "summary_text"
+            }
+          ],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_060ccbe7d1d2a20d0169c5ad5a31588196be6abc4ed37c3f0b",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Explanation of reasoning:\n1. One way to calculate 17 × 19 is to use the distributive property. Notice that 19 = 20 - 1.\n2. Therefore, 17 × 19 = 17 × (20 - 1).\n3. This equals 17 × 20 - 17 × 1 = 340 - 17.\n4. Subtracting gives 340 - 17 = 323.\n\nFinal Answer:\n323",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "high",
+        "summary": "detailed"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 35,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 902,
+        "output_tokens_details": {
+          "reasoning_tokens": 384
+        },
+        "total_tokens": 937
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1774562650,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
+    }
+  }
+}

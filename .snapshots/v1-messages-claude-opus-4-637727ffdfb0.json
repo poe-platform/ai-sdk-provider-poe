@@ -1,0 +1,78 @@
+{
+  "key": "v1-messages-claude-opus-4-637727ffdfb0",
+  "test": {
+    "name": "claude-opus-4 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:55:28Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-20250514",
+      "id": "req_poe_8918db7e0765402f9a3de2bba1b96b3d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19 step by step.\n\nMethod 1: Standard multiplication\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nLet me verify this another way:\n\nMethod 2: Breaking it down differently\n17 * 19 = (20 - 3) * 19 = 20 * 19 - 3 * 19 = 380 - 57 = 323\n\nMethod 3: Traditional multiplication\n    17\n  x 19\n  ----\n   153  (17 * 9)\n  170   (17 * 10)\n  ----\n  323\n\nAll methods give me 323, so I'm confident in the answer.",
+          "signature": "Et0ECkgIDBACGAIqQFFVYWiT9szUr44T0SJ9z03zw78tATuhpLGzYdn/mHABwwmbxT16tEg1t3fxWVIkckL9MXzihLlg5k03e3Mg/OASDJmgutv8V1ws2UolihoMHIgnYTHW4dEc//pBIjCFAw9kTB0ko6ifa7nd6orgT3kN0GeSQrIhZRW0w1IYTUK7RUqyfaZFVIwI7llrKf0qwgP2ZK0TP/fwQ6LrUlzoFqwz1S7ktEfCprpzQX6c8qz75gwseP1nLYk379EgzIgY4XsPGdwSc0NZzjHbcCGgR3iv5t7YYN0e1pHI5SWtfSzD10E9FJUu9mcl0bSCS5I9UtPW5x17m7zT29COK3FYaSkPAWeifhkJBb3uc4tshPSi0fRpNlipH4xcUL1Vy4CU2Aprnb1TcyGQV6Wv3pQLxO+hbKSvQbCi6w3XwQlNPVQj3njtc7eH16R57DS8n/lc8o79Ds1YQP/qNcFuvxN+XDDPys7NP+ZYqe1yRHfz2bmzVeyHrg/ppAxnH583J/EClV3sIwOpDSJMJIeT6hzKkIQJbOKV8+qXm/jaop1GxgH93p2eBgtN3G6IMJH9xH76yc5JL4qexVEWSCuU7PI7TjcQlH5xKO2iLMrcdOzzsj0JKqtt+CPdBcQn7/BW/bbepvzBS5yCPSRuPUrktyJRXA6CE19ijYdmYpUqqPPOgq7qcGSj6TGhUYiQTS0yaSu8KAk82lqZDzEFQU2X/RAj4wYWIGXd2ISfUn2Kg9poL6yG4qKzbWv+qMLN0pTg/5zFb+8WaqALkTUHGc2IUNfiLHTxHQ4YAQ=="
+        },
+        {
+          "type": "text",
+          "text": "I'll solve 17 × 19 step by step.\n\n**Method 1: Using the distributive property**\n- I can rewrite 19 as (20 - 1)\n- So: 17 × 19 = 17 × (20 - 1)\n- This equals: 17 × 20 - 17 × 1\n- 17 × 20 = 340\n- 340 - 17 = 323\n\n**Method 2: Traditional multiplication**\n```\n    17\n  × 19\n  ----\n   153  (17 × 9)\n +170   (17 × 10)\n  ----\n   323\n```\n\nBoth methods confirm the same result.\n\n323"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 380,
+        "total_tokens": 447
+      }
+    }
+  }
+}

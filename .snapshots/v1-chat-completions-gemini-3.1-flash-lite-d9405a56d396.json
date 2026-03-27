@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-3.1-flash-lite-d9405a56d396",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-3.1-flash-lite",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-flash-lite",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "23154",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-20206b6bd4d92a1943f84306",
+      "object": "chat.completion",
+      "created": 1774579781,
+      "model": "gemini-3.1-flash-lite",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To solve 17 * 19, we can use the distributive property to simplify the calculation:\n\n1.  **Rewrite the problem:** It is easier to multiply by numbers that end in zero. Since 19 is very close to 20, we can rewrite 19 as (20 - 1). The problem becomes 17 * (20 - 1).\n2.  **Distribute:** Multiply 17 by each part of the expression inside the parentheses: (17 * 20) - (17 * 1).\n3.  **Calculate the first part:** 17 * 20 is the same as 17 * 2, then add a zero. Since 17 * 2 = 34, then 17 * 20 = 340.\n4.  **Calculate the second part:** 17 * 1 = 17.\n5.  **Subtract:** Now, subtract the second part from the first: 340 - 17.\n6.  **Final result:** 340 - 10 = 330, and 330 - 7 = 323.\n\n323",
+            "reasoning_content": "**Contemplating the Approach**\n\nI've been meticulously dissecting the prompt. My primary focus is on the most efficient methodology for calculating the product of 17 and 19. I'm leaning toward breaking down the multiplication into manageable components, ensuring clarity in each step. Currently, I'm charting the logical progression for the response.\n\n\n",
+            "reasoning": "**Contemplating the Approach**\n\nI've been meticulously dissecting the prompt. My primary focus is on the most efficient methodology for calculating the product of 17 and 19. I'm leaning toward breaking down the multiplication into manageable components, ensuring clarity in each step. Currently, I'm charting the logical progression for the response.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 225,
+        "total_tokens": 255
+      }
+    }
+  }
+}

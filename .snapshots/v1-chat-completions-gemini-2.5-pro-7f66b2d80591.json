@@ -1,0 +1,95 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-pro-7f66b2d80591",
+  "test": {
+    "name": "handles tool calling with gemini-2.5-pro",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "1677",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-1c2d9abefaeb08bfb052382a",
+      "object": "chat.completion",
+      "created": 1774579384,
+      "model": "gemini-2.5-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_667YPU6uPRAe1VUcp4QX",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                },
+                "extra_content": {
+                  "google": {
+                    "thought_signature": "CiQBjz1rXwrgC9PWahBZAOJn5PWOnkdbaLnPakrnl54vTcMAXWIKeQGPPWtfd/LMsmQmDzEwZvq4FzN+hz8LpDs5MAwEBbr3QJDKC4t8mORAdiWaLlcUyM/0nidYfcdUy3ycb75Okn7V9oteiZMPlTDkhakZXJ8kCLoVvdvIewauukZ4ZmUNk/w1d+nA2LyL6+zq/4kcavULCvgAWw3kKXoKfAGPPWtf7e36l4UN/a+XVChIfKSKqw/Yca3VjtUpDMQ4Ot2Psp7FJwL27vLmpYXOS76eeY9G053qZGALy3oouZacdHK3axNpFCfevm7satPZ7blfVvlC9m7F0FYupseOWv1VoHdhyWARjW/RERWTH9FudQmVTp7oNOAgyXEKsAEBjz1rX1jTZI53eueCMb9MzWfWIGfp5i7FhLF50WT6hpv7kTRre6U6ekHcNso7e2BnqL0LPJW8ZyosV6PY5kBRRmaYOASqWeA0DqU5sINq6qA5L6KcASMB73Yl61tQeB19xDmakNil5Z+bD51vnlWIgt/E1qViW+KA8rfTtcf2TLal41wQDqKc5ZWTH1y46HmXFCdhKzLFFfCgycOiwGT0zNV6MXy2rAnJA+k781ddEApxAY89a19GtRLuBIRwWFvdCJ9a2WKT4uSLdEpOjo6GZxbxfJOCDVKJjqZI114kRUIJy3Eo7R5lw1WD3aU2TeYH9+q/+PVJxigg2g/bCjxcoR1cb7jKQdJOwHmy1+3155uBPGQ/ug6WR8slA+djQPcD1c4="
+                  }
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
+      }
+    }
+  }
+}

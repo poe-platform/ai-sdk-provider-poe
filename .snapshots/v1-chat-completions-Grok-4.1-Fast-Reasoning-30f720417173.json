@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Grok-4.1-Fast-Reasoning-30f720417173",
   "test": {
     "name": "generates text with Grok-4.1-Fast-Reasoning",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,41 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "5072",
+      "openai-processing-ms": "3480",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5eeb06bcb44b0caf30d17bcf",
+      "id": "chatcmpl-3cbddec6f54c9c402f6c6e69",
       "object": "chat.completion",
-      "created": 1774470771,
+      "created": 1774577769,
       "model": "Grok-4.1-Fast-Reasoning",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there friend!"
+            "content": "Hello my friend."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
+        "prompt_tokens": 7,
         "completion_tokens": 4,
-        "prompt_tokens": 163,
-        "total_tokens": 167,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 377,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 151
-        }
+        "total_tokens": 11
       }
     }
   }

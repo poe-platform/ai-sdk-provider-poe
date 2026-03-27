@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-sonnet-4-7dc5e7874c24",
   "test": {
     "name": "handles tool calls",
-    "file": "tests/integration/anthropic.test.ts"
+    "file": "src/poe-provider.anthropic.integration.test.ts"
   },
   "request": {
     "body": {
@@ -51,7 +51,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:18Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:18Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -62,7 +62,7 @@
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_3388931dc5e64deca3b453caba78cf36",
+      "id": "req_poe_52bdb7114dad424c94ef581741eb2a07",
       "type": "message",
       "role": "assistant",
       "content": [
@@ -72,7 +72,7 @@
         },
         {
           "type": "tool_use",
-          "id": "toolu_vrtx_01WJGPDUEBPWTuvrPP7Nx3XL",
+          "id": "toolu_vrtx_01VAy4rJ2PnqzLzczvkbD3Zw",
           "name": "getWeather",
           "input": {
             "location": "San Francisco"

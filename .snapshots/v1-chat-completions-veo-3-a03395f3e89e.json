@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "63718",
+      "openai-processing-ms": "64033",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-e338623211cad0647bbe93bb",
+      "id": "chatcmpl-77a0fff11667844891f259db",
       "object": "chat.completion",
-      "created": 1774480798,
+      "created": 1774579609,
       "model": "veo-3",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/video/5649eb435aca29a42a44b140459657f7d3f7483904a0dac47f9f6fa4343f84e2"
+            "content": "https://pfst.cf2.poecdn.net/base/video/222ad2ab602da5ea4d00eda44c725ec9978adb31f43ac6e0f353e5905be32a24"
           },
           "finish_reason": "stop"
         }

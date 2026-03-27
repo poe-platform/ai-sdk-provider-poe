@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-opus-4-5-20250514-55996201ca0f",
   "test": {
     "name": "caches tokens on repeated calls with claude-opus-4-5",
-    "file": "tests/integration/anthropic-caching.test.ts"
+    "file": "src/poe-provider.anthropic-caching.integration.test.ts"
   },
   "request": {
     "body": {
@@ -39,8 +39,8 @@
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
-      "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:47:05Z",
+      "anthropic-ratelimit-requests-remaining": "498",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:56:10Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -51,13 +51,13 @@
     },
     "body": {
       "model": "claude-opus-4-5-20251101",
-      "id": "req_poe_d7c5dfe376ab4492b43e258ddbb19599",
+      "id": "req_poe_d1aace5e43944ef19f1e43514e951c69",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and employing principles from Bravais lattice theory and point group symmetry operations to analyze asymmetric units defined by glide plane reflections and screw axis rotations."
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, focusing particularly on monoclinic and triclinic crystal systems and analyzing their symmetry properties through glide plane reflections, screw axis rotations, and tensor analysis of anisotropic properties."
         }
       ],
       "stop_reason": "end_turn",
@@ -70,8 +70,8 @@
           "ephemeral_5m_input_tokens": 4487,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 72,
-        "total_tokens": 75
+        "output_tokens": 63,
+        "total_tokens": 66
       }
     }
   }

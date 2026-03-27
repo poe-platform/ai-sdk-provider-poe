@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-4o-search-6985cd438b40",
   "test": {
     "name": "generates text with gpt-4o-search",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "3526",
+      "openai-processing-ms": "6398",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-cf55b52df9956d22220260f7",
+      "id": "chatcmpl-fb8c85d7eb255afe3d1dac01",
       "object": "chat.completion",
-      "created": 1774470827,
+      "created": 1774561949,
       "model": "gpt-4o-search",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello! How are you? "
+            "content": "Here are some three-word phrases used to say hello:\n\n- \"Good morning, everyone.\"\n- \"How are you?\"\n- \"It's nice to meet you.\"\n\nThese greetings are commonly used in English to welcome someone or initiate a conversation. "
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 7,
+        "completion_tokens": 48,
         "prompt_tokens": 7,
-        "total_tokens": 14,
+        "total_tokens": 55,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,

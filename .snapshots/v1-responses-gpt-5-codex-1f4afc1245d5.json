@@ -1,0 +1,118 @@
+{
+  "key": "v1-responses-gpt-5-codex-1f4afc1245d5",
+  "test": {
+    "name": "returns reasoning text with openai/gpt-5-codex",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5-codex",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ],
+      "reasoning": {
+        "effort": "high",
+        "summary": "auto"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1169",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDU3NmZhNGM5NDcxYzFmNTAxNjljNWFkMzMwYWQwODFhMWE5NjAwZTE2M2U4YjA4ZDM=",
+      "created_at": 1774562611,
+      "metadata": {},
+      "model": "gpt-5-codex",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_0576fa4c9471c1f50169c5ad33590081a1902c7378134c80a6",
+          "summary": [],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_0576fa4c9471c1f50169c5ad33df4881a1b72a84f18a7933f6",
+          "content": [
+            {
+              "annotations": [],
+              "text": "To find 17 × 19, note that 19 = 20 − 1, so 17 × 19 = 17 × 20 − 17 × 1 = 340 − 17 = 323.\n\n323",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "high",
+        "summary": "detailed"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 35,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 82,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 117
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1774562612,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "key": "v1-chat-completions-gemini-3.1-pro-8a7e468161e8",
+  "test": {
+    "name": "generates text with gemini-3.1-pro",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "10215",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-20fad46bfdb470459d5dbe0e",
+      "object": "chat.completion",
+      "created": 1774579933,
+      "model": "gemini-3.1-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello to you.",
+            "reasoning_content": "**Evaluating Constraints & Options**\n\nI've been meticulously sifting through the constraints of this \"hello\" request. Initial ideas like \"Hello to you\" are shaping up well, and I am actively assessing how closely they align with the specifications.\n\n\n**Narrowing the Selection**\n\nI'm now prioritizing the most appropriate greeting. \"Hello there friend\" has a nice ring, but \"Hello to you\" feels more directly compliant. The constraints are straightforward, and I'm leaning towards \"Hello to you.\" I'm also now carefully checking word counts, just to be sure.\n\n\n",
+            "reasoning": "**Evaluating Constraints & Options**\n\nI've been meticulously sifting through the constraints of this \"hello\" request. Initial ideas like \"Hello to you\" are shaping up well, and I am actively assessing how closely they align with the specifications.\n\n\n**Narrowing the Selection**\n\nI'm now prioritizing the most appropriate greeting. \"Hello there friend\" has a nice ring, but \"Hello to you\" feels more directly compliant. The constraints are straightforward, and I'm leaning towards \"Hello to you.\" I'm also now carefully checking word counts, just to be sure.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 4,
+        "total_tokens": 11
+      }
+    }
+  }
+}

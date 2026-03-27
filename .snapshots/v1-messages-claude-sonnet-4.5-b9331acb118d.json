@@ -1,0 +1,78 @@
+{
+  "key": "v1-messages-claude-sonnet-4.5-b9331acb118d",
+  "test": {
+    "name": "claude-sonnet-4.5 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:55:03Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-5-20250929",
+      "id": "req_poe_417a8024072944bf9b7494852a355607",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me think about the best way to do this. I can use a few different methods:\n\nMethod 1: Direct multiplication\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nMethod 2: Using the difference of squares formula\nSince 17 and 19 are both close to 18, I can use:\n17 * 19 = (18 - 1)(18 + 1) = 18² - 1² = 324 - 1 = 323\n\nMethod 3: Traditional multiplication\n  17\n× 19\n----\n 153  (17 * 9)\n170  (17 * 10)\n----\n323\n\nLet me verify with method 3:\n17 * 9 = 153\n17 * 10 = 170\n153 + 170 = 323\n\nAll methods give me 323.",
+          "signature": "EtAFCkgIDBACGAIqQC5ItTb83rPtytqnpaKu/cnEyM+fUKS/HmksrYth/8Ds8R/8LW2y+OQk8CVoBWKd2s632ziJrBPOJPY1gWO6sIwSDHyoBC9i7VoJVpP2hxoMl7w8K5EGkZjbCFJCIjC2J7lplFmJl8LtaZMpALTLErqoZVAC68rRUEJzr6DVR2hEjZnz6bBaQkH1rttnp3EqtQTNiEL8QLNfUbjHOmFbylrEQqxZGQnOgtY9ZFgSug+v8r/klvcAKA0IJXdIDQQ1qqSBc6vmqo0p053Nv5N+fxg7wUAC7m2XkLr1YcN/e9GYcI+j3zmyEKmZKaPi3mGyQaOvRxKZ15qY3r8/4d8H4YL7dzJJJkjwVWWw+BlCEeJd9EJQY710BYA8CZwxwNGvYMVIDaI1Y0ev0DE2o6ZYpfDPd3f2oJ8FvwJtF9IUucJZdJidAhEkn+7imc4YFHt66L+hCQTufb3HHoWevm9sfyxHYsAjIwkaTzkxX/YBrSMFGQXtkuxN1dckpKH8LVsUsOT+SJaxvVsk+PXJ28LDIxN3f+c6pQKHjbbckmg4GS//iZ9k46Y16unn+Mh/OnkXLGeri8iP1XZPOESDOgaVTVIa4OrpuExkUMYb8Qh6qFVNLga41j/ePJxPVZVD4VexEHCi/k/BWiz0vcnFlygNIF+A2NQnw0NVxUDMkZdD2AxezKPzX3mHg8hm4P+4l51DGycggJD0IsD9seEgDlBPPX1PjndQa/4P+QZ/KoIHMLw6b4LEkgg2bGg8AGllopeGhLiUtng1AkAWM0LzAdB7k2/jCiGAJpMTuDjgaIIQJr4ETGBOaq3tQ8HYdSjlwPTZzvQDQln55ad1CnUfhCTQh3UYL8WG5vB4FP+GxFkILwwHqANJJO/FhMmp3WUdXMtBDBgK3DibW8nsfMg/QCEgQY8E0x75Hcxcpzk/Dv4coFPl9urfOkGIGAE="
+        },
+        {
+          "type": "text",
+          "text": "# Reasoning\n\nI'll solve 17 × 19 using the distributive property to make the calculation easier.\n\nI can break down 19 as (20 - 1):\n\n**17 × 19 = 17 × (20 - 1)**\n\nNow I'll distribute:\n- 17 × 20 = 340\n- 17 × 1 = 17\n\nSo: 340 - 17 = 323\n\nTo verify, I can also use the difference of squares since 17 and 19 are equidistant from 18:\n- (18 - 1)(18 + 1) = 18² - 1² = 324 - 1 = 323 ✓\n\n# Final Answer\n\n323"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 431,
+        "total_tokens": 498
+      }
+    }
+  }
+}

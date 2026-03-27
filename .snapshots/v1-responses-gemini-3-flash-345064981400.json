@@ -1,0 +1,103 @@
+{
+  "key": "v1-responses-gemini-3-flash-345064981400",
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "5027",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOm80X0ZhY0VvLWJHZi1nLUVvTnZKREE=",
+      "created_at": 1774555042,
+      "metadata": {},
+      "model": "gemini-3-flash-preview",
+      "object": "response",
+      "output": [
+        {
+          "type": "message",
+          "id": "o4_FacEo-bGf-g-EoNvJDA",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "To solve $17 \\times 19$, we can use a few different mental math strategies:\n\n1.  **Method 1: Difference of Squares**\n    Notice that both numbers are equidistant from $18$ ($17$ is $18 - 1$ and $19$ is $18 + 1$). \n    We can use the formula $(a - b)(a + b) = a^2 - b^2$:\n    $(18 - 1)(18 + 1) = 18^2 - 1^2$\n    Since $18^2 = 324$ and $1^2 = 1$:\n    $324 - 1 = 323$\n\n2.  **Method 2: Distributive Property**\n    You can break the multiplication down by treating $19$ as $(20 - 1)$:\n    $17 \\times (20 - 1) = (17 \\times 20) - (17 \\times 1)$\n    $17 \\times 20 = 340$\n    $340 - 17 = 323$\n\nBoth methods confirm that $17 \\times 19 = 323$.\n\n323",
+              "annotations": [],
+              "logprobs": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        }
+      },
+      "usage": {
+        "input_tokens": 31,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 31
+        },
+        "output_tokens": 651,
+        "output_tokens_details": {
+          "reasoning_tokens": 365,
+          "text_tokens": 286
+        },
+        "total_tokens": 682
+      },
+      "provider_specific_fields": {
+        "traffic_type": "ON_DEMAND"
+      },
+      "completed_at": 1774555042,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "reasoning": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null,
+      "background": false,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "store": true,
+      "top_logprobs": 0,
+      "top_p": 1,
+      "truncation": "disabled"
+    }
+  }
+}

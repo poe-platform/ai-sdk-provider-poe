@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-image-1-dd3484fd64ae",
   "test": {
     "name": "generates text with gpt-image-1",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "28381",
+      "openai-processing-ms": "27340",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-b633a25e0b359d93314d0267",
+      "id": "chatcmpl-d4a7e5721a0f473bf8a9fdc7",
       "object": "chat.completion",
-      "created": 1774470858,
+      "created": 1774561978,
       "model": "gpt-image-1",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words.png](https://pfst.cf2.poecdn.net/base/image/0d4c4d8b72d3aa52b9c2172adc3155d6a25b201cb4857cdca2598c2c5414921b?w=1024&h=1024)\n\nhttps://pfst.cf2.poecdn.net/base/image/0d4c4d8b72d3aa52b9c2172adc3155d6a25b201cb4857cdca2598c2c5414921b?w=1024&h=1024"
+            "content": "![Say hello in exactly 3 words.png](https://pfst.cf2.poecdn.net/base/image/1b37c9367ea13b9b35f1ebfc17bbc00e2bd640d87bd21fa340bc180ad101f2ed?w=1024&h=1024)\n\nhttps://pfst.cf2.poecdn.net/base/image/1b37c9367ea13b9b35f1ebfc17bbc00e2bd640d87bd21fa340bc180ad101f2ed?w=1024&h=1024"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 75,
-        "total_tokens": 82
+        "completion_tokens": 70,
+        "total_tokens": 77
       }
     }
   }

@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-nova-lite-2-a232919c35c8",
   "test": {
     "name": "generates text with nova-lite-2",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "5980",
+      "openai-processing-ms": "9820",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5d8284f00662190f70fcecab",
+      "id": "chatcmpl-dcaf4d3d5c6cfd905077523a",
       "object": "chat.completion",
-      "created": 1774471680,
+      "created": 1774577564,
       "model": "nova-lite-2",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "### Hello to you.  \n\n*(Exactly 3 words: \"Hello\", \"to\", \"you\")*",
+            "content": "### Hello to you.",
             "reasoning_content": "[REDACTED].",
             "reasoning": "[REDACTED]."
           },
@@ -49,14 +49,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 831,
-        "prompt_tokens": 88,
-        "total_tokens": 919,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 5,
+        "total_tokens": 12
       }
     }
   }

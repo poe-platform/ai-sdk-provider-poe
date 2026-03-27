@@ -1,0 +1,78 @@
+{
+  "key": "v1-messages-claude-sonnet-4-f0702fb9e7d0",
+  "test": {
+    "name": "claude-sonnet-4 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:55:21Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-20250514",
+      "id": "req_poe_149d509ea237482d9ba1380873db0620",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 × 19. Let me think about the best way to do this step by step.\n\nI can use the standard multiplication method, or I could use some mental math tricks.\n\nLet me try a mental math approach first. I notice that 17 is close to 20, and 19 is close to 20.\n\nMethod 1: Using the identity (a-b)(a+b) = a² - b²\nActually, let me try a different approach.\n\nMethod 2: Break it down\n17 × 19 = 17 × (20 - 1) = 17 × 20 - 17 × 1 = 340 - 17 = 323\n\nLet me verify this with the standard method:\n  17\n× 19\n----\n 153  (17 × 9)\n170   (17 × 10)\n----\n323\n\nLet me double-check the calculation:\n17 × 9 = 153 ✓\n17 × 10 = 170 ✓\n153 + 170 = 323 ✓\n\nBoth methods give me 323, so that's correct.",
+          "signature": "EugGCkgIDBACGAIqQG2YgRSwG/zz37Vs/o4eEhXmZaCDai46RXwC4LQf1t3WpregY/0Eb3XXfb5zdvFMM3xbxNzy1HsP/e5VeFOLWAUSDCxpA7NMrzxMiGW0bxoMq1RKYB0emrmTnBYCIjCJPyOpajJGw/NuLpSta/4pT50LxMYVtOIH04b4M6m7XMXdBh/9EXLg02UnrVeqVmUqzQXmAYNfgcV/Gr0Lerz92dbzTkUCpLb/gIPkBCAFauJ/fhCEJoiEeUiMGTD8icT6OKphwGusqE9uqzP+03jRCQhDE2xjYBtj+ZlLXreDzYKMTjrGsqKZnXqo+tt+onMx7bFGnJ+SQtgSnEbB9WKmDgtNOqySWYRaMklPrtKOcsJpRiPE0YrIRj5QADcoxL/3wkoxZ9+FhPhQP8o0Jf+fwDAggwANkyFIcugx0JPHJwC9OC/DroQa3cl5GAyhfRuDo1Rht8tx+M4JBsH4oh59glB9yx2aN+t8gF7AOJ71p0xEs6eUoINgld4wbS++wSRs3XxLWR64aqgaJDqzILLOu6t71EC/OA7Y5zSt2Ng9ZzDLHunfmRcXPfzu++1WnrwimR+mdh56jdNTaYMmHGkJA1XLiDIiZC0SOekc+75a8icZNPhUVI8Usmm2edACZslXGRu2S0sF7o6MJK9WG2+siLuwa+LpsLF4QaKu98NhvlDGTB4KVWEizfjDjO/0PqU8pV4suXCHQIz1DZBNC39+0Y73Ca5/hlxZXGMox6jojMt+83WdJKa9ITjbgNfQIEwTX1D8k1tymwkZZlorZu2CQW8QSEk8/k5WH74u9RerpianuRGwYHm1uh6JiCFj6f7knOgSanuK+4hMWetVNTWp64xb6cCT1ISVngdeBPZX7Gqct7eieoKw0BGvk+JWivT/GD8KTaaLmA5v46uypYP2mkFKAeSlYZAewLlsdFa6764rfWmRW2Lon2rq1ivIGDK7fH0VSsr/LNRAUrh00mhje8MAAUJ/xgq1sDVma97trp9pQGo5oypHQBhK3se8piq3SlNKhKs9GtOY4hSCmhBZKxrb0Nx3R7yt6WsbIi7B86OEhSur/RDt8P832QVj4UJh41ROfP2nvCXbPXhqeuQa5h5GkMbdwhoM+1fwOiWK9SRPBNVgapRRc3ap+B75p4wYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "I'll solve 17 × 19 using a mental math approach that breaks down the problem.\n\n**Reasoning:**\nI can rewrite 19 as (20 - 1) to make the multiplication easier:\n\n17 × 19 = 17 × (20 - 1)\n\nUsing the distributive property:\n= 17 × 20 - 17 × 1\n= 340 - 17\n= 323\n\n**Verification using standard multiplication:**\n```\n   17\n×  19\n-----\n  153  (17 × 9)\n 170   (17 × 1, shifted one place)\n-----\n 323\n```\n\n**Final answer:** 323"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 442,
+        "total_tokens": 509
+      }
+    }
+  }
+}

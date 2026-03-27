@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-2.5-flash-ffa039a0ef7d",
-  "test": {
-    "name": "generates text with gemini-2.5-flash",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-2.5-flash",
@@ -30,28 +26,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1268",
+      "openai-processing-ms": "817",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnRHekVhYXlRRHIya29NOFBvTWFmNEFv",
-      "created_at": 1774480564,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlBvN0ZhWUNXRXZiNjB2Y1BxWXljb0Fz",
+      "created_at": 1774554686,
       "metadata": {},
       "model": "gemini-2.5-flash",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "tGzEaayQDr2koM8PoMaf4Ao",
+          "id": "Po7FaYCWEvb60vcPqYycoAs",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Well hello there.",
+              "text": "Hello there!",
               "annotations": [],
               "logprobs": []
             }
@@ -74,17 +70,17 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 148,
+        "output_tokens": 73,
         "output_tokens_details": {
-          "reasoning_tokens": 144,
-          "text_tokens": 4
+          "reasoning_tokens": 70,
+          "text_tokens": 3
         },
-        "total_tokens": 155
+        "total_tokens": 80
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480564,
+      "completed_at": 1774554686,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

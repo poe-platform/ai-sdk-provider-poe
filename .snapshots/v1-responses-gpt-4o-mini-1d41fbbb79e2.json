@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-4o-mini-1d41fbbb79e2",
   "test": {
     "name": "generates text with gpt-4o-mini",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,25 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "501",
+      "openai-processing-ms": "686",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDNhMTNlNGQ0NGU2MWNiNTAxNjljNDQ2OTkzYTIwODE5Mjk0ZTFiZDhhYTdkMmNiYWM=",
-      "created_at": 1774470809,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDdkNzk2MDM3ZmNiOGRhMDAxNjljNWFhOGJjYTQ4ODE5MzhiYmM0MGVhYWJhMzlhZWM=",
+      "created_at": 1774561931,
       "metadata": {},
       "model": "gpt-4o-mini-2024-07-18",
       "object": "response",
       "output": [
         {
-          "id": "msg_03a13e4d44e61cb50169c4469987fc81929ca27eec529f0138",
+          "id": "msg_07d796037fcb8da00169c5aa8c40748193b33ff792220cded1",
           "content": [
             {
               "annotations": [],
-              "text": "Hello, how are you?",
+              "text": "Hello there, friend!",
               "type": "output_text",
               "logprobs": []
             }
@@ -80,18 +80,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 7,
+        "output_tokens": 6,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 21
+        "total_tokens": 20
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470809,
+      "completed_at": 1774561932,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

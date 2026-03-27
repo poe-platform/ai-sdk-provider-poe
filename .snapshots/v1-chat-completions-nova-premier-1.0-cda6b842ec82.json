@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-nova-premier-1.0-cda6b842ec82",
   "test": {
     "name": "generates text with nova-premier-1.0",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,38 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "3882",
+      "openai-processing-ms": "3014",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-d63cb1a348cde1501c40b8b7",
+      "id": "chatcmpl-2cb44553ee110d09df995ccc",
       "object": "chat.completion",
-      "created": 1774471667,
+      "created": 1774577554,
       "model": "nova-premier-1.0",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "\nHi there friend",
-            "reasoning_content": "\n- The user requests a hello message using exactly 3 words. \n- Common greetings include \"Hello there\" (too long) or \"Hi there\" (valid). \n- Must confirm the total word count strictly equals three. \n- \"Hello world\" is another candidate, but \"Hi friend\" also fits and is friendly. \n- The key is adhering to the exact requirement of three words.\n",
-            "reasoning": "\n- The user requests a hello message using exactly 3 words. \n- Common greetings include \"Hello there\" (too long) or \"Hi there\" (valid). \n- Must confirm the total word count strictly equals three. \n- \"Hello world\" is another candidate, but \"Hi friend\" also fits and is friendly. \n- The key is adhering to the exact requirement of three words.\n"
+            "content": "\nHello there friend.",
+            "reasoning_content": "\n- Need exactly 3 words. \n- Common greetings: \"Hello there\", \"Hi buddy\", \"Hey friend\". \n- \"Hello there\" fits perfectly with 3 words. \n- Verify count: Hello (1) there (2) = total 3. \n- Meets requirement.\n",
+            "reasoning": "\n- Need exactly 3 words. \n- Common greetings: \"Hello there\", \"Hi buddy\", \"Hey friend\". \n- \"Hello there\" fits perfectly with 3 words. \n- Verify count: Hello (1) there (2) = total 3. \n- Meets requirement.\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 105,
-        "prompt_tokens": 117,
-        "total_tokens": 222,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 5,
+        "total_tokens": 12
       }
     }
   }

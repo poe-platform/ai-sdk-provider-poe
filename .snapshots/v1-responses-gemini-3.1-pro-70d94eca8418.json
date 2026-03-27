@@ -2,7 +2,7 @@
   "key": "v1-responses-gemini-3.1-pro-70d94eca8418",
   "test": {
     "name": "generates text with gemini-3.1-pro",
-    "file": "src/poe-provider.google.integration.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,28 +30,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "5507",
+      "openai-processing-ms": "5084",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOm9HekVhWXVOQ1pqRi03VVAtdGVxeUFR",
-      "created_at": 1774480544,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOjB1ZkZhWVdLTU9HQnh0VVB0SUx0MlFN",
+      "created_at": 1774577618,
       "metadata": {},
       "model": "gemini-3.1-pro-preview",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "oGzEaYuNCZjF-7UP-teqyAQ",
+          "id": "0ufFaYWKMOGBxtUPtILt2QM",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Hello to you.",
+              "text": "Hello there, friend!",
               "annotations": [],
               "logprobs": []
             }
@@ -74,17 +74,17 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 305,
+        "output_tokens": 359,
         "output_tokens_details": {
-          "reasoning_tokens": 301,
-          "text_tokens": 4
+          "reasoning_tokens": 354,
+          "text_tokens": 5
         },
-        "total_tokens": 312
+        "total_tokens": 366
       },
       "provider_specific_fields": {
         "traffic_type": "PROVISIONED_THROUGHPUT"
       },
-      "completed_at": 1774480544,
+      "completed_at": 1774577618,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

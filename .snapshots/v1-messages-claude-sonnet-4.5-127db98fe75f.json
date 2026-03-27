@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-sonnet-4.5-127db98fe75f",
+  "test": {
+    "name": "uses thinking with claude-sonnet-4.5",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:13:25Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-5-20250929",
+      "id": "req_poe_6f0cd5fa310342a097ad2d8728b6b155",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me use a simple method to break this down:\n\nMethod 1: Use the formula (a-b)(a+b) = a² - b²\nI can rewrite this as (18-1)(18+1) = 18² - 1² = 324 - 1 = 323\n\nLet me verify this with another method to be sure.\n\nMethod 2: Distribution\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nMethod 3: Traditional multiplication\n17\n× 19\n---\n153 (17 × 9)\n170 (17 × 10)\n---\n323\n\nAll methods give me 323, so that's the answer.",
+          "signature": "EvkECkgIDBACGAIqQManABIFfwVMKF5QeHF0uzuoPi9m1cKBAqetD6azClhpX0BA81gGzctKNfC+7Bi8Fr9TNKeVG9yVn1QaU2CkKFMSDOiThpAIqKwt4a8GOBoMuS8oEtyl/QfIIUfNIjBOhsS47yadi5fRuHnRSpMgCJiT4mp/kvhs8G8bzBeCaW0hIsjU1hUp2Axky4cYh7oq3gOuxaceFfxD24xldsBNd7iSF6iTgs58DTfICcj8eoXwQLv5o/ysvvH0nzvAKUhv8MISQouMUVHkFkBJWPqmC0kacNTHz7nDHM4O0+bwTBmgBhvmld8oLa73W/2iwcpIcxrbUm47iwv0hXM1aq9NGcCWI3vlpsGVhDvHNqQJMOwhmIf1TqadW3h4LvQxFVlrrpr0xRJSgRI/F6BgXki8UuoueN/PNcmKDbhx3SIIdpbn/tT7Epc1vQqZzFzpxWmccSqvR/4qzjiHPKgotUTPR9QYUnu42ceFk0/RNATSzCgnC070TyXxdZ2HX4+2HtZ/Z/iFLvcAGB8KBIbLWGTiZOOj3NPnyDnN/ZkBM8YULm0/upCEgIo5R8lk3j/1luTGMgg1eiDcoStnww1ZmyHx0XiAmYuZO3hKpFQ24Q7pMdmOtoG4MuQF1kLw3oG0Vy/vihEfmNl+iVHdy08mzsKn1saXj0Afsn8S0N/HbzRS+WmYOCuyYC2nzOMBfSYgiIYcLwYhVNsNZTJHREmO15Ulf+Vq0yzDjq0sywDIaYm96FRH4auOVbQfV9Wgwu8VWSB8UmOPQBkqGY+MjLHNByPQHXyErRX/GxV12+iYcGZL5NuCzjehUiI3kSGeLThH8cz0GAE="
+        },
+        {
+          "type": "text",
+          "text": "# Reasoning\n\nI'll calculate 17 × 19 using the distribution method:\n\n**Break down 19 into easier numbers:**\n- 19 = 20 - 1\n\n**Apply the distributive property:**\n- 17 × 19 = 17 × (20 - 1)\n- = (17 × 20) - (17 × 1)\n- = 340 - 17\n- = 323\n\n**Verification using another method (difference of squares):**\n- Notice that 17 and 19 are equidistant from 18\n- 17 × 19 = (18 - 1)(18 + 1) = 18² - 1² = 324 - 1 = 323 ✓\n\n# Final Answer\n\n323"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 396,
+        "total_tokens": 463
+      }
+    }
+  }
+}

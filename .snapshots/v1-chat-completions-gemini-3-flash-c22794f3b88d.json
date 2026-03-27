@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-3-flash-c22794f3b88d",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-3-flash",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "5691",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-f46f77ae996e93bc26760c74",
+      "object": "chat.completion",
+      "created": 1774579735,
+      "model": "gemini-3-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To solve $17 \\times 19$, we can use the distributive property of multiplication, which involves breaking one of the numbers into a simpler form.\n\n1.  **Rewrite the expression:** We can express 19 as $(20 - 1)$.\n    So, $17 \\times 19$ becomes $17 \\times (20 - 1)$.\n\n2.  **Distribute the 17:** Multiply 17 by each number inside the parentheses:\n    $(17 \\times 20) - (17 \\times 1)$\n\n3.  **Calculate the parts:**\n    *   $17 \\times 20 = 340$ (since $17 \\times 2 = 34$, then add a zero).\n    *   $17 \\times 1 = 17$.\n\n4.  **Subtract the results:**\n    $340 - 17 = 323$.\n\nAlternatively, you can use the **difference of squares** method because 17 and 19 are both one unit away from 18:\n*   $(18 - 1) \\times (18 + 1) = 18^2 - 1^2$\n*   $18^2 = 324$\n*   $324 - 1 = 323$\n\n323",
+            "reasoning_content": "**Analyzing Multiplication Methods**\n\nI've been exploring different ways to multiply 17 by 19. I've broken it down to consider long multiplication as a standard approach. Then I'm working through difference of squares. Finally, I'm thinking about the distributive property. I plan to compare and contrast each method, looking for efficiency.\n\n\n**Contrasting Calculation Approaches**\n\nI've successfully performed the calculations for all three methods. Now, I'm leaning towards explaining the distributive property approach, specifically $17 \\times (20 - 1)$, due to its relative simplicity for mental calculation. I've also verified the final answer, ensuring accuracy across all the tested techniques.\n\n\n",
+            "reasoning": "**Analyzing Multiplication Methods**\n\nI've been exploring different ways to multiply 17 by 19. I've broken it down to consider long multiplication as a standard approach. Then I'm working through difference of squares. Finally, I'm thinking about the distributive property. I plan to compare and contrast each method, looking for efficiency.\n\n\n**Contrasting Calculation Approaches**\n\nI've successfully performed the calculations for all three methods. Now, I'm leaning towards explaining the distributive property approach, specifically $17 \\times (20 - 1)$, due to its relative simplicity for mental calculation. I've also verified the final answer, ensuring accuracy across all the tested techniques.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 262,
+        "total_tokens": 292
+      }
+    }
+  }
+}

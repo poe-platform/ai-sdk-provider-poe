@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-kimi-k2-thinking-14148d667b90",
   "test": {
     "name": "generates text with kimi-k2-thinking",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,43 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "9160",
+      "openai-processing-ms": "9486",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-5007491785416be4141bf729",
+      "id": "chatcmpl-30c31f46e6769feeab6b9dae",
       "object": "chat.completion",
-      "created": 1774471659,
+      "created": 1774577541,
       "model": "kimi-k2-thinking",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello there everyone",
-            "reasoning_content": "The user wants me to say hello in exactly 3 words.\n\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means the response must contain precisely three words.\n\nCommon 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi there, everyone\" (3 words)\n- \"Hello, how are\" (3 words, but incomplete)\n- \"Hey there, you\" (3 words)\n- \"Hello, nice day\" (3 words)\n- \"Greetings to all\" (3 words)\n- \"Hello, world!\" (This is tricky. \"Hello,\" is one word, \"world!\" is another. That's 2 words. But sometimes punctuation doesn't split words. \"Hello world\" is 2 words. \"Hello, world\" is 2 words. \"Hello world!\" is 2 words. So that doesn't work.)\n- \"Hello there everyone\" (3 words)\n- \"Hi there friend\" (3 words)\n- \"Hello my friend\" (3 words)\n\nThe simplest and most direct would be something like \"Hello there, friend\" or \"Hello everyone there\" or just \"Hello there everyone\".\n\nLet me count:\n- \"Hello\" = 1 word\n- \"there\" = 1 word\n- \"everyone\" = 1 word\n\nTotal: 3 words.\n\n\"Hello there everyone\" is a valid, natural-sounding greeting.\n\nOther options:\n- \"Hi there friend\" (also 3 words)\n- \"Hello dear friend\" (3 words)\n- \"Greetings earthlings everywhere\" (3 words, but a bit silly)\n- \"Hello to you\" (3 words)\n\nI think \"Hello there everyone\" is a good, neutral choice. Or even simpler: \"Hello there friend\".\n\nWait, let me re-read. \"Say hello\". This is a command. I should respond with a greeting.\n\n\"Hello there, friend\" - the comma doesn't create a new word. So that's 3 words.\n\"Hello there everyone\" - no comma needed, 3 words.\n\nLet me go with \"Hello there everyone\". It's clear, friendly, and exactly 3 words.",
-            "reasoning": "The user wants me to say hello in exactly 3 words.\n\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means the response must contain precisely three words.\n\nCommon 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi there, everyone\" (3 words)\n- \"Hello, how are\" (3 words, but incomplete)\n- \"Hey there, you\" (3 words)\n- \"Hello, nice day\" (3 words)\n- \"Greetings to all\" (3 words)\n- \"Hello, world!\" (This is tricky. \"Hello,\" is one word, \"world!\" is another. That's 2 words. But sometimes punctuation doesn't split words. \"Hello world\" is 2 words. \"Hello, world\" is 2 words. \"Hello world!\" is 2 words. So that doesn't work.)\n- \"Hello there everyone\" (3 words)\n- \"Hi there friend\" (3 words)\n- \"Hello my friend\" (3 words)\n\nThe simplest and most direct would be something like \"Hello there, friend\" or \"Hello everyone there\" or just \"Hello there everyone\".\n\nLet me count:\n- \"Hello\" = 1 word\n- \"there\" = 1 word\n- \"everyone\" = 1 word\n\nTotal: 3 words.\n\n\"Hello there everyone\" is a valid, natural-sounding greeting.\n\nOther options:\n- \"Hi there friend\" (also 3 words)\n- \"Hello dear friend\" (3 words)\n- \"Greetings earthlings everywhere\" (3 words, but a bit silly)\n- \"Hello to you\" (3 words)\n\nI think \"Hello there everyone\" is a good, neutral choice. Or even simpler: \"Hello there friend\".\n\nWait, let me re-read. \"Say hello\". This is a command. I should respond with a greeting.\n\n\"Hello there, friend\" - the comma doesn't create a new word. So that's 3 words.\n\"Hello there everyone\" - no comma needed, 3 words.\n\nLet me go with \"Hello there everyone\". It's clear, friendly, and exactly 3 words."
+            "content": "Hello to you",
+            "reasoning_content": "The user wants me to say hello in exactly 3 words.\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means the response must contain precisely 3 words.\n\nCommon 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi there everyone\" (3 words)\n- \"Hello to you\" (3 words)\n- \"Greetings to all\" (3 words)\n- \"Hello my friend\" (3 words)\n- \"Hello, how are\" (incomplete, not a greeting by itself)\n- \"Hi, nice day\" (3 words, but more of a comment)\n- \"Hello everyone there\" (3 words)\n\nThe simplest and most direct would be something like \"Hello there, friend\" or \"Hello to you\".\n\"Hello there, friend\" is 3 words: \"Hello\", \"there,\", \"friend\". The comma doesn't create a new word.\n\"Hello to you\" is also 3 words: \"Hello\", \"to\", \"you\".\n\nLet's go with \"Hello to you\". It's clear, direct, and exactly 3 words.\nAnother option: \"Hi there, friend\". Also 3 words.\nOr just \"Hello, everyone\". Wait, that's 2 words if you don't count the comma as a separator for words. \"Hello\" and \"everyone\". The comma is punctuation. So \"Hello, everyone\" is 2 words.\n\"Hello everyone\" is 2 words.\n\"Hello there friend\" is 3 words.\n\"Hello to you\" is 3 words.\n\"Hi there everyone\" is 3 words.\n\n\"Hello to you\" seems like a good choice. It's polite and fits the criteria.\n\"Hi there, friend\" also works.\n\"Greetings, earthlings\" is 2 words.\n\"Hello world again\" is 3 words.\n\nLet me just pick one. \"Hello to you\" is simple and effective.",
+            "reasoning": "The user wants me to say hello in exactly 3 words.\n\"Say hello\" means I need to greet them.\n\"Exactly 3 words\" means the response must contain precisely 3 words.\n\nCommon 3-word greetings:\n- \"Hello there, friend\" (3 words)\n- \"Hi there everyone\" (3 words)\n- \"Hello to you\" (3 words)\n- \"Greetings to all\" (3 words)\n- \"Hello my friend\" (3 words)\n- \"Hello, how are\" (incomplete, not a greeting by itself)\n- \"Hi, nice day\" (3 words, but more of a comment)\n- \"Hello everyone there\" (3 words)\n\nThe simplest and most direct would be something like \"Hello there, friend\" or \"Hello to you\".\n\"Hello there, friend\" is 3 words: \"Hello\", \"there,\", \"friend\". The comma doesn't create a new word.\n\"Hello to you\" is also 3 words: \"Hello\", \"to\", \"you\".\n\nLet's go with \"Hello to you\". It's clear, direct, and exactly 3 words.\nAnother option: \"Hi there, friend\". Also 3 words.\nOr just \"Hello, everyone\". Wait, that's 2 words if you don't count the comma as a separator for words. \"Hello\" and \"everyone\". The comma is punctuation. So \"Hello, everyone\" is 2 words.\n\"Hello everyone\" is 2 words.\n\"Hello there friend\" is 3 words.\n\"Hello to you\" is 3 words.\n\"Hi there everyone\" is 3 words.\n\n\"Hello to you\" seems like a good choice. It's polite and fits the criteria.\n\"Hi there, friend\" also works.\n\"Greetings, earthlings\" is 2 words.\n\"Hello world again\" is 3 words.\n\nLet me just pick one. \"Hello to you\" is simple and effective."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 451,
-        "prompt_tokens": 14,
-        "total_tokens": 465,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 446,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 3,
+        "total_tokens": 10
       }
     }
   }

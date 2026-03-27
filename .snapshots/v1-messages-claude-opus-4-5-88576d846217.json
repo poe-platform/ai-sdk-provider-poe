@@ -1,0 +1,78 @@
+{
+  "key": "v1-messages-claude-opus-4-5-88576d846217",
+  "test": {
+    "name": "uses extended thinking with anthropic/claude-opus-4-5",
+    "file": "src/poe-provider.anthropic.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4-5",
+      "max_tokens": 64000,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:53:52Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_69cd9ad164e04e8fbbf9869b0d65bc60",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me break this down step by step.\n\nMethod 1: Standard multiplication\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nMethod 2: Breaking it down differently\n17 * 19 = (10 + 7) * 19 = 10 * 19 + 7 * 19 = 190 + 133 = 323\n\nLet me verify: 7 * 19 = 7 * 20 - 7 = 140 - 7 = 133. Yes.\n190 + 133 = 323. Correct.\n\nSo the answer is 323.",
+          "signature": "EpwECkgIDBACGAIqQNOyIVsdgVocGQEe6PwPI/05K5XllGEjkLlpjeMWev5ehLZ01vSHoj27ntIgFazWT+XtgJcI5aO765DP6L8rnekSDAPYUXsbpYO8i85y6hoM2gkK3bLXWUxEIuo7IjCl2DFEj0gu3MiCPf0Py1UP/lPAAD4RK3WvXeDh44dSFbhsjNzeDo5Dbx5wtlhAaXAqgQPRog6nZEJrvFixDKvwR2zFReb4OwOdzFWE2ZcIs4DuyEomR1USR+SItdhIiwh2ZdLAjMa2KmqV8NrG50BVMcRHnzkYoTVoW23OefWuxxDpUBWK1PiVxDSI67ewu6Mnw9VkMnbaoSS2jlEWb1UYA8t6U1kMGs1lvG+zaCbGt2SOiVMqq7Pqj496GhIv+hRiEQPIlAvsQOqO0p5Y6kv2J5Vxjyhcrvc4V0VTZPnrTB9DjlCtuOo5m9pShFUEro/QYENiQm12mv3P08oLLrvhCAQn8Ol+mU55XM6QgjWmTRuF3obg+lFuDrsRK7NBAcUKYX2O87ep8IR3f3OmTvJVbkrGXwTl0MBnjDhF7Fcl7l1XqJBiLZWuJ4MSVma9MOGp8tigBX9yh317KkwH1PFDDVt85uwtK3Kpiyp03E1qie7XCCZfMsWFGxI7PeudNgLQo0K0iuReQ6WHUFHL+NF5Ps/Jf6wDtiU2kZmn03krxLgQ/x5ARR2Kl7vBBcXvwwjEXgA1GAE="
+        },
+        {
+          "type": "text",
+          "text": "## Reasoning\n\nI'll break this multiplication into simpler parts.\n\nI can rewrite 19 as (20 - 1), which makes the calculation easier:\n\n17 × 19 = 17 × (20 - 1)\n\nFirst, calculate 17 × 20 = 340\n\nThen subtract 17 × 1 = 17\n\nSo: 340 - 17 = 323\n\n**323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 299,
+        "total_tokens": 366
+      }
+    }
+  }
+}

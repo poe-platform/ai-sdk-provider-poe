@@ -1,0 +1,80 @@
+{
+  "key": "v1-messages-claude-sonnet-4.6-623e327e56d7",
+  "test": {
+    "name": "claude-sonnet-4.6 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-4.6",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:54:55Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-sonnet-4-6",
+      "id": "req_poe_210cba1864b149de91fe474f2ff6e6cc",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "17 * 19\n\nI can solve this by breaking it down:\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323",
+          "signature": "EqcCClsIDBgCKkBgJ/xobufiHsWCROP5Faz8YAiNG9DryHPiG9aU6ljdTxrSn1N5HxKXkkyu+3NjuuNsuL1/GR4JQh+Rz7uvXMvRMhFjbGF1ZGUtc29ubmV0LTQtNjgAEgzsK0Y1DDCKbbJFAA4aDIJDd/OZz6XVWduouiIwRMYfp9yot0Qsdh9OP2glYDizMw2Of1FBA0Uz3sHw5dHXFVS1QWJw/wa/lc9aM7quKnqc68ViRUthsC6Z0ne1sFrpfi3KAAo6TyT3HPbbiYooFDCBvOL0QrQtJOoDJaaEaKf85HdUFLtUMmmmPIZXMLP1SBspdePQeOgM5FKe/BifDfchnfQJ1oYI7N3XWHRsrfTWewYg+cspz0up0AEJ7A8TXpcQqGinltsTjRgB"
+        },
+        {
+          "type": "text",
+          "text": "## Reasoning\n\nTo solve 17 × 19, I'll use a helpful decomposition strategy:\n\n**Rewrite 19 as (20 - 1):**\n\n17 × 19 = 17 × (20 - 1)\n\n**Distribute the multiplication:**\n\n- 17 × 20 = 340\n- 17 × 1 = 17\n\n**Subtract:**\n\n340 - 17 = **323**\n\n---\n\n**17 × 19 = 323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 191,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "total_tokens": 258
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "key": "v1-messages-claude-sonnet-4-20250514-969daf063fb0",
   "test": {
-    "name": "caches tokens on repeated calls with claude-sonnet-4",
-    "file": "tests/integration/anthropic-caching.test.ts"
+    "name": "manual cacheControl still works",
+    "file": "src/workarounds/anthropic-cache.integration.test.ts"
   },
   "request": {
     "body": {
@@ -40,7 +40,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:47:15Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T03:04:36Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -51,27 +51,27 @@
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_7f58ef7892c04e9c9e8bed662f6543f2",
+      "id": "req_poe_20f13db01d904213836d94b23486f8a3",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, particularly focusing on monoclinic and triclinic crystal systems through analysis of glide plane reflections and screw axis rotations that define the asymmetric unit."
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, particularly focusing on monoclinic and triclinic crystal systems where practitioners analyze glide plane reflections and screw axis rotations to characterize the asymmetric unit using tensor analysis for anisotropic properties."
         }
       ],
       "stop_reason": "end_turn",
       "stop_sequence": null,
       "usage": {
         "input_tokens": 3,
-        "cache_creation_input_tokens": 4487,
-        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 4487,
         "cache_creation": {
-          "ephemeral_5m_input_tokens": 4487,
+          "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 56,
-        "total_tokens": 59
+        "output_tokens": 66,
+        "total_tokens": 69
       }
     }
   }

@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Nano-Banana-Pro-19b691540632",
   "test": {
     "name": "generates text with Nano-Banana-Pro",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,35 +25,35 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "27514",
+      "openai-processing-ms": "18217",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-ca02b722a84e17e97e418b3f",
+      "id": "chatcmpl-11f0b6a8c0d0e2f223ee8c20",
       "object": "chat.completion",
-      "created": 1774470692,
+      "created": 1774577714,
       "model": "Nano-Banana-Pro",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "**Evaluating Concise Greetings**\n\n\\n\\n\n\nI'm focused on the constraint of three words. Currently, I'm assessing the core \"hello\" options, filtering for brevity, and considering suitable alternatives. This involves prioritizing directness and avoiding any unnecessary language. I'm exploring ways to meet the word count without losing the essential meaning of a greeting.\n\n\n**Narrowing Greeting Choices**\n\n\\n\\n\n\nNow, I'm refining the list. After generating several options, I'm focusing on the tone and practicality of each. I'm prioritizing greetings that are widely understood and work well in various situations. It seems the best option I came up with is \"Hello to you.\" I am continuing to evaluate the nuances of each to find the most broadly applicable choice.\n\n\n**Simplifying Greeting Delivery**\n\n\\n\\n\n\nMy current thinking leans towards the most direct options. After further review, I'm testing several combinations. The core challenge is balancing simplicity and effectiveness. I'm streamlining the selection process, prioritizing brevity. I'm finding the optimal choice through a process of elimination. My latest iteration looks at \"Hello, hi, hey.\"\n\n\n**Selecting Final Greetings**\n\n\\n\\n\n\nMy focus is on the most natural-sounding three-word greetings. I am now evaluating the various options for the best combination. I have assessed \"Well, hello there\" and am reconsidering the use of simple greetings. I am focusing on the most direct and universally understood options. I'm prioritizing brevity.\n\n\n**Refining Final Selection**\n\n\\n\\n\n\nMy current thinking involves assessing the most natural-sounding three-word options. I am revisiting the previously generated phrases to choose the best ones. I've re-evaluated \"Well, hello there\" and also examined \"Hey there, hello.\" The simplest option is preferable. I'm leaning toward selecting the most direct option.\n\n\nHello to you."
+            "content": "**Analyzing the Task's Core**\n\nI'm focused on breaking down the core elements of the initial request, specifically the action and the constraints. The goal is to identify a greeting that satisfies the length limitation. I'm now exploring different options and quickly discarding those that don't fit the parameters.\n\n\n**Choosing the Greeting's Essence**\n\nI'm presently focusing on selecting the most appropriate three-word greeting. I've narrowed down the choices based on the initial brainstorm and am prioritizing a balance of directness and common usage. I'm leaning toward the more conventional option.\n\n\n**Refining the Greeting Choices**\n\nI'm now considering the subtleties of the selected greetings. I'm focusing on the implied meaning and potential context of \"Hello to you\" versus \"How are you?\". I'm also looking at the impact of formality and the universality of the greeting's application.\n\n\n**Revisiting Greeting Suitability**\n\nI'm now revisiting the options with a more critical eye. I'm reassessing \"Well hello there\" and its suitability as a functional greeting, considering how directly it fulfills the \"say hello\" directive. I'm also now analyzing the impact of slightly unconventional greetings.\n\n\n**Narrowing the Greeting's Choice**\n\nI'm revisiting the chosen greeting and I've gone through a lot of ideas. I considered \"How are you?\" before it occurred to me that I must include the word \"hello\". Now, I'm focusing on \"Well hello there\" as the most suitable option, despite some redundant alternatives.\n\n\n**Greeting Finalization Focus**\n\nI'm now revisiting all possible choices, making sure they comply with the word constraint. I'm focusing on the tone and practicality of each choice, checking that they fulfill the 'say hello' requirement. I am working towards a final selection based on common usage and universality.\n\n\n**Choosing the Best Greeting**\n\nI'm now revisiting all possible choices, making sure they comply with the word constraint. After a series of iterations, I am still debating between \"Well hello there\" and \"How are you?\". Both are valid greetings, but I am leaning towards \"How are you?\" due to its conversational familiarity, and direct functionality. I am now confident in my selection.\n\n\nHow are you?"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 1047,
+        "completion_tokens": 1582,
         "prompt_tokens": 7,
-        "total_tokens": 1054,
+        "total_tokens": 1589,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,
-          "reasoning_tokens": 1043,
+          "reasoning_tokens": 1578,
           "rejected_prediction_tokens": null
         },
         "prompt_tokens_details": {

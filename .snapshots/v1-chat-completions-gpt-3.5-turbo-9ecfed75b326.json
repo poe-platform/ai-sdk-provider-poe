@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-3.5-turbo-9ecfed75b326",
   "test": {
     "name": "generates text with gpt-3.5-turbo",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "428",
+      "openai-processing-ms": "537",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-39bb3da3337f2ceb672b6051",
+      "id": "chatcmpl-c0bb4bddae74daca0bddaa36",
       "object": "chat.completion",
-      "created": 1774471079,
+      "created": 1774562210,
       "model": "gpt-3.5-turbo",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Greetings. Howdy. Hey!"
+            "content": "Greetings, salutations, hello!"
           },
           "finish_reason": "stop"
         }

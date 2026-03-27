@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-3-flash-4e749e6538bd",
-  "test": {
-    "name": "generates text with gemini-3-flash",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-3-flash",
@@ -30,28 +26,28 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "2570",
+      "openai-processing-ms": "3511",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnNHekVhZkctRE5xby03VVBvN2luc1F3",
-      "created_at": 1774480560,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOk9ZN0ZhWmlUSGU2eG9NOFByYXVIbUFz",
+      "created_at": 1774554681,
       "metadata": {},
       "model": "gemini-3-flash-preview",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "sGzEafG-DNqo-7UPo7insQw",
+          "id": "OY7FaZiTHe6xoM8PrauHmAs",
           "status": "completed",
           "role": "assistant",
           "content": [
             {
               "type": "output_text",
-              "text": "Hello there friend.",
+              "text": "Hello there, friend.",
               "annotations": [],
               "logprobs": []
             }
@@ -74,17 +70,17 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 321,
+        "output_tokens": 451,
         "output_tokens_details": {
-          "reasoning_tokens": 317,
-          "text_tokens": 4
+          "reasoning_tokens": 446,
+          "text_tokens": 5
         },
-        "total_tokens": 328
+        "total_tokens": 458
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480560,
+      "completed_at": 1774554681,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

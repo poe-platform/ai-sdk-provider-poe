@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-haiku-3-5-aba530739438",
   "test": {
     "name": "handles tool calls",
-    "file": "tests/integration/anthropic.test.ts"
+    "file": "src/poe-provider.anthropic.integration.test.ts"
   },
   "request": {
     "body": {
@@ -51,7 +51,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:21Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:20Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -62,7 +62,7 @@
     },
     "body": {
       "model": "claude-3-5-haiku-20241022",
-      "id": "req_poe_6929d556c76d4020b025ca18953c05ff",
+      "id": "req_poe_ef9975dcadb2446aa16f09f7f86c643c",
       "type": "message",
       "role": "assistant",
       "content": [
@@ -72,7 +72,7 @@
         },
         {
           "type": "tool_use",
-          "id": "toolu_vrtx_01DXpxv3kegmRPM7kCJzgEcK",
+          "id": "toolu_vrtx_01VZrh89H8kFF7wa8CFs8jEV",
           "name": "getWeather",
           "input": {
             "location": "San Francisco"

@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5-chat-0d88f33a8fdd",
   "test": {
     "name": "generates text with gpt-5-chat",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,21 +30,21 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1186",
+      "openai-processing-ms": "462",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGY2OGU5N2QzODIyYzk5YzAxNjljNDQ2NGJmMzljODE5NGE3NWI1Mzk2Mzg1Y2Y4ZWY=",
-      "created_at": 1774470731,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDdhNzhmNzM5NGNiOTlhNTAxNjljNWFhNTcwMWRjODFhMWE5ODZmNTE5MmZmOThjYzc=",
+      "created_at": 1774561879,
       "metadata": {},
       "model": "gpt-5-chat-latest",
       "object": "response",
       "output": [
         {
-          "id": "msg_0f68e97d3822c99c0169c4464cbecc8194b592738bf51b6127",
+          "id": "msg_07a78f7394cb99a50169c5aa5748a481a182044fd6890f4911",
           "content": [
             {
               "annotations": [],
@@ -91,7 +91,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470732,
+      "completed_at": 1774561879,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

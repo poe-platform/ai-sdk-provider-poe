@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-sonnet-4-253dcc47573f",
   "test": {
     "name": "generates text",
-    "file": "tests/integration/anthropic.test.ts"
+    "file": "src/poe-provider.anthropic.integration.test.ts"
   },
   "request": {
     "body": {
@@ -28,7 +28,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:17Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:17Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -39,13 +39,13 @@
     },
     "body": {
       "model": "claude-sonnet-4-20250514",
-      "id": "req_poe_7e973e57b4af48ccb6e6e48adb28d37e",
+      "id": "req_poe_02b5f004254549ceab8c837c3eaecc97",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Hello there friend."
+          "text": "Hello there, friend!"
         }
       ],
       "stop_reason": "end_turn",
@@ -58,8 +58,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 7,
-        "total_tokens": 22
+        "output_tokens": 8,
+        "total_tokens": 23
       }
     }
   }

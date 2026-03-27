@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.3-codex-626b01b3f6d9",
   "test": {
     "name": "generates text with gpt-5.3-codex",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,25 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1014",
+      "openai-processing-ms": "692",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDgxYTk2NjM2OWQyZmUwNDAxNjljNDQ2MTAyYjYwODFhM2I4MjQ1YzI5ZGJlNzg4ZjA=",
-      "created_at": 1774470672,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGQ2YzMwNWVkNTA4NGVjNDAxNjljNWFhZjUzMWMwODE5ZDg5M2FiM2NlOTRlYzk1NjQ=",
+      "created_at": 1774562037,
       "metadata": {},
       "model": "gpt-5.3-codex",
       "object": "response",
       "output": [
         {
-          "id": "msg_081a966369d2fe040169c446108c5c81a383988aeece840343",
+          "id": "msg_0d6c305ed5084ec40169c5aaf5969c819d8adb0ffcfed8b03a",
           "content": [
             {
               "annotations": [],
-              "text": "Hello, nice to-meet-you.",
+              "text": "Hello to you.",
               "type": "output_text",
               "logprobs": []
             }
@@ -81,18 +81,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 12,
+        "output_tokens": 8,
         "output_tokens_details": {
           "reasoning_tokens": 0
         },
-        "total_tokens": 25
+        "total_tokens": 21
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470673,
+      "completed_at": 1774562037,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

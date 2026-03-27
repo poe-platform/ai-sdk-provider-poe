@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-grok-4-c7595fafda42",
   "test": {
     "name": "generates structured output with xai/grok-4",
-    "file": "tests/integration/other.test.ts"
+    "file": "src/poe-provider.other.integration.test.ts"
   },
   "request": {
     "body": {
@@ -59,16 +59,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "5384",
+      "openai-processing-ms": "7055",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-2514d996ddcc36d00b4aacaf",
+      "id": "chatcmpl-b28ab716837cd78db4f7d492",
       "object": "chat.completion",
-      "created": 1774470720,
+      "created": 1774578553,
       "model": "grok-4",
       "choices": [
         {
@@ -81,19 +81,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 32,
-        "prompt_tokens": 837,
-        "total_tokens": 869,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 251,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 688
-        }
+        "prompt_tokens": 45,
+        "completion_tokens": 34,
+        "total_tokens": 79
       }
     }
   }

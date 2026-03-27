@@ -1,0 +1,50 @@
+{
+  "key": "v1-responses-gpt-5.3-instant-df96c160eb00",
+  "test": {
+    "name": "returns reasoning text with openai/gpt-5.3-instant",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5.3-instant",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ],
+      "reasoning": {
+        "effort": "high",
+        "summary": "auto"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-length": "219",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "277",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+    },
+    "body": {
+      "error": {
+        "message": "Unsupported value: 'high' is not supported with the 'gpt-5.3-chat-latest' model. Supported values are: 'medium'.",
+        "type": "invalid_request_error",
+        "error_id": "c99e0f2624d25d009662b711e8d1a20a"
+      }
+    }
+  }
+}

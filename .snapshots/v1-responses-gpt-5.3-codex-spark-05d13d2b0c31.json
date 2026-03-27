@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.3-codex-spark-05d13d2b0c31",
   "test": {
     "name": "handles tool calling with gpt-5.3-codex-spark",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "911",
+      "openai-processing-ms": "720",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDhlM2ZlNzE2ZjM5NmNjOTAxNjljNDQ2NDAwZTFjODFhMzhiNDUyMzk2NTUwYTY0ODc=",
-      "created_at": 1774470720,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDEwNWFhYWQ1MGQyNTM5MjAxNjljNWFhZjgwZjc4ODE5MWFiODBmZTRlYTY2ZGNjOTU=",
+      "created_at": 1774562040,
       "metadata": {},
       "model": "gpt-5.3-codex-spark-preview",
       "object": "response",
       "output": [
         {
-          "id": "rs_08e3fe716f396cc90169c4464078ac81a38064af48d8949df2",
+          "id": "rs_0105aaad50d253920169c5aaf8773c8191a93f03d7f7715bda",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_FmyA4YFxKd5PP0Qe1JA6PVBj",
+          "call_id": "call_OO8CD3jiYNYJ0Cx2Mkyb6c32",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_08e3fe716f396cc90169c446408be881a3ad00bde8da64cc00",
+          "id": "fc_0105aaad50d253920169c5aaf87ce08191ac3968e2753451f8",
           "status": "completed"
         }
       ],
@@ -121,18 +121,18 @@
         "input_tokens_details": {
           "cached_tokens": 0
         },
-        "output_tokens": 72,
+        "output_tokens": 74,
         "output_tokens_details": {
-          "reasoning_tokens": 51
+          "reasoning_tokens": 53
         },
-        "total_tokens": 138
+        "total_tokens": 140
       },
       "store": false,
       "background": false,
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470720,
+      "completed_at": 1774562040,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

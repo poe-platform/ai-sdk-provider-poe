@@ -1,0 +1,151 @@
+{
+  "key": "v1-responses-gpt-5-nano-dd265207ed7c",
+  "test": {
+    "name": "returns reasoning text with openai/gpt-5-nano",
+    "file": "src/poe-provider.openai.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gpt-5-nano",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ],
+      "reasoning": {
+        "effort": "high",
+        "summary": "auto"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "40531",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGM3ODU3ZmRiNDlhNTY5MzAxNjljNWFjZmRlZTEwODFhM2I2NjM0MGJmZTRlNGUwMjY=",
+      "created_at": 1774562557,
+      "metadata": {},
+      "model": "gpt-5-nano-2025-08-07",
+      "object": "response",
+      "output": [
+        {
+          "id": "rs_0c7857fdb49a56930169c5acfe2e2081a39907ecabfa7a87c1",
+          "summary": [
+            {
+              "text": "**Calculating 17 times 19**\n\nAlright, so I’m calculating 17 times 19, and I realized there are a couple of ways to approach it. One method is applying the distributive property:\n\n- Start with 17 * 19 as 17 * (20 - 1).\n- Compute 17 * 20 to get 340, then subtract 17, resulting in 323.\n\nAlternatively, I can also express it as 19 * (20 - 3). Both approaches confirm that the result is indeed 323.",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Providing a clear answer**\n\nThe request is to first explain my reasoning without revealing too much detail about my thought process. I should provide a concise explanation of the method used for arithmetic while avoiding introspective reasoning.\n\nI’ll clearly lay out the calculation steps in a straightforward manner.\n\nFinal answer: \n[Your answer here]",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Calculating 17 times 19**\n\nTo find 17 times 19, I can use the distributive property. I approach it as follows:\n\n1. \\(17 \\times 19\\) becomes \\(17 \\times (20 - 1)\\).\n2. So, it's \\(17 \\times 20 - 17 \\times 1 = 340 - 17\\).\n3. Thus, the result is \\(323\\).\n\nFinal answer: \n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Explaining the calculation**\n\nTo calculate \\(17 \\times 19\\), I’ll use the distributive property:\n\n- \\(17 \\times 19 = 17 \\times (20 - 1)\\)\n- Thus, it simplifies to \\(17 \\times 20 - 17 \\times 1\\)\n- Calculating gives \\(340 - 17\\), which results in \\(323\\).\n\nFinal answer:  \n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Calculating 17 times 19**\n\nTo find \\(17 \\times 19\\), I’m using the distributive property:\n\n- Write it as \\(17 \\times (20 - 1)\\).\n- This simplifies to \\(17 \\times 20 - 17 \\times 1\\).\n- Calculating, I get \\(340 - 17\\), which equals \\(323\\).\n\nFinal answer:  \n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Presenting the calculation**\n\nI can’t share detailed step-by-step reasoning, but here's a concise solution:\n\nTo calculate \\(17 \\times 19\\), I can use the distributive property: \n- Rewrite it as \\(17 \\times (20 - 1)\\)\n- This gives \\(17 \\times 20 - 17 \\times 1 = 340 - 17\\)\n- The result is \\(323\\).\n\nFinal answer:  \n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Providing calculation succinctly**\n\nI can’t share my detailed reasoning, but I can provide a concise calculation. \n\nUsing the distributive property, I rewrite \\(19\\) as \\(20 - 1\\):  \n\\(17 \\times 19 = 17 \\times (20 - 1) = 17 \\times 20 - 17 \\)  \nThis simplifies to \\(340 - 17 = 323\\).\n\nFinal answer:  \n323",
+              "type": "summary_text"
+            },
+            {
+              "text": "**Delivering concise reasoning**\n\nTo multiply \\(17\\) by \\(19\\), represent \\(19\\) as \\(20 - 1\\) and apply the distributive property:  \n\\(17 \\times (20 - 1) = 17 \\times 20 - 17 = 340 - 17 = 323\\).  \nFinal answer:  \n323",
+              "type": "summary_text"
+            }
+          ],
+          "type": "reasoning"
+        },
+        {
+          "id": "msg_0c7857fdb49a56930169c5ad260a1081a3a57d710654f78b7a",
+          "content": [
+            {
+              "annotations": [],
+              "text": "Concise reasoning:\nUse the distributive property by writing 19 as 20 − 1: 17*19 = 17*(20 − 1) = 17*20 − 17 = 340 − 17 = 323.\n\n323",
+              "type": "output_text",
+              "logprobs": []
+            }
+          ],
+          "role": "assistant",
+          "status": "completed",
+          "type": "message"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "temperature": 1,
+      "tool_choice": "auto",
+      "tools": [],
+      "top_p": 1,
+      "reasoning": {
+        "effort": "high",
+        "summary": "detailed"
+      },
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 35,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 4777,
+        "output_tokens_details": {
+          "reasoning_tokens": 4672
+        },
+        "total_tokens": 4812
+      },
+      "store": false,
+      "background": false,
+      "billing": {
+        "payer": "developer"
+      },
+      "completed_at": 1774562598,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "top_logprobs": 0,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null
+    }
+  }
+}

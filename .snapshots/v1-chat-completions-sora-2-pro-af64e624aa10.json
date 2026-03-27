@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-sora-2-pro-af64e624aa10",
   "test": {
     "name": "generates text with sora-2-pro",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,23 +25,23 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "137937",
+      "openai-processing-ms": "141232",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-d47ad2943c5e8d6ed30c1fd8",
+      "id": "chatcmpl-7313cd9f770d7c68c0476007",
       "object": "chat.completion",
-      "created": 1774470996,
+      "created": 1774562119,
       "model": "sora-2-pro",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/video/0256cdcad9c650b9b72b3ad4bdecf23fc7d1d570a19376b45467ec1b0ccd1797"
+            "content": "https://pfst.cf2.poecdn.net/base/video/f07237ae98980a02c75b25934e6a027aa6f076a193698cec5c81584d24f9b851"
           },
           "finish_reason": "stop"
         }

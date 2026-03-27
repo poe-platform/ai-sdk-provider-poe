@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-nano-banana-0dd1ea2d68f8",
-  "test": {
-    "name": "generates text with nano-banana",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "nano-banana",
@@ -30,22 +26,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "839",
+      "openai-processing-ms": "889",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOndXekVhZnF5TXZXRnh0VVBpZVczMlFn",
-      "created_at": 1774480577,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlJZN0ZhWldvUExtSDRPVVB0cEh4MFEw",
+      "created_at": 1774554693,
       "metadata": {},
       "model": "gemini-2.5-flash-image",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "wWzEafqyMvWFxtUPieW32Qg",
+          "id": "RY7FaZWoPLmH4OUPtpHx0Q0",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -84,7 +80,7 @@
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480577,
+      "completed_at": 1774554693,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-opus-4-6-a08446f65512",
   "test": {
     "name": "handles tool calls",
-    "file": "tests/integration/anthropic.test.ts"
+    "file": "src/poe-provider.anthropic.integration.test.ts"
   },
   "request": {
     "body": {
@@ -51,7 +51,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:08Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:11Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -62,17 +62,17 @@
     },
     "body": {
       "model": "claude-opus-4-6",
-      "id": "req_poe_bf88393efdee4f6587465cfe63c1205a",
+      "id": "req_poe_80df548f09a047ed88f3433422ccc88e",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "\n\nI'll check the weather in San Francisco for you right away!"
+          "text": "\n\nI'll get the current weather in San Francisco for you right away!"
         },
         {
           "type": "tool_use",
-          "id": "toolu_017opyMpxZYMB5pB3sdwv8i2",
+          "id": "toolu_012B7rEinA6eEihiVz3Bvxfa",
           "name": "getWeather",
           "input": {
             "location": "San Francisco"
@@ -92,10 +92,10 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 69,
+        "output_tokens": 70,
         "service_tier": "standard",
         "inference_geo": "global",
-        "total_tokens": 681
+        "total_tokens": 682
       }
     }
   }

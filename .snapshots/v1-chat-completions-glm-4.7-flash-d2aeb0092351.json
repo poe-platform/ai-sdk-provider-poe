@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-glm-4.7-flash-d2aeb0092351",
   "test": {
     "name": "generates text with glm-4.7-flash",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1375",
+      "openai-processing-ms": "1364",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-161422908740bc0d6c0c90be",
+      "id": "chatcmpl-ccd51ee9495fe5ac672d49af",
       "object": "chat.completion",
-      "created": 1774471648,
+      "created": 1774577528,
       "model": "glm-4.7-flash",
       "choices": [
         {
@@ -47,19 +47,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 3,
-        "prompt_tokens": 12,
-        "total_tokens": 15,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 2
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 2,
+        "total_tokens": 9
       }
     }
   }

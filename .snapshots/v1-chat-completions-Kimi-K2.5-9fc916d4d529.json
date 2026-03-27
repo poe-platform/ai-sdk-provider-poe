@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Kimi-K2.5-9fc916d4d529",
   "test": {
     "name": "handles tool calls with Kimi-K2.5",
-    "file": "tests/integration/other.test.ts"
+    "file": "src/poe-provider.other.integration.test.ts"
   },
   "request": {
     "body": {
@@ -49,16 +49,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1696",
+      "openai-processing-ms": "1678",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-54998fcb083dfda7aac4b726",
+      "id": "chatcmpl-5a5a14dbc76337a12ee72ae2",
       "object": "chat.completion",
-      "created": 1774470668,
+      "created": 1774578546,
       "model": "Kimi-K2.5",
       "choices": [
         {
@@ -81,11 +81,9 @@
         }
       ],
       "usage": {
-        "completion_tokens": 33,
-        "prompt_tokens": 71,
-        "total_tokens": 104,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": null
+        "prompt_tokens": 14,
+        "completion_tokens": 15,
+        "total_tokens": 29
       }
     }
   }

@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-opus-4-6-37201b019e87",
   "test": {
     "name": "generates text",
-    "file": "tests/integration/anthropic.test.ts"
+    "file": "src/poe-provider.anthropic.integration.test.ts"
   },
   "request": {
     "body": {
@@ -28,7 +28,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:31:06Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:08Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -39,7 +39,7 @@
     },
     "body": {
       "model": "claude-opus-4-6",
-      "id": "req_poe_1595abbac2234b4eb7bac5f4f01f6135",
+      "id": "req_poe_9e55c6dcd6124fbc9fb40d1496cfcaea",
       "type": "message",
       "role": "assistant",
       "content": [

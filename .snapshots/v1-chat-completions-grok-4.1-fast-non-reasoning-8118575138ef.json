@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-grok-4.1-fast-non-reasoning-8118575138ef",
   "test": {
     "name": "generates text with grok-4.1-fast-non-reasoning",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,41 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "876",
+      "openai-processing-ms": "687",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-1e2b660a59895475b9988c46",
+      "id": "chatcmpl-4dea01a9f3600605f46af11c",
       "object": "chat.completion",
-      "created": 1774471624,
+      "created": 1774580679,
       "model": "grok-4.1-fast-non-reasoning",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, there!"
+            "content": "Hello, world there!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
-        "prompt_tokens": 175,
-        "total_tokens": 179,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 161
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 5,
+        "total_tokens": 12
       }
     }
   }

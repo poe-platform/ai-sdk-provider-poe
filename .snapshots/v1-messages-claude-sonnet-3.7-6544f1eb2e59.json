@@ -1,0 +1,71 @@
+{
+  "key": "v1-messages-claude-sonnet-3.7-6544f1eb2e59",
+  "test": {
+    "name": "claude-sonnet-3.7 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-3.7",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:54Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-3-7-sonnet-20250219",
+      "id": "req_poe_f0404045409b45b98193f470df7b81e0",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate the product of 17 and 19.\n\nOne approach is to do the standard multiplication algorithm:\n\n  17\n× 19\n----\n  \nI multiply 9 × 7 = 63. I write down 3 and carry the 6.\nThen I multiply 9 × 1 = 9, and add the carried 6 to get 15. So the first row is 153.\n\nNext, I multiply 1 × 7 = 7, and write that down.\nThen I multiply 1 × 1 = 1. So the second row is 17, but shifted one place to the left, so it's 170.\n\nFinally, I add the two rows:\n  153\n+ 170\n-----\n  323\n\nSo 17 × 19 = 323.\n\nLet me double-check this. Another approach is to use the distributive property:\n17 × 19 = 17 × (20 - 1) = 17 × 20 - 17 × 1 = 340 - 17 = 323.\n\nThis confirms my answer.",
+          "signature": "ErkBCkoIDBACGAIiQNH3AoHqcgffpPJkFX+aqgOYqHpwgnyXW3ftsJLFXAtjaGXGa8eKx8BUGPCYNJzgwlY+lq/FeEGr/XxfIiTFPYEoARIM+LpZ65yWOBMHr7S1GgyvcZYfl5+vrIgg3wkiMBEqffmCmsRxd2wo8hOlT4/HqKouuHQo8eJW4q3f2yLCS7wEFvT/l0Z56eu2jzclViodKsOeNLQTaFgEFK5uaPojYLiYikE/GQ8z3EE9BQUYAg=="
+        },
+        {
+          "type": "text",
+          "text": "# Calculating 17 × 19\n\nI'll solve this multiplication step by step.\n\n## Method 1: Standard multiplication\nLet me multiply these numbers using the standard algorithm:\n```\n   17\n× 19\n----\n  153  (= 17 × 9)\n  170  (= 17 × 10)\n----\n  323\n```\n\n## Method 2: Using distributive property\nI can also think of 19 as 20 - 1:\n17 × 19 = 17 × (20 - 1)\n        = 17 × 20 - 17 × 1\n        = 340 - 17\n        = 323\n\nThe answer is 323."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 437,
+        "total_tokens": 504
+      }
+    }
+  }
+}

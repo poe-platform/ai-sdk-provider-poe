@@ -2,7 +2,7 @@
   "key": "v1-messages-claude-haiku-3-edcebab6f8c9",
   "test": {
     "name": "generates text with claude-haiku-3",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -28,7 +28,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-25T20:48:21Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:13:19Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -39,13 +39,13 @@
     },
     "body": {
       "model": "claude-3-haiku-20240307",
-      "id": "req_poe_744da8c580844a4fb97156353c2bddce",
+      "id": "req_poe_ab2420f4dc954582b434661bc480bc7a",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Hello there, you."
+          "text": "Hello."
         }
       ],
       "stop_reason": "end_turn",
@@ -58,8 +58,8 @@
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 8,
-        "total_tokens": 23
+        "output_tokens": 5,
+        "total_tokens": 20
       }
     }
   }

@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-3.5-turbo-instruct-93cab6722fc0",
   "test": {
     "name": "generates text with gpt-3.5-turbo-instruct",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "274",
+      "openai-processing-ms": "713",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-b02375aab49c99e99c85edfc",
+      "id": "chatcmpl-4bba06ea4a3173f8a12ca0d3",
       "object": "chat.completion",
-      "created": 1774471088,
+      "created": 1774562216,
       "model": "gpt-3.5-turbo-instruct",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": " Hi there friend!"
+            "content": " Hello there!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 4,
+        "completion_tokens": 3,
         "prompt_tokens": 13,
-        "total_tokens": 17,
+        "total_tokens": 16,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
       }

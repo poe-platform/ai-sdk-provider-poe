@@ -1,0 +1,80 @@
+{
+  "key": "v1-messages-claude-opus-4.6-0e2d04e04072",
+  "test": {
+    "name": "claude-opus-4.6 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4.6",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:54:51Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-6",
+      "id": "req_poe_ef5d8fd074974c65b7f60c39c1605f0e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "17 * 19\n\nI can compute this as:\n17 * 19 = 17 * (20 - 1) = 340 - 17 = 323",
+          "signature": "EoMCClkIDBgCKkAuTGgHE1xQwiWWSEpl4XXBa0vC2/tCCrWRsE8mPmApiiy+RJHh+LriOgJW4CFR+FWd2Gw1M9PiKgtEeOkGgsebMg9jbGF1ZGUtb3B1cy00LTY4ABIMUM3F/PUSSRlC9m4HGgx4eiLwVCkKF2KmRN8iMKqMCDkMqCeS020BY//FIdUgOz7WtfXEkCoq5WrJOmxl0M6Hs4idEJ9paXy3LD102CpYH7920BRPjDqCHUtIoPeub+Rt5h9I/BZ6VZ/VM1S9oLMmGe8RpF3kSBOWWLo6b/3xizPLyelRJB4EbNYH3QdO0lsM2bxMRvG6267QTRT/Hes9heL7qKgB5BgB"
+        },
+        {
+          "type": "text",
+          "text": "## Reasoning\n\nI can simplify this multiplication by rewriting 19 as (20 - 1):\n\n1. **Rewrite the problem:** 17 × 19 = 17 × (20 - 1)\n2. **Distribute:** (17 × 20) - (17 × 1)\n3. **Calculate each part:**\n   - 17 × 20 = 340\n   - 17 × 1 = 17\n4. **Subtract:** 340 - 17 = 323\n\n**323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 183,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "total_tokens": 250
+      }
+    }
+  }
+}

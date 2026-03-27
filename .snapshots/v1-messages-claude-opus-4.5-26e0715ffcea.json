@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-opus-4.5-26e0715ffcea",
+  "test": {
+    "name": "claude-opus-4.5 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-opus-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-26T21:50:27Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-opus-4-5-20251101",
+      "id": "req_poe_d92a800e262b49319e6c0985bb94496d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me break this down step by step.\n\nMethod 1: Direct multiplication\n17 * 19\n= 17 * (20 - 1)\n= 17 * 20 - 17 * 1\n= 340 - 17\n= 323\n\nLet me verify with another method:\n\nMethod 2: \n19 * 17\n= 19 * (10 + 7)\n= 19 * 10 + 19 * 7\n= 190 + 133\n= 323\n\nBoth methods give 323, so the answer is 323.",
+          "signature": "EuUDCkgIDBACGAIqQOPjhuzQna0famvFAMEz4mOytwpIRXB3wOu0e1fZcp3ikeuGcCh1EjivShXu/An2pkRAlTejPGoDS2qySRcAR+QSDPT+uyk85DzTtLxjtxoMN0mMX5XSfaV0G8fpIjDDuSQG7hO27ps309LCHurJ2S7c1qnKdMPT9UXUNTU90eBd1ELK9bm4p+hcqLc4mA0qygLgmlGb16Dz6M/0M9se4j/9GzVmYB32GP5wkEE390ndTSAxg3l1uvkEc0ecCoYfPTreuThB2cYUeawZvgnMo2pDw4S7VF01NKkTcAWjbeZ8Eyw7R4lruPDmhqwNwbcv06N3cr++L47gbtCxcz97Eol9AwnbH8egZ512cbrPyT0xSQzdKH+wF1Ru5tXAXBLz8Civ5ngGmBlJ6K7QuzCxb6E9QdqMxmMFuVHbc8MnTBq4jvaqUy6n5KlQhO7Hba2aXSUvlwlMu3GLOyok6ntSJhiPiYuzQ+tro0pfmyZDpeEUYd4DKTP/FuQo9rPgPYGhqcQij4gIv5ixKh6XGGx0Ozkp0yVLkfYnqqenSDbboS8vHUAB6anwyZ2G34/f+mWicYak7kCY0CylX7VBcjoqZCGqGNRScYOFC+7Nm9mrnoyo9QWdykxNSAQos8IYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "## Solving 17 × 19\n\nI'll break this into simpler parts using the distributive property.\n\n**Method: Rewrite 19 as (20 - 1)**\n\n17 × 19 = 17 × (20 - 1)\n\n= (17 × 20) - (17 × 1)\n\n= 340 - 17\n\n= 323\n\n**Final Answer: 323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 259,
+        "total_tokens": 326
+      }
+    }
+  }
+}

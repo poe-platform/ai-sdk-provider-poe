@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-minimax-m2.1-acd042817004",
   "test": {
     "name": "generates text with minimax-m2.1",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,38 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "3865",
+      "openai-processing-ms": "9725",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-666d302f88db2a4095141c59",
+      "id": "chatcmpl-6e16e260b09104ddfec9089f",
       "object": "chat.completion",
-      "created": 1774471663,
+      "created": 1774577550,
       "model": "minimax-m2.1",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "\n\nHello there, friend",
-            "reasoning_content": "The user wants me to say hello in exactly 3 words. Let me think of a 3-word greeting:\n\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you\" (4 words)\n- \"Hello, good friend\" (3 words)\n- \"Hey there, buddy\" (3 words)\n\nI'll go with \"Hello there, friend\" - that's exactly 3 words.",
-            "reasoning": "The user wants me to say hello in exactly 3 words. Let me think of a 3-word greeting:\n\n- \"Hello there, friend\" (3 words)\n- \"Hi, how are you\" (4 words)\n- \"Hello, good friend\" (3 words)\n- \"Hey there, buddy\" (3 words)\n\nI'll go with \"Hello there, friend\" - that's exactly 3 words."
+            "content": "\n\nHello there, friend!",
+            "reasoning_content": "\nThe user wants a greeting in exactly 3 words. I should provide a simple, friendly greeting that uses exactly 3 words. Let me think of some options:\n\n- \"Hello, nice to meet you!\" (4 words)\n- \"Hi there, friend!\" (3 words) ✓\n- \"Hello, my friend!\" (3 words) ✓\n- \"Hey, good to see you!\" (5 words)\n\nI'll go with \"Hello there, friend!\" which is exactly 3 words.\n",
+            "reasoning": "\nThe user wants a greeting in exactly 3 words. I should provide a simple, friendly greeting that uses exactly 3 words. Let me think of some options:\n\n- \"Hello, nice to meet you!\" (4 words)\n- \"Hi there, friend!\" (3 words) ✓\n- \"Hello, my friend!\" (3 words) ✓\n- \"Hey, good to see you!\" (5 words)\n\nI'll go with \"Hello there, friend!\" which is exactly 3 words.\n"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 91,
-        "prompt_tokens": 45,
-        "total_tokens": 136,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 32
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 6,
+        "total_tokens": 13
       }
     }
   }

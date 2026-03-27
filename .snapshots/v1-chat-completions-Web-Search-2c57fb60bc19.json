@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Web-Search-2c57fb60bc19",
   "test": {
     "name": "generates text with Web-Search",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1359",
+      "openai-processing-ms": "938",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-fccd72ac3b722632e33d669e",
+      "id": "chatcmpl-706de75e5d1b8d5c74d93e10",
       "object": "chat.completion",
-      "created": 1774470705,
+      "created": 1774577726,
       "model": "Web-Search",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, how are you?"
+            "content": "Hello there, friend."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 6,
-        "total_tokens": 13
+        "completion_tokens": 5,
+        "total_tokens": 12
       }
     }
   }

@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-flash-lite-a50d8049c0ce",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-2.5-flash-lite",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-flash-lite",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "5748",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-81c41c3b78c583eea0970867",
+      "object": "chat.completion",
+      "created": 1774579729,
+      "model": "gemini-2.5-flash-lite",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To solve the multiplication problem 17 * 19, I will use the distributive property. This method breaks down one of the numbers into simpler parts, making the multiplication easier to manage. I will rewrite 19 as the difference between 20 and 1 (i.e., $20 - 1$). Then, I will multiply 17 by each of these parts separately and subtract the second result from the first. This is mathematically equivalent to multiplying 17 by 19 directly.\n\nHere are the steps:\n\n1.  **Rewrite 19:** Express 19 as a difference: $19 = 20 - 1$.\n2.  **Substitute:** Replace 19 in the original problem with this expression: $17 * (20 - 1)$.\n3.  **Apply the Distributive Property:** Multiply 17 by each term inside the parentheses: $(17 * 20) - (17 * 1)$.\n4.  **Calculate the first product:** $17 * 20$. This can be calculated as $17 * 2 * 10$. First, $17 * 2 = 34$. Then, $34 * 10 = 340$.\n5.  **Calculate the second product:** $17 * 1$. This is simply 17.\n6.  **Subtract the results:** Subtract the second product from the first: $340 - 17$.\n    $340 - 10 = 330$.\n    $330 - 7 = 323$.\n\nThe final answer is:\n323",
+            "reasoning_content": "**Calculating the product**\n\nI'm currently focused on tackling the multiplication of 17 by 19. My approach involves breaking down the problem into understandable steps to ensure a clear and accurate solution.\n\n**Solving the multiplication**\n\nI am currently working through the calculation of 17 multiplied by 19. My strategy involves applying the distributive property, specifically by rewriting 19 as (20 - 1) to simplify the steps.\n\n**Applying the distributive property**\n\nI'm currently refining my thought process, specifically focusing on how to best explain the calculation of 17 multiplied by 19. My current preference is to break down 19 into (20 - 1) to simplify the multiplication steps.\n\n**Explaining the distribution**\n\nI am continuing to refine my explanation for calculating 17 multiplied by 19. My current focus is on clearly demonstrating how rewriting 19 as (20 - 1) simplifies the multiplication process through the distributive property.\n\n**Applying the distributive property**\n\nI am continuing to refine my explanation for calculating 17 multiplied by 19. My current focus is on clearly demonstrating how rewriting 19 as (20 - 1) simplifies the multiplication process through the distributive property.\n\n",
+            "reasoning": "**Calculating the product**\n\nI'm currently focused on tackling the multiplication of 17 by 19. My approach involves breaking down the problem into understandable steps to ensure a clear and accurate solution.\n\n**Solving the multiplication**\n\nI am currently working through the calculation of 17 multiplied by 19. My strategy involves applying the distributive property, specifically by rewriting 19 as (20 - 1) to simplify the steps.\n\n**Applying the distributive property**\n\nI'm currently refining my thought process, specifically focusing on how to best explain the calculation of 17 multiplied by 19. My current preference is to break down 19 into (20 - 1) to simplify the multiplication steps.\n\n**Explaining the distribution**\n\nI am continuing to refine my explanation for calculating 17 multiplied by 19. My current focus is on clearly demonstrating how rewriting 19 as (20 - 1) simplifies the multiplication process through the distributive property.\n\n**Applying the distributive property**\n\nI am continuing to refine my explanation for calculating 17 multiplied by 19. My current focus is on clearly demonstrating how rewriting 19 as (20 - 1) simplifies the multiplication process through the distributive property.\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 318,
+        "total_tokens": 348
+      }
+    }
+  }
+}

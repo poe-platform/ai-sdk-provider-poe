@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.1-codex-mini-709c7fb7a03d",
   "test": {
     "name": "handles tool calling with gpt-5.1-codex-mini",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -52,30 +52,30 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "983",
+      "openai-processing-ms": "627",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGU3NWZjMjY4NmI4NGMwYzAxNjljNDQ2NGViZDg4ODE5ZmEwNTQ4MmZiZTM0ZTYwZmI=",
-      "created_at": 1774470734,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGU3YWEyMGJhNGE4ZWFlZTAxNjljNWFhNTk0NTE0ODE5ZThkMDkzOGM3MWRlMmU5NDg=",
+      "created_at": 1774561881,
       "metadata": {},
       "model": "gpt-5.1-codex-mini",
       "object": "response",
       "output": [
         {
-          "id": "rs_0e75fc2686b84c0c0169c4464f3ef0819fb3bf63054cbe3653",
+          "id": "rs_0e7aa20ba4a8eaee0169c5aa598aac819eab7fd8cdd8825342",
           "summary": [],
           "type": "reasoning"
         },
         {
           "arguments": "{\"location\":\"San Francisco\"}",
-          "call_id": "call_8XCI8DLH7jo0eUy11FZjJKux",
+          "call_id": "call_ZxVlJwGmAn5RWU7VjV2dH4aE",
           "name": "getWeather",
           "type": "function_call",
-          "id": "fc_0e75fc2686b84c0c0169c4464f57f4819f9a73d171e8a76cd2",
+          "id": "fc_0e7aa20ba4a8eaee0169c5aa59a490819e8b968e1ef3dc2192",
           "status": "completed"
         }
       ],
@@ -132,7 +132,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470735,
+      "completed_at": 1774561881,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

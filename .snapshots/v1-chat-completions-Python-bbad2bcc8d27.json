@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Python-bbad2bcc8d27",
   "test": {
     "name": "generates text with Python",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "315",
+      "openai-processing-ms": "275",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-969abde31c804f9550dcce4b",
+      "id": "chatcmpl-44d633bbebaceb8bf8521919",
       "object": "chat.completion",
-      "created": 1774470804,
+      "created": 1774577804,
       "model": "Python",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "```plaintext\nFile \"/tmp/tmpt7tjgkr7.py\", line 1\n    Say hello in exactly 3 words\n        ^^^^^\nSyntaxError: invalid syntax\n```"
+            "content": "```plaintext\nFile \"/tmp/tmpltb4ntkt.py\", line 1\n    Say hello in exactly 3 words\n        ^^^^^\nSyntaxError: invalid syntax\n```"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 41,
-        "total_tokens": 48
+        "completion_tokens": 39,
+        "total_tokens": 46
       }
     }
   }

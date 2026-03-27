@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-3.5-turbo-af15b7d5a8b8",
   "test": {
     "name": "handles tool calling with gpt-3.5-turbo",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -49,16 +49,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "664",
+      "openai-processing-ms": "740",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-79ba30d83dc7825ed3bd4e7f",
+      "id": "chatcmpl-9865cb4e3af6c7bdeed405f7",
       "object": "chat.completion",
-      "created": 1774471079,
+      "created": 1774562211,
       "model": "gpt-3.5-turbo",
       "choices": [
         {
@@ -68,7 +68,7 @@
             "content": "",
             "tool_calls": [
               {
-                "id": "call_5UoX792ptpccNHUrWzXMyz28",
+                "id": "call_72k2jRPwEXVXiMocahrQ2rqn",
                 "type": "function",
                 "function": {
                   "name": "getWeather",

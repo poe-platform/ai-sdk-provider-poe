@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Grok-4-c31453ec75d8",
   "test": {
     "name": "generates text with Grok-4",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,41 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "4797",
+      "openai-processing-ms": "4496",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-9aab6a9d0e0e8dae27c8428b",
+      "id": "chatcmpl-b0cddc546e29848e1c009f66",
       "object": "chat.completion",
-      "created": 1774470698,
+      "created": 1774577720,
       "model": "Grok-4",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, dear user."
+            "content": "Hello, world!"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 5,
-        "prompt_tokens": 691,
-        "total_tokens": 696,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 201,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 679
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 4,
+        "total_tokens": 11
       }
     }
   }

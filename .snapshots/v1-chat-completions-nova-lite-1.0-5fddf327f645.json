@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-nova-lite-1.0-5fddf327f645",
   "test": {
     "name": "generates text with nova-lite-1.0",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,36 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "5982",
+      "openai-processing-ms": "817",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-3b758726091713dccfa4ca22",
+      "id": "chatcmpl-fb5af45f7744f3c124498bcb",
       "object": "chat.completion",
-      "created": 1774471674,
+      "created": 1774577555,
       "model": "nova-lite-1.0",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, how, are, you?"
+            "content": "Hello, I'm, Nova."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 9,
-        "prompt_tokens": 20,
-        "total_tokens": 29,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 7,
+        "total_tokens": 14
       }
     }
   }

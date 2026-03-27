@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-2.5-pro-cf3c3b345c30",
-  "test": {
-    "name": "generates text with gemini-2.5-pro",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-2.5-pro",
@@ -30,22 +26,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "12142",
+      "openai-processing-ms": "6723",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnRXekVhZTN6STZISC03VVBfZnF1b0Ew",
-      "created_at": 1774480565,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlA0N0ZhZmltQy1XYXNfSVBwbzc3b0FN",
+      "created_at": 1774554687,
       "metadata": {},
       "model": "gemini-2.5-pro",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "tWzEae3zI6HH-7UP_fquoA0",
+          "id": "P47FafimC-Was_IPpo77oAM",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -74,17 +70,17 @@
           "cached_tokens": 0,
           "text_tokens": 7
         },
-        "output_tokens": 1281,
+        "output_tokens": 669,
         "output_tokens_details": {
-          "reasoning_tokens": 1277,
+          "reasoning_tokens": 665,
           "text_tokens": 4
         },
-        "total_tokens": 1288
+        "total_tokens": 676
       },
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480565,
+      "completed_at": 1774554687,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

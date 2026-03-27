@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-llama-3.1-8b-cs-1791e2e86340",
   "test": {
     "name": "generates text with llama-3.1-8b-cs",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,41 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "2077",
+      "openai-processing-ms": "431",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-4d00488372e2a2cb01e9188b",
+      "id": "chatcmpl-d3e06b44045aca1b870fda9b",
       "object": "chat.completion",
-      "created": 1774471700,
+      "created": 1774577598,
       "model": "llama-3.1-8b-cs",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello to you."
+            "content": "Hello, how are you."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 5,
-        "prompt_tokens": 42,
-        "total_tokens": 47,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 6,
+        "total_tokens": 13
       }
     }
   }

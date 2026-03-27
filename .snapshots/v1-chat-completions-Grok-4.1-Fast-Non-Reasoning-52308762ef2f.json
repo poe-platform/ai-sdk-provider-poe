@@ -1,0 +1,56 @@
+{
+  "key": "v1-chat-completions-Grok-4.1-Fast-Non-Reasoning-52308762ef2f",
+  "test": {
+    "name": "generates text with Grok-4.1-Fast-Non-Reasoning",
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "Grok-4.1-Fast-Non-Reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "533",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-a30ea36d6e6f2e0d174d429d",
+      "object": "chat.completion",
+      "created": 1774577773,
+      "model": "Grok-4.1-Fast-Non-Reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello, there!"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 4,
+        "total_tokens": 11
+      }
+    }
+  }
+}

@@ -1,9 +1,5 @@
 {
   "key": "v1-responses-gemini-2.0-flash-lite-c398d6e195dc",
-  "test": {
-    "name": "generates text with gemini-2.0-flash-lite",
-    "file": "src/poe-provider.google.integration.test.ts"
-  },
   "request": {
     "body": {
       "model": "gemini-2.0-flash-lite",
@@ -30,22 +26,22 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "504",
+      "openai-processing-ms": "441",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnhHekVhZW1SSjhIbzg4QVBzOGFTLUFZ",
-      "created_at": 1774480580,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOlNJN0ZhZk9TSUtMbzI5c1B1Nk9HNEFZ",
+      "created_at": 1774554696,
       "metadata": {},
       "model": "gemini-2.0-flash-lite-001",
       "object": "response",
       "output": [
         {
           "type": "message",
-          "id": "xGzEaemRJ8Ho88APs8aS-AY",
+          "id": "SI7FafOSIKLo29sPu6OG4AY",
           "status": "completed",
           "role": "assistant",
           "content": [
@@ -84,7 +80,7 @@
       "provider_specific_fields": {
         "traffic_type": "ON_DEMAND"
       },
-      "completed_at": 1774480580,
+      "completed_at": 1774554696,
       "error": null,
       "incomplete_details": null,
       "instructions": null,

@@ -1,8 +1,8 @@
 {
   "key": "v1-models-unknown-1d913ca119b4",
   "test": {
-    "name": "handles tool calling with gemini-3.1-flash-lite",
-    "file": "src/poe-provider.google.integration.test.ts"
+    "name": "generates text with grok-4.1-fast-non-reasoning",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": null
@@ -1419,7 +1419,7 @@
           "id": "minimax-m2.7",
           "object": "model",
           "created": 1773820893957,
-          "description": "MiniMax M2.7 is an all-around evolved, versatile open-source large language model that seamlessly blends hardcore engineering productivity with high-EQ, human-like interaction capabilities.\nIn real-world software engineering, M2.7 excels by independently driving end-to-end project delivery while efficiently handling advanced tasks such as log analysis, bug troubleshooting, code security, and machine learning. In the professional workspace, it boasts the highest open-source GDPval-AA score (1495 ELO). It delivers high-fidelity, complex editing and multi-turn revisions across the Office suite (Excel, PPT, Word), elevating task execution to industry-leading standards.\nBuilt for complex environment interactions, M2.7 maintains an impressive 97% skill-following rate even with complex, long-context tool calls (>2000 tokens).  Beyond its robust productivity, M2.7 breaks the \"cold tool\" stereotype of traditional models. With exceptional identity retention and high emotional intelligence (EQ), it not only empowers ent\n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens",
+          "description": "MiniMax M2.7 is an all-around evolved, versatile open-source large language model that seamlessly blends hardcore engineering productivity with high-EQ, human-like interaction capabilities.\nIn real-world software engineering, M2.7 excels by independently driving end-to-end project delivery while efficiently handling advanced tasks such as log analysis, bug troubleshooting, code security, and machine learning. In the professional workspace, it boasts the highest open-source GDPval-AA score (1495 ELO). It delivers high-fidelity, complex editing and multi-turn revisions across the Office suite (Excel, PPT, Word), elevating task execution to industry-leading standards.\nBuilt for complex environment interactions, M2.7 maintains an impressive 97% skill-following rate even with complex, long-context tool calls (>2000 tokens).  Beyond its robust productivity, M2.7 breaks the \"cold tool\" stereotype of traditional models. With exceptional identity retention and high emotional intelligence (EQ), it not only empowers enterprise productivity, but also opens up more room for product innovation.\n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens",
           "owned_by": "Novita AI",
           "root": "minimax-m2.7",
           "architecture": {
@@ -1488,13 +1488,12 @@
           "root": "mistral-small-4",
           "architecture": {
             "input_modalities": [
-              "text",
-              "image"
+              "text"
             ],
             "output_modalities": [
               "text"
             ],
-            "modality": "text,image->text"
+            "modality": "text->text"
           },
           "supported_features": [],
           "supported_endpoints": [],
@@ -1931,13 +1930,12 @@
           "root": "mimo-v2-omni",
           "architecture": {
             "input_modalities": [
-              "text",
-              "image"
+              "text"
             ],
             "output_modalities": [
               "text"
             ],
-            "modality": "text,image->text"
+            "modality": "text->text"
           },
           "supported_features": [],
           "supported_endpoints": [],
@@ -2032,12 +2030,13 @@
           "root": "mimo-v2-pro",
           "architecture": {
             "input_modalities": [
-              "text"
+              "text",
+              "image"
             ],
             "output_modalities": [
               "text"
             ],
-            "modality": "text->text"
+            "modality": "text,image->text"
           },
           "supported_features": [],
           "supported_endpoints": [],
@@ -2490,6 +2489,294 @@
           },
           "reasoning": null,
           "parameters": []
+        },
+        {
+          "id": "seed-2.0-pro",
+          "object": "model",
+          "created": 1774508584107,
+          "description": "Seed 2.0 Pro is a flagship all-purpose general model designed for complex reasoning and long-chain task execution in the Agent era. It emphasizes multimodal understanding, long-context reasoning, structured generation, and tool-augmented execution. It delivers outstanding performance in handling complex instructions and multi-constraint execution, and can reliably address scenarios such as multi-step complex planning, sophisticated visual-text reasoning, video content understanding, and high-difficulty analysis.\n\nNotes:\n- Pricing is 2x when input tokens >=128k\n- Context Window: 256k\n- Temperature and top_p are fixed by the model (temp=1, top_p=0.95).\n\nParameter controls available:\n1. Reasoning\n- Default: Thinking enabled\n- Reasoning effort [low, medium, high]: How deeply the model thinks. Low=fast, Medium=balanced, High=thorough (default: medium). Only applies if thinking is enabled.\n\n2. Search & Vision\n- Web Search: Enable real-time web search for up-to-date information (default: false).\n- Image Detail [low, high, xhigh]: Quality for image understanding. Higher = more accurate but uses more tokens (default: high).\n- Video FPS [0.2-5]: Frame sampling rate for video input. Higher = more frames analyzed, more accurate, more tokens (default: 1).",
+          "owned_by": "Empirio Labs AI",
+          "root": "seed-2.0-pro",
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "modality": "text,image,video->text"
+          },
+          "supported_features": [
+            "tools"
+          ],
+          "supported_endpoints": [],
+          "pricing": {
+            "prompt": "0.00000062",
+            "completion": "0.0000038",
+            "image": null,
+            "request": null,
+            "input_cache_read": null,
+            "input_cache_write": null
+          },
+          "context_window": null,
+          "context_length": null,
+          "metadata": {
+            "display_name": "Seed-2.0-Pro",
+            "image": {
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6904621-200-dopcynjylmhafwsfbdahfxwynvfcegua.jpeg",
+              "alt": "Seed-2.0-Pro model icon",
+              "width": 200,
+              "height": 200
+            },
+            "url": "https://poe.com/seed-2.0-pro"
+          },
+          "reasoning": null,
+          "parameters": [
+            {
+              "name": "enable_thinking",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": true,
+              "description": "Let the model reason step-by-step before answering."
+            },
+            {
+              "name": "reasoning_effort",
+              "schema": {
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              },
+              "default_value": "medium",
+              "description": "How deeply the model thinks. Low=fast, Medium=balanced, High=thorough."
+            },
+            {
+              "name": "enable_web_search",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": false,
+              "description": "Enable real-time web search for up-to-date information."
+            },
+            {
+              "name": "image_detail",
+              "schema": {
+                "enum": [
+                  "low",
+                  "high",
+                  "xhigh"
+                ]
+              },
+              "default_value": "high",
+              "description": "Quality for image understanding. Higher = more accurate but more tokens."
+            },
+            {
+              "name": "video_fps",
+              "schema": {
+                "type": "number",
+                "minimum": 0.2,
+                "maximum": 5
+              },
+              "default_value": 1,
+              "description": "Frame sampling rate for video input (0.2-5). Higher = more frames, more accurate, more tokens."
+            }
+          ]
+        },
+        {
+          "id": "minimax-speech-2.8",
+          "object": "model",
+          "created": 1774510258443,
+          "description": "MiniMax Speech 2.8 is a premium text-to-speech model delivering studio-quality audio with enhanced clarity and naturalness. With support for multiple voice presets, emotional tones, and fine-grained audio controls, it produces broadcast-ready speech synthesis for professional applications.",
+          "owned_by": "Novita AI",
+          "root": "minimax-speech-2.8",
+          "architecture": {
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "audio"
+            ],
+            "modality": "text->audio"
+          },
+          "supported_features": [],
+          "supported_endpoints": [],
+          "pricing": {
+            "prompt": null,
+            "completion": null,
+            "image": null,
+            "request": "0.00",
+            "input_cache_read": null,
+            "input_cache_write": null
+          },
+          "context_window": null,
+          "context_length": null,
+          "metadata": {
+            "display_name": "MiniMax-Speech-2.8",
+            "image": {
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6904717-200-kmvvzbitpvffoywnjdqsghzrgwypshtn.jpeg",
+              "alt": "MiniMax-Speech-2.8 model icon",
+              "width": 200,
+              "height": 200
+            },
+            "url": "https://poe.com/minimax-speech-2.8"
+          },
+          "reasoning": null,
+          "parameters": [
+            {
+              "name": "model",
+              "schema": {
+                "enum": [
+                  "turbo",
+                  "hd"
+                ]
+              },
+              "default_value": "turbo",
+              "description": "HD: high quality, async, max 50K chars. Turbo: fast, sync, max 10K chars."
+            },
+            {
+              "name": "voice_id",
+              "schema": {
+                "enum": [
+                  "Chinese (Mandarin)_Lyrical_Voice",
+                  "Chinese (Mandarin)_HK_Flight_Attendant",
+                  "moss_audio_ce44fc67-7ce3-11f0-8de5-96e35d26fb85",
+                  "moss_audio_aaa1346a-7ce7-11f0-8e61-2e6e3c7ee85d",
+                  "English_Graceful_Lady",
+                  "English_Insightful_Speaker",
+                  "English_radiant_girl",
+                  "English_Persuasive_Man",
+                  "English_Lucky_Robot",
+                  "moss_audio_6dc281eb-713c-11f0-a447-9613c873494c",
+                  "moss_audio_570551b1-735c-11f0-b236-0adeeecad052",
+                  "moss_audio_ad5baf92-735f-11f0-8263-fe5a2fe98ec8",
+                  "Japanese_Whisper_Belle",
+                  "moss_audio_24875c4a-7be4-11f0-9359-4e72c55db738",
+                  "moss_audio_7f4ee608-78ea-11f0-bb73-1e2a4cfcd245",
+                  "moss_audio_c1a6a3ac-7be6-11f0-8e8e-36b92fbb4f95"
+                ]
+              },
+              "default_value": "Chinese (Mandarin)_Lyrical_Voice",
+              "description": "Select a voice for speech synthesis"
+            },
+            {
+              "name": "speed",
+              "schema": {
+                "enum": [
+                  "0.5",
+                  "0.75",
+                  "1.0",
+                  "1.25",
+                  "1.5",
+                  "1.75",
+                  "2.0"
+                ]
+              },
+              "default_value": "1.0",
+              "description": "Speech speed (1.0 = normal)"
+            },
+            {
+              "name": "vol",
+              "schema": {
+                "enum": [
+                  "0.5",
+                  "1.0",
+                  "2.0",
+                  "3.0",
+                  "5.0"
+                ]
+              },
+              "default_value": "1.0",
+              "description": "Audio volume (1.0 = default)"
+            },
+            {
+              "name": "pitch",
+              "schema": {
+                "enum": [
+                  "-12",
+                  "-6",
+                  "-3",
+                  "0",
+                  "3",
+                  "6",
+                  "12"
+                ]
+              },
+              "default_value": "0",
+              "description": "Voice pitch (-12 = low, 0 = original, 12 = high)"
+            },
+            {
+              "name": "sound_effects",
+              "schema": {
+                "enum": [
+                  "none",
+                  "spacious_echo",
+                  "auditorium_echo",
+                  "lofi_telephone",
+                  "robotic"
+                ]
+              },
+              "default_value": "none",
+              "description": "Apply a sound effect to the voice"
+            },
+            {
+              "name": "format",
+              "schema": {
+                "enum": [
+                  "mp3",
+                  "flac",
+                  "wav",
+                  "pcm"
+                ]
+              },
+              "default_value": "mp3",
+              "description": "Audio output format (wav only available for Turbo)"
+            },
+            {
+              "name": "sample_rate",
+              "schema": {
+                "enum": [
+                  "8000",
+                  "16000",
+                  "22050",
+                  "24000",
+                  "32000",
+                  "44100"
+                ]
+              },
+              "default_value": "32000",
+              "description": "Audio sample rate in Hz"
+            },
+            {
+              "name": "language_boost",
+              "schema": {
+                "enum": [
+                  "auto",
+                  "Chinese",
+                  "Chinese,Yue",
+                  "English",
+                  "Japanese",
+                  "Korean",
+                  "French",
+                  "German",
+                  "Spanish",
+                  "Russian",
+                  "Arabic",
+                  "Portuguese",
+                  "Italian",
+                  "Thai",
+                  "Vietnamese",
+                  "Indonesian",
+                  "Hindi"
+                ]
+              },
+              "default_value": "auto",
+              "description": "Enhance recognition for a specific language"
+            }
+          ]
         },
         {
           "id": "manus",

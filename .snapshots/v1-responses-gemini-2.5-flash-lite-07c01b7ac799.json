@@ -1,0 +1,103 @@
+{
+  "key": "v1-responses-gemini-2.5-flash-lite-07c01b7ac799",
+  "request": {
+    "body": {
+      "model": "gemini-2.5-flash-lite",
+      "input": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "input_text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json; charset=utf-8",
+      "openai-processing-ms": "1364",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOnZlcnRleF9haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOm9ZX0ZhY3VRRVBteG5fb1BoS0RieVF3",
+      "created_at": 1774555041,
+      "metadata": {},
+      "model": "gemini-2.5-flash-lite",
+      "object": "response",
+      "output": [
+        {
+          "type": "message",
+          "id": "oY_FacuQEPmxn_oPhKDbyQw",
+          "status": "completed",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "Here's how to solve 17 * 19 step by step:\n\n**Reasoning:**\n\nWe can solve this multiplication problem using a few different methods. I'll choose a method that breaks down the numbers to make the multiplication easier. One common and effective strategy is to use the distributive property. This property states that multiplying a sum by a number is the same as multiplying each part of the sum by the number and then adding the results.\n\nWe can rewrite 19 as (20 - 1). This makes it easier to multiply by 20 and then subtract the multiplication by 1.\n\nSo, the problem becomes 17 * (20 - 1).\nUsing the distributive property, this is equal to (17 * 20) - (17 * 1).\n\n**Step 1: Multiply 17 by 20.**\n*   Multiplying by 20 is the same as multiplying by 2 and then multiplying by 10.\n*   17 * 2 = 34\n*   34 * 10 = 340\n\n**Step 2: Multiply 17 by 1.**\n*   Any number multiplied by 1 is itself.\n*   17 * 1 = 17\n\n**Step 3: Subtract the result from Step 2 from the result from Step 1.**\n*   340 - 17\n\n**Step 4: Perform the subtraction.**\n*   340 - 10 = 330\n*   330 - 7 = 323\n\n**Final Answer:**\n323",
+              "annotations": [],
+              "logprobs": []
+            }
+          ]
+        }
+      ],
+      "parallel_tool_calls": false,
+      "temperature": 0,
+      "tool_choice": "auto",
+      "tools": [],
+      "status": "completed",
+      "text": {
+        "format": {
+          "type": "text"
+        }
+      },
+      "usage": {
+        "input_tokens": 31,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 31
+        },
+        "output_tokens": 353,
+        "output_tokens_details": {
+          "reasoning_tokens": 0,
+          "text_tokens": 353
+        },
+        "total_tokens": 384
+      },
+      "provider_specific_fields": {
+        "traffic_type": "ON_DEMAND"
+      },
+      "completed_at": 1774555041,
+      "error": null,
+      "incomplete_details": null,
+      "instructions": null,
+      "max_output_tokens": null,
+      "max_tool_calls": null,
+      "previous_response_id": null,
+      "reasoning": null,
+      "safety_identifier": null,
+      "prompt_cache_key": null,
+      "background": false,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "service_tier": "default",
+      "store": true,
+      "top_logprobs": 0,
+      "top_p": 1,
+      "truncation": "disabled"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-grok-3-mini-afe2abc7e899",
   "test": {
     "name": "generates text with grok-3-mini",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,43 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "7643",
+      "openai-processing-ms": "5963",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-699076eac08b87a41b2d1dcc",
+      "id": "chatcmpl-d79afb0845b28ca4cba03f38",
       "object": "chat.completion",
-      "created": 1774471637,
+      "created": 1774577502,
       "model": "grok-3-mini",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello, my friend.",
-            "reasoning_content": "First, the user said: \"Say hello in exactly 3 words.\" I need to respond with exactly 3 words that say hello.\n\nWhat does \"say hello\" mean? It probably means to greet someone, like \"Hello\" or something similar.\n\nThe key constraint is \"exactly 3 words.\" So, my response must consist of precisely 3 words.\n\nIf I just say \"Hello,\" that's only 1 word. I need to make it into 3 words.\n\nPossible ways:\n\n- \"Hello there friend.\" That's 3 words.\n\n- \"Say hello now.\" But that might not be directly saying hello.\n\nThe instruction is to \"say hello,\" so I should be greeting, not just talking about it.\n\nA simple one: \"Hello world example.\" But that doesn't make much sense.\n\nThe most straightforward: \"Hello, how are you?\" But that's 4 words: Hello, how, are, you.\n\n\"Hello, I am.\" Wait, no.\n\nLet's count: \"Hi there buddy.\" That's 3 words: Hi, there, buddy.\n\nOr \"Greetings from me.\" That's 3 words.\n\nTo keep it simple and directly responsive: \"Hello in three.\" But that might be meta.\n\nThe user said \"Say hello in exactly 3 words,\" which could mean to say the word \"hello\" as part of a 3-word phrase.\n\nPerhaps: \"Hello is greeting.\" But that's not accurate.\n\nI think the best is to just say a greeting that totals 3 words.\n\nCommon greeting: \"Hello my friend.\" That's 3 words: Hello, my, friend.\n\nYes, that works.\n\nTo be precise, maybe \"Say hello now.\" But that includes the command.\n\nNo, the user wants me to say hello, not to say \"say hello.\"\n\nSo, directly: \"Hello everyone today.\" But that's arbitrary.\n\nPerhaps the simplest: \"Hello hello hello.\" That's 3 words, all saying hello.\n\nBut that might be redundant.\n\nAnother idea: \"Bonjour hi hello.\" But that's mixing languages.\n\nI should stick to English.\n\nLet me think of a standard response.\n\nIn programming, \"Hello world\" is famous, but that's 2 words.\n\nSo, \"Hello big world.\" That's 3 words.\n\nOr \"Say hello world.\" Wait, no.\n\nPerhaps: \"I say hello.\" That's 3 words: I, say, hello.\n\nThat directly responds to the command.\n\nThe user said \"Say hello,\" so \"I say hello\" is like echoing it.\n\nBut is that exactly saying hello? It's a bit indirect.\n\n\"Hello to you.\" That's 3 words.\n\nI think that's fine.\n\nTo make it clear: \"Greeting: Hello there.\" But that's more than 3 words.\n\nNo, I have to limit to exactly 3 words.\n\nLet's decide on one: \"Hello my friend.\"\n\nThat seems friendly and direct.\n\nSo, my response will be: Hello my friend.\n\nIs that exactly 3 words? Yes: 1. Hello 2. my 3. friend.\n\nPerfect.",
-            "reasoning": "First, the user said: \"Say hello in exactly 3 words.\" I need to respond with exactly 3 words that say hello.\n\nWhat does \"say hello\" mean? It probably means to greet someone, like \"Hello\" or something similar.\n\nThe key constraint is \"exactly 3 words.\" So, my response must consist of precisely 3 words.\n\nIf I just say \"Hello,\" that's only 1 word. I need to make it into 3 words.\n\nPossible ways:\n\n- \"Hello there friend.\" That's 3 words.\n\n- \"Say hello now.\" But that might not be directly saying hello.\n\nThe instruction is to \"say hello,\" so I should be greeting, not just talking about it.\n\nA simple one: \"Hello world example.\" But that doesn't make much sense.\n\nThe most straightforward: \"Hello, how are you?\" But that's 4 words: Hello, how, are, you.\n\n\"Hello, I am.\" Wait, no.\n\nLet's count: \"Hi there buddy.\" That's 3 words: Hi, there, buddy.\n\nOr \"Greetings from me.\" That's 3 words.\n\nTo keep it simple and directly responsive: \"Hello in three.\" But that might be meta.\n\nThe user said \"Say hello in exactly 3 words,\" which could mean to say the word \"hello\" as part of a 3-word phrase.\n\nPerhaps: \"Hello is greeting.\" But that's not accurate.\n\nI think the best is to just say a greeting that totals 3 words.\n\nCommon greeting: \"Hello my friend.\" That's 3 words: Hello, my, friend.\n\nYes, that works.\n\nTo be precise, maybe \"Say hello now.\" But that includes the command.\n\nNo, the user wants me to say hello, not to say \"say hello.\"\n\nSo, directly: \"Hello everyone today.\" But that's arbitrary.\n\nPerhaps the simplest: \"Hello hello hello.\" That's 3 words, all saying hello.\n\nBut that might be redundant.\n\nAnother idea: \"Bonjour hi hello.\" But that's mixing languages.\n\nI should stick to English.\n\nLet me think of a standard response.\n\nIn programming, \"Hello world\" is famous, but that's 2 words.\n\nSo, \"Hello big world.\" That's 3 words.\n\nOr \"Say hello world.\" Wait, no.\n\nPerhaps: \"I say hello.\" That's 3 words: I, say, hello.\n\nThat directly responds to the command.\n\nThe user said \"Say hello,\" so \"I say hello\" is like echoing it.\n\nBut is that exactly saying hello? It's a bit indirect.\n\n\"Hello to you.\" That's 3 words.\n\nI think that's fine.\n\nTo make it clear: \"Greeting: Hello there.\" But that's more than 3 words.\n\nNo, I have to limit to exactly 3 words.\n\nLet's decide on one: \"Hello my friend.\"\n\nThat seems friendly and direct.\n\nSo, my response will be: Hello my friend.\n\nIs that exactly 3 words? Yes: 1. Hello 2. my 3. friend.\n\nPerfect."
+            "content": "Hello my friend.",
+            "reasoning_content": "First, the user said: \"Say hello in exactly 3 words.\" I need to respond with exactly 3 words that say hello.\n\nWhat does \"say hello\" mean? It probably means to greet someone, like \"Hello\" or something similar.\n\nBut it has to be exactly 3 words. So, I can't just say \"Hello\" because that's one word.\n\nI need to form a phrase that conveys a greeting and consists of precisely 3 words.\n\nPossible options:\n\n- \"Hello there friend\"\n\n- \"Hi how are you\" – Wait, that might be more than a greeting, but it says \"hello,\" which could be interpreted broadly.\n\nThe instruction is \"Say hello in exactly 3 words,\" so I should stick to a simple greeting.\n\nThe simplest might be \"Hello world example,\" but that doesn't make sense.\n\nPerhaps \"Say hello now\" – but that's me saying to say it, not actually saying it.\n\nI need to directly say hello in 3 words.\n\nA classic is \"Hello, how are you?\" But that's 4 words.\n\n\"Hello, how are\" is 3 words, but that's incomplete.\n\n\"Hi there friend\" is 3 words.\n\nOr \"Greetings from me\" – but that's not exactly \"hello.\"\n\nTo be precise, I should use \"hello\" in the response.\n\nThe user said \"Say hello,\" so including \"hello\" might be key.\n\nSo, perhaps: \"I say hello.\"\n\nThat's 3 words: I, say, hello.\n\n\"Hello to you.\"\n\nThat's 3 words.\n\nOr \"Hello everyone there.\"\n\nBut let's keep it simple.\n\nAnother idea: \"Hello in three words.\" But that's meta and not directly saying hello.\n\nThe most straightforward is \"Hello my friend.\"\n\nThat's 3 words: Hello, my, friend.\n\nYes, that works.\n\nIs \"Hello\" one word? Yes. \"My friend\" is two more, totaling three.\n\nPerfect.\n\nI could do \"Say hello please,\" but that might not be what they want.\n\nThe user said \"Say hello in exactly 3 words,\" so my response should be the 3 words that say hello.\n\nSo, I'll go with \"Hello my friend.\"\n\nThat seems appropriate.\n\nFinally, as an AI, I should ensure my response is exactly as specified: exactly 3 words.",
+            "reasoning": "First, the user said: \"Say hello in exactly 3 words.\" I need to respond with exactly 3 words that say hello.\n\nWhat does \"say hello\" mean? It probably means to greet someone, like \"Hello\" or something similar.\n\nBut it has to be exactly 3 words. So, I can't just say \"Hello\" because that's one word.\n\nI need to form a phrase that conveys a greeting and consists of precisely 3 words.\n\nPossible options:\n\n- \"Hello there friend\"\n\n- \"Hi how are you\" – Wait, that might be more than a greeting, but it says \"hello,\" which could be interpreted broadly.\n\nThe instruction is \"Say hello in exactly 3 words,\" so I should stick to a simple greeting.\n\nThe simplest might be \"Hello world example,\" but that doesn't make sense.\n\nPerhaps \"Say hello now\" – but that's me saying to say it, not actually saying it.\n\nI need to directly say hello in 3 words.\n\nA classic is \"Hello, how are you?\" But that's 4 words.\n\n\"Hello, how are\" is 3 words, but that's incomplete.\n\n\"Hi there friend\" is 3 words.\n\nOr \"Greetings from me\" – but that's not exactly \"hello.\"\n\nTo be precise, I should use \"hello\" in the response.\n\nThe user said \"Say hello,\" so including \"hello\" might be key.\n\nSo, perhaps: \"I say hello.\"\n\nThat's 3 words: I, say, hello.\n\n\"Hello to you.\"\n\nThat's 3 words.\n\nOr \"Hello everyone there.\"\n\nBut let's keep it simple.\n\nAnother idea: \"Hello in three words.\" But that's meta and not directly saying hello.\n\nThe most straightforward is \"Hello my friend.\"\n\nThat's 3 words: Hello, my, friend.\n\nYes, that works.\n\nIs \"Hello\" one word? Yes. \"My friend\" is two more, totaling three.\n\nPerfect.\n\nI could do \"Say hello please,\" but that might not be what they want.\n\nThe user said \"Say hello in exactly 3 words,\" so my response should be the 3 words that say hello.\n\nSo, I'll go with \"Hello my friend.\"\n\nThat seems appropriate.\n\nFinally, as an AI, I should ensure my response is exactly as specified: exactly 3 words."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 5,
-        "prompt_tokens": 14,
-        "total_tokens": 19,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 613,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 4
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 4,
+        "total_tokens": 11
       }
     }
   }

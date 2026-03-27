@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-2.5-pro-d3efe8c119d1",
+  "test": {
+    "name": "returns text with reasoning options for google/gemini-2.5-pro",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-2.5-pro",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "13683",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-ff6a28461d34a5b85a1ef8ba",
+      "object": "chat.completion",
+      "created": 1774579723,
+      "model": "gemini-2.5-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Here is a step-by-step method to solve the multiplication problem.\n\n**Reasoning:**\n\nOne way to solve this is to use the distributive property, which makes the mental math easier. We can round one number to a multiple of 10 and adjust.\n\n1.  Start with the problem: 17 * 19.\n2.  Rewrite 19 as an easier expression, such as (20 - 1).\n3.  The problem now becomes 17 * (20 - 1).\n4.  Distribute the 17 to both numbers inside the parentheses: (17 * 20) - (17 * 1).\n5.  Calculate the first part: 17 * 20 = 340.\n6.  Calculate the second part: 17 * 1 = 17.\n7.  Subtract the second result from the first: 340 - 17 = 323.\n\n**Final Answer:**\n323",
+            "reasoning_content": "**Assessing User Needs**\n\nI'm focused on grasping the user's explicit needs. Their request is straightforward: calculate the product of two numbers, 17 and 19. The prescribed output format, a step-by-step reasoning followed by the final answer, is clear. This guides my approach to the solution.\n\n\n**Considering Solution Approaches**\n\nI've been exploring different ways to solve this multiplication problem. Long multiplication is straightforward and easy to convey step-by-step. I'm also considering some mental math strategies. The algebraic trick of using a difference of squares might be elegant. Finally, I'm thinking about breaking down 17 into (10 + 7) and using the distributive property.\n\n\n**Deciding the Best Approach**\n\nI've settled on the algebraic approach using the distributive property. It's concise and demonstrates sound mathematical principles. My draft now includes clear, sequential steps. I'm focusing on making the logic easy to follow, making sure the user understands why the approach works.\n\n\n**Developing the Explanation**\n\nI'm now drafting the step-by-step explanation. I've broken down the calculation into logical steps, including clear introductions to the strategy and mathematical principles involved. My current focus is refining the language to ensure clarity and conciseness, making sure the user fully understands each step. I'm aiming for a straightforward and easy-to-follow explanation that delivers the final answer in the format specified.\n\n\n**Crafting the Response**\n\nI've just finalized the step-by-step solution and the output format, ensuring it strictly adheres to the prompt's specifications. The response provides a comprehensive explanation followed by the correct numerical answer on a separate line. A final review confirms all requirements are satisfied.\n\n\n",
+            "reasoning": "**Assessing User Needs**\n\nI'm focused on grasping the user's explicit needs. Their request is straightforward: calculate the product of two numbers, 17 and 19. The prescribed output format, a step-by-step reasoning followed by the final answer, is clear. This guides my approach to the solution.\n\n\n**Considering Solution Approaches**\n\nI've been exploring different ways to solve this multiplication problem. Long multiplication is straightforward and easy to convey step-by-step. I'm also considering some mental math strategies. The algebraic trick of using a difference of squares might be elegant. Finally, I'm thinking about breaking down 17 into (10 + 7) and using the distributive property.\n\n\n**Deciding the Best Approach**\n\nI've settled on the algebraic approach using the distributive property. It's concise and demonstrates sound mathematical principles. My draft now includes clear, sequential steps. I'm focusing on making the logic easy to follow, making sure the user understands why the approach works.\n\n\n**Developing the Explanation**\n\nI'm now drafting the step-by-step explanation. I've broken down the calculation into logical steps, including clear introductions to the strategy and mathematical principles involved. My current focus is refining the language to ensure clarity and conciseness, making sure the user fully understands each step. I'm aiming for a straightforward and easy-to-follow explanation that delivers the final answer in the format specified.\n\n\n**Crafting the Response**\n\nI've just finalized the step-by-step solution and the output format, ensuring it strictly adheres to the prompt's specifications. The response provides a comprehensive explanation followed by the correct numerical answer on a separate line. A final review confirms all requirements are satisfied.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 189,
+        "total_tokens": 219
+      }
+    }
+  }
+}

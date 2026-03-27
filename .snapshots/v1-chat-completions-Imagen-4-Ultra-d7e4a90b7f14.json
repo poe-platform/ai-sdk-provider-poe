@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Imagen-4-Ultra-d7e4a90b7f14",
   "test": {
     "name": "generates text with Imagen-4-Ultra",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "9821",
+      "openai-processing-ms": "7195",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-4f25a3b0904af85c13c9ee16",
+      "id": "chatcmpl-3d585ea2db917d80a756072e",
       "object": "chat.completion",
-      "created": 1774470765,
+      "created": 1774577766,
       "model": "Imagen-4-Ultra",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/daa30ce12f47593a28cb5570364a95ac249d137b757fad4dd9a8dec9e19a856a?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/daa30ce12f47593a28cb5570364a95ac249d137b757fad4dd9a8dec9e19a856a?w=1024&h=1024"
+            "content": "![Say hello in exactly 3 words_image_1](https://pfst.cf2.poecdn.net/base/image/46f18c351391da3248feae24ae628446a4ff434ae35671767caec403d075a6e4?w=1024&h=1024)\n\n\nhttps://pfst.cf2.poecdn.net/base/image/46f18c351391da3248feae24ae628446a4ff434ae35671767caec403d075a6e4?w=1024&h=1024"
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
         "prompt_tokens": 7,
-        "completion_tokens": 71,
-        "total_tokens": 78
+        "completion_tokens": 68,
+        "total_tokens": 75
       }
     }
   }

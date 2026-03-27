@@ -1,0 +1,78 @@
+{
+  "key": "v1-messages-claude-haiku-4.5-9d14c975b74e",
+  "test": {
+    "name": "claude-haiku-4.5 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-haiku-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:54:58Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-haiku-4-5-20251001",
+      "id": "req_poe_012ec7ee443c45c0a4f92f2310b2621d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me think about this step by step.\n\nOne approach is to use the formula (a)(b) where I can break it down:\n17 * 19 = 17 * (20 - 1)\n= 17 * 20 - 17 * 1\n= 340 - 17\n= 323\n\nLet me verify this another way:\n17 * 19 = (20 - 3) * 19\n= 20 * 19 - 3 * 19\n= 380 - 57\n= 323\n\nOr I can use the identity (a-1)(a+1) = a² - 1, but 17 and 19 aren't quite in that form. However, I can think of it as:\n17 * 19 = (18 - 1)(18 + 1) = 18² - 1 = 324 - 1 = 323\n\nAll three methods give me 323, so I'm confident that's the answer.",
+          "signature": "EsAFCkgIDBACGAIqQMlHZ7s/LcBWCYb9QIcfBsC8+1e30t/uS9Y2wt6iE42O8tZzFsA8VtPBYAmohuKILWxQf6yaSZFrgr74G87ucToSDPHt28ESGlsRKjMTVRoMOPvwLFxI/PDYM3UEIjAjhnTAI8/CkwONkBt//dosSj6otKoULNp/TrChlV9CnWFDLx58SEEYEwpRsGnWW1EqpQTiaYb8No7nBY+9/os4f7jLmNUPsiwKDZBpniyfpH31A9926k8wcM7QRRvL9tWn82Ins+j3E9q/ywX2648sxhXvmHGQNK2E8ouyy7iF23wms/Fg6Au0jhUD6rIS7ng0aVCO3rDwGPgdiEkruu1X9EiwMyr2eb6Cmf8t7ZgOyPncd7VAegXnF18GYuiJLtGcl8kZWVT6cKOAP+3wh7+yMOCN9BRynsbpCtnRa/Jysacpj3LCAF5D7xV4hsrkpIvsjjNd1smVnAtT8tkc78tM/Q+/HQz0bwxNqYfnb5HTbgDDACcj6ej/LkwtgsV5++nfvKEhtx+QKk9dlxOpjVRS3weHOU2vQqyUFLDs2XKeHRySd9qA08/2t5HOmB+J1bTtSyGzsAB5BDlphLUbjNjTre64Gx7GZMoD3gNN8/9WpV7unalrKH90X4D0wqUFlO6lYvsYLE2cqxTicJ4o3Pbkr1XptjEmP2eXsORYYlS72UAx5rEFYEgmA2ntAuSl08R4cjX2JIy08nOuG4gu6a91K7CTQgIKwq5CIPXxSnDX4vwpvvum1l3ZlY14nQvak0pIa9V6KcA+5dYoQuP9MQrM490jbT9p1yG+TZuxlyXNMgb/jI0w6J7BKkYS1t13IydPvWR/KAjYtJQ1DPQjZx7ApR+YB0AwNWhlaTpP3AFNd6CoMt1OvH6Ib+8SeaMX15hP62AoMssDrrBb3ZHXVcLrChlIhwYpvgsYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "# Reasoning\n\nI'll use the approach of rewriting one number to make the calculation easier.\n\n17 * 19 can be rewritten by noticing that 19 = 20 - 1:\n\n17 * 19 = 17 * (20 - 1)\n= (17 * 20) - (17 * 1)\n= 340 - 17\n= 323\n\n**Alternatively**, I can recognize that 17 and 19 are symmetric around 18:\n17 * 19 = (18 - 1)(18 + 1) = 18² - 1 = 324 - 1 = 323\n\n# Answer\n\n**323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 421,
+        "total_tokens": 488
+      }
+    }
+  }
+}

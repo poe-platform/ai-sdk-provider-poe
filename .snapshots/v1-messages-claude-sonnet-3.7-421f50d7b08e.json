@@ -1,0 +1,74 @@
+{
+  "key": "v1-messages-claude-sonnet-3.7-421f50d7b08e",
+  "test": {
+    "name": "claude-sonnet-3.7 produces reasoning with budget",
+    "file": "src/code/reasoning.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-sonnet-3.7",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?",
+              "cache_control": {
+                "type": "ephemeral"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:55:36Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-3-7-sonnet-20250219",
+      "id": "req_poe_f6971d6b606240259423619f85ce9bcc",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "To solve 17 * 19, I'll multiply these two numbers step by step.\n\nOne way to approach this is to use the distributive property:\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nAnother approach is to multiply directly:\n   17\n×  19\n-----\n   153 (17 × 9)\n  170  (17 × 10)\n-----\n  323\n\nSo 17 * 19 = 323.",
+          "signature": "ErkBCkoIDBACGAIiQH646GyNhcXbaYeRiFTJSZfl88JInY399D3Y277gQjQOUfbazzOV1kBpe6wOEjWoJdNtprYo7rLDTvJU5pxXQeQoARIMYHPrsHuK694lAL1TGgyxiiRUoCPrG3WfBN0iMFR2BcbBJheTfvSTOJ+EdeTJmA61Whgxc+gVyt0ifv52wVcGO5AE2R3F0M49cYESECod/1Y7UNJAskugoDLRPpDYdzghzHkGJQltimXwyVwYAg=="
+        },
+        {
+          "type": "text",
+          "text": "To find the product of 17 * 19, I'll break this down into a calculation that's easier to work with.\n\nMethod 1: Using the distributive property\nI can rewrite 19 as (20 - 1) to make the calculation simpler:\n17 * 19 = 17 * (20 - 1)\n        = 17 * 20 - 17 * 1\n        = 340 - 17\n        = 323\n\nMethod 2: Standard multiplication\n   17\n×  19\n-----\n   153  (17 × 9)\n  170   (17 × 10)\n-----\n  323\n\nBoth methods give the same result.\n\n17 * 19 = 323"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 318,
+        "total_tokens": 385
+      }
+    }
+  }
+}

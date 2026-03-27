@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-4o-mini-search-8c27993ee804",
   "test": {
     "name": "generates text with gpt-4o-mini-search",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,31 +25,31 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1899",
+      "openai-processing-ms": "1531",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-d348c2ba8509c74d94228416",
+      "id": "chatcmpl-6e224f69350415a6b1be8048",
       "object": "chat.completion",
-      "created": 1774470829,
+      "created": 1774561950,
       "model": "gpt-4o-mini-search",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "\"Hello, hello, hello\" is a three-word greeting. This phrase is notably used in the title of a 1979 song by the American rock band New England. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Hello%2C_Hello%2C_Hello?utm_source=openai)) "
+            "content": "Hello! How are you? "
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 65,
+        "completion_tokens": 7,
         "prompt_tokens": 7,
-        "total_tokens": 72,
+        "total_tokens": 14,
         "completion_tokens_details": {
           "accepted_prediction_tokens": null,
           "audio_tokens": null,

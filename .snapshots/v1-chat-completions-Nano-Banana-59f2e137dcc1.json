@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-Nano-Banana-59f2e137dcc1",
   "test": {
     "name": "generates text with Nano-Banana",
-    "file": "tests/integration/poe-bots.test.ts"
+    "file": "src/poe-provider.poe-bots.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,16 +25,16 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "1244",
+      "openai-processing-ms": "678",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-8bb5813adb66094eabc09a06",
+      "id": "chatcmpl-127eb57ba8e81ef3ffd1a493",
       "object": "chat.completion",
-      "created": 1774470694,
+      "created": 1774577715,
       "model": "Nano-Banana",
       "choices": [
         {

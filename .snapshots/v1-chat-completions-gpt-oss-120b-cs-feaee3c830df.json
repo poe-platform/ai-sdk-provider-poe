@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-gpt-oss-120b-cs-feaee3c830df",
   "test": {
     "name": "generates text with gpt-oss-120b-cs",
-    "file": "tests/integration/reasoning-models.test.ts"
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
   },
   "request": {
     "body": {
@@ -25,43 +25,33 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json",
-      "openai-processing-ms": "517",
+      "openai-processing-ms": "484",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "chatcmpl-0441b717f42b7c8f29f5f4fa",
+      "id": "chatcmpl-9766d5c097028dc0119f14c0",
       "object": "chat.completion",
-      "created": 1774471698,
+      "created": 1774577597,
       "model": "gpt-oss-120b-cs",
       "choices": [
         {
           "index": 0,
           "message": {
             "role": "assistant",
-            "content": "Hello dear friend",
-            "reasoning_content": "The user: \"Say hello in exactly 3 words\". They want a response that says hello in exactly three words. So perhaps \"Hello, dear friend!\" That's three words? Count: \"Hello,\" (counts as Hello) that's one word, \"dear\" second, \"friend!\" third. That's three words. However punctuation might affect counting but typical counting: words separated by spaces. So \"Hello dear friend\" is three words. Or \"Hello there, friend!\" that's three words? \"Hello\" \"there,\" \"friend!\" that's three. Provide exactly three words. Use minimal. So answer: \"Hello dear friend\". That's three words. Provide that.",
-            "reasoning": "The user: \"Say hello in exactly 3 words\". They want a response that says hello in exactly three words. So perhaps \"Hello, dear friend!\" That's three words? Count: \"Hello,\" (counts as Hello) that's one word, \"dear\" second, \"friend!\" third. That's three words. However punctuation might affect counting but typical counting: words separated by spaces. So \"Hello dear friend\" is three words. Or \"Hello there, friend!\" that's three words? \"Hello\" \"there,\" \"friend!\" that's three. Provide exactly three words. Use minimal. So answer: \"Hello dear friend\". That's three words. Provide that."
+            "content": "Hello there friend",
+            "reasoning_content": "We need to output \"Hello\" in exactly 3 words. So three words total, like \"Hello there friend\". That's three words. The user says \"Say hello in exactly 3 words\". So output a greeting using exactly three words. Provide exactly three words. Could be \"Hello there, friend\". That's three words? Actually \"Hello\" is one, \"there\" two, \"friend\" three. That's three words. Should we include punctuation? It's okay. Must ensure exactly three words, no extra. So output \"Hello there friend\". That's three words. Let's do that.",
+            "reasoning": "We need to output \"Hello\" in exactly 3 words. So three words total, like \"Hello there friend\". That's three words. The user says \"Say hello in exactly 3 words\". So output a greeting using exactly three words. Provide exactly three words. Could be \"Hello there, friend\". That's three words? Actually \"Hello\" is one, \"there\" two, \"friend\" three. That's three words. Should we include punctuation? It's okay. Must ensure exactly three words, no extra. So output \"Hello there friend\". That's three words. Let's do that."
           },
           "finish_reason": "stop"
         }
       ],
       "usage": {
-        "completion_tokens": 148,
-        "prompt_tokens": 74,
-        "total_tokens": 222,
-        "completion_tokens_details": {
-          "accepted_prediction_tokens": null,
-          "audio_tokens": null,
-          "reasoning_tokens": 0,
-          "rejected_prediction_tokens": null
-        },
-        "prompt_tokens_details": {
-          "audio_tokens": null,
-          "cached_tokens": 0
-        }
+        "prompt_tokens": 7,
+        "completion_tokens": 3,
+        "total_tokens": 10
       }
     }
   }

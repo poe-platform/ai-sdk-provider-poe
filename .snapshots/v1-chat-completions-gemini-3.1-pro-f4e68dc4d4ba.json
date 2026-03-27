@@ -1,0 +1,97 @@
+{
+  "key": "v1-chat-completions-gemini-3.1-pro-f4e68dc4d4ba",
+  "test": {
+    "name": "handles tool calling with gemini-3.1-pro",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-pro",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the weather in San Francisco? Use the getWeather tool."
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "getWeather",
+            "description": "Get the current weather for a location",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "string",
+                  "description": "The city to get weather for"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            }
+          }
+        }
+      ],
+      "tool_choice": "auto"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "4161",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-7a25cf26f9a7220de86b14a0",
+      "object": "chat.completion",
+      "created": 1774579362,
+      "model": "gemini-3.1-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "",
+            "reasoning_content": "**Assessing the Request**\n\nI'm focused on the user's need, recognizing they want San Francisco's weather. I've now identified the correct tool, `default_api:getWeather`, and I'm isolating the core parameter: `location` and determining the value as \"San Francisco\". My plan is clear and straightforward.\n\n\n**Confirming the Parameters**\n\nI'm solidifying the parameters for the tool call. I've re-evaluated and confirmed that the only necessary parameter is `location`, and its value should indeed be \"San Francisco.\" I am now preparing the final tool call.\n\n\n",
+            "reasoning": "**Assessing the Request**\n\nI'm focused on the user's need, recognizing they want San Francisco's weather. I've now identified the correct tool, `default_api:getWeather`, and I'm isolating the core parameter: `location` and determining the value as \"San Francisco\". My plan is clear and straightforward.\n\n\n**Confirming the Parameters**\n\nI'm solidifying the parameters for the tool call. I've re-evaluated and confirmed that the only necessary parameter is `location`, and its value should indeed be \"San Francisco.\" I am now preparing the final tool call.\n\n\n",
+            "tool_calls": [
+              {
+                "id": "tool_getWeather_BRaTexgrFH8tGzQa6BJY",
+                "type": "function",
+                "function": {
+                  "name": "getWeather",
+                  "arguments": "{\"location\": \"San Francisco\"}"
+                },
+                "extra_content": {
+                  "google": {
+                    "thought_signature": "CmIBjz1rX5qfhQ+TJurHM4Hf80Hm8T5kpah9QkOL8/V0BXzi8/U7gFL8Pt8pFX4T7Sg7Al5ZrlMt/dizQGUEzGqjTfbXdr3b1wdsnSnJ3MaTbLbOe7C8FM2tX2HgOVukT+DtnApnAY89a1+qDQCpjW+UJHrQbzUO5HaZkyBUC+iUE76TFuZeg7JXIG38IuQTOfTfe0teACloo7UQ8u9b3wTJf9oibEZJcwgWWh1zq/y619vpPOzQyrCyCG8tBZVu4hzK7wNt3UapLssMPAqUAQGPPWtfrSW4jnKccnF3lfOU7Mee03j7hOCVpKhUnzH2z7u8DMMcM76Shq2RgMVtd81KW+qxalLdbrTcrewF326BFz6c6RFqqiY4Gq6UiA/VxkGt3QB9roGbsCzhfkxk5959M+O4x8yS/v3oXlNO3bHilDWjJC7hCZ3Qdk3MS4n7De0I0TId3Woh5nAXMZvZjy3aC2wKfgGPPWtfmbSfyvaEKooTHvoz4KKHaS5hoIBJXYjcsnjMiLuAXSGbeLq4YuSgZVTWdQBpDvpAiFKAvbioOTwKxnYCQfuFIhcG3uD98rGbCahZ6sL1jFFOKwNsUjqihBB0/K7CmdNJEwXf3yLsMfvFzeMsq0n0+ifOyDsgRVpxOQ=="
+                  }
+                }
+              }
+            ]
+          },
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 0,
+        "total_tokens": 14
+      }
+    }
+  }
+}

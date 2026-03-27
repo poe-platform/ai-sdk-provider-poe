@@ -1,0 +1,58 @@
+{
+  "key": "v1-chat-completions-gemini-3-flash-0fdc6e3ed0c2",
+  "test": {
+    "name": "generates text with gemini-3-flash",
+    "file": "src/poe-provider.google.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3-flash",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Say hello in exactly 3 words"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "3363",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-13fb87b6c84b920aa3fb25b2",
+      "object": "chat.completion",
+      "created": 1774579369,
+      "model": "gemini-3-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "Hello there, friend.",
+            "reasoning_content": "**Examining Word Count**\n\nI've been experimenting with the constraints, specifically the three-word limit. I successfully produced two compliant examples, \"Hello there, friend.\" and \"Greetings to you.\", which confirms my approach. Further tests are planned to explore other possibilities.\n\n\n**Deciding on Greetings**\n\nI've settled on \"Hello there, friend.\" and confirmed its word count. I'm now verifying the alternative, \"Hello there, human.\", and comparing the feel of both, leaning towards the more natural greeting.\n\n\n",
+            "reasoning": "**Examining Word Count**\n\nI've been experimenting with the constraints, specifically the three-word limit. I successfully produced two compliant examples, \"Hello there, friend.\" and \"Greetings to you.\", which confirms my approach. Further tests are planned to explore other possibilities.\n\n\n**Deciding on Greetings**\n\nI've settled on \"Hello there, friend.\" and confirmed its word count. I'm now verifying the alternative, \"Hello there, human.\", and comparing the feel of both, leaning towards the more natural greeting.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 5,
+        "total_tokens": 12
+      }
+    }
+  }
+}

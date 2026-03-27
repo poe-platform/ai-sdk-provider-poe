@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-4o-cc56413017b7",
   "test": {
     "name": "generates text with gpt-4o",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,21 +30,21 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "1241",
+      "openai-processing-ms": "679",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMGYyZDAyOGNhNTAxYmM4NTAxNjljNDQ2N2Y4ZWM4ODE5MjliOGM2ODQ5YzBiYjE0ZGI=",
-      "created_at": 1774470783,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDcxNTQ3NmNhYTc4Njk4YTAxNjljNWFhNzc2MjY4ODE5Y2I0NzAzM2NhOWMyNzM2YmI=",
+      "created_at": 1774561911,
       "metadata": {},
       "model": "gpt-4o-2024-11-20",
       "object": "response",
       "output": [
         {
-          "id": "msg_0f2d028ca501bc850169c4468097788192b6ca0bf640c847e7",
+          "id": "msg_0715476caa78698a0169c5aa77c114819cb810b53e79c7bcb9",
           "content": [
             {
               "annotations": [],
@@ -91,7 +91,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470784,
+      "completed_at": 1774561911,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

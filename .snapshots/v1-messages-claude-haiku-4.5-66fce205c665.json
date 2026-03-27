@@ -1,0 +1,75 @@
+{
+  "key": "v1-messages-claude-haiku-4.5-66fce205c665",
+  "test": {
+    "name": "uses thinking with claude-haiku-4.5",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "claude-haiku-4.5",
+      "max_tokens": 9096,
+      "thinking": {
+        "type": "enabled",
+        "budget_tokens": 5000
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "anthropic-ratelimit-requests-limit": "500",
+      "anthropic-ratelimit-requests-remaining": "499",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T02:13:21Z",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "model": "claude-haiku-4-5-20251001",
+      "id": "req_poe_9b99d94ebf494e86a1fcc226c7264156",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "I need to calculate 17 * 19.\n\nLet me think about this step by step.\n\nOne approach is to use the distributive property or think of this as:\n17 * 19 = 17 * (20 - 1) = 17 * 20 - 17 * 1 = 340 - 17 = 323\n\nLet me verify this another way:\n17 * 19 = (20 - 3) * 19 = 20 * 19 - 3 * 19 = 380 - 57 = 323\n\nOr I could just multiply directly:\n17 * 19\n= 17 * (10 + 9)\n= 170 + 153\n= 323\n\nLet me verify 17 * 9:\n17 * 9 = 17 * 10 - 17 = 170 - 17 = 153\n\nSo: 17 * 10 + 17 * 9 = 170 + 153 = 323\n\nAll three methods give me 323.",
+          "signature": "EqIFCkgIDBACGAIqQDOirVMrOr2PRPN4/KAkNZSuPpXFlhs0vUka+HsKM4H+RBnT6K+mNo7L7hUTcsE9EteoxrEAawD97PKqs04jG9MSDGkA7j+01/qRlMEnXxoMii5T27SYzbUXIicjIjAY+cXYwGz30bre6S3aG/l/U9TVioVTqjHdyHL5Dd+mKyhxTCHd5sZDc7HB9D7UfwcqhwTdCQ924BiAjTcTPRXadUnwuf5Ks4GI9BeS02GkYTJrR8xe+6jH0wznCU47ZwxkbHmxtVARlcrtmwIKftSLCTUPtlXhFN/QMObzxcUC61ot3b4P0AXFeaFGxFTio8a8b6YcgK6b6qeiky8jTvj2sjkVdbOg3Lv/HKDN4zAO6hHewRc9EWD4P2SdPeIAcvK/BOWK0iezOeLCCbv1G7NJwD2frz7VXtGyYrijNzOE+koWEynnWVJ8d0aOC9H153aO/TSb+CrtaWAfla9kAm742K7P5cfAUUerPyV5/yNbsz8REh0ADDE54JXnJPupnpnqhwyz5DUQboIFe74aAa2csZXcT6WQ/u6d1gaTZckRFrsFOW3Grx0EUdFcITRAo6P7I3RIlBaCoxarL3JhWA7c3Zx3aR/FZC6dS501ry0Bgr1QKSYK79mhe+ZX93fSmV4tne2r8tAnhFyC4AE90OMq+3L1k+vusF4yMTPTzdoxAc4ZMGcpPa7XpviBI116jtJ9zrsIwNIowUo9OmR7AX1C1MXxiS7hUuKzO/9JY04Wd/cKFWMexMxvtGYMLtu+KyBxWBUb6cDxa1Dgt9kNBuQG4JQ45Pst3C8H1jADfr7zmO7sg6YocHYy+gnorPCEnk3XHcQhejVWuPO9tIJjIKfe2KH0pE4ITNO7VVvmL4PTBFw7sZaLEcyfSJUYAQ=="
+        },
+        {
+          "type": "text",
+          "text": "# Solving 17 × 19\n\n**Reasoning:**\nI'll use the distributive property to break this down into easier pieces:\n\n17 × 19 = 17 × (20 - 1)\n= (17 × 20) - (17 × 1)\n= 340 - 17\n= 323\n\nAlternatively, I can think of it as:\n17 × 19 = (17 × 10) + (17 × 9)\n= 170 + 153\n= 323\n\n**Final Answer: 323**"
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 67,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 398,
+        "total_tokens": 465
+      }
+    }
+  }
+}

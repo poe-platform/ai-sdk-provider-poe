@@ -2,7 +2,7 @@
   "key": "v1-responses-gpt-5.4-mini-a683846787ad",
   "test": {
     "name": "generates text with gpt-5.4-mini",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -30,25 +30,25 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "513",
+      "openai-processing-ms": "981",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
       "transfer-encoding": "chunked"
     },
     "body": {
-      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDhlNjlkMDU0NzMyMDJmMzAxNjljNDQ2MGUwZDhjODE5MzlkMTBmMzU1OGIyM2NhZTU=",
-      "created_at": 1774470670,
+      "id": "resp_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDpOb25lO3Jlc3BvbnNlX2lkOnJlc3BfMDFiNDEwMmIzYjdmOGI5NjAxNjljNWFhMTJmY2IwODE5NWJiZmI2YmY5NWRjMTczMDg=",
+      "created_at": 1774561811,
       "metadata": {},
       "model": "gpt-5.4-mini-2026-03-17",
       "object": "response",
       "output": [
         {
-          "id": "msg_08e69d05473202f30169c4460e329881939a8c6048e24eea50",
+          "id": "msg_01b4102b3b7f8b960169c5aa1345f0819593dc94b01b77dadb",
           "content": [
             {
               "annotations": [],
-              "text": "Hello, friendly human!",
+              "text": "Hello, friendly world.",
               "type": "output_text",
               "logprobs": []
             }
@@ -92,7 +92,7 @@
       "billing": {
         "payer": "developer"
       },
-      "completed_at": 1774470670,
+      "completed_at": 1774561811,
       "frequency_penalty": 0,
       "presence_penalty": 0,
       "service_tier": "default",

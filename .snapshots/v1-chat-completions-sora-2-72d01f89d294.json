@@ -2,7 +2,7 @@
   "key": "v1-chat-completions-sora-2-72d01f89d294",
   "test": {
     "name": "generates text with sora-2",
-    "file": "tests/integration/openai.test.ts"
+    "file": "src/poe-provider.openai.integration.test.ts"
   },
   "request": {
     "body": {
@@ -16,40 +16,24 @@
     }
   },
   "response": {
-    "status": 200,
+    "status": 500,
     "headers": {
       "access-control-allow-headers": "Authorization, Content-Type",
       "access-control-allow-origin": "*",
       "alt-svc": "h3=\":443\"; ma=86400",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
-      "content-encoding": "br",
+      "content-length": "337",
       "content-type": "application/json",
-      "openai-processing-ms": "66775",
+      "openai-processing-ms": "1787",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
-      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "transfer-encoding": "chunked"
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
     },
     "body": {
-      "id": "chatcmpl-f1391f05bbe7b4fa893c3665",
-      "object": "chat.completion",
-      "created": 1774471063,
-      "model": "sora-2",
-      "choices": [
-        {
-          "index": 0,
-          "message": {
-            "role": "assistant",
-            "content": "https://pfst.cf2.poecdn.net/base/video/25ba5b074f30df9d26958df766d2bfdcd9c11eaf0c9f1d453a0e91bc8b72389d"
-          },
-          "finish_reason": "stop"
-        }
-      ],
-      "usage": {
-        "prompt_tokens": 7,
-        "completion_tokens": 0,
-        "total_tokens": 7
+      "error": {
+        "message": "Error from OpenAI: The server had an error processing your request. Sorry about that! You can retry your request, or contact us through our help center at help.openai.com if you keep seeing this error. (Please include the request ID req_9e36dbe486554180aa8960402bb8ae31 in your email.)",
+        "type": "provider_error"
       }
     }
   }

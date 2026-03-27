@@ -1,0 +1,59 @@
+{
+  "key": "v1-chat-completions-gemini-3.1-pro-dfbbdbb1f40d",
+  "test": {
+    "name": "returns text with gemini-3.1-pro when reasoning options are provided",
+    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+  },
+  "request": {
+    "body": {
+      "model": "gemini-3.1-pro",
+      "reasoning_effort": "high",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "access-control-allow-headers": "Authorization, Content-Type",
+      "access-control-allow-origin": "*",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "cf-cache-status": "DYNAMIC",
+      "connection": "keep-alive",
+      "content-encoding": "br",
+      "content-type": "application/json",
+      "openai-processing-ms": "34606",
+      "openai-version": "2020-10-01",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "transfer-encoding": "chunked"
+    },
+    "body": {
+      "id": "chatcmpl-5625e2bc63260bfcf200282d",
+      "object": "chat.completion",
+      "created": 1774580010,
+      "model": "gemini-3.1-pro",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "To find the product of 17 and 19, we can use the distributive property to make the math easier. We can rewrite 19 as (20 - 1). \n\nThis changes the equation to: 17 * (20 - 1).\n\nStep 1: Multiply 17 by 20. Since 17 * 2 = 34, 17 * 20 = 340.\nStep 2: Multiply 17 by 1, which is 17.\nStep 3: Subtract the second result from the first result: 340 - 17 = 323.\n\nAlternatively, you can use the difference of squares formula, (a - b) * (a + b) = a² - b². \nSince 17 is (18 - 1) and 19 is (18 + 1), the problem becomes 18² - 1². We know 18 squared is 324, and 1 squared is 1. Subtracting 1 from 324 also gives us 323.\n\n323",
+            "reasoning_content": "**Initiating the Analysis**\n\nI'm focused on breaking down the request. First, there's the core task: a straightforward multiplication problem. Then, I'm noting the required output format. It's step-by-step reasoning followed by the final answer. Seems simple enough, but clarity is key.\n\n\n**Structuring the Response**\n\nI've decided to employ the distributive property for the primary explanation, as it feels most accessible. I'm also preparing to briefly mention the \"difference of squares\" as an alternate solution for the sake of completeness. Now, I'm formatting the step-by-step presentation, ensuring clarity and conciseness in the breakdown.\n\n\n**Simplifying the Explanation**\n\nI'm now prioritizing clarity. The primary method will use the distributive property, making it as direct as possible, using the 19 as 20 - 1 shortcut. I've streamlined the explanation to minimize jargon, making it immediately understandable. The \"difference of squares\" alternative will only be mentioned in passing.\n\n\n**Finalizing the Explanation**\n\nI'm now carefully crafting the final explanation, opting for the 20-1 method, as it is most intuitive, and I believe it makes the mental math easy to follow. The \"difference of squares\" alternative will be briefly acknowledged, but it's not the primary focus. I will ensure each step is clear and concise, and the answer is on its own line.\n\n\n",
+            "reasoning": "**Initiating the Analysis**\n\nI'm focused on breaking down the request. First, there's the core task: a straightforward multiplication problem. Then, I'm noting the required output format. It's step-by-step reasoning followed by the final answer. Seems simple enough, but clarity is key.\n\n\n**Structuring the Response**\n\nI've decided to employ the distributive property for the primary explanation, as it feels most accessible. I'm also preparing to briefly mention the \"difference of squares\" as an alternate solution for the sake of completeness. Now, I'm formatting the step-by-step presentation, ensuring clarity and conciseness in the breakdown.\n\n\n**Simplifying the Explanation**\n\nI'm now prioritizing clarity. The primary method will use the distributive property, making it as direct as possible, using the 19 as 20 - 1 shortcut. I've streamlined the explanation to minimize jargon, making it immediately understandable. The \"difference of squares\" alternative will only be mentioned in passing.\n\n\n**Finalizing the Explanation**\n\nI'm now carefully crafting the final explanation, opting for the 20-1 method, as it is most intuitive, and I believe it makes the mental math easy to follow. The \"difference of squares\" alternative will be briefly acknowledged, but it's not the primary focus. I will ensure each step is clear and concise, and the answer is on its own line.\n\n\n"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 212,
+        "total_tokens": 242
+      }
+    }
+  }
+}
