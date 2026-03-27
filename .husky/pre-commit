@@ -1,1 +1,1 @@
-trufflehog git file://.
+trufflehog git file://. --json --no-update
