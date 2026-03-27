@@ -1,5 +1,6 @@
 import { loadApiKey } from "@ai-sdk/provider-utils";
 import bundledRouting from "./data/bundled-routing.json" with { type: "json" };
+import { applyWorkarounds } from "./model-definition-workarounds/index.js";
 
 export const POE_DEFAULT_BASE_URL = "https://api.poe.com/v1";
 
@@ -43,19 +44,11 @@ function toPerMillion(v?: string | number | null): number | undefined {
   return Number.isFinite(n) ? Math.round(n * 100) / 100 : undefined;
 }
 
-/**
- * Models whose API output_modalities are missing "text".
- * Safe to keep after the upstream fix — the workaround is a no-op when "text" is already present.
- */
-const MISSING_TEXT_OUTPUT: Set<string> = new Set([
-  "gpt-5.4",
-  "gpt-5.4-mini",
-  "gpt-5.4-nano",
-  "gpt-5.4-pro",
-]);
-
-/** Normalize a raw API model into the canonical PoeApiModel shape. */
-function normalizeModel(raw: RawApiModel): PoeApiModel {
+/** Normalize a raw API model into the canonical PoeApiModel shape. Returns null if excluded by workarounds. */
+function normalizeModel(raw: RawApiModel): PoeApiModel | null {
+  const patched = applyWorkarounds(raw);
+  if (patched === null) return null;
+  raw = patched;
   const cw = raw.context_window;
   const contextWindow = typeof cw === "object" && cw ? cw.context_length : (typeof cw === "number" ? cw : undefined);
   const maxOutput = typeof cw === "object" && cw ? (cw.max_output_tokens ?? undefined) : raw.max_output_tokens;
@@ -84,7 +77,6 @@ function normalizeModel(raw: RawApiModel): PoeApiModel {
       const om: string[] | undefined = raw.output_modalities?.length
         ? raw.output_modalities
         : raw.architecture?.output_modalities?.length ? raw.architecture.output_modalities : undefined;
-      if (om && MISSING_TEXT_OUTPUT.has(raw.id) && !om.includes("text")) return { output_modalities: ["text", ...om] };
       return om?.length ? { output_modalities: om } : {};
     })(),
     ...(raw.reasoning && { reasoning: raw.reasoning }),
@@ -103,7 +95,10 @@ function normalizeModel(raw: RawApiModel): PoeApiModel {
 
 function loadBundled(): Map<string, PoeApiModel> {
   const map = new Map<string, PoeApiModel>();
-  for (const m of bundledRouting) map.set(m.id, normalizeModel(m as RawApiModel));
+  for (const m of bundledRouting) {
+    const n = normalizeModel(m as RawApiModel);
+    if (n) map.set(n.id, n);
+  }
   return map;
 }
 
@@ -150,9 +145,6 @@ function resolveFromStore(model: string): { provider: EffectiveProvider; model: 
   const endpoint = stored?.supported_endpoints?.[0];
   if (!endpoint) return undefined;
   if (endpoint === "/v1/messages") return { provider: "anthropic", model };
-  // Google models must use chat completions — the openai-compatible provider
-  // flushes unfinished tool calls on stream end, unlike @ai-sdk/openai responses.
-  if (stored?.owned_by === "Google") return { provider: "openai-chat", model };
   if (endpoint === "/v1/responses") return { provider: "openai-responses", model };
   return { provider: "openai-chat", model };
 }
@@ -209,8 +201,11 @@ export async function fetchPoeModels(options: {
   }
 
   const body = (await response.json()) as PoeApiModelsResponse;
-  const normalized = body.data.map(normalizeModel);
+  const normalized: PoeApiModel[] = [];
   models = new Map();
-  for (const m of normalized) models.set(m.id, m);
+  for (const raw of body.data) {
+    const m = normalizeModel(raw);
+    if (m) { normalized.push(m); models.set(m.id, m); }
+  }
   return normalized;
 }

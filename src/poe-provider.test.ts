@@ -132,7 +132,7 @@ describe("resolveProvider with model store", () => {
     expect(resolveProvider("openai/gpt-4o")).toEqual({ provider: "openai-chat", model: "gpt-4o" });
   });
 
-  it("routes Google-owned models to chat completions regardless of first endpoint", async () => {
+  it("routes Google-owned models to chat completions via endpoint reorder workaround", async () => {
     await seedModels([
       { id: "gemini-3.1-pro", owned_by: "Google", supported_endpoints: ["/v1/responses", "/v1/chat/completions"] },
     ]);
