@@ -22,7 +22,7 @@ describe("getModels", () => {
 
   it("includes text+tools models", () => {
     expect(ids).toContain("claude-opus-4.6");
-    expect(ids).toContain("assistant");
+    expect(ids).toContain("glm-5");
   });
 });
 

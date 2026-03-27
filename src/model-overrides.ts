@@ -30,4 +30,5 @@ export const MODEL_OVERRIDES: Record<string, ModelOverride> = {
   "lyria":                  { skip: "audio model" },
   "nano-banana-pro":        { skip: "Poe reasoning output missing summary field" },
   "nano-banana-2":          { skip: "image gen, too slow" },
+  "gpt-4-classic-0314":     { skip: "deprecated" },
 };
