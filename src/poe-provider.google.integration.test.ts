@@ -10,6 +10,24 @@ const poe = createPoe({
   fetch: getSnapshotFetch(),
 });
 
+const REASONING_PROMPT =
+  "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?";
+
+async function expectGoogleReasoningOptions(modelId: string) {
+  const { text } = await generateText({
+    model: poe(`google/${modelId}`),
+    prompt: REASONING_PROMPT,
+    providerOptions: {
+      poe: {
+        reasoningEffort: "high",
+        reasoningSummary: "auto",
+      },
+    },
+  });
+
+  expect(text).toContain("323");
+}
+
 describe("google provider", () => {
   for (const m of getStoredModels().filter(m => m.owned_by === "Google")) {
     describe(m.id, () => {
@@ -51,4 +69,36 @@ describe("google provider", () => {
       }
     });
   }
+
+  it("returns text with reasoning options for google/gemini-2.5-flash", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-2.5-flash");
+  });
+
+  it("returns text with reasoning options for google/gemini-2.5-pro", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-2.5-pro");
+  });
+
+  it("returns text with reasoning options for google/gemini-2.5-flash-lite", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-2.5-flash-lite");
+  });
+
+  it("returns text with reasoning options for google/gemini-3-flash", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-3-flash");
+  });
+
+  it("returns text with reasoning options for google/gemini-3.1-pro", { tags: ["timeout:reasoning", "timeout:slow"], timeout: 180_000 }, async () => {
+    await expectGoogleReasoningOptions("gemini-3.1-pro");
+  });
+
+  it("returns text with reasoning options for google/gemini-3.1-flash-lite", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-3.1-flash-lite");
+  });
+
+  it("returns text with reasoning options for google/gemini-2.0-flash", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-2.0-flash");
+  });
+
+  it("returns text with reasoning options for google/gemini-2.0-flash-lite", { tags: ["timeout:reasoning"] }, async () => {
+    await expectGoogleReasoningOptions("gemini-2.0-flash-lite");
+  });
 });

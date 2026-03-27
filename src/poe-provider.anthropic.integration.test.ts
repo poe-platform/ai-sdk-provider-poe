@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { generateText, tool, type ModelMessage } from "ai";
 import { z } from "zod";
 import { createPoe } from "./poe-provider.js";
-import { getSnapshotFetch } from "./test/index.js";
+import { expectReasoningText, getSnapshotFetch } from "./test/index.js";
 import { SYSTEM_PROMPT_LARGE } from "./test/fixtures/prompt-caching.js";
 
 const poe = createPoe({
@@ -21,6 +21,24 @@ const THINKING_MODELS = [
   "anthropic/claude-opus-4-5",
   "anthropic/claude-sonnet-4",
 ] as const;
+
+const REASONING_PROMPT =
+  "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?";
+
+async function expectAnthropicReasoning(modelId: string) {
+  const { text, reasoning } = await generateText({
+    model: poe(modelId),
+    prompt: REASONING_PROMPT,
+    providerOptions: {
+      poe: {
+        reasoningBudgetTokens: 5000,
+      },
+    },
+  });
+
+  expect(text).toContain("323");
+  expectReasoningText(reasoning);
+}
 
 describe("anthropic provider", () => {
   for (const modelId of MODELS) {
@@ -58,23 +76,21 @@ describe("anthropic provider", () => {
     });
   }
 
-  for (const modelId of THINKING_MODELS) {
-    it(`uses extended thinking with ${modelId}`, async () => {
-      const { text, reasoning } = await generateText({
-        model: poe(modelId),
-        prompt: "What is 7 * 8?",
-        providerOptions: {
-          anthropic: {
-            thinking: { type: "enabled", budgetTokens: 5000 },
-          },
-        },
-      });
+  it("uses extended thinking with anthropic/claude-opus-4-6", async () => {
+    await expectAnthropicReasoning("anthropic/claude-opus-4-6");
+  });
 
-      expect(text).toBeTruthy();
-      expect(text).toContain("56");
-      expect(reasoning).toBeTruthy();
-    });
-  }
+  it("uses extended thinking with anthropic/claude-opus-4-5", async () => {
+    await expectAnthropicReasoning("anthropic/claude-opus-4-5");
+  });
+
+  it("uses extended thinking with anthropic/claude-sonnet-4", async () => {
+    await expectAnthropicReasoning("anthropic/claude-sonnet-4");
+  });
+
+  it("returns reasoning text for anthropic/claude-sonnet-4.6", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicReasoning("anthropic/claude-sonnet-4.6");
+  });
 
   it.skip("opus 4.6 1 million context", {
     timeout: 3600000,

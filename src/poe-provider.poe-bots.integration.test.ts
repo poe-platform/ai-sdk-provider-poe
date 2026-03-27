@@ -116,6 +116,61 @@ describe("poe-bots (chat completions)", () => {
   );
 
   it(
+    "generates text with Grok-4-Fast-Reasoning",
+    { tags: ["timeout:reasoning"] },
+    async () => {
+      const { text } = await generateText({
+        model: poe("Grok-4-Fast-Reasoning"),
+        prompt: "Say hello in exactly 3 words",
+      });
+
+      expect(text).toBeTruthy();
+    },
+  );
+
+  it(
+    "generates text with Grok-4-Fast-Non-Reasoning",
+    async () => {
+      const { text } = await generateText({
+        model: poe("Grok-4-Fast-Non-Reasoning"),
+        prompt: "Say hello in exactly 3 words",
+      });
+
+      expect(text).toBeTruthy();
+    },
+  );
+
+  it(
+    "generates text with Grok-4.1-Fast-Non-Reasoning",
+    async () => {
+      const { text } = await generateText({
+        model: poe("Grok-4.1-Fast-Non-Reasoning"),
+        prompt: "Say hello in exactly 3 words",
+      });
+
+      expect(text).toBeTruthy();
+    },
+  );
+
+  it("handles tool calls with Grok-4.1-Fast-Reasoning", { tags: ["timeout:reasoning"] }, async () => {
+    const { toolCalls } = await generateText({
+      model: poe("Grok-4.1-Fast-Reasoning"),
+      prompt: "What is the weather in San Francisco? Use the getWeather tool.",
+      tools: {
+        getWeather: tool({
+          description: "Get the current weather for a location",
+          inputSchema: z.object({
+            location: z.string().describe("The city to get weather for"),
+          }),
+        }),
+      },
+    });
+
+    expect(toolCalls.length).toBeGreaterThan(0);
+    expect(toolCalls[0].toolName).toBe("getWeather");
+  });
+
+  it(
     "generates text with GPT-Image-1",
     { tags: ["timeout:image"] },
     async () => {

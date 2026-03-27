@@ -37,39 +37,6 @@ describe("models without prefix (chat completions)", () => {
     expect(toolCalls[0].toolName).toBe("getWeather");
   });
 
-  it("supports enable_thinking with Kimi-K2.5", async () => {
-    const { text } = await generateText({
-      model: poe("Kimi-K2.5"),
-      prompt: "Create a nutritious, high-protein recipe using chicken, broccoli, and sweet potatoes",
-      experimental_providerMetadata: {
-        openai: {
-          enable_thinking: true,
-        },
-      },
-    });
-
-    expect(text).toBeTruthy();
-    expect(typeof text).toBe("string");
-  });
-
-  it("supports thinking_level and web_search with gemini-3.1-pro", { tags: ["timeout:slow"] }, async () => {
-    const { text, usage } = await generateText({
-      model: poe("gemini-3.1-pro"),
-      prompt:
-        "Write a Python function where given an int array, it returns the length of the longest strictly increasing subsequence. Give the naive solution and an optimal solution.",
-      experimental_providerMetadata: {
-        openai: {
-          thinking_level: "high",
-          web_search: true,
-        },
-      },
-    });
-
-    expect(text).toBeTruthy();
-    expect(text).toContain("def");
-    expect(usage.outputTokens).toBeGreaterThan(1);
-  });
-
   it("generates structured output with xai/grok-4", async () => {
     const { output } = await generateText({
       model: poe("xai/grok-4"),

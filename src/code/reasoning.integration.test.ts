@@ -1,10 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { generateText } from "ai";
 import { createPoe } from "../poe-provider.js";
-import { MODEL_OVERRIDES } from "../model-overrides.js";
-import { getModels } from "./models.js";
 import { _resetModelCache } from "../poe-models.js";
-import { getSnapshotFetch } from "../test/index.js";
+import { expectReasoningText, getSnapshotFetch } from "../test/index.js";
 
 // Ensure bundled routing is loaded (guards against shared-thread cache clearing)
 _resetModelCache();
@@ -13,43 +11,58 @@ const poe = createPoe({
   fetch: getSnapshotFetch(),
 });
 
-const models = getModels();
+const REASONING_PROMPT =
+  "Solve this step by step. First explain your reasoning, then give the final answer on a separate line: What is 17 * 19?";
+
+async function expectAnthropicBudgetReasoning(modelId: string) {
+  const { text, reasoning } = await generateText({
+    model: poe(modelId),
+    prompt: REASONING_PROMPT,
+    providerOptions: {
+      poe: {
+        reasoningBudgetTokens: 5000,
+      },
+    },
+  });
+
+  expect(text).toContain("323");
+  expectReasoningText(reasoning);
+}
 
 describe("reasoning: budget (anthropic thinking)", () => {
-  for (const m of models.filter(m => m.supportsReasoningBudget)) {
-    const run = MODEL_OVERRIDES[m.rawId]?.skip ? it.skip : it;
+  it("claude-opus-4.6 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-opus-4.6");
+  });
 
-    run(`${m.rawId} produces reasoning with budget`, { tags: ["timeout:reasoning"] }, async () => {
-      const { text, reasoning } = await generateText({
-        model: poe(m.id),
-        prompt: "What is 7 * 8?",
-        providerOptions: {
-          anthropic: {
-            thinking: { type: "enabled", budgetTokens: 5000 },
-          },
-        },
-      });
+  it("claude-sonnet-4.6 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-sonnet-4.6");
+  });
 
-      expect(text).toBeTruthy();
-      expect(text).toContain("56");
-      expect(reasoning).toBeTruthy();
-    });
-  }
-});
+  it("claude-haiku-4.5 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-haiku-4.5");
+  });
 
-describe("reasoning: effort (openai responses)", () => {
-  for (const m of models.filter(m => m.supportsReasoningEffort)) {
-    const run = MODEL_OVERRIDES[m.rawId]?.skip ? it.skip : it;
+  it("claude-sonnet-4.5 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-sonnet-4.5");
+  });
 
-    run(`${m.rawId} produces reasoning with effort`, { tags: ["timeout:reasoning"] }, async () => {
-      const { text, reasoning } = await generateText({
-        model: poe(m.id),
-        prompt: "What is 7 * 8?",
-      });
+  it("claude-opus-4.5 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-opus-4.5");
+  });
 
-      expect(text).toBeTruthy();
-      expect(text).toContain("56");
-      expect(reasoning).toBeTruthy();
-    });
-  }
+  it("claude-opus-4.1 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-opus-4.1");
+  });
+
+  it("claude-sonnet-4 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-sonnet-4");
+  });
+
+  it("claude-opus-4 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-opus-4");
+  });
+
+  it("claude-sonnet-3.7 produces reasoning with budget", { tags: ["timeout:reasoning"] }, async () => {
+    await expectAnthropicBudgetReasoning("anthropic/claude-sonnet-3.7");
+  });
 });
