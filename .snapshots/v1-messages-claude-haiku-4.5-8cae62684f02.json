@@ -1,12 +1,12 @@
 {
-  "key": "v1-messages-claude-haiku-3-5-20241022-8ae68562640a",
+  "key": "v1-messages-claude-haiku-4.5-8cae62684f02",
   "test": {
-    "name": "caches tokens on repeated calls with claude-haiku-3-5",
-    "file": "src/poe-provider.anthropic-caching.integration.test.ts"
+    "name": "auto-caches with claude-haiku-4-5",
+    "file": "src/workarounds/anthropic-cache.integration.test.ts"
   },
   "request": {
     "body": {
-      "model": "claude-haiku-3-5-20241022",
+      "model": "claude-haiku-4.5",
       "max_tokens": 4096,
       "system": [
         {
@@ -40,7 +40,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-27T03:30:12Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T03:29:57Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -50,14 +50,14 @@
       "transfer-encoding": "chunked"
     },
     "body": {
-      "model": "claude-3-5-haiku-20241022",
-      "id": "req_poe_b9dd6be8879242c18d1c627dea81af36",
+      "model": "claude-haiku-4-5-20251001",
+      "id": "req_poe_a54a694b8c21411db35e138c14956c19",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on the analysis of monoclinic and triclinic crystal systems using advanced techniques like tensor analysis and point group symmetry operations."
+          "text": "Zygomorphic crystallography is the study of bilateral symmetry in mineral formations, particularly in monoclinic and triclinic crystal systems, using Bravais lattice theory, point group symmetry operations, and tensor analysis to characterize anisotropic properties."
         }
       ],
       "stop_reason": "end_turn",
@@ -70,8 +70,8 @@
           "ephemeral_5m_input_tokens": 4487,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 50,
-        "total_tokens": 53
+        "output_tokens": 61,
+        "total_tokens": 64
       }
     }
   }

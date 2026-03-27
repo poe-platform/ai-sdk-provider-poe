@@ -58,23 +58,20 @@ async function testCaching(modelId: string) {
   // First call: should write to cache
   expect(first.usage.inputTokens).toBeGreaterThan(0);
 
-  // Extract cache metrics from response metadata
-  const firstMeta = first.providerMetadata?.anthropic as Record<string, number> | undefined;
-  const secondMeta = second.providerMetadata?.anthropic as Record<string, number> | undefined;
-  const thirdMeta = third.providerMetadata?.anthropic as Record<string, number> | undefined;
+  // Cache metrics via inputTokenDetails (structured usage)
+  const tokens = [first, second, third].map((r) => {
+    const d = r.usage.inputTokenDetails;
+    return { cacheRead: d.cacheReadTokens ?? 0, cacheWrite: d.cacheWriteTokens ?? 0 };
+  });
 
-  // First call should create cache (cacheCreationInputTokens > 0)
-  if (firstMeta?.cacheCreationInputTokens !== undefined) {
-    expect(firstMeta.cacheCreationInputTokens).toBeGreaterThan(0);
+  // Every call should engage the cache (write or read depending on warm/cold state)
+  for (const t of tokens) {
+    expect(t.cacheRead + t.cacheWrite).toBeGreaterThan(0);
   }
 
-  // Subsequent calls should read from cache (cacheReadInputTokens > 0)
-  if (secondMeta?.cacheReadInputTokens !== undefined) {
-    expect(secondMeta.cacheReadInputTokens).toBeGreaterThan(0);
-  }
-  if (thirdMeta?.cacheReadInputTokens !== undefined) {
-    expect(thirdMeta.cacheReadInputTokens).toBeGreaterThan(0);
-  }
+  // Subsequent calls should read from cache
+  expect(tokens[1].cacheRead).toBeGreaterThan(0);
+  expect(tokens[2].cacheRead).toBeGreaterThan(0);
 }
 
 describe("anthropic prompt caching", () => {

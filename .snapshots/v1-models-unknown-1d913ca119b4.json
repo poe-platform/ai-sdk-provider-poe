@@ -1,8 +1,8 @@
 {
   "key": "v1-models-unknown-1d913ca119b4",
   "test": {
-    "name": "generates text with grok-4.1-fast-non-reasoning",
-    "file": "src/poe-provider.reasoning-models.integration.test.ts"
+    "name": "caches tokens on repeated calls with claude-opus-4-5",
+    "file": "src/poe-provider.anthropic-caching.integration.test.ts"
   },
   "request": {
     "body": null
@@ -17,7 +17,7 @@
       "connection": "keep-alive",
       "content-encoding": "br",
       "content-type": "application/json; charset=utf-8",
-      "openai-processing-ms": "14",
+      "openai-processing-ms": "19",
       "openai-version": "2020-10-01",
       "server": "cloudflare",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",

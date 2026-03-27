@@ -35,60 +35,12 @@ async function testAutoCaching(modelId: string) {
 
   const tokens = results.map(cacheTokens);
 
-  // Every call should engage the cache (either writing or reading).
-  // If the cache is cold the first call writes; if warm it reads.
+  // Every call should engage the cache (either writing or reading)
   for (const t of tokens) {
     expect(t.cacheRead + t.cacheWrite).toBeGreaterThan(0);
   }
 
   // Later calls should read from cache (system prompt reuse)
-  expect(tokens[1].cacheRead).toBeGreaterThan(0);
-  expect(tokens[2].cacheRead).toBeGreaterThan(0);
-}
-
-/** Manual cacheControl still works alongside the workaround. */
-async function testManualCaching(modelId: string) {
-  const model = poe(modelId);
-  const history: ModelMessage[] = [];
-  const results = [];
-
-  for (let i = 0; i < 3; i++) {
-    history.push({
-      role: "user",
-      content: [
-        {
-          type: "text",
-          text: USER_MESSAGES[i],
-          providerOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
-        },
-      ],
-    });
-
-    const result = await generateText({
-      model,
-      messages: [
-        {
-          role: "system",
-          content: SYSTEM_PROMPT_LARGE,
-          providerOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
-        },
-        ...history,
-      ],
-    });
-
-    history.push({ role: "assistant", content: result.text });
-    results.push(result);
-  }
-
-  for (const r of results) {
-    expect(r.text).toBeTruthy();
-  }
-
-  const tokens = results.map(cacheTokens);
-
-  for (const t of tokens) {
-    expect(t.cacheRead + t.cacheWrite).toBeGreaterThan(0);
-  }
   expect(tokens[1].cacheRead).toBeGreaterThan(0);
   expect(tokens[2].cacheRead).toBeGreaterThan(0);
 }
@@ -130,8 +82,7 @@ async function testCacheDisabled(modelId: string) {
 }
 
 describe("anthropic automatic cache breakpoints", () => {
-  it("auto-caches with claude-sonnet-4", async () => testAutoCaching("anthropic/claude-sonnet-4-20250514"), 600_000);
-  it("auto-caches with claude-haiku-3-5", async () => testAutoCaching("anthropic/claude-haiku-3-5-20241022"), 600_000);
-  it("manual cacheControl still works", async () => testManualCaching("anthropic/claude-sonnet-4-20250514"), 600_000);
+  // Use haiku-4.5 to avoid snapshot collisions with the manual caching test (which uses haiku-3.5)
+  it("auto-caches with claude-haiku-4-5", async () => testAutoCaching("anthropic/claude-haiku-4.5"), 600_000);
   it("cache: false disables breakpoints", async () => testCacheDisabled("anthropic/claude-haiku-3-5-20241022"), 600_000);
 });

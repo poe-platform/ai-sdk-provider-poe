@@ -1,5 +1,5 @@
 {
-  "key": "v1-messages-claude-haiku-3-5-20241022-3d2f59b5cfc6",
+  "key": "v1-messages-claude-haiku-3-5-20241022-70a25c4d7434",
   "test": {
     "name": "cache: false disables breakpoints",
     "file": "src/workarounds/anthropic-cache.integration.test.ts"
@@ -23,6 +23,24 @@
               "text": "What is zygomorphic crystallography? Answer in one sentence."
             }
           ]
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on monoclinic and triclinic crystal systems with particular attention to glide plane reflections and screw axis rotations that define the asymmetric unit of crystal structures."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "What is pneumatic differential calculus? Answer in one sentence."
+            }
+          ]
         }
       ]
     }
@@ -34,7 +52,7 @@
       "alt-svc": "h3=\":443\"; ma=86400",
       "anthropic-ratelimit-requests-limit": "500",
       "anthropic-ratelimit-requests-remaining": "499",
-      "anthropic-ratelimit-requests-reset": "2026-03-27T03:30:00Z",
+      "anthropic-ratelimit-requests-reset": "2026-03-27T03:30:03Z",
       "cf-cache-status": "DYNAMIC",
       "connection": "keep-alive",
       "content-encoding": "br",
@@ -45,27 +63,27 @@
     },
     "body": {
       "model": "claude-3-5-haiku-20241022",
-      "id": "req_poe_2386a307ed19422fb187547aeb2b67e5",
+      "id": "req_poe_a7eb3196f65843f28be6ff417f198004",
       "type": "message",
       "role": "assistant",
       "content": [
         {
           "type": "text",
-          "text": "Zygomorphic crystallography is the specialized study of bilateral symmetry in mineral formations, focusing on monoclinic and triclinic crystal systems with particular attention to glide plane reflections and screw axis rotations that define the asymmetric unit of crystal structures."
+          "text": "Pneumatic differential calculus is an advanced mathematical framework for modeling gas dynamics in non-equilibrium thermodynamic systems, incorporating Boltzmann transport coefficients and modified Navier-Stokes approximations to analyze rarefied gas regimes and hypersonic flow behaviors."
         }
       ],
       "stop_reason": "end_turn",
       "stop_sequence": null,
       "usage": {
-        "input_tokens": 4490,
+        "input_tokens": 4566,
         "cache_creation_input_tokens": 0,
         "cache_read_input_tokens": 0,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
           "ephemeral_1h_input_tokens": 0
         },
-        "output_tokens": 60,
-        "total_tokens": 4550
+        "output_tokens": 62,
+        "total_tokens": 4628
       }
     }
   }
