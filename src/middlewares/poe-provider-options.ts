@@ -1,12 +1,12 @@
 import type { LanguageModelV3 } from "@ai-sdk/provider";
 import { wrapLanguageModel } from "ai";
-import { withAnthropicCache } from "./anthropic-cache.js";
+import type { ProviderOptionsRecord } from "./types.js";
 
-type ModelTransform = (model: LanguageModelV3) => LanguageModelV3;
-
-export type ProviderOptionsRecord = Record<string, Record<string, unknown>>;
-
-function withPoeProviderOptions(model: LanguageModelV3): LanguageModelV3 {
+/**
+ * Maps poe.* provider options to the correct backend-specific options.
+ * e.g. poe.reasoningBudgetTokens → anthropic.thinking.budgetTokens
+ */
+export function withPoeProviderOptions(model: LanguageModelV3): LanguageModelV3 {
   return wrapLanguageModel({
     model,
     middleware: {
@@ -50,10 +50,4 @@ function withPoeProviderOptions(model: LanguageModelV3): LanguageModelV3 {
       },
     },
   });
-}
-
-const workarounds: ModelTransform[] = [withAnthropicCache, withPoeProviderOptions];
-
-export function withWorkarounds(model: LanguageModelV3): LanguageModelV3 {
-  return workarounds.reduce((m, w) => w(m), model);
 }

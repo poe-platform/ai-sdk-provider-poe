@@ -4,8 +4,7 @@ import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
 import { createOpenAICompatible, type OpenAICompatibleProvider } from "@ai-sdk/openai-compatible";
 import { POE_DEFAULT_BASE_URL, resolveProvider, fetchPoeModels, setRefetchFn } from "./poe-models.js";
-import { withWorkarounds } from "./workarounds/index.js";
-import { patchingFetch } from "./workarounds/patch-output-text.js";
+import { withMiddlewares, patchingFetch } from "./middlewares/index.js";
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -87,11 +86,11 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
 
     switch (provider) {
       case "anthropic":
-        return withWorkarounds(getAnthropicProvider()(model));
+        return withMiddlewares(getAnthropicProvider()(model));
       case "openai-responses":
-        return withWorkarounds(getOpenAIResponsesProvider().responses(model));
+        return withMiddlewares(getOpenAIResponsesProvider().responses(model));
       case "openai-chat":
-        return withWorkarounds(getOpenAIChatProvider().chatModel(model));
+        return withMiddlewares(getOpenAIChatProvider().chatModel(model));
     }
   };
 

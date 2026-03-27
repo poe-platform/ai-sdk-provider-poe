@@ -1,6 +1,6 @@
 import type { LanguageModelV3, LanguageModelV3Message } from "@ai-sdk/provider";
 import { wrapLanguageModel } from "ai";
-import type { ProviderOptionsRecord } from "./index.js";
+import type { ProviderOptionsRecord } from "./types.js";
 
 const EPHEMERAL = { cacheControl: { type: "ephemeral" } };
 
