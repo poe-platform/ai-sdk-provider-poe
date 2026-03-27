@@ -4,7 +4,7 @@ import { createAnthropic, type AnthropicProvider } from "@ai-sdk/anthropic";
 import { createOpenAI, type OpenAIProvider } from "@ai-sdk/openai";
 import { createOpenAICompatible, type OpenAICompatibleProvider } from "@ai-sdk/openai-compatible";
 import { POE_DEFAULT_BASE_URL, resolveProvider, fetchPoeModels, setRefetchFn } from "./poe-models.js";
-import { withMiddlewares, patchingFetch } from "./middlewares/index.js";
+import { withMiddlewares } from "./middlewares/index.js";
 
 export interface PoeProviderSettings {
   apiKey?: string;
@@ -59,7 +59,7 @@ export function createPoe(options: PoeProviderSettings = {}): PoeProvider {
         baseURL,
         apiKey: getApiKey(),
         headers: options.headers,
-        fetch: patchingFetch(options.fetch ?? globalThis.fetch),
+        fetch: options.fetch,
       });
     }
     return openaiResponsesProvider;

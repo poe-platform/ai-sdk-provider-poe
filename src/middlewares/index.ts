@@ -15,4 +15,3 @@ export function withMiddlewares(model: LanguageModelV3): LanguageModelV3 {
   return middlewares.reduce((m, mw) => mw(m), model);
 }
 
-export { patchingFetch } from "./patch-output-text.js";

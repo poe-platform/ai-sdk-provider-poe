@@ -21,20 +21,12 @@ function patchOutputText(obj: any): any {
 }
 
 function patchSSEStream(body: ReadableStream<Uint8Array>): ReadableStream<Uint8Array> {
-  const reader = body.getReader();
   const decoder = new TextDecoder();
   const encoder = new TextEncoder();
   let buffer = "";
 
-  return new ReadableStream<Uint8Array>({
-    async pull(controller) {
-      const { done, value } = await reader.read();
-      if (done) {
-        if (buffer) controller.enqueue(encoder.encode(buffer));
-        controller.close();
-        return;
-      }
-
+  return body.pipeThrough(new TransformStream<Uint8Array, Uint8Array>({
+    transform(value, controller) {
       buffer += decoder.decode(value, { stream: true });
       const lines = buffer.split("\n");
       buffer = lines.pop()!;
@@ -54,7 +46,10 @@ function patchSSEStream(body: ReadableStream<Uint8Array>): ReadableStream<Uint8A
         controller.enqueue(encoder.encode(line + "\n"));
       }
     },
-  });
+    flush(controller) {
+      if (buffer) controller.enqueue(encoder.encode(buffer));
+    },
+  }));
 }
 
 /**
@@ -65,7 +60,6 @@ export function patchingFetch(baseFetch: typeof globalThis.fetch): typeof global
   return async (input, init) => {
     const res = await baseFetch(input, init);
     const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
-
     if (!url.includes("/responses")) return res;
 
     const ct = res.headers.get("content-type") ?? "";
