@@ -7,6 +7,8 @@
  * Usage: npm run update-routing
  */
 
+import { applyWorkarounds } from "../src/model-definition-workarounds/index.js";
+
 const API_URL = "https://api.poe.com/v1/models";
 const OUTPUT = new URL("../src/data/bundled-routing.json", import.meta.url);
 
@@ -18,11 +20,12 @@ if (!res.ok) {
 
 const { data } = (await res.json()) as { data: Record<string, unknown>[] };
 
-const models = data.filter((m) => {
+const models = data.map((m) => applyWorkarounds(m)).filter((m): m is Record<string, unknown> => {
+  if (m === null) return false;
   if (m.owned_by === "Poe") return false;
   const arch = m.architecture as { output_modalities?: string[] } | undefined;
   const features = m.supported_features as string[] | undefined;
-  return arch?.output_modalities?.includes("text") && features?.includes("tools");
+  return !!(arch?.output_modalities?.includes("text") && features?.includes("tools"));
 });
 
 const { writeFile, mkdir } = await import("node:fs/promises");

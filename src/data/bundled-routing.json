@@ -78,6 +78,95 @@
     ]
   },
   {
+    "id": "gpt-5.4",
+    "object": "model",
+    "created": 1772143119942,
+    "description": "GPT-5.4 is the most capable AI model from OpenAI, built for advanced real-world tasks across coding, computer use, deep research, complex document understanding, and multi-step problem solving. It outperforms previous versions on agentic workflows and tool use, delivering stronger reasoning, higher accuracy, and more reliable results on complex tasks.\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "OpenAI",
+    "root": "gpt-5.4",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text",
+        "image"
+      ],
+      "modality": "text,image->image"
+    },
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "pricing": {
+      "prompt": "0.0000022",
+      "completion": "0.000014",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000022",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 1050000,
+      "max_output_tokens": 128000
+    },
+    "context_length": 1050000,
+    "metadata": {
+      "display_name": "GPT-5.4",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3059-200-ftfdcmjibjzhyaworsxmtkykumwdemnw.jpeg",
+        "alt": "GPT-5.4 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/gpt-5.4"
+    },
+    "reasoning": {
+      "budget": null,
+      "required": false,
+      "supports_reasoning_effort": true
+    },
+    "parameters": [
+      {
+        "name": "web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable web search and real-time information access."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "none"
+      },
+      {
+        "name": "verbosity",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium"
+      }
+    ]
+  },
+  {
     "id": "claude-sonnet-4.6",
     "object": "model",
     "created": 1770262891433,
@@ -156,6 +245,184 @@
     ]
   },
   {
+    "id": "gpt-5.4-nano",
+    "object": "model",
+    "created": 1773272021193,
+    "description": "GPT‑5.4 Nano is the fastest and most cost‑efficient model in the GPT‑5 family, built for high‑volume tasks such as summarization, categorization, extraction, and lightweight multimodal workflows. It supports native vision and a 400k‑token context window for efficient large‑scale processing.\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "OpenAI",
+    "root": "gpt-5.4-nano",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text",
+        "image"
+      ],
+      "modality": "text,image->image"
+    },
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "pricing": {
+      "prompt": "0.00000018",
+      "completion": "0.0000011",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000018",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 400000,
+      "max_output_tokens": 128000
+    },
+    "context_length": 400000,
+    "metadata": {
+      "display_name": "GPT-5.4-Nano",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3064-200-jjrjbaldtpsxqapxmifgyxtvcwvitkdq.jpeg",
+        "alt": "GPT-5.4-Nano model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/gpt-5.4-nano"
+    },
+    "reasoning": {
+      "budget": null,
+      "required": false,
+      "supports_reasoning_effort": true
+    },
+    "parameters": [
+      {
+        "name": "web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable web search and real-time information access."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "none"
+      },
+      {
+        "name": "verbosity",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium"
+      }
+    ]
+  },
+  {
+    "id": "gpt-5.4-mini",
+    "object": "model",
+    "created": 1773276546626,
+    "description": "GPT‑5.4 Mini is a fast, affordable general‑purpose model designed for production assistants, coding support, document analysis, and multimodal reasoning. With a 400k‑token context window, it handles complex inputs and scalable workflows with strong reliability. \n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "OpenAI",
+    "root": "gpt-5.4-mini",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text",
+        "image"
+      ],
+      "modality": "text,image->image"
+    },
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "pricing": {
+      "prompt": "0.00000068",
+      "completion": "0.0000040",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000068",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 400000,
+      "max_output_tokens": 128000
+    },
+    "context_length": 400000,
+    "metadata": {
+      "display_name": "GPT-5.4-Mini",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3063-200-xmakbmbxmoyhxrapobefciakgzdpocuw.jpeg",
+        "alt": "GPT-5.4-Mini model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/gpt-5.4-mini"
+    },
+    "reasoning": {
+      "budget": null,
+      "required": false,
+      "supports_reasoning_effort": true
+    },
+    "parameters": [
+      {
+        "name": "web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable web search and real-time information access."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "none"
+      },
+      {
+        "name": "verbosity",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium"
+      }
+    ]
+  },
+  {
     "id": "gemini-3.1-pro",
     "object": "model",
     "created": 1771460884211,
@@ -178,8 +445,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.0000020",
@@ -231,6 +498,93 @@
     ]
   },
   {
+    "id": "gpt-5.4-pro",
+    "object": "model",
+    "created": 1772735432534,
+    "description": "A smarter, more precise version of GPT-5.4 that leverages additional compute to think harder and provide consistently better answers. Designed to tackle your toughest problems, this model operates with the highest reasoning capability to ensure maximum accuracy on complex tasks.\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "OpenAI",
+    "root": "gpt-5.4-pro",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text",
+        "image"
+      ],
+      "modality": "text,image->image"
+    },
+    "supported_features": [
+      "web_search",
+      "tools"
+    ],
+    "supported_endpoints": [
+      "/v1/responses",
+      "/v1/chat/completions"
+    ],
+    "pricing": {
+      "prompt": "0.000027",
+      "completion": "0.00016",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 1050000,
+      "max_output_tokens": 128000
+    },
+    "context_length": 1050000,
+    "metadata": {
+      "display_name": "GPT-5.4-Pro",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3062-200-xkeutmibkvqgfuvcprpuivgjohdgesee.jpeg",
+        "alt": "GPT-5.4-Pro model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/gpt-5.4-pro"
+    },
+    "reasoning": {
+      "budget": null,
+      "required": false,
+      "supports_reasoning_effort": true
+    },
+    "parameters": [
+      {
+        "name": "web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable web search and real-time information access."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "medium"
+      },
+      {
+        "name": "verbosity",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium"
+      }
+    ]
+  },
+  {
     "id": "gemini-3.1-flash-lite",
     "object": "model",
     "created": 1771380296910,
@@ -253,8 +607,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.00000025",
@@ -1328,8 +1682,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.00000040",
@@ -2237,8 +2591,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.00000021",
@@ -2315,8 +2669,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.00000087",
@@ -3592,8 +3946,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.000000070",
@@ -4992,8 +5346,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.00000010",
@@ -5053,8 +5407,8 @@
       "tools"
     ],
     "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+      "/v1/chat/completions",
+      "/v1/responses"
     ],
     "pricing": {
       "prompt": "0.000000052",
@@ -5760,55 +6114,6 @@
         "height": 200
       },
       "url": "https://poe.com/gpt-4o-aug"
-    },
-    "reasoning": null,
-    "parameters": []
-  },
-  {
-    "id": "gpt-4-classic-0314",
-    "object": "model",
-    "created": 1724707714433,
-    "description": "OpenAI's GPT-4 model. Powered by gpt-4-0314 (non-Turbo) for text input and gpt-4o for image input. For most use cases, https://poe.com/GPT-4o will perform significantly better.",
-    "owned_by": "OpenAI",
-    "root": "gpt-4-classic-0314",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "modality": "text,image->text"
-    },
-    "supported_features": [
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.000027",
-      "completion": "0.000054",
-      "image": null,
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 8192,
-      "max_output_tokens": 4096
-    },
-    "context_length": 8192,
-    "metadata": {
-      "display_name": "GPT-4-Classic-0314",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3021-200-dcfzihobnwryuqkyuxizckytkuoplihu.jpeg",
-        "alt": "GPT-4-Classic-0314 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-4-classic-0314"
     },
     "reasoning": null,
     "parameters": []
