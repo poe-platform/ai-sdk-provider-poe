@@ -1,8 +1,36 @@
 # ai-sdk-provider-poe/code
 
-Utilities for model discovery and testing. Import from `ai-sdk-provider-poe/code` to keep the main provider import lean.
+Utilities for model discovery and testing. This subpath is intended for Roo-facing capability checks while keeping the main provider import minimal.
 
 ## Model Discovery
+
+Use `getModel()` for a single model or `getModels()` to inspect the full normalized catalog.
+
+```typescript
+import { getModel, getModels } from 'ai-sdk-provider-poe/code';
+
+const o3 = getModel('openai/o3');
+const models = getModels();
+
+console.log(o3?.supportsReasoningEffort); // true | ["low", "medium", "high"]
+console.log(models.length);
+```
+
+For Roo-style capability checks, pair `getModel()` with `providerOptions.poe` on the main provider:
+
+```typescript
+import { poe } from "ai-sdk-provider-poe";
+import { getModel } from "ai-sdk-provider-poe/code";
+
+const model = getModel("anthropic/claude-sonnet-4");
+
+const providerOptions =
+  model?.supportsReasoningBudget
+    ? { poe: { reasoningBudgetTokens: 5000 } }
+    : model?.supportsReasoningEffort
+      ? { poe: { reasoningEffort: "high", reasoningSummary: "auto" } }
+      : undefined;
+```
 
 `fetchPoeModels()` calls the Poe `/v1/models` endpoint and returns model metadata including capabilities, pricing, and supported endpoints.
 
@@ -44,3 +72,20 @@ const models = await fetchPoeModels({
   baseURL: 'https://custom.api.com/v1',
 });
 ```
+
+## Dev Tools
+
+### Model Inspector
+
+```sh
+npm run dev:models                           # web dashboard
+npm run dev:models -- --json                 # all models JSON (agent-readable)
+npm run dev:models -- --json <model-id>      # single model JSON
+npm run dev:models -- --cli                  # summary table
+npm run dev:models -- --cli <model-id>       # single model detail
+```
+
+Web mode opens `http://localhost:3456` with:
+- HTML dashboard: full pipeline view per model (raw → `/code` → Roo-Code)
+- JSON API at `/api/models` for programmatic consumption
+- `PORT` env var to change port
