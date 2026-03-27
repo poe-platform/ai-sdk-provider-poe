@@ -1,7 +1,6 @@
 import type { PoeModelInfo } from "../models.js";
 import { applyAnthropicBudget } from "./anthropic-budget.js";
 import { applyGeminiReasoning } from "./gemini-reasoning.js";
-import { applyReasoningFallbacks } from "./reasoning-fallbacks.js";
 import { applyXaiEffort } from "./xai-effort.js";
 import { applyXhighEffort } from "./xhigh-effort.js";
 
@@ -10,7 +9,6 @@ type ModelTransform = (m: PoeModelInfo) => PoeModelInfo;
 const workarounds: ModelTransform[] = [
   applyAnthropicBudget,
   applyGeminiReasoning,
-  applyReasoningFallbacks,
   applyXaiEffort,
   applyXhighEffort,
 ];
