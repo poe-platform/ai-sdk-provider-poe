@@ -18,7 +18,12 @@ if (!res.ok) {
 
 const { data } = (await res.json()) as { data: Record<string, unknown>[] };
 
-const models = data.filter((m) => (m.supported_endpoints as string[] | undefined)?.length);
+const models = data.filter((m) => {
+  if (m.owned_by === "Poe") return false;
+  const arch = m.architecture as { output_modalities?: string[] } | undefined;
+  const features = m.supported_features as string[] | undefined;
+  return arch?.output_modalities?.includes("text") && features?.includes("tools");
+});
 
 const { writeFile, mkdir } = await import("node:fs/promises");
 const { dirname } = await import("node:path");

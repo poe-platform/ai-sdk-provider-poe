@@ -1,54 +1,5 @@
 [
   {
-    "id": "assistant",
-    "object": "model",
-    "created": 1694610718936,
-    "description": "General-purpose assistant. Write, code, ask for real-time information, create images, and more.\n\nQueries are automatically routed based on the task and subscription status.\n\nFor subscribers:\n- General queries: @GPT-5.2-Instant\n- Web searches: @GPT-5.2-Instant\n- Image generation: @Nano-Banana\n- Video-input tasks: @Gemini-3.1-Pro\n\nFor non-subscribers:\n- General queries: @GPT-5-Mini / @GPT-5.4-Nano\n- Web searches: @Web-Search\n- Image generation: @Flux-1-Schnell-FW / @FLUX-schnell\n- Video-input tasks: @Gemini-3-Flash\n",
-    "owned_by": "Poe",
-    "root": "assistant",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "modality": "text,image,video->text"
-    },
-    "supported_features": [
-      "web_search",
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 400000,
-      "max_output_tokens": 128000
-    },
-    "context_length": 400000,
-    "metadata": {
-      "display_name": "Assistant",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3002-200-vcmrcgoloaktppabmdfsgeczaixswmxt.jpeg",
-        "alt": "Assistant model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/assistant"
-    },
-    "reasoning": {
-      "budget": null,
-      "required": false,
-      "supports_reasoning_effort": true
-    },
-    "parameters": []
-  },
-  {
     "id": "claude-opus-4.6",
     "object": "model",
     "created": 1770248062467,
@@ -123,185 +74,6 @@
           ]
         },
         "default_value": "high"
-      }
-    ]
-  },
-  {
-    "id": "nano-banana-2",
-    "object": "model",
-    "created": 1772107200000,
-    "description": "Google's latest image model combines Pro-level intelligence with lightning-fast generation. It features advanced world knowledge, precise text rendering, strong subject consistency, and 4K production-ready outputs.\n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "Google",
-    "root": "nano-banana-2",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/responses"
-    ],
-    "pricing": {
-      "prompt": "0.00000050",
-      "completion": "0.0000030",
-      "image": "0.000060",
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 65536,
-      "max_output_tokens": null
-    },
-    "context_length": 65536,
-    "metadata": {
-      "display_name": "Nano-Banana-2",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6818286-200-plmqoxsqehcxarfvcyuxtsgscphxibii.jpeg",
-        "alt": "Nano-Banana-2 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/nano-banana-2"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "1:1",
-            "2:3",
-            "3:2",
-            "3:4",
-            "4:3",
-            "4:5",
-            "5:4",
-            "9:16",
-            "16:9",
-            "21:9"
-          ]
-        }
-      },
-      {
-        "name": "image_only",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "The model defaults to returning text and images. Turn on to only return images."
-      },
-      {
-        "name": "web_search",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
-      },
-      {
-        "name": "image_size",
-        "schema": {
-          "enum": [
-            "1K",
-            "2K",
-            "4K"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "gpt-5.4",
-    "object": "model",
-    "created": 1772143119942,
-    "description": "GPT-5.4 is the most capable AI model from OpenAI, built for advanced real-world tasks across coding, computer use, deep research, complex document understanding, and multi-step problem solving. It outperforms previous versions on agentic workflows and tool use, delivering stronger reasoning, higher accuracy, and more reliable results on complex tasks.\n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "OpenAI",
-    "root": "gpt-5.4",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [
-      "web_search",
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.0000022",
-      "completion": "0.000014",
-      "image": null,
-      "request": null,
-      "input_cache_read": "0.00000022",
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 1050000,
-      "max_output_tokens": 128000
-    },
-    "context_length": 1050000,
-    "metadata": {
-      "display_name": "GPT-5.4",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3059-200-ftfdcmjibjzhyaworsxmtkykumwdemnw.jpeg",
-        "alt": "GPT-5.4 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-5.4"
-    },
-    "reasoning": {
-      "budget": null,
-      "required": false,
-      "supports_reasoning_effort": true
-    },
-    "parameters": [
-      {
-        "name": "web_search",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
-      },
-      {
-        "name": "reasoning_effort",
-        "schema": {
-          "enum": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        },
-        "default_value": "none"
-      },
-      {
-        "name": "verbosity",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "medium"
       }
     ]
   },
@@ -384,182 +156,6 @@
     ]
   },
   {
-    "id": "gpt-5.4-nano",
-    "object": "model",
-    "created": 1773272021193,
-    "description": "GPT‑5.4 Nano is the fastest and most cost‑efficient model in the GPT‑5 family, built for high‑volume tasks such as summarization, categorization, extraction, and lightweight multimodal workflows. It supports native vision and a 400k‑token context window for efficient large‑scale processing.\n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "OpenAI",
-    "root": "gpt-5.4-nano",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [
-      "web_search",
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.00000018",
-      "completion": "0.0000011",
-      "image": null,
-      "request": null,
-      "input_cache_read": "0.000000018",
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 400000,
-      "max_output_tokens": 128000
-    },
-    "context_length": 400000,
-    "metadata": {
-      "display_name": "GPT-5.4-Nano",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3064-200-jjrjbaldtpsxqapxmifgyxtvcwvitkdq.jpeg",
-        "alt": "GPT-5.4-Nano model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-5.4-nano"
-    },
-    "reasoning": {
-      "budget": null,
-      "required": false,
-      "supports_reasoning_effort": true
-    },
-    "parameters": [
-      {
-        "name": "web_search",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
-      },
-      {
-        "name": "reasoning_effort",
-        "schema": {
-          "enum": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        },
-        "default_value": "none"
-      },
-      {
-        "name": "verbosity",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "medium"
-      }
-    ]
-  },
-  {
-    "id": "gpt-5.4-mini",
-    "object": "model",
-    "created": 1773276546626,
-    "description": "GPT‑5.4 Mini is a fast, affordable general‑purpose model designed for production assistants, coding support, document analysis, and multimodal reasoning. With a 400k‑token context window, it handles complex inputs and scalable workflows with strong reliability. \n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "OpenAI",
-    "root": "gpt-5.4-mini",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [
-      "web_search",
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.00000068",
-      "completion": "0.0000040",
-      "image": null,
-      "request": null,
-      "input_cache_read": "0.000000068",
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 400000,
-      "max_output_tokens": 128000
-    },
-    "context_length": 400000,
-    "metadata": {
-      "display_name": "GPT-5.4-Mini",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3063-200-xmakbmbxmoyhxrapobefciakgzdpocuw.jpeg",
-        "alt": "GPT-5.4-Mini model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-5.4-mini"
-    },
-    "reasoning": {
-      "budget": null,
-      "required": false,
-      "supports_reasoning_effort": true
-    },
-    "parameters": [
-      {
-        "name": "web_search",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
-      },
-      {
-        "name": "reasoning_effort",
-        "schema": {
-          "enum": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        },
-        "default_value": "none"
-      },
-      {
-        "name": "verbosity",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "medium"
-      }
-    ]
-  },
-  {
     "id": "gemini-3.1-pro",
     "object": "model",
     "created": 1771460884211,
@@ -631,92 +227,6 @@
         },
         "default_value": false,
         "description": "Enable web search and real-time information access."
-      }
-    ]
-  },
-  {
-    "id": "gpt-5.4-pro",
-    "object": "model",
-    "created": 1772735432534,
-    "description": "A smarter, more precise version of GPT-5.4 that leverages additional compute to think harder and provide consistently better answers. Designed to tackle your toughest problems, this model operates with the highest reasoning capability to ensure maximum accuracy on complex tasks.\n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "OpenAI",
-    "root": "gpt-5.4-pro",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [
-      "web_search",
-      "tools"
-    ],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.000027",
-      "completion": "0.00016",
-      "image": null,
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 1050000,
-      "max_output_tokens": 128000
-    },
-    "context_length": 1050000,
-    "metadata": {
-      "display_name": "GPT-5.4-Pro",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3062-200-xkeutmibkvqgfuvcprpuivgjohdgesee.jpeg",
-        "alt": "GPT-5.4-Pro model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-5.4-pro"
-    },
-    "reasoning": {
-      "budget": null,
-      "required": false,
-      "supports_reasoning_effort": true
-    },
-    "parameters": [
-      {
-        "name": "web_search",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
-      },
-      {
-        "name": "reasoning_effort",
-        "schema": {
-          "enum": [
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        },
-        "default_value": "medium"
-      },
-      {
-        "name": "verbosity",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "medium"
       }
     ]
   },
@@ -864,6 +374,78 @@
     ]
   },
   {
+    "id": "glm-5",
+    "object": "model",
+    "created": 1770830055326,
+    "description": "GLM-5 is an open-source foundation model engineered for complex system engineering and long-horizon Agent tasks, delivering reliable productivity for top-tier programmers. Transcending the boundary from \"writing code\" to \"building systems,\" it moves beyond traditional snippet generation to offer senior-architect-level planning and execution capabilities. By rejecting the \"frontend-heavy, logic-light\" approach, GLM-5 demonstrates exceptional reasoning and self-healing abilities in backend refactoring, complex algorithm implementation, and deep debugging—autonomously analyzing logs and iteratively fixing persistent bugs until the system runs. As the first open-source model featuring Opus-class style and system engineering depth, GLM-5 provides extreme logic density alongside the freedom of local deployment and high cost-effectiveness, making it the ideal choice for large-scale backend development and automated Agent construction. Context window: 205k tokens\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "Novita AI",
+    "root": "glm-5",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.0000010",
+      "completion": "0.0000032",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000020",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "GLM-5",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6802092-200-sqrsdkzksaocmqhyynlwkagfcrkajwyw.jpeg",
+        "alt": "GLM-5 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/glm-5"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think..."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "default_value": 131072,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
     "id": "gpt-5.3-instant",
     "object": "model",
     "created": 1772564731085,
@@ -920,6 +502,374 @@
         },
         "default_value": false,
         "description": "Enable web search and real-time information access."
+      }
+    ]
+  },
+  {
+    "id": "grok-4.20-multi-agent",
+    "object": "model",
+    "created": 1773433661072,
+    "description": "Realtime Multi-agent Research enables Grok to orchestrate multiple AI agents that work together in real time to perform deep, multi-step research tasks. Each agent specializes in a particular aspect of the research (searching the web, analyzing data, synthesizing findings) and they collaborate to deliver comprehensive, well-sourced answers.\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "XAI",
+    "root": "grok-4.20-multi-agent",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.0000020",
+      "completion": "0.0000060",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000020",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 128000,
+      "max_output_tokens": null
+    },
+    "context_length": 128000,
+    "metadata": {
+      "display_name": "Grok-4.20-Multi-Agent",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6874163-200-aomwgdhhcvvlzfvdzcfnpibugcpnzidf.jpeg",
+        "alt": "Grok-4.20-Multi-Agent model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/grok-4.20-multi-agent"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium",
+        "description": "Controls how deeply the bot researches before answering."
+      }
+    ]
+  },
+  {
+    "id": "kimi-k2.5",
+    "object": "model",
+    "created": 1769511157082,
+    "description": "Kimi K2.5 is the latest flagship iteration of Moonshot AI's large language model series, representing a significant leap in multimodal and agentic capabilities. It features a native multimodal architecture supporting both visual and text inputs, alongside versatile thinking and non-thinking modes. This model maintains the substantial 256k token context window found in the K2 series but achieves new open-source state-of-the-art (SoTA) performance across general intelligence, coding, and visual understanding benchmarks. Kimi K2.5 delivers a breakthrough in frontend development, enabling the generation of fully functional, aesthetically polished interactive interfaces with complex dynamic layouts directly from natural language. Optimized for complex problem-solving, it excels in multi-step tool invocation, logical reasoning, and full-stack code synthesis.\n\nOptional parameters:\nEnable thinking about the response before giving a final answer: toggle it `on`, otherwise it is `off` by default.\nSet temperature to control randomness in the response: Set number from 1 to 2. This is set to 0.7 by default. Lower values make the output more focused and deterministic.\nSet max output tokens: Set number from 1 to 262144. This is set to 262144 by default.",
+    "owned_by": "Novita AI",
+    "root": "kimi-k2.5",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000060",
+      "completion": "0.0000030",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000010",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 128000,
+      "max_output_tokens": null
+    },
+    "context_length": 128000,
+    "metadata": {
+      "display_name": "Kimi-K2.5",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6767008-200-nlbqfbtluvgvpmlkdzxpgxrxwdusnxca.jpeg",
+        "alt": "Kimi-K2.5 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/kimi-k2.5"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think..."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 262144
+        },
+        "default_value": 262144,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
+    "id": "minimax-m2.7",
+    "object": "model",
+    "created": 1773820893957,
+    "description": "MiniMax M2.7 is an all-around evolved, versatile open-source large language model that seamlessly blends hardcore engineering productivity with high-EQ, human-like interaction capabilities.\nIn real-world software engineering, M2.7 excels by independently driving end-to-end project delivery while efficiently handling advanced tasks such as log analysis, bug troubleshooting, code security, and machine learning. In the professional workspace, it boasts the highest open-source GDPval-AA score (1495 ELO). It delivers high-fidelity, complex editing and multi-turn revisions across the Office suite (Excel, PPT, Word), elevating task execution to industry-leading standards.\nBuilt for complex environment interactions, M2.7 maintains an impressive 97% skill-following rate even with complex, long-context tool calls (>2000 tokens).  Beyond its robust productivity, M2.7 breaks the \"cold tool\" stereotype of traditional models. With exceptional identity retention and high emotional intelligence (EQ), it not only empowers enterprise productivity, but also opens up more room for product innovation.\n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens",
+    "owned_by": "Novita AI",
+    "root": "minimax-m2.7",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000030",
+      "completion": "0.0000012",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000060",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Minimax-M2.7",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6885560-200-ontorjpvkiowoosbmyegynxpyxfpibfw.jpeg",
+        "alt": "Minimax-M2.7 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/minimax-m2.7"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "default_value": 131072,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
+    "id": "mimo-v2-flash",
+    "object": "model",
+    "created": 1773985456579,
+    "description": "Xiaomi MiMo-V2-Flash is a proprietary MoE model developed by Xiaomi, designed for extreme inference efficiency with 309B total parameters (15B active). By incorporating an innovative Hybrid attention architecture and multi-layer MTP inference acceleration, it ranks among the top 2 global open-source models across multiple Agent benchmarks. Its coding capabilities surpass all open-source models and rival the industry-leading closed-source model, Claude 4.5 Sonnet—yet at only 2.5% of the inference cost and with 2x the generation speed, successfully pushing the limits of both model performance and efficiency.\n\nContext window: 262k tokens\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "Novita AI",
+    "root": "mimo-v2-flash",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000010",
+      "completion": "0.00000030",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000020",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "MiMo-V2-Flash",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6890586-200-atjpdaarkivevbbjniipndybrwupnsmw.jpeg",
+        "alt": "MiMo-V2-Flash model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/mimo-v2-flash"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think..."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 32000
+        },
+        "default_value": 32000,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
+    "id": "seed-2.0-lite",
+    "object": "model",
+    "created": 1772817225611,
+    "description": "Seed 2.0 Lite is a balanced model designed for high-frequency enterprise workloads, optimizing for both capability and cost. Its overall performance surpasses the previous-generation ByteDance-Seed-1.8. It is well-suited for production tasks such as unstructured information processing, text content creation, search and recommendation, and data analysis. The model supports long-context processing, multi-source information fusion, multi-step instruction execution, and high-fidelity structured outputs—delivering stable quality while significantly reducing cost.\nThis model is served from Malaysia.\n\nNotes: \n- Pricing is 2x when input tokens >=128k\n- Context Window: 256k \n- Temperature and top_p are fixed by the model (temp=1, top_p=0.95).\n\nParameter controls available:\n1. Reasoning\n- Default: Thinking enabled\n- Reasoning effort [low, medium, high]: How deeply the model thinks. Low=fast, Medium=balanced, High=thorough (default: medium). Only applies if thinking is enabled.\n\n2. Search & Vision\n- Web Search: Enable real-time web search for up-to-date information (default: false).\n- Image Detail [low, high, xhigh]: Quality for image understanding. Higher = more accurate but uses more tokens (default: high).\n- Video FPS [0.2-5]: Frame sampling rate for video input. Higher = more frames analyzed, more accurate, more tokens (default: 1).",
+    "owned_by": "Empirio Labs AI",
+    "root": "seed-2.0-lite",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000031",
+      "completion": "0.0000025",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Seed-2.0-Lite",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6854989-200-otkjsrqfhykvgucidgeylvqopnjvrjki.jpeg",
+        "alt": "Seed-2.0-Lite model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/seed-2.0-lite"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "Let the model reason step-by-step before answering."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium",
+        "description": "How deeply the model thinks. Low=fast, Medium=balanced, High=thorough."
+      },
+      {
+        "name": "enable_web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable real-time web search for up-to-date information."
+      },
+      {
+        "name": "image_detail",
+        "schema": {
+          "enum": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "high",
+        "description": "Quality for image understanding. Higher = more accurate but more tokens."
+      },
+      {
+        "name": "video_fps",
+        "schema": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 5
+        },
+        "default_value": 1,
+        "description": "Frame sampling rate for video input (0.2-5). Higher = more frames, more accurate, more tokens."
       }
     ]
   },
@@ -998,6 +948,272 @@
         },
         "default_value": false,
         "description": "Enable web search and real-time information access."
+      }
+    ]
+  },
+  {
+    "id": "seed-2.0-mini",
+    "object": "model",
+    "created": 1771632981140,
+    "description": "Seed-2.0-Mini from Bytedance targets latency-sensitive, high-concurrency, and cost-sensitive scenarios, emphasizing fast response and flexible inference deployment. It supports 256k context, four reasoning effort modes, and multimodal understanding (including image and video), and is optimized for lightweight tasks where cost and speed take priority.\nThis model is served from Malaysia.\n\nNote: Pricing is 2x when input tokens >=128k\n\nParameter controls available:\n1. Reasoning\n- Default: Thinking enabled\n- Reasoning effort [low, medium, high]: How deeply the model thinks. Low=fast, Medium=balanced, High=thorough (default: medium). Only applies if thinking is enabled.\n\n2. Search & Vision\n- Web Search: Enable real-time web search for up-to-date information (default: false).\n- Image Detail [low, high, xhigh]: Quality for image understanding. Higher = more accurate but uses more tokens (default: high).\n- Video FPS [0.2-5]: Frame sampling rate for video input. Higher = more frames analyzed, more accurate, more tokens (default: 1).",
+    "owned_by": "Empirio Labs AI",
+    "root": "seed-2.0-mini",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000012",
+      "completion": "0.00000050",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Seed-2.0-Mini",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6822254-200-ddnfzxiawffeqryxrluxuldbxcyatpgt.jpeg",
+        "alt": "Seed-2.0-Mini model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/seed-2.0-mini"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "Let the model reason step-by-step before answering."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium",
+        "description": "How deeply the model thinks. Low=fast, Medium=balanced, High=thorough."
+      },
+      {
+        "name": "enable_web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable real-time web search for up-to-date information."
+      },
+      {
+        "name": "image_detail",
+        "schema": {
+          "enum": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "high",
+        "description": "Quality for image understanding. Higher = more accurate but more tokens."
+      },
+      {
+        "name": "video_fps",
+        "schema": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 5
+        },
+        "default_value": 1,
+        "description": "Frame sampling rate for video input (0.2-5). Higher = more frames, more accurate, more tokens."
+      }
+    ]
+  },
+  {
+    "id": "qwen3.5-397b-a17b",
+    "object": "model",
+    "created": 1771239767882,
+    "description": "The Qwen3.5 series 397B-A17B native vision-language model is based on a hybrid architecture design that integrates linear attention mechanisms with sparse Mixture-of-Experts (MoE), achieving higher inference efficiency. Across a variety of tasks—including language understanding, logical reasoning, code generation, agentic tasks, image understanding, video understanding, and graphical user interface (GUI) interaction—it demonstrates exceptional performance comparable to current top-tier frontier models. Possessing robust code generation and agentic capabilities, it exhibits strong generalization across various agent scenarios.\n\nFile Support: Text, Markdown, Image, Video and PDF files\nContext window: 262k tokens\n\nOptional parameters:\nEnable thinking about the response before giving a final answer: toggle it `on`, otherwise it is `off`  by default.\nSet temperature to control randomness in the response: Set number from 1 to 2.  This is set to `0.7` by default. Lower values make the output more focused and deterministic.\nSet max output tokens: Set number from 1 to 64000. This is set to 64000 by default.",
+    "owned_by": "Novita AI",
+    "root": "qwen3.5-397b-a17b",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000060",
+      "completion": "0.0000036",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Qwen3.5-397B-A17B",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6813466-200-gaeagtwigznhnkaddiiplbxadkcqofrg.jpeg",
+        "alt": "Qwen3.5-397B-A17B model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/qwen3.5-397b-a17b"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think..."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 64000
+        },
+        "default_value": 64000,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
+    "id": "seed-2.0-pro",
+    "object": "model",
+    "created": 1774508584107,
+    "description": "Seed 2.0 Pro is a flagship all-purpose general model designed for complex reasoning and long-chain task execution in the Agent era. It emphasizes multimodal understanding, long-context reasoning, structured generation, and tool-augmented execution. It delivers outstanding performance in handling complex instructions and multi-constraint execution, and can reliably address scenarios such as multi-step complex planning, sophisticated visual-text reasoning, video content understanding, and high-difficulty analysis.\n\nNotes:\n- Pricing is 2x when input tokens >=128k\n- Context Window: 256k\n- Temperature and top_p are fixed by the model (temp=1, top_p=0.95).\n\nParameter controls available:\n1. Reasoning\n- Default: Thinking enabled\n- Reasoning effort [low, medium, high]: How deeply the model thinks. Low=fast, Medium=balanced, High=thorough (default: medium). Only applies if thinking is enabled.\n\n2. Search & Vision\n- Web Search: Enable real-time web search for up-to-date information (default: false).\n- Image Detail [low, high, xhigh]: Quality for image understanding. Higher = more accurate but uses more tokens (default: high).\n- Video FPS [0.2-5]: Frame sampling rate for video input. Higher = more frames analyzed, more accurate, more tokens (default: 1).",
+    "owned_by": "Empirio Labs AI",
+    "root": "seed-2.0-pro",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000062",
+      "completion": "0.0000038",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Seed-2.0-Pro",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6904621-200-dopcynjylmhafwsfbdahfxwynvfcegua.jpeg",
+        "alt": "Seed-2.0-Pro model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/seed-2.0-pro"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "Let the model reason step-by-step before answering."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium",
+        "description": "How deeply the model thinks. Low=fast, Medium=balanced, High=thorough."
+      },
+      {
+        "name": "enable_web_search",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "Enable real-time web search for up-to-date information."
+      },
+      {
+        "name": "image_detail",
+        "schema": {
+          "enum": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        },
+        "default_value": "high",
+        "description": "Quality for image understanding. Higher = more accurate but more tokens."
+      },
+      {
+        "name": "video_fps",
+        "schema": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 5
+        },
+        "default_value": 1,
+        "description": "Frame sampling rate for video input (0.2-5). Higher = more frames, more accurate, more tokens."
       }
     ]
   },
@@ -1353,6 +1569,134 @@
     ]
   },
   {
+    "id": "qwen3-coder-next",
+    "object": "model",
+    "created": 1770157079067,
+    "description": "Qwen3-Coder-Next is an open-weight language model specifically engineered for coding agents and local development environments. This highly efficient model delivers exceptional performance with only 3B activated parameters out of 80B total parameters, achieving results comparable to models with 10-20x more active parameters while maintaining remarkable cost-effectiveness for agent deployment. Through its sophisticated training methodology, Qwen3-Coder-Next excels in advanced agentic capabilities including long-horizon reasoning, complex tool usage, and robust recovery from execution failures, ensuring reliable performance across dynamic coding tasks. The model's versatility is further enhanced by its 256k context length and adaptability to various scaffold templates, enabling seamless integration with diverse CLI/IDE platforms such as Claude Code, Qwen Code, Qoder, Kilo, Trae, and Cline, making it an ideal solution for comprehensive development environments.\n\nOptional parameters:\nSet temperature to control randomness in the response: Set number from 1 to 2.  This is set to 0.7 by default. Lower values make the output more focused and deterministic.\nSet max output tokens: Set number from 1 to 65536. This is set to 65536 by default.",
+    "owned_by": "Novita AI",
+    "root": "qwen3-coder-next",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000020",
+      "completion": "0.0000015",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Qwen3-Coder-Next",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6784074-200-sonuttgoxmrcqyecpbzgxruzhipcajfm.jpeg",
+        "alt": "Qwen3-Coder-Next model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/qwen3-coder-next"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 65536
+        },
+        "default_value": 65536,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
+    "id": "minimax-m2.5",
+    "object": "model",
+    "created": 1770910818129,
+    "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.\n\nContext window: 205k tokens\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "Novita AI",
+    "root": "minimax-m2.5",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000030",
+      "completion": "0.0000012",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000030",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Minimax-M2.5",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6804219-200-ijeualnurqajzhlmprlofqopbkcgssib.jpeg",
+        "alt": "Minimax-M2.5 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/minimax-m2.5"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131100
+        },
+        "default_value": 131100,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
     "id": "grok-4.1-fast-non-reasoning",
     "object": "model",
     "created": 1763585662409,
@@ -1400,6 +1744,78 @@
     },
     "reasoning": null,
     "parameters": []
+  },
+  {
+    "id": "kimi-k2-thinking",
+    "object": "model",
+    "created": 1762485029151,
+    "description": "The kimi-k2-thinking model is a general-purpose agentic reasoning model developed by Moonshot AI. \n\nFile Support: Text, Markdown and PDF files\nContext window: 262k tokens",
+    "owned_by": "Novita AI",
+    "root": "kimi-k2-thinking",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000060",
+      "completion": "0.0000025",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000015",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Kimi-K2-Thinking",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6563264-200-rdevwoigqgyhouhdkfpbolhewkqppmrr.jpeg",
+        "alt": "Kimi-K2-Thinking model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/kimi-k2-thinking"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think..."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 262144
+        },
+        "default_value": 262144,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
   },
   {
     "id": "gpt-5.2-codex",
@@ -1469,6 +1885,61 @@
     ]
   },
   {
+    "id": "deepseek-v3.2",
+    "object": "model",
+    "created": 1764585257709,
+    "description": "We introduce DeepSeek-V3.2, a next-generation foundation model designed to unify high computational efficiency with state-of-the-art reasoning and agentic performance. DeepSeek-V3.2 is built upon three core technical breakthroughs:\n\n• DeepSeek Sparse Attention (DSA):\nA new highly efficient attention mechanism that significantly reduces computational overhead while preserving model quality, purpose-built for long-context reasoning and high-throughput workloads.\n\n• Scalable Reinforcement Learning Framework:\nDeepSeek-V3.2 leverages a robust RL training protocol and expanded post-training compute to reach GPT-5-level performance. Its high-compute variant, DeepSeek-V3.2-Speciale, surpasses GPT-5 and demonstrates reasoning capabilities comparable to Gemini-3.0-Pro.\n\n• Large-Scale Agentic Task Synthesis Pipeline:\nTo enable reliable tool-use and multi-step decision-making, we develop a novel agentic data synthesis pipeline that generates high-quality interactive reasoning tasks at scale, greatly enhancing the model’s\n\nFile Support: Text, Markdown and PDF files\nContext window: 164k tokens",
+    "owned_by": "Novita AI",
+    "root": "deepseek-v3.2",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000027",
+      "completion": "0.00000040",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000013",
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 128000,
+      "max_output_tokens": null
+    },
+    "context_length": 128000,
+    "metadata": {
+      "display_name": "DeepSeek-V3.2",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6632595-200-zjfoedfpabhdybodxxoirwfxbnhgnepz.jpeg",
+        "alt": "DeepSeek-V3.2 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/deepseek-v3.2"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "This will cause the model to think about the response before giving a final answer."
+      }
+    ]
+  },
+  {
     "id": "grok-4",
     "object": "model",
     "created": 1752143407651,
@@ -1518,80 +1989,74 @@
     "parameters": []
   },
   {
-    "id": "gpt-image-1.5",
+    "id": "minimax-m2.1",
     "object": "model",
-    "created": 1765850472161,
-    "description": "OpenAI's frontier image generation model in ChatGPT as of December 2025, offering exceptional prompt adherence, world knowledge, precise edits, facial preservation, level of detail, and overall quality with improved latency/generation times. It supports editing, restyling, and combining images attached to the latest user query. For a conversational image generation and editing experience use: https://poe.com/GPT-5.2\n\nOptional Parameters:\nSet aspect ratio, with options 3:2, 1:1 and 2:3. \nSet quality to low, medium and high. Default is set to high.\nEnable use mask by toggling it on or by typing 'use_mask' in the prompt. This option is turned off by default.\nDisable high fidelity by toggling it off or by typing 'use_high_fidelity'. This option is turned on by default.",
-    "owned_by": "OpenAI",
-    "root": "gpt-image-1.5",
+    "created": 1766743140197,
+    "description": "MiniMax M2.1 is a cutting-edge AI model designed to revolutionize how developers build software. With enhanced multi-language programming support, it excels in generating high-quality code across popular languages like Rust, Java, Golang, C++, Kotlin, Objective-C, TypeScript, and JavaScript.\n\nKey improvements include:\n\n22% faster response times and 30% lower token consumption for efficient workflows.\nSeamless integration with leading development frameworks (Claude Code, Droid Factory AI, BlackBox, etc.).\nFull-stack development capabilities, from mobile (Android/iOS) to web and 3D interactive prototyping.\nOptimized performance-to-cost ratio, making AI-assisted development more accessible.\nWhether you're a software engineer, app developer, or tech innovator, M2.1 empowers smarter coding with industry-leading AI.\n\nContext window: 205k tokens\n\nThis bot supports optional parameters for additional customization.",
+    "owned_by": "Novita AI",
+    "root": "minimax-m2.1",
     "architecture": {
       "input_modalities": [
-        "text",
-        "image"
+        "text"
       ],
       "output_modalities": [
-        "image"
+        "text"
       ],
-      "modality": "text,image->image"
+      "modality": "text->text"
     },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/images"
+    "supported_features": [
+      "tools"
     ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 128000,
-      "max_output_tokens": null
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000030",
+      "completion": "0.0000012",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000030",
+      "input_cache_write": null
     },
-    "context_length": 128000,
+    "context_window": null,
+    "context_length": null,
     "metadata": {
-      "display_name": "GPT-Image-1.5",
+      "display_name": "Minimax-M2.1",
       "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6672155-200-wxaffodsvussaktjknijciktnwlyzxyz.jpeg",
-        "alt": "GPT-Image-1.5 model icon",
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6696121-200-cxyzlwpzarivcurfdfyucjcynxxzouzs.jpeg",
+        "alt": "Minimax-M2.1 model icon",
         "width": 200,
         "height": 200
       },
-      "url": "https://poe.com/gpt-image-1.5"
+      "url": "https://poe.com/minimax-m2.1"
     },
     "reasoning": null,
     "parameters": [
       {
-        "name": "aspect",
-        "schema": {
-          "enum": [
-            "1:1",
-            "3:2",
-            "2:3"
-          ]
-        }
-      },
-      {
-        "name": "quality",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "high"
-      },
-      {
-        "name": "use_mask",
+        "name": "enable_thinking",
         "schema": {
           "type": "boolean"
         },
         "default_value": false,
-        "description": "Indicates that the last attached image is a mask for inpainting (editing specific regions). The mask must match the dimensions of the base image, with transparent (zero-alpha) areas showing which parts to edit."
+        "description": "This will cause the model to think before providing a response."
       },
       {
-        "name": "use_high_fidelity",
+        "name": "temperature",
         "schema": {
-          "type": "boolean"
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
         },
-        "default_value": true,
-        "description": "High input fidelity allows you to make subtle edits to an image without altering unrelated areas. This is ideal for controlled, localized changes."
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "default_value": 131072,
+        "description": "Maximum number of tokens to generate in the response."
       }
     ]
   },
@@ -1992,6 +2457,78 @@
     ]
   },
   {
+    "id": "glm-4.7-flash",
+    "object": "model",
+    "created": 1768838511598,
+    "description": "GLM-4.7-Flash, a state-of-the-art model in the 30B class, delivers a compelling balance of high performance and efficiency. Tailored for Agentic Coding, it strengthens coding proficiency, long-horizon planning, and tool synergy, securing top-tier results on public benchmarks among similarly sized open-source models. It excels in complex agent tasks with superior instruction following for tool use, while significantly elevating the frontend aesthetics and completion efficiency of long-range workflows in Artifacts and Agentic Coding. \n\nContext window: 200k tokens\n\nOptional parameters:\nEnable thinking about the response before giving a final answer: toggle it `on`, otherwise it is `off`  by default.\nSet temperature to control randomness in the response: Set number from 1 to 2.  This is set to `0.7` by default. Lower values make the output more focused and deterministic.\nSet max output tokens: Set number from 1 to 65500. This is set to 65500 by default.",
+    "owned_by": "Novita AI",
+    "root": "glm-4.7-flash",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.000000070",
+      "completion": "0.00000040",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000010",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "GLM-4.7-Flash",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6749261-200-aprgrchpkzqaponuvjvpakglncbotiet.jpeg",
+        "alt": "GLM-4.7-Flash model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/glm-4.7-flash"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think before providing a response."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 65500
+        },
+        "default_value": 65500,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
     "id": "gpt-5.1-instant",
     "object": "model",
     "created": 1762990086156,
@@ -2118,6 +2655,78 @@
           ]
         },
         "default_value": "medium"
+      }
+    ]
+  },
+  {
+    "id": "glm-4.7-n",
+    "object": "model",
+    "created": 1766425366576,
+    "description": "GLM-4.7 is Z.AI's latest flagship model, with major upgrades focused on advanced coding capabilities and more reliable multi-step reasoning and execution. It shows clear gains in complex agent workflows, while delivering a more natural conversational experience and stronger front-end design sensibility.\n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens\n\nOptional parameters:\nEnable thinking about the response before giving a final answer: toggle it `on`, otherwise it is `off`  by default.\nSet temperature to control randomness in the response: Set number from 1 to 2.  This is set to `0.7` by default. Lower values make the output more focused and deterministic.\nSet max output tokens: Set number from 1 to 131072. This is set to 131072 by default.",
+    "owned_by": "Novita AI",
+    "root": "glm-4.7-n",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000060",
+      "completion": "0.0000022",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "GLM-4.7-N",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6688425-200-bilqlanglxoqolyuejulmtsutadayoea.jpeg",
+        "alt": "GLM-4.7-N model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/glm-4.7-n"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think before providing a response."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "default_value": 131072,
+        "description": "Maximum number of tokens to generate in the response."
       }
     ]
   },
@@ -2423,6 +3032,78 @@
     ]
   },
   {
+    "id": "glm-4.6",
+    "object": "model",
+    "created": 1759223039599,
+    "description": "As the latest iteration in the GLM series, GLM-4.6 achieves comprehensive enhancements across multiple domains, including real-world coding, long-context processing, reasoning, searching, writing, and agentic applications. \n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens",
+    "owned_by": "Novita AI",
+    "root": "glm-4.6",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000055",
+      "completion": "0.0000022",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000011",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "GLM-4.6",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6462183-200-ebhirjmybgbzfjzsknkiimmkcjxdzwpz.jpeg",
+        "alt": "GLM-4.6 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/glm-4.6"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": false,
+        "description": "This will cause the model to think before providing a response."
+      },
+      {
+        "name": "temperature",
+        "schema": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
+      },
+      {
+        "name": "max_output_tokens",
+        "schema": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 131072
+        },
+        "default_value": 131072,
+        "description": "Maximum number of tokens to generate in the response."
+      }
+    ]
+  },
+  {
     "id": "gpt-5.1-codex-mini",
     "object": "model",
     "created": 1762990151662,
@@ -2555,169 +3236,75 @@
     ]
   },
   {
-    "id": "nano-banana-pro",
+    "id": "glm-4.6v",
     "object": "model",
-    "created": 1763518946353,
-    "description": "Nano Banana Pro (Gemini 3 Pro Image Preview) can make detailed, context-rich visuals, precisely edit or restyle input images with exceptional fidelity, and even generate legible text in images in multiple languages.\n\nThis bot supports optional parameters for additional customization.",
-    "owned_by": "Google",
-    "root": "nano-banana-pro",
+    "created": 1765278260925,
+    "description": "GLM-4.6V represents a significant multimodal advancement in the GLM series, achieving state-of-the-art visual understanding accuracy for models of its parameter scale. Notably, it's the first visual model to natively integrate Function Call capabilities directly into its architecture, creating a seamless pathway from visual perception to executable actions. This breakthrough establishes a unified technical foundation for deploying multimodal agents in real-world business applications.\n\nFile Support: Text, Markdown, Image and PDF files\nContext window: 131k tokens\n\nOptional parameters:\nEnable Thinking - Toggle this on for the model to think before providing a response. This is disabled by default\nTemperature - Controls randomness in the response. Lower values make the output more focused and deterministic. Select from 0 to 2 range. This is set to 0.7 by default.\nMax Output Tokens: Maximum number of tokens to generate in the response. This can be set from 1 to 32768. Set to Max token at 32768 by default.",
+    "owned_by": "Novita AI",
+    "root": "glm-4.6v",
     "architecture": {
       "input_modalities": [
         "text",
         "image"
       ],
       "output_modalities": [
-        "image"
+        "text"
       ],
-      "modality": "text,image->image"
+      "modality": "text,image->text"
     },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
+    "supported_features": [
+      "tools"
     ],
+    "supported_endpoints": [],
     "pricing": {
-      "prompt": "0.0000020",
-      "completion": "0.000012",
-      "image": "0.00012",
+      "prompt": "0.00000030",
+      "completion": "0.00000090",
+      "image": null,
       "request": null,
-      "input_cache_read": "0.00000020",
+      "input_cache_read": "0.000000055",
       "input_cache_write": null
     },
-    "context_window": {
-      "context_length": 65536,
-      "max_output_tokens": null
-    },
-    "context_length": 65536,
+    "context_window": null,
+    "context_length": null,
     "metadata": {
-      "display_name": "Nano-Banana-Pro",
+      "display_name": "GLM-4.6V",
       "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6594978-200-xmkviblepufpzqergeyhvuplaucdmikb.jpeg",
-        "alt": "Nano-Banana-Pro model icon",
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6655058-200-byhnlafeprgwhfoftamknsrqpqaexgyy.jpeg",
+        "alt": "GLM-4.6V model icon",
         "width": 200,
         "height": 200
       },
-      "url": "https://poe.com/nano-banana-pro"
+      "url": "https://poe.com/glm-4.6v"
     },
     "reasoning": null,
     "parameters": [
       {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "1:1",
-            "2:3",
-            "3:2",
-            "3:4",
-            "4:3",
-            "4:5",
-            "5:4",
-            "9:16",
-            "16:9",
-            "21:9"
-          ]
-        }
-      },
-      {
-        "name": "image_only",
+        "name": "enable_thinking",
         "schema": {
           "type": "boolean"
         },
         "default_value": false,
-        "description": "The model defaults to returning text and images. Turn on to only return images."
+        "description": "This will cause the model to think before providing a response."
       },
       {
-        "name": "web_search",
+        "name": "temperature",
         "schema": {
-          "type": "boolean"
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
         },
-        "default_value": false,
-        "description": "Enable web search and real-time information access."
+        "default_value": 0.7,
+        "description": "Controls randomness in the response. Lower values make the output more focused and deterministic."
       },
       {
-        "name": "image_size",
+        "name": "max_output_tokens",
         "schema": {
-          "enum": [
-            "1K",
-            "2K",
-            "4K"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "nano-banana",
-    "object": "model",
-    "created": 1755817420757,
-    "description": "Google DeepMind's Nano Banana (i.e. Gemini 2.5 Flash Image model) offers image generation and editing capabilities, state-of-the-art performance in photo-realistic multi-turn edits at exceptional speeds. Supports a maximum input context of 32k tokens.\n\nOptional parameters:\nSet aspect ratio. Select from (1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9). It is set to 16:9 aspect ratio as default.\nImage only to only generate image output. It is `off` by default\n\nNote: Simply enabling image only will not result in an image unless the prompt is phrased specifically for image generation, but it does guarantee that only a single image (or none) will be produced.",
-    "owned_by": "Google",
-    "root": "nano-banana",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text",
-        "image"
-      ],
-      "modality": "text,image->text,image"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/responses",
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.00000021",
-      "completion": "0.0000018",
-      "image": "0.000021",
-      "request": null,
-      "input_cache_read": "0.000000021",
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 65536,
-      "max_output_tokens": null
-    },
-    "context_length": 65536,
-    "metadata": {
-      "display_name": "Nano-Banana",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6348843-200-zqnidmlfltbivcuhqcvqpckxnwvpebdy.jpeg",
-        "alt": "Nano-Banana model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/nano-banana"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "1:1",
-            "2:3",
-            "3:2",
-            "3:4",
-            "4:3",
-            "4:5",
-            "5:4",
-            "9:16",
-            "16:9",
-            "21:9"
-          ]
-        }
-      },
-      {
-        "name": "image_only",
-        "schema": {
-          "type": "boolean"
+          "type": "number",
+          "minimum": 1,
+          "maximum": 32768
         },
-        "default_value": false,
-        "description": "The model defaults to returning text and images. Turn on to only return images."
+        "default_value": 32768,
+        "description": "Maximum number of tokens to generate in the response."
       }
     ]
   },
@@ -3176,6 +3763,60 @@
     "parameters": []
   },
   {
+    "id": "nova-premier-1.0",
+    "object": "model",
+    "created": 1757959733022,
+    "description": "Note: This model will be retired on September 14, 2026\nThe Amazon Nova Premier 1.0 model is Amazon’s most capable foundation model, able to handle extremely long contexts (≈ 1 million tokens) and multimodal inputs like text, images, and video while excelling at complex, multi‑step tasks across tools and data sources. \nIt supports chain‑of‑thought style reasoning and breaks down problems into intermediate steps before arriving at an answer, improving coherence and accuracy.\n\nOptional parameter:\nEnable thinking about the response before giving a final answer: toggle it `off`, otherwise it is `on` by default.",
+    "owned_by": "Empirio Labs AI",
+    "root": "nova-premier-1.0",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.0000030",
+      "completion": "0.000015",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.0000016",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Nova-Premier-1.0",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6420137-200-hisjdivnqbcsnphixafergqmkdpzieqw.jpeg",
+        "alt": "Nova-Premier-1.0 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/nova-premier-1.0"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_thinking",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "Enable chain-of-thought reasoning."
+      }
+    ]
+  },
+  {
     "id": "grok-4-fast-reasoning",
     "object": "model",
     "created": 1758058244361,
@@ -3223,6 +3864,204 @@
     },
     "reasoning": null,
     "parameters": []
+  },
+  {
+    "id": "nova-micro-1.0",
+    "object": "model",
+    "created": 1733714662051,
+    "description": "Amazon Nova Micro is a text-only foundation model in the Amazon Nova family, designed for ultra‑low latency and very low cost, optimized for tasks like summarization, translation, and interactive chat. It supports a context window of 128,000 tokens, enabling handling of large text inputs in a single request.",
+    "owned_by": "Empirio Labs AI",
+    "root": "nova-micro-1.0",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.000000040",
+      "completion": "0.00000016",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000022",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Nova-Micro-1.0",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5389559-200-ndlbiqdnxlqsttihcubiwziedgoiittj.jpeg",
+        "alt": "Nova-Micro-1.0 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/nova-micro-1.0"
+    },
+    "reasoning": null,
+    "parameters": []
+  },
+  {
+    "id": "nova-lite-1.0",
+    "object": "model",
+    "created": 1733713614756,
+    "description": "Amazon Nova Lite is a low‑cost multimodal foundation model from Amazon that can process text, images, and video and is optimized for speed and affordability. It offers a context window of 300,000 tokens, allowing handling of very large inputs in a single request (including up to ~30 minutes of video).",
+    "owned_by": "Empirio Labs AI",
+    "root": "nova-lite-1.0",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.000000069",
+      "completion": "0.00000028",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.000000038",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Nova-Lite-1.0",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5389486-200-qqqaqlmrfqfcunlwwutanazrvoolueqf.jpeg",
+        "alt": "Nova-Lite-1.0 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/nova-lite-1.0"
+    },
+    "reasoning": null,
+    "parameters": []
+  },
+  {
+    "id": "mistral-medium-3.1",
+    "object": "model",
+    "created": 1758398334743,
+    "description": "Mistral Medium 3.1 is a high-performance, enterprise-grade language model that delivers strong reasoning, coding, and STEM capabilities. It supports hybrid, on-prem, and in-VPC deployments, offering competitive accuracy and easy integration across cloud environments. Context Length: 131k",
+    "owned_by": "Empirio Labs AI",
+    "root": "mistral-medium-3.1",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000052",
+      "completion": "0.0000026",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Mistral-Medium-3.1",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6435763-200-qbwqniiwyzudzgkszewklvxvvbztrjcr.jpeg",
+        "alt": "Mistral-Medium-3.1 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/mistral-medium-3.1"
+    },
+    "reasoning": null,
+    "parameters": []
+  },
+  {
+    "id": "nova-lite-2",
+    "object": "model",
+    "created": 1764827272207,
+    "description": "Amazon Nova 2 Lite is a fast, cost-effective multimodal reasoning model from Amazon that can process text, images, documents, and video, designed for everyday workloads like chatbots, document processing, and business automation. It offers a 1 million token context window, enabling very large, complex inputs in a single request, including long documents and extended video clips (~90 minutes).\n\nNotes: \n- Video file uploads are limited to ~1GB. Also note that reasoning traces are not exposed from AWS.\n- Supported file types: JPEG, PNG, GIF, WEBP, PDF, DOCX, TXT, MP4, MOV, MKV, WebM, FLV, MPEG, MPG, WMV, 3GP\n\nParameter controls available:\n- Enable Extended thinking. Enable step-by-step reasoning (default: on).\n- Set reasoning effort: Select from  low (faster), medium (balanced) , high (deep analysis). Default: medium (balanced)",
+    "owned_by": "Empirio Labs AI",
+    "root": "nova-lite-2",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image,video->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000038",
+      "completion": "0.0000032",
+      "image": null,
+      "request": null,
+      "input_cache_read": "0.00000021",
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Nova-Lite-2",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6640726-200-ndgdrjlscsycabknxryewozpnkerfrta.jpeg",
+        "alt": "Nova-Lite-2 model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/nova-lite-2"
+    },
+    "reasoning": null,
+    "parameters": [
+      {
+        "name": "enable_reasoning",
+        "schema": {
+          "type": "boolean"
+        },
+        "default_value": true,
+        "description": "Enable step-by-step reasoning."
+      },
+      {
+        "name": "reasoning_effort",
+        "schema": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "default_value": "medium",
+        "description": "Depth of analysis."
+      }
+    ]
   },
   {
     "id": "claude-sonnet-4",
@@ -4244,6 +5083,96 @@
     "parameters": []
   },
   {
+    "id": "gpt-oss-120b-cs",
+    "object": "model",
+    "created": 1754490145525,
+    "description": "World’s fastest inference for GPT OSS 120B with Cerebras. OpenAI's GPT-OSS-120B delivers sophisticated chain-of-thought reasoning capabilities in a fully open model. The bot does not accept video, ppt, docx and excel files.",
+    "owned_by": "CerebrasAI",
+    "root": "gpt-oss-120b-cs",
+    "architecture": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.00000035",
+      "completion": "0.00000075",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": {
+      "context_length": 128000,
+      "max_output_tokens": null
+    },
+    "context_length": 128000,
+    "metadata": {
+      "display_name": "GPT-OSS-120B-CS",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6299377-200-ffqmlqigvwmqzddozfuvcrwcjrbmaeax.jpeg",
+        "alt": "GPT-OSS-120B-CS model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/gpt-oss-120b-cs"
+    },
+    "reasoning": null,
+    "parameters": []
+  },
+  {
+    "id": "magistral-medium-2509-thinking",
+    "object": "model",
+    "created": 1750288555644,
+    "description": "Magistral Medium 2509 (thinking) by EmpirioLabs.\nMagistral is Mistral's first reasoning model. It is ideal for general purpose use requiring longer thought processing and better accuracy than with non-reasoning LLMs. From legal research and financial forecasting to software development and creative storytelling — this model solves multi-step challenges where transparency and precision are critical. Context Window: 40,000k\nSupported file type uploads: PDF, XLSX, TXT, PNG, JPG, JPEG",
+    "owned_by": "Empirio Labs AI",
+    "root": "magistral-medium-2509-thinking",
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "modality": "text,image->text"
+    },
+    "supported_features": [
+      "tools"
+    ],
+    "supported_endpoints": [],
+    "pricing": {
+      "prompt": "0.0000026",
+      "completion": "0.0000065",
+      "image": null,
+      "request": null,
+      "input_cache_read": null,
+      "input_cache_write": null
+    },
+    "context_window": null,
+    "context_length": null,
+    "metadata": {
+      "display_name": "Magistral-Medium-2509-Thinking",
+      "image": {
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6140563-200-vjgowpstnsgwapnoktgwnfwentlahfys.jpeg",
+        "alt": "Magistral-Medium-2509-Thinking model icon",
+        "width": 200,
+        "height": 200
+      },
+      "url": "https://poe.com/magistral-medium-2509-thinking"
+    },
+    "reasoning": null,
+    "parameters": []
+  },
+  {
     "id": "o1",
     "object": "model",
     "created": 1734482114732,
@@ -4547,29 +5476,28 @@
     "parameters": []
   },
   {
-    "id": "mistral-medium",
+    "id": "llama-3.1-8b-cs",
     "object": "model",
-    "created": 1703096777397,
-    "description": "Mistral AI's medium-sized model. Supports a context window of 32k tokens (around 24,000 words) and is stronger than Mixtral-8x7b and Mistral-7b on benchmarks across the board.",
-    "owned_by": "Mistral",
-    "root": "mistral-medium",
+    "created": 1747179273060,
+    "description": "World’s fastest inference for Llama 3.1 8B with Cerebras. This Llama 8B instruct-tuned version is fast and efficient. The Llama 3.1 8B is an instruction tuned text only model, optimized for multilingual dialogue use cases. It has demonstrated strong performance compared to leading closed-source models in human evaluations.",
+    "owned_by": "CerebrasAI",
+    "root": "llama-3.1-8b-cs",
     "architecture": {
       "input_modalities": [
-        "text",
-        "image"
+        "text"
       ],
       "output_modalities": [
         "text"
       ],
-      "modality": "text,image->text"
+      "modality": "text->text"
     },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/chat/completions"
+    "supported_features": [
+      "tools"
     ],
+    "supported_endpoints": [],
     "pricing": {
-      "prompt": "0.0000027",
-      "completion": "0.0000081",
+      "prompt": "0.00000010",
+      "completion": "0.00000010",
       "image": null,
       "request": null,
       "input_cache_read": null,
@@ -4577,18 +5505,18 @@
     },
     "context_window": {
       "context_length": 128000,
-      "max_output_tokens": 4096
+      "max_output_tokens": null
     },
     "context_length": 128000,
     "metadata": {
-      "display_name": "Mistral-Medium",
+      "display_name": "Llama-3.1-8B-CS",
       "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7009-200-wxkbzvleprmbkslrrqmnswcikmnhgvvw.jpeg",
-        "alt": "Mistral-Medium model icon",
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6016634-200-emjkhajuhloiqepnypioyzkpdhsvnicz.jpeg",
+        "alt": "Llama-3.1-8B-CS model icon",
         "width": 200,
         "height": 200
       },
-      "url": "https://poe.com/mistral-medium"
+      "url": "https://poe.com/llama-3.1-8b-cs"
     },
     "reasoning": null,
     "parameters": []
@@ -4690,589 +5618,6 @@
     "parameters": []
   },
   {
-    "id": "gpt-image-1",
-    "object": "model",
-    "created": 1743434309185,
-    "description": "OpenAI's model that powers image generation in ChatGPT, offering exceptional prompt adherence, level of detail, and quality. It supports editing, restyling, and combining images attached to the latest user query. For a conversational editing experience, use https://poe.com/GPT-4o (all users) or https://poe.com/Assistant (subscribers) instead.\n\nOptional parameters:\n- Aspect Ration. Aspect ratio of the output image (Options: 1:1, 3:2, 2:3)\n- Quality: Image resolution (options: high, medium, low)\n- Mask.  Indicates that the last attached image is a mask for in-painting (editing specific regions). The mask must match the dimensions of the base image, with transparent (zero-alpha) areas showing which parts to edit.\n- High fidelity to false to disable high input fidelity. This option is enabled by default.",
-    "owned_by": "OpenAI",
-    "root": "gpt-image-1",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text,image->image"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/images"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 128000,
-      "max_output_tokens": null
-    },
-    "context_length": 128000,
-    "metadata": {
-      "display_name": "GPT-Image-1",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5860961-200-lqgunndzxoajcyjfnmyuctxudtanfivt.jpeg",
-        "alt": "GPT-Image-1 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/gpt-image-1"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect",
-        "schema": {
-          "enum": [
-            "1:1",
-            "3:2",
-            "2:3"
-          ]
-        }
-      },
-      {
-        "name": "quality",
-        "schema": {
-          "enum": [
-            "low",
-            "medium",
-            "high"
-          ]
-        },
-        "default_value": "high"
-      },
-      {
-        "name": "use_mask",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Indicates that the last attached image is a mask for inpainting (editing specific regions). The mask must match the dimensions of the base image, with transparent (zero-alpha) areas showing which parts to edit."
-      },
-      {
-        "name": "use_high_fidelity",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": true,
-        "description": "High input fidelity allows you to make subtle edits to an image without altering unrelated areas. This is ideal for controlled, localized changes."
-      }
-    ]
-  },
-  {
-    "id": "veo-3.1",
-    "object": "model",
-    "created": 1760537766690,
-    "description": "Google’s Veo 3.1 is an updated version of the Veo family of models that features richer native audio, from natural conversations to synchronized sound effects, and offers greater narrative control with an improved understanding of cinematic styles. Enhanced image-to-video capabilities ensure better prompt adherence while delivering superior audio and visual quality and maintaining character consistency across multiple scenes.\n\nOptional parameters:\n- Set the aspect ratio (either `16:9` or `9:16`), which defaults to `16:9`\n- Negative prompt can be set on elements to avoid\n- Set the duration (one of `4s`, `6s`, or `8s`), which defaults to `8s`\n- Seed to set the seed (set number value)\n- Resolution (set from 720p or 1080p)\n- Reference mode. Toggle to use input images (3 max) as reference for video generation\n\nFor first & last frame video generation and references support, please use www.poe.com/Veo-v3.1",
-    "owned_by": "Google",
-    "root": "veo-3.1",
-    "architecture": {
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Veo-3.1",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6501423-200-ulpnllwaaaonkxsedbljuanxokvwknwz.jpeg",
-        "alt": "Veo-3.1 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/veo-3.1"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "16:9",
-            "9:16"
-          ]
-        },
-        "default_value": "16:9"
-      },
-      {
-        "name": "no",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "6",
-            "8"
-          ]
-        },
-        "default_value": "8"
-      },
-      {
-        "name": "seed",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "silent",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Toggle to generate a video without audio. Decreases cost."
-      },
-      {
-        "name": "reference_mode",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Toggle to use input images(3 max) as reference for video generation."
-      },
-      {
-        "name": "resolution",
-        "schema": {
-          "enum": [
-            "720p",
-            "1080p"
-          ]
-        },
-        "default_value": "720p"
-      }
-    ]
-  },
-  {
-    "id": "veo-3.1-fast",
-    "object": "model",
-    "created": 1760540647924,
-    "description": "Google’s Veo 3.1 Fast is an updated version of the Veo family of models that's optimized for speed and cost, but still features richer native audio, from natural conversations to synchronized sound effects, and offer greater narrative control with an improved understanding of cinematic styles. Enhanced image-to-video capabilities ensure better prompt adherence while delivering superior audio and visual quality and maintaining character consistency across multiple scenes.\n\nOptional parameters:\n- Set the aspect ratio (either `16:9` or `9:16`), which defaults to `16:9`\n- Negative prompt can be set on elements to avoid\n- Set the duration (one of `4s`, `6s`, or `8s`), which defaults to `8s`\n- Seed to set the seed (set number value)\n- Resolution (set from 720p or 1080p)\n\nFor first & last frame video generation support, please use www.poe.com/Veo-v3.1-Fast",
-    "owned_by": "Google",
-    "root": "veo-3.1-fast",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text,image->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Veo-3.1-Fast",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6501541-200-ayjxcwkcfikkjicbsbhcywnxljitkxxv.jpeg",
-        "alt": "Veo-3.1-Fast model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/veo-3.1-fast"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "16:9",
-            "9:16"
-          ]
-        },
-        "default_value": "16:9"
-      },
-      {
-        "name": "no",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "6",
-            "8"
-          ]
-        },
-        "default_value": "8"
-      },
-      {
-        "name": "seed",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "silent",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Toggle to generate a video without audio. Decreases cost."
-      },
-      {
-        "name": "resolution",
-        "schema": {
-          "enum": [
-            "720p",
-            "1080p"
-          ]
-        },
-        "default_value": "720p"
-      }
-    ]
-  },
-  {
-    "id": "sora-2-pro",
-    "object": "model",
-    "created": 1759779974530,
-    "description": "Sora 2 Pro is OpenAI’s state-of-the-art video and audio generation model, capable of creating richly detailed, dynamic clips with synchronized audio from natural language prompts or images. It builds on Sora 2’s capabilities with enhanced physical accuracy, intricate world-state persistence, and higher fidelity in cinematic styles. The model excels at generating synchronized dialogue, sound effects, and realistic simulations, all while adhering to real-world physics. Sora 2 Pro also supports seamless editing, complex multi-shot prompt execution, and the integration of real-world elements like people, animals, and objects with unparalleled detail and accuracy.\nThis bot supports text-to-video and image-to-video generation.\n\nOptional parameters:\n- Duration. Video output duration in seconds (options: 4, 8, 12)\n- Size. Resolution of the output video. Options: [Landscape] - 1280x720, 1792x1024, [Portrait] - 720x1280, 1024x1792",
-    "owned_by": "OpenAI",
-    "root": "sora-2-pro",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text,image->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Sora-2-Pro",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6478771-200-abbjvkqfxufhqojouahnbkrfzdguunlk.jpeg",
-        "alt": "Sora-2-Pro model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/sora-2-pro"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "size",
-        "schema": {
-          "enum": [
-            "1280x720",
-            "720x1280",
-            "1792x1024",
-            "1024x1792",
-            "1920x1080",
-            "1080x1920"
-          ]
-        },
-        "default_value": "720x1280"
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "8",
-            "12",
-            "16",
-            "20"
-          ]
-        },
-        "default_value": "4"
-      }
-    ]
-  },
-  {
-    "id": "sora-2",
-    "object": "model",
-    "created": 1759780020960,
-    "description": "Sora 2 is OpenAI’s latest video and audio generation model, delivering exceptional realism, physical accuracy, and controllability. It excels at creating cinematic scenes, synchronized dialogue, sound effects, and dynamic simulations while faithfully adhering to the laws of physics. The model supports editing, multi-shot prompt adherence, and the integration of real-world elements, such as people, animals, and objects.\nThis bot supports text-to-video and image-to-video generation.\n\nOptional parameters:\n- Set Duration. Select from (4 seconds, 8 seconds or 12 seconds) to specify video length in seconds. Set to 4 seconds as default.\n- Set Resolution. Select from (Landscape - 1280x720 or Portrait - 720x1280). It is set to Portrait (720x1280) resolution as default.",
-    "owned_by": "OpenAI",
-    "root": "sora-2",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text,image->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Sora-2",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6478775-200-pkaiapkzxadtwqatzmwzraneemwedqtz.jpeg",
-        "alt": "Sora-2 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/sora-2"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "size",
-        "schema": {
-          "enum": [
-            "1280x720",
-            "720x1280"
-          ]
-        },
-        "default_value": "720x1280"
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "8",
-            "12",
-            "16",
-            "20"
-          ]
-        },
-        "default_value": "4"
-      }
-    ]
-  },
-  {
-    "id": "veo-3",
-    "object": "model",
-    "created": 1747796700448,
-    "description": "Veo 3 produces incredibly high-quality videos across a diverse range of subjects and styles. It incorporates an enhanced understanding of real-world physics and the subtleties of human movement and expression, resulting in greater detail and overall realism.\n\nVeo 3 is fluent in the unique language of cinematography: you can request a specific genre, specify a lens, or suggest cinematic effects, and Veo 3 will deliver stunning 8-second video clips. It supports both text-to-video and image-to-video generation and also features native audio generation based on text prompts.\n\nNote: Please note that Veo 3 does not accept audio attachments.\n\nOptional parameters:\nSet negative prompt to exclude specific elements (e.g., blurry, cloudy, or other attributes). \nSet seed to set a specific seed value by entering the desired number.\nSet aspect ratio followed by either 16:9 or 9:16.\nSet duration followed by either 4s, 6s, 8s.",
-    "owned_by": "Google",
-    "root": "veo-3",
-    "architecture": {
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Veo-3",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6040520-200-ycffcgunfwthfylqqbbhffkfxotsufqj.jpeg",
-        "alt": "Veo-3 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/veo-3"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "16:9",
-            "9:16"
-          ]
-        },
-        "default_value": "16:9"
-      },
-      {
-        "name": "no",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "6",
-            "8"
-          ]
-        },
-        "default_value": "8"
-      },
-      {
-        "name": "seed",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "silent",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Toggle to generate a video without audio. Decreases cost."
-      },
-      {
-        "name": "resolution",
-        "schema": {
-          "enum": [
-            "720p",
-            "1080p"
-          ]
-        },
-        "default_value": "720p"
-      }
-    ]
-  },
-  {
-    "id": "veo-3-fast",
-    "object": "model",
-    "created": 1760335513509,
-    "description": "Veo 3 Fast is a speed-optimized variant of Google’s Veo 3 AI video generation engine. It’s designed for rapid, cost-efficient production of short clips with synchronized audio (dialogue, ambient sound, effects). Prioritizes faster generation times while still delivering solid visual and audio quality, supports text-to-video and image-to-video workflows, allowing creators to animate still images into motion sequences, operates under defined constraints (e.g. video lengths of 4, 6, or 8 seconds). Set the aspect ratio (either `16:9` or `9:16`), which defaults to `16:9`.\nPlease only upload photos that you own or have the right to use, otherwise the bot will throw an error.",
-    "owned_by": "Google",
-    "root": "veo-3-fast",
-    "architecture": {
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Veo-3-Fast",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6494812-200-hhoigayewqibyxyfiibwqvpwtujjxlvv.jpeg",
-        "alt": "Veo-3-Fast model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/veo-3-fast"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "16:9",
-            "9:16"
-          ]
-        },
-        "default_value": "16:9"
-      },
-      {
-        "name": "no",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "4",
-            "6",
-            "8"
-          ]
-        },
-        "default_value": "8"
-      },
-      {
-        "name": "seed",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "silent",
-        "schema": {
-          "type": "boolean"
-        },
-        "default_value": false,
-        "description": "Toggle to generate a video without audio. Decreases cost."
-      },
-      {
-        "name": "resolution",
-        "schema": {
-          "enum": [
-            "720p",
-            "1080p"
-          ]
-        },
-        "default_value": "720p"
-      }
-    ]
-  },
-  {
     "id": "grok-code-fast-1",
     "object": "model",
     "created": 1755884835039,
@@ -5319,232 +5664,6 @@
     },
     "reasoning": null,
     "parameters": []
-  },
-  {
-    "id": "veo-2",
-    "object": "model",
-    "created": 1733117805122,
-    "description": "Veo 2 creates incredibly high-quality videos in a wide range of subjects and styles. It brings an improved understanding of real-world physics and the nuances of human movement and expression, which helps improve its detail and realism overall. Veo 2 understands the unique language of cinematography: ask it for a genre, specify a lens, suggest cinematic effects and Veo 2 will deliver in 8-second clips. Use `--aspect_ratio` (16:9 or 9:16) to customize video aspect ratio. Supports text-to-video as well as image-to-video. Non english input will be translated first. Note: currently has low rate limit so you may need to retry your request at times of peak usage.",
-    "owned_by": "Google",
-    "root": "veo-2",
-    "architecture": {
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "video"
-      ],
-      "modality": "text->video"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/videos"
-    ],
-    "pricing": null,
-    "context_window": {
-      "context_length": 480,
-      "max_output_tokens": null
-    },
-    "context_length": 480,
-    "metadata": {
-      "display_name": "Veo-2",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-5356474-200-ibzsqagpmxpivhmtlxiefknlknxoibxi.jpeg",
-        "alt": "Veo-2 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/veo-2"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect_ratio",
-        "schema": {
-          "enum": [
-            "16:9",
-            "9:16"
-          ]
-        },
-        "default_value": "16:9"
-      },
-      {
-        "name": "no",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "duration",
-        "schema": {
-          "enum": [
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        "default_value": "8"
-      },
-      {
-        "name": "seed",
-        "schema": {
-          "type": "string"
-        }
-      }
-    ]
-  },
-  {
-    "id": "mistral-small-3",
-    "object": "model",
-    "created": 1738360161146,
-    "description": "Mistral Small 3 is a pre-trained and instructed model catered to the ‘80%’ of generative AI tasks--those that require robust language and instruction following performance, with very low latency. Released under an Apache 2.0 license and comparable to Llama-3.3-70B and Qwen2.5-32B-Instruct.",
-    "owned_by": "Mistral",
-    "root": "mistral-small-3",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "modality": "text,image->text"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.00000010",
-      "completion": "0.00000030",
-      "image": null,
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 128000,
-      "max_output_tokens": 4096
-    },
-    "context_length": 128000,
-    "metadata": {
-      "display_name": "Mistral-Small-3",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7012-200-oelvcswpytpieygsqdymsppwvpwoqdob.jpeg",
-        "alt": "Mistral-Small-3 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/mistral-small-3"
-    },
-    "reasoning": null,
-    "parameters": []
-  },
-  {
-    "id": "mistral-large-2",
-    "object": "model",
-    "created": 1708971504266,
-    "description": "Mistral's latest text generation model (Mistral-Large-2407) with top-tier reasoning capabilities. It can be used for complex multilingual reasoning tasks, including text understanding, transformation, and code generation. This bot has the full 128k context window supported by the model.",
-    "owned_by": "Mistral",
-    "root": "mistral-large-2",
-    "architecture": {
-      "input_modalities": [
-        "text",
-        "image"
-      ],
-      "output_modalities": [
-        "text"
-      ],
-      "modality": "text,image->text"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/chat/completions"
-    ],
-    "pricing": {
-      "prompt": "0.0000030",
-      "completion": "0.0000090",
-      "image": null,
-      "request": null,
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 128000,
-      "max_output_tokens": 4096
-    },
-    "context_length": 128000,
-    "metadata": {
-      "display_name": "Mistral-Large-2",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7010-200-jaspeixxffhayqwvhydkkjjmjwtjzgrv.jpeg",
-        "alt": "Mistral-Large-2 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/mistral-large-2"
-    },
-    "reasoning": null,
-    "parameters": []
-  },
-  {
-    "id": "dall-e-3",
-    "object": "model",
-    "created": 1699306131647,
-    "description": "OpenAI's most powerful image generation model. Generates high quality images with intricate details based on the user's most recent prompt. For most prompts, https://poe.com/FLUX-pro-1.1-ultra or https://poe.com/FLUX-dev or https://poe.com/Imagen3 will produce better results. \n\nOptional parameters:\nAspect Ratio to select an aspect ratio. Valid aspect ratios are 1:1, 7:4, & 4:7.",
-    "owned_by": "OpenAI",
-    "root": "dall-e-3",
-    "architecture": {
-      "input_modalities": [
-        "text"
-      ],
-      "output_modalities": [
-        "image"
-      ],
-      "modality": "text->image"
-    },
-    "supported_features": [],
-    "supported_endpoints": [
-      "/v1/images"
-    ],
-    "pricing": {
-      "prompt": null,
-      "completion": null,
-      "image": null,
-      "request": "0.045",
-      "input_cache_read": null,
-      "input_cache_write": null
-    },
-    "context_window": {
-      "context_length": 800,
-      "max_output_tokens": null
-    },
-    "context_length": 800,
-    "metadata": {
-      "display_name": "DALL-E-3",
-      "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-2828029-200-mlvmbysbpfpcjfyxswvxbzufpvszchqb.jpeg",
-        "alt": "DALL-E-3 model icon",
-        "width": 200,
-        "height": 200
-      },
-      "url": "https://poe.com/dall-e-3"
-    },
-    "reasoning": null,
-    "parameters": [
-      {
-        "name": "aspect",
-        "schema": {
-          "enum": [
-            "1:1",
-            "7:4",
-            "4:7"
-          ]
-        },
-        "default_value": "1:1"
-      }
-    ]
   },
   {
     "id": "gpt-3.5-turbo",
@@ -5646,12 +5765,12 @@
     "parameters": []
   },
   {
-    "id": "solar-pro-2",
+    "id": "gpt-4-classic-0314",
     "object": "model",
-    "created": 1694610718864,
-    "description": "Solar Pro 2 is Upstage's latest frontier-scale LLM. With just 31B parameters, it delivers top-tier performance through world-class multilingual support, advanced reasoning, and real-world tool use. Especially in Korean, it outperforms much larger models across critical benchmarks. Built for the next generation of practical LLMs, Solar Pro 2 proves that smaller models can still lead. Supports a context length of 64k tokens.",
-    "owned_by": "Upstage",
-    "root": "solar-pro-2",
+    "created": 1724707714433,
+    "description": "OpenAI's GPT-4 model. Powered by gpt-4-0314 (non-Turbo) for text input and gpt-4o for image input. For most use cases, https://poe.com/GPT-4o will perform significantly better.",
+    "owned_by": "OpenAI",
+    "root": "gpt-4-classic-0314",
     "architecture": {
       "input_modalities": [
         "text",
@@ -5662,32 +5781,34 @@
       ],
       "modality": "text,image->text"
     },
-    "supported_features": [],
+    "supported_features": [
+      "tools"
+    ],
     "supported_endpoints": [
       "/v1/chat/completions"
     ],
     "pricing": {
-      "prompt": null,
-      "completion": null,
+      "prompt": "0.000027",
+      "completion": "0.000054",
       "image": null,
-      "request": "0.0021",
+      "request": null,
       "input_cache_read": null,
       "input_cache_write": null
     },
     "context_window": {
-      "context_length": 4096,
-      "max_output_tokens": 1024
+      "context_length": 8192,
+      "max_output_tokens": 4096
     },
-    "context_length": 4096,
+    "context_length": 8192,
     "metadata": {
-      "display_name": "Solar-Pro-2",
+      "display_name": "GPT-4-Classic-0314",
       "image": {
-        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-7006-200-vawvkuecismyzqxchgrbiayuvjzowwuy.jpeg",
-        "alt": "Solar-Pro-2 model icon",
+        "url": "https://qph.cf2.poecdn.net/main-thumb-pb-3021-200-dcfzihobnwryuqkyuxizckytkuoplihu.jpeg",
+        "alt": "GPT-4-Classic-0314 model icon",
         "width": 200,
         "height": 200
       },
-      "url": "https://poe.com/solar-pro-2"
+      "url": "https://poe.com/gpt-4-classic-0314"
     },
     "reasoning": null,
     "parameters": []
