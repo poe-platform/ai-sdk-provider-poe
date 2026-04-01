@@ -146,12 +146,12 @@
           ]
         },
         {
-          "id": "app-creator",
+          "id": "canvas-creator",
           "object": "model",
           "created": 1758612381235,
-          "description": "Specializes in building interactive web applications designed for publishing as apps on Poe. Powered by Claude Code.\n\nSee what's new: https://creator.poe.com/changelog?tag=canvas-apps\n\nNote: App-Creator cannot access messages sent to or from other bots.\n\nOptional parameters:\n`Model` (options: Claude Sonnet 4.5 / Opus  4.6 / Haiku 4.5): Claude model to use\n`Thinking budget` (options: 0 to 31999) : The maximum number of tokens to spend on thinking.",
+          "description": "Specializes in building interactive web applications designed for publishing as apps on Poe. Powered by Claude Code.\n\nSee what's new: https://creator.poe.com/changelog?tag=canvas-apps\n\nNote: Canvas-Creator cannot access messages sent to or from other bots.\n\nOptional parameters:\n`Model` (options: Claude Sonnet 4.5 / Opus  4.6 / Haiku 4.5): Claude model to use\n`Thinking budget` (options: 0 to 31999) : The maximum number of tokens to spend on thinking.",
           "owned_by": "Poe Tools",
-          "root": "app-creator",
+          "root": "canvas-creator",
           "architecture": {
             "input_modalities": [
               "text"
@@ -167,14 +167,14 @@
           "context_window": null,
           "context_length": null,
           "metadata": {
-            "display_name": "App-Creator",
+            "display_name": "Canvas-Creator",
             "image": {
               "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6443209-200-gzcekhhdszpsqdvzjyioaceskumtzmqp.jpeg",
-              "alt": "App-Creator model icon",
+              "alt": "Canvas-Creator model icon",
               "width": 200,
               "height": 200
             },
-            "url": "https://poe.com/app-creator"
+            "url": "https://poe.com/canvas-creator"
           },
           "reasoning": null,
           "parameters": [
@@ -397,9 +397,10 @@
               "image"
             ],
             "output_modalities": [
+              "text",
               "image"
             ],
-            "modality": "text,image->image"
+            "modality": "text,image->text,image"
           },
           "supported_features": [
             "web_search",
@@ -563,9 +564,10 @@
               "image"
             ],
             "output_modalities": [
+              "text",
               "image"
             ],
-            "modality": "text,image->image"
+            "modality": "text,image->text,image"
           },
           "supported_features": [
             "web_search",
@@ -651,9 +653,10 @@
               "image"
             ],
             "output_modalities": [
+              "text",
               "image"
             ],
-            "modality": "text,image->image"
+            "modality": "text,image->text,image"
           },
           "supported_features": [
             "web_search",
@@ -814,9 +817,10 @@
               "image"
             ],
             "output_modalities": [
+              "text",
               "image"
             ],
-            "modality": "text,image->image"
+            "modality": "text,image->text,image"
           },
           "supported_features": [
             "web_search",
@@ -1419,7 +1423,11 @@
           "id": "minimax-m2.7",
           "object": "model",
           "created": 1773820893957,
+<<<<<<< HEAD
           "description": "MiniMax M2.7 is an all-around evolved, versatile open-source large language model that seamlessly blends hardcore engineering productivity with high-EQ, human-like interaction capabilities.\nIn real-world software engineering, M2.7 excels by independently driving end-to-end project delivery while efficiently handling advanced tasks such as log analysis, bug troubleshooting, code security, and machine learning. In the professional workspace, it boasts the highest open-source GDPval-AA score (1495 ELO). It delivers high-fidelity, complex editing and multi-turn revisions across the Office suite (Excel, PPT, Word), elevating task execution to industry-leading standards.\nBuilt for complex environment interactions, M2.7 maintains an impressive 97% skill-following rate even with complex, long-context tool calls (>2000 tokens).  Beyond its robust productivity, M2.7 breaks the \"cold tool\" stereotype of traditional models. With exceptional identity retention and high emotional intelligence (EQ), it not only empowers enterprise productivity, but also opens up more room for product innovation.\n\nFile Support: Text, Markdown and PDF files\nContext window: 205k tokens",
+=======
+          "description": "MiniMax M2.7 is an all-around evolved, versatile open-source large language model that seamlessly blends hardcore engineering productivity with high-EQ, human-like interaction capabilities.\nIn real-world software engineering, M2.7 excels by independently driving end-to-end project delivery while efficiently handling advanced tasks such as log analysis, bug troubleshooting, code security, and machine learning. In the professional workspace, it boasts the highest open-source GDPval-AA score (1495 ELO). It delivers high-fidelity, complex editing and multi-turn revisions across the Office suite (Excel, PPT, Word), elevating task execution to industry-leading standards.\nBuilt for complex environment interactions, M2.7 maintains an impressive 97% skill-following rate even with complex, long-context tool calls (>2000 tokens).  Beyond its robust productivity, M2.7 breaks the \"cold tool\" stereotype of traditional models. With exceptional identity retention and high emotional intelligence (EQ), it not only empowers enterprise productivity, but also opens up more room for product innovation.\n\nContext window: 205k tokens\n\nThis bot supports optional parameters for additional customization.",
+>>>>>>> bb9e34a (test: verify kimi-k2.5-fw rejects tool calling)
           "owned_by": "Novita AI",
           "root": "minimax-m2.7",
           "architecture": {
@@ -1847,7 +1855,7 @@
           "id": "claude-haiku-4.5",
           "object": "model",
           "created": 1760556959473,
-          "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance across reasoning, coding, and computer-use tasks, Haiku 4.5 brings frontier-level capability to real-time and high-volume applications. It introduces extended thinking to the Haiku line, and scores >73% on SWE-bench verified, ranking among the world's best coding models. Supports 200k tokens of context.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 63,999.\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance across reasoning, coding, and computer-use tasks, Haiku 4.5 brings frontier-level capability to real-time and high-volume applications. It introduces extended thinking to the Haiku line, and scores >73% on SWE-bench verified, ranking among the world's best coding models. Supports 200k tokens of context.",
           "owned_by": "Anthropic",
           "root": "claude-haiku-4.5",
           "architecture": {
@@ -2403,10 +2411,9 @@
               "text"
             ],
             "output_modalities": [
-              "image",
-              "video"
+              "image"
             ],
-            "modality": "text->image,video"
+            "modality": "text->image"
           },
           "supported_features": [],
           "supported_endpoints": [],
@@ -2471,7 +2478,7 @@
             "prompt": null,
             "completion": null,
             "image": null,
-            "request": "0.0075",
+            "request": "0.00",
             "input_cache_read": null,
             "input_cache_write": null
           },
@@ -2608,7 +2615,11 @@
             "prompt": null,
             "completion": null,
             "image": null,
+<<<<<<< HEAD
             "request": "0.00",
+=======
+            "request": "0.0060",
+>>>>>>> bb9e34a (test: verify kimi-k2.5-fw rejects tool calling)
             "input_cache_read": null,
             "input_cache_write": null
           },
@@ -3111,6 +3122,98 @@
           "parameters": []
         },
         {
+          "id": "veo-3.1-lite",
+          "object": "model",
+          "created": 1774976562653,
+          "description": "Google’s Veo 3.1 Lite is the most cost-efficient model in the Veo 3.1 family, delivering high-quality video generation with native audio at a fraction of the cost. It supports both text-to-video and image-to-video workflows, with synchronized dialogue, sound effects, and ambient audio. While optimized for affordability, it still benefits from the Veo 3.1 generation’s improved prompt adherence and cinematic understanding.\n\nOptional Parameters\nAspect ratio: 16:9 or 9:16\nDefault: 16:9\nNegative prompt: Specify elements to avoid\nDuration: 4s, 6s, or 8s\nDefault: 8s\nSeed: Set a numeric seed value\nResolution: 720p or 1080p\nNote: 1080p requires 8s duration\nReference mode: Use up to 3 input images as references for video generation\nNote: Reference images require 8s duration\nPlease only upload photos that you own or have the right to use. Otherwise, the bot will return an error.",
+          "owned_by": "Google",
+          "root": "veo-3.1-lite",
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "output_modalities": [
+              "video"
+            ],
+            "modality": "text,image->video"
+          },
+          "supported_features": [],
+          "supported_endpoints": [
+            "/v1/videos"
+          ],
+          "pricing": null,
+          "context_window": {
+            "context_length": 480,
+            "max_output_tokens": null
+          },
+          "context_length": 480,
+          "metadata": {
+            "display_name": "Veo-3.1-Lite",
+            "image": {
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6915732-200-ysfhzieddahakgceidzsedlsthcyyyvz.jpeg",
+              "alt": "Veo-3.1-Lite model icon",
+              "width": 200,
+              "height": 200
+            },
+            "url": "https://poe.com/veo-3.1-lite"
+          },
+          "reasoning": null,
+          "parameters": [
+            {
+              "name": "aspect_ratio",
+              "schema": {
+                "enum": [
+                  "16:9",
+                  "9:16"
+                ]
+              },
+              "default_value": "16:9"
+            },
+            {
+              "name": "no",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "duration",
+              "schema": {
+                "enum": [
+                  "4",
+                  "6",
+                  "8"
+                ]
+              },
+              "default_value": "8"
+            },
+            {
+              "name": "seed",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "reference_mode",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": false,
+              "description": "Toggle to use input images(3 max) as reference for video generation."
+            },
+            {
+              "name": "resolution",
+              "schema": {
+                "enum": [
+                  "720p",
+                  "1080p"
+                ]
+              },
+              "default_value": "720p"
+            }
+          ]
+        },
+        {
           "id": "qwen3-max-thinking",
           "object": "model",
           "created": 1769457283480,
@@ -3271,7 +3374,7 @@
           "id": "claude-sonnet-4.5",
           "object": "model",
           "created": 1758868894776,
-          "description": "Claude Sonnet 4.5 represents a major leap forward in AI capability and alignment. It is the most advanced model released by Anthropic to date, distinguished by dramatic improvements in reasoning, mathematics, and real-world coding. Supports 1m tokens of context.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 31,999.\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "Claude Sonnet 4.5 represents a major leap forward in AI capability and alignment. It is the most advanced model released by Anthropic to date, distinguished by dramatic improvements in reasoning, mathematics, and real-world coding. Supports 1m tokens of context.",
           "owned_by": "Anthropic",
           "root": "claude-sonnet-4.5",
           "architecture": {
@@ -3399,7 +3502,7 @@
           "id": "kling-v3-motion-ctrl",
           "object": "model",
           "created": 1773103662749,
-          "description": "Kling v3 Motion Control uses Kuaishou's Kling 3.0 model to transfer motion from a reference video onto a character from a reference image, generating a new video where the subject performs the movements with high fidelity and temporal consistency with support for Standard (720p) and Pro (1080p) quality tiers.\n\nParameter controls available:\n1. Generation Settings\n- Quality Mode [Standard, Pro]: Standard outputs at 720p for faster, more affordable generation; Pro outputs at 1080p with higher fidelity. Default: Standard\n- Character Orientation [Image, Video]: \"Image\" keeps the character in the pose from the reference image (max 10s video). \"Video\" aligns the character to the pose of the person in the reference video (max 30s video). Default: Image\n- Keep Original Sound [on/off]: Preserves the audio track from the reference video in the generated output. Default: on\n\nWorkflow\n- Attach exactly 1 reference video (motion source) and 1 reference image (character/subject)\n- Optionally include a text prompt to guide the generation\n- If no prompt is provided, a default cinematic animation prompt is used automatically\n- Output video duration matches the reference video duration (after any trimming)\n- Make sure the upper body is clearly visible in the input video to avoid errors\n\nInput Limits & Requirements\n- Prompt length: 2 characters minimum, 2,500 characters maximum\n- Image inputs: JPEG, PNG, or WEBP only. Max 10 MB per file. Exactly 1 image required. Dimensions must be 340–3,850px per side with an aspect ratio between 1:2.5 and 2.5:1. Under-sized images are automatically upscaled; out-of-range aspect ratios are automatically center-cropped to fit\n- Video inputs: MP4, MOV, or WEBM only. Max 100 MB per file. Exactly 1 video required. Minimum 3 seconds. Videos exceeding the orientation limit (10s for Image, 30s for Video) are automatically trimmed. Videos outside the 340–3,850px resolution range are automatically resized. FPS outside 24–60 is automatically adjusted to 30 fps. Non-MP4 formats are automatically re-encoded",
+          "description": "Kling v3 Motion Control uses Kuaishou's Kling 3.0 model to transfer motion from a reference video onto a character from a reference image, generating a new video where the subject performs the movements with high fidelity and temporal consistency with support for Standard (720p) and Pro (1080p) quality tiers.\n\nThis bot supports optional parameters for additional customization.",
           "owned_by": "Empirio Labs AI",
           "root": "kling-v3-motion-ctrl",
           "architecture": {
@@ -5254,7 +5357,7 @@
           "id": "claude-opus-4.5",
           "object": "model",
           "created": 1763768938036,
-          "description": "Claude Opus 4.5 from Anthropic, supports customizable thinking budget (up to 64k tokens) and 200k context window.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 63,999.\nSet output effort: Select from  `low`, `medium`, `high`. Set to `high` by default.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "Claude Opus 4.5 from Anthropic, supports customizable thinking budget (up to 64k tokens) and 200k context window.",
           "owned_by": "Anthropic",
           "root": "claude-opus-4.5",
           "architecture": {
@@ -5343,7 +5446,7 @@
           "id": "gemini-2.5-flash",
           "object": "model",
           "created": 1745638152572,
-          "description": "Gemini 2.5 Flash builds upon the popular foundation of Google's 2.0 Flash, this new version delivers a major upgrade in reasoning capabilities, search capabilities, and image/video understanding while still prioritizing speed and cost. Supports 1M tokens of input context. Serves the latest `gemini-2.5-flash-preview-09-2025` snapshot.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 24,576.\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "Gemini 2.5 Flash builds upon the popular foundation of Google's 2.0 Flash, this new version delivers a major upgrade in reasoning capabilities, search capabilities, and image/video understanding while still prioritizing speed and cost. Supports 1M tokens of input context. Serves the latest `gemini-2.5-flash-preview-09-2025` snapshot.",
           "owned_by": "Google",
           "root": "gemini-2.5-flash",
           "architecture": {
@@ -5615,7 +5718,7 @@
           "id": "gemini-2.5-pro",
           "object": "model",
           "created": 1738780524168,
-          "description": "Gemini 2.5 Pro is Google's advanced model with frontier performance on various key benchmarks; supports web search and 1 million tokens of input context.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 32,768.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "Gemini 2.5 Pro is Google's advanced model with frontier performance on various key benchmarks; supports web search and 1 million tokens of input context.",
           "owned_by": "Google",
           "root": "gemini-2.5-pro",
           "architecture": {
@@ -5898,7 +6001,7 @@
           "id": "gpt-5.1-instant",
           "object": "model",
           "created": 1762990086156,
-          "description": "OpenAI’s most flagship model optimized for conversational intelligence. It excels at natural dialogue, contextual memory, and adaptive tone, making it perfect for interactive agents, tutoring, and customer support. It balances speed, reliability, and empathy for seamless real‑time communication. \n\nSupports 128k tokens of input context.\n\nOptional parameters:\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "OpenAI’s most flagship model optimized for conversational intelligence. It excels at natural dialogue, contextual memory, and adaptive tone, making it perfect for interactive agents, tutoring, and customer support. It balances speed, reliability, and empathy for seamless real‑time communication. \n\nSupports 128k tokens of input context.",
           "owned_by": "OpenAI",
           "root": "gpt-5.1-instant",
           "architecture": {
@@ -6041,7 +6144,9 @@
             "modality": "text->audio"
           },
           "supported_features": [],
-          "supported_endpoints": [],
+          "supported_endpoints": [
+            "/v1/audio"
+          ],
           "pricing": null,
           "context_window": {
             "context_length": 128000,
@@ -6490,7 +6595,7 @@
           "id": "gpt-5.1",
           "object": "model",
           "created": 1762989903319,
-          "description": "OpenAI’s flagship general‑purpose model, built for advanced reasoning, comprehension, and creativity. It delivers robust performance across text and code, with significant improvements in factual accuracy, long‑context understanding, and multilingual fluency. Ideal for research, content creation, analysis, and problem‑solving in any domain. \n\nSupports 400k of input context window.\n\nOptional parameters:\nSet reasoning effort: Select from  `low`, `medium`, `high`. No reasoning effort by default.\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.\nSet verbosity to control response details at the end of your message: Select from  `low`, `medium`, `high`. This is set to `medium` by default.",
+          "description": "OpenAI’s flagship general‑purpose model, built for advanced reasoning, comprehension, and creativity. It delivers robust performance across text and code, with significant improvements in factual accuracy, long‑context understanding, and multilingual fluency. Ideal for research, content creation, analysis, and problem‑solving in any domain. \n\nSupports 400k of input context window.",
           "owned_by": "OpenAI",
           "root": "gpt-5.1",
           "architecture": {
@@ -6589,7 +6694,7 @@
           "id": "gpt-5-pro",
           "object": "model",
           "created": 1759789057270,
-          "description": "OpenAI’s latest flagship model with significantly improved coding skills, long context (400k tokens), and improved instruction following. Supports native vision, and generally has more intelligence than GPT-4.1.\n\nNote: \nGPT-5-Pro thinks long and hard. When using this bot through the API, consider increasing your request timeouts.\n\nOptional parameters:\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "OpenAI’s latest flagship model with significantly improved coding skills, long context (400k tokens), and improved instruction following. Supports native vision, and generally has more intelligence than GPT-4.1.\n\nNote: \nGPT-5-Pro thinks long and hard. When using this bot through the API, consider increasing your request timeouts.",
           "owned_by": "OpenAI",
           "root": "gpt-5-pro",
           "architecture": {
@@ -6713,7 +6818,7 @@
           "id": "claude-opus-4.1",
           "object": "model",
           "created": 1754419185968,
-          "description": "Claude Opus 4.1 from Anthropic, supports customizable thinking budget (up to 32k tokens) and 200k context window.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 31,999.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "Claude Opus 4.1 from Anthropic, supports customizable thinking budget (up to 32k tokens) and 200k context window.",
           "owned_by": "Anthropic",
           "root": "claude-opus-4.1",
           "architecture": {
@@ -7169,10 +7274,9 @@
               "image"
             ],
             "output_modalities": [
-              "text",
               "image"
             ],
-            "modality": "text,image->text,image"
+            "modality": "text,image->image"
           },
           "supported_features": [],
           "supported_endpoints": [
@@ -7235,7 +7339,7 @@
           "id": "gpt-5",
           "object": "model",
           "created": 1754429855700,
-          "description": "OpenAI’s most advanced general model with significantly improved coding skills, long context (400k tokens), and improved instruction following. Supports native vision, and generally has more intelligence than GPT-4.1. Provides a 90% chat history cache discount.\n\nOptional parameters:\nSet reasoning effort: Select from `minimal`, `low`, `medium`, `high`. Minimal reasoning effort is set by default.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "OpenAI’s most advanced general model with significantly improved coding skills, long context (400k tokens), and improved instruction following. Supports native vision, and generally has more intelligence than GPT-4.1. Provides a 90% chat history cache discount.",
           "owned_by": "OpenAI",
           "root": "gpt-5",
           "architecture": {
@@ -7322,7 +7426,7 @@
           "id": "gpt-5-nano",
           "object": "model",
           "created": 1754429832540,
-          "description": "GPT-5 nano is an extremely fast and cheap model, ideal for text/vision summarization/categorization tasks. Supports native vision and 400k input tokens of context. Provides a 90% chat history cache discount.\n\nOptional parameters:\nSet reasoning effort: Select from `minimal`, `low`, `medium`, `high`. Minimal reasoning effort is set by default.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "GPT-5 nano is an extremely fast and cheap model, ideal for text/vision summarization/categorization tasks. Supports native vision and 400k input tokens of context. Provides a 90% chat history cache discount.",
           "owned_by": "OpenAI",
           "root": "gpt-5-nano",
           "architecture": {
@@ -7409,7 +7513,7 @@
           "id": "gpt-5-mini",
           "object": "model",
           "created": 1750886324513,
-          "description": "GPT-5 mini is a small, fast & affordable model that matches or beats GPT-4.1 in many intelligence and vision-related tasks. Supports 400k tokens of context. Provides a 90% chat history cache discount.\n\nOptional parameters:\nSet reasoning effort: Select from `minimal`, `low`, `medium`, `high`. Minimal reasoning effort is set by default.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "GPT-5 mini is a small, fast & affordable model that matches or beats GPT-4.1 in many intelligence and vision-related tasks. Supports 400k tokens of context. Provides a 90% chat history cache discount.",
           "owned_by": "OpenAI",
           "root": "gpt-5-mini",
           "architecture": {
@@ -7496,7 +7600,7 @@
           "id": "gemini-2.5-flash-lite",
           "object": "model",
           "created": 1750348180783,
-          "description": "A lightweight Gemini 2.5 Flash reasoning model optimized for cost efficiency and low latency. Supports web search. Supports 1 million tokens of input context. Serves the latest `gemini-2.5-flash-lite-preview-09-2025` snapshot. For more complex queries, use https://poe.com/Gemini-2.5-Pro or https://poe.com/Gemini-2.5-Flash\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 24,576.\nSet web search and real-time information access: toggle it on, otherwise it is off by default",
+          "description": "A lightweight Gemini 2.5 Flash reasoning model optimized for cost efficiency and low latency. Supports web search. Supports 1 million tokens of input context. Serves the latest `gemini-2.5-flash-lite-preview-09-2025` snapshot. For more complex queries, use https://poe.com/Gemini-2.5-Pro or https://poe.com/Gemini-2.5-Flash",
           "owned_by": "Google",
           "root": "gemini-2.5-flash-lite",
           "architecture": {
@@ -9203,7 +9307,7 @@
           "id": "amazon-nova-canvas",
           "object": "model",
           "created": 1757741443323,
-          "description": "Amazon Nova Canvas is a high-quality image‐generation model that creates and edits images from text or image inputs—offering features like inpainting/outpainting, virtual try‑on, style controls, and background removal—all with built‑in customization.",
+          "description": "Note: This model will be retired on September 30, 2026\nAmazon Nova Canvas is a high-quality image‐generation model that creates and edits images from text or image inputs—offering features like inpainting/outpainting, virtual try‑on, style controls, and background removal—all with built‑in customization.",
           "owned_by": "Empirio Labs AI",
           "root": "amazon-nova-canvas",
           "architecture": {
@@ -9750,7 +9854,7 @@
           "id": "claude-sonnet-4",
           "object": "model",
           "created": 1747860708348,
-          "description": "Claude Sonnet 4 from Anthropic, supports customizable thinking budget (up to 61,440k tokens) and 1M context window.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 61,440.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "Claude Sonnet 4 from Anthropic, supports customizable thinking budget (up to 61,440k tokens) and 1M context window.",
           "owned_by": "Anthropic",
           "root": "claude-sonnet-4",
           "architecture": {
@@ -9828,7 +9932,7 @@
           "id": "claude-opus-4",
           "object": "model",
           "created": 1747863925397,
-          "description": "Claude Opus 4 from Anthropic, supports customizable thinking budget (up to 30k tokens) and 200k context window.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 26,672.\nSet web search and real-time information access: toggle it on, otherwise it is off by default.",
+          "description": "Claude Opus 4 from Anthropic, supports customizable thinking budget (up to 30k tokens) and 200k context window.",
           "owned_by": "Anthropic",
           "root": "claude-opus-4",
           "architecture": {
@@ -9906,7 +10010,7 @@
           "id": "o4-mini",
           "object": "model",
           "created": 1744826580331,
-          "description": "o4-mini provides high intelligence on a variety of tasks and domains, including science, math, and coding at an affordable price point. This bot uses medium reasoning effort by low, medium & high are also selectable; supports 200k tokens of input context and 100k tokens of output context.\n\nOptional parameters:\nSet reasoning effort: Select from `low`, `medium`, `high`. Medium reasoning effort is set by default.",
+          "description": "o4-mini provides high intelligence on a variety of tasks and domains, including science, math, and coding at an affordable price point. \n\nThis bot supports 200k tokens of input context and 100k tokens of output context.\n\nThis bot supports optional parameters for additional customization.",
           "owned_by": "OpenAI",
           "root": "o4-mini",
           "architecture": {
@@ -10696,7 +10800,7 @@
           "id": "claude-sonnet-3.7",
           "object": "model",
           "created": 1739926818142,
-          "description": "Claude Sonnet 3.7 is a hybrid reasoning model, producing near-instant responses or extended, step-by-step thinking. \n\nSupports a 200k token context window.\n\nOptional parameters:\nSet thinking budget to use more thinking effort. Set number from 0 to 61,440.\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "Claude Sonnet 3.7 is a hybrid reasoning model, producing near-instant responses or extended, step-by-step thinking. \n\nSupports a 200k token context window.",
           "owned_by": "Anthropic",
           "root": "claude-sonnet-3.7",
           "architecture": {
@@ -10774,7 +10878,7 @@
           "id": "claude-haiku-3.5",
           "object": "model",
           "created": 1727818578813,
-          "description": "The latest generation of Anthropic's fastest model. Claude Haiku 3.5 has fast speeds and improved instruction following. \n\nOptional parameters:\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "The latest generation of Anthropic's fastest model. Claude Haiku 3.5 has fast speeds and improved instruction following. ",
           "owned_by": "Anthropic",
           "root": "claude-haiku-3.5",
           "architecture": {
@@ -10835,7 +10939,7 @@
           "id": "gemini-2.0-flash",
           "object": "model",
           "created": 1733958136993,
-          "description": "Gemini 2.0 Flash is Google's most popular model yet with enhanced performance and blazingly fast response times; supports web search grounding so can intelligently answer questions related to recent events. Notably, 2.0 Flash even outperforms 1.5 Pro on key benchmarks, at twice the speed. Supports 1 million tokens of input context.\n\nOptional parameters:\nSet web search and real-time information access: toggle it `on`, otherwise it is `off` by default.",
+          "description": "Gemini 2.0 Flash is Google's most popular model yet with enhanced performance and blazingly fast response times; supports web search grounding so can intelligently answer questions related to recent events. Notably, 2.0 Flash even outperforms 1.5 Pro on key benchmarks, at twice the speed. Supports 1 million tokens of input context.",
           "owned_by": "Google",
           "root": "gemini-2.0-flash",
           "architecture": {
@@ -10948,7 +11052,7 @@
           "id": "qwen3-max",
           "object": "model",
           "created": 1758038838064,
-          "description": "Qwen3-Max is a major update to the Qwen3 series, delivering significant improvements in reasoning, instruction following, and multilingual support. It provides higher accuracy in complex tasks like coding and math, along with reduced hallucinations and better performance on open-ended questions.\nThis model is served by Alibaba Cloud Int. from Singapore.\n\nParameter controls available:\nSet web search and real-time information access: toggle it on, otherwise it is off by default. Additional charges apply.",
+          "description": "Qwen3-Max is a major update to the Qwen3 series, delivering significant improvements in reasoning, instruction following, and multilingual support. It provides higher accuracy in complex tasks like coding and math, along with reduced hallucinations and better performance on open-ended questions.\nThis model is served by Alibaba Cloud Int. from Singapore.",
           "owned_by": "Empirio Labs AI",
           "root": "qwen3-max",
           "architecture": {
@@ -12067,7 +12171,7 @@
           "metadata": {
             "display_name": "GLM-4.7-T",
             "image": {
-              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6572668-200-fjsecijyssoaxilctkagfgtqcjlddppp.jpeg",
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6572668-200-yvyefgflsqigipbdsedvrovsltezthcn.jpeg",
               "alt": "GLM-4.7-T model icon",
               "width": 200,
               "height": 200
@@ -14062,7 +14166,7 @@
           "id": "perplexity-deep-research",
           "object": "model",
           "created": 1740542141787,
-          "description": "Perplexity Deep Research is a research-focused model designed for multi-step retrieval, synthesis, and reasoning across complex topics. It autonomously searches, reads, and evaluates sources, refining its approach as it gathers information. This enables comprehensive report generation across domains like finance, technology, health, and current events. Context Length: 128k",
+          "description": "Perplexity Deep Research is a research-focused model designed for multi-step retrieval, synthesis, and reasoning across complex topics. It autonomously searches, reads, and evaluates sources, refining its approach as it gathers information. This enables comprehensive report generation across domains like finance, technology, health, and current events. Context Length: 128k\n\nThis bot supports optional parameters for additional customization.",
           "owned_by": "Empirio Labs AI",
           "root": "perplexity-deep-research",
           "architecture": {
@@ -16245,7 +16349,7 @@
           "id": "imagen-4",
           "object": "model",
           "created": 1747888192720,
-          "description": "DeepMind's May 2025 text-to-image model with exceptional prompt adherence, capable of generating images with great detail, rich lighting, and few distracting artifacts. \n\nOptional parameters:\nAspect ratio of your image (1:1, 16:9, 9:16, 4:3, 3:4). \n\nNotes:\nNon-English input will be translated first. Serves the `imagen-4.0-ultra-generate-05-20` model from Google Vertex, and has a maximum input of 480 tokens.",
+          "description": "DeepMind's May 2025 text-to-image model with exceptional prompt adherence, capable of generating images with great detail, rich lighting, and few distracting artifacts. \n\nNotes:\nNon-English input will be translated first. Serves the `imagen-4.0-ultra-generate-05-20` model from Google Vertex, and has a maximum input of 480 tokens.\n\nThis bot supports optional parameters for additional customization.\n\nThis bot does not support attachments.",
           "owned_by": "Google",
           "root": "imagen-4",
           "architecture": {
@@ -17226,7 +17330,7 @@
           "id": "seedream-3.0",
           "object": "model",
           "created": 1750007407012,
-          "description": "Seedream 3.0 by ByteDance is a bilingual (Chinese and English) text-to-image model that excels at text-to-image generation.",
+          "description": "Seedream 3.0 by ByteDance is a bilingual (Chinese and English) text-to-image model that excels at text-to-image generation.\n\nThis bot supports optional parameters for additional customization.",
           "owned_by": "Bytedance",
           "root": "seedream-3.0",
           "architecture": {
@@ -18175,7 +18279,7 @@
           "metadata": {
             "display_name": "GLM-4.7-FW",
             "image": {
-              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6689310-200-ufavujxenmzpzgogakgmobhezhttohse.jpeg",
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6689310-200-ecptbivmxmilucwvimwtysnsnwbrmuxv.jpeg",
               "alt": "GLM-4.7-FW model icon",
               "width": 200,
               "height": 200
@@ -20913,72 +21017,6 @@
               },
               "default_value": "5",
               "description": "Video duration in seconds"
-            }
-          ]
-        },
-        {
-          "id": "sora",
-          "object": "model",
-          "created": 1749552672238,
-          "description": "Sora is OpenAI's video generation model. Use `--duration` to set the duration of the generated video, and `--resolution` to set the video's resolution (480p, 720p, or 1080p). Set the aspect ratio of the generated video with `--aspect` (Valid aspect ratios are 16:9, 1:1, 9:16). This is a text-to-video model only.\n\nSwitch to the newest models for improved video and audio creation: https://poe.com/Sora-2-Pro for cinematic excellence or https://poe.com/Sora-2 for unmatched realism and precision.",
-          "owned_by": "fal",
-          "root": "sora",
-          "architecture": {
-            "input_modalities": [
-              "text"
-            ],
-            "output_modalities": [
-              "video"
-            ],
-            "modality": "text->video"
-          },
-          "supported_features": [],
-          "supported_endpoints": [],
-          "pricing": null,
-          "context_window": null,
-          "context_length": null,
-          "metadata": {
-            "display_name": "Sora",
-            "image": {
-              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6109841-200-jvxlezixqithrufkoopjcvbenavuzfdx.jpeg",
-              "alt": "Sora model icon",
-              "width": 200,
-              "height": 200
-            },
-            "url": "https://poe.com/sora"
-          },
-          "reasoning": null,
-          "parameters": [
-            {
-              "name": "aspect",
-              "schema": {
-                "enum": [
-                  "16:9",
-                  "1:1",
-                  "9:16"
-                ]
-              },
-              "default_value": "16:9"
-            },
-            {
-              "name": "resolution",
-              "schema": {
-                "enum": [
-                  "480p",
-                  "720p",
-                  "1080p"
-                ]
-              },
-              "default_value": "720p"
-            },
-            {
-              "name": "duration",
-              "schema": {
-                "type": "number",
-                "minimum": 1,
-                "maximum": 10
-              },
-              "default_value": 5
             }
           ]
         },
@@ -24398,6 +24436,300 @@
           },
           "reasoning": null,
           "parameters": []
+        },
+        {
+          "id": "qwen3.5-omni-flash",
+          "object": "model",
+          "created": 1774908896258,
+          "description": "Qwen3.5-Omni Flash is the cost-efficient variant of Qwen's latest omni-modal model, supporting text, image, audio, and video understanding and interaction. It handles up to 3 hours of audio and 1 hour of video input, with audio input in 90+ languages and speech output in 30+ languages across 55 voice timbres.\n\nNotes:\n- Context Window: 256K\n- Recommended: instruct the model to avoid markdown formatting in Text + Audio mode\n\nInput limits:\n- Images: up to 2,048 files, ≤20 MB each, min 10×10 px, aspect ratio ≤200:1\n- Audio: up to 2,048 files, ≤2 GB each, up to 3 hrs\n- Video: up to 512 files, ≤2 GB each, up to 1 hr\n- Formats — Image: JPG, JPEG, PNG, WebP, BMP, TIFF, HEIC, GIF | Audio: AMR, WAV, 3GP, AAC, MP3, OGG, FLAC, M4A, WMA | Video: MP4, AVI, MKV, MOV, FLV, WMV\n- Audio Input: 92 languages, 21 dialects\n\nOutput:\n- Modalities: text only, or text + audio (audio-only not available)\n- 55 voice timbres (default: Tina)\n- Audio output: 29 languages, 7 dialects\n\nThis bot supports optional parameters for additional customization.",
+          "owned_by": "Empirio Labs AI",
+          "root": "qwen3.5-omni-flash",
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image",
+              "video",
+              "audio"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "modality": "text,image,video,audio->text"
+          },
+          "supported_features": [],
+          "supported_endpoints": [],
+          "pricing": null,
+          "context_window": null,
+          "context_length": null,
+          "metadata": {
+            "display_name": "Qwen3.5-Omni-Flash",
+            "image": {
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6914148-200-jkmknqfuhujzudeiyuflhmwskdqwuutc.jpeg",
+              "alt": "Qwen3.5-Omni-Flash model icon",
+              "width": 200,
+              "height": 200
+            },
+            "url": "https://poe.com/qwen3.5-omni-flash"
+          },
+          "reasoning": null,
+          "parameters": [
+            {
+              "name": "output_mode",
+              "schema": {
+                "enum": [
+                  "text",
+                  "text_audio"
+                ]
+              },
+              "default_value": "text",
+              "description": "Choose whether the model responds with text only, or text with synthesized audio"
+            },
+            {
+              "name": "voice",
+              "schema": {
+                "enum": [
+                  "Tina",
+                  "Cindy",
+                  "Liora Mira",
+                  "Sunnybobi",
+                  "Raymond",
+                  "Ethan",
+                  "Theo Calm",
+                  "Serena",
+                  "Harvey",
+                  "Maia",
+                  "Evan",
+                  "Qiao",
+                  "Momo",
+                  "Wil",
+                  "Angel",
+                  "Li Cassian",
+                  "Mia",
+                  "Joyner",
+                  "Gold",
+                  "Katerina",
+                  "Ryan",
+                  "Jennifer",
+                  "Aiden",
+                  "Mione",
+                  "Sunny",
+                  "Dylan",
+                  "Eric",
+                  "Peter",
+                  "Joseph Chen",
+                  "Marcus",
+                  "Li",
+                  "Rocky",
+                  "Sohee",
+                  "Lenn",
+                  "Ono Anna",
+                  "Sonrisa",
+                  "Bodega",
+                  "Emilien",
+                  "Andre",
+                  "Radio Gol",
+                  "Alek",
+                  "Rizky",
+                  "Roya",
+                  "Arda",
+                  "Hana",
+                  "Dolce",
+                  "Jakub",
+                  "Griet",
+                  "Eliška",
+                  "Marina",
+                  "Siiri",
+                  "Ingrid",
+                  "Sigga",
+                  "Bea",
+                  "Chloe"
+                ]
+              },
+              "default_value": "Tina",
+              "description": "Select the voice timbre for audio output (55 timbres available)"
+            },
+            {
+              "name": "enable_web_search",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": false,
+              "description": "Enable web search for real-time information (charged per request when enabled)"
+            },
+            {
+              "name": "video_fps",
+              "schema": {
+                "type": "number",
+                "minimum": 0.1,
+                "maximum": 10
+              },
+              "default_value": 2,
+              "description": "Frames per second to extract from video input (higher = more detail, more tokens)"
+            },
+            {
+              "name": "vl_high_resolution_images",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": true,
+              "description": "Use maximum resolution for input images (more tokens, better detail)"
+            },
+            {
+              "name": "max_pixels",
+              "schema": {
+                "type": "string"
+              },
+              "default_value": "2621440",
+              "description": "Maximum pixel count per image (min 4096, default 2621440, max 16777216). Lower = fewer tokens."
+            }
+          ]
+        },
+        {
+          "id": "qwen3.5-omni-plus",
+          "object": "model",
+          "created": 1774889310984,
+          "description": "Qwen3.5-Omni Plus is the flagship variant of Qwen's latest omni-modal model, supporting text, image, audio, and video understanding and interaction. It handles up to 3 hours of audio and 1 hour of video input, with audio input in 90+ languages and speech output in 30+ languages across 55 voice timbres.\nThis model is served by Alibaba Cloud Int. from Singapore.\n\nNotes:\n- Context Window: 256K\n- Recommended: instruct the model to avoid markdown formatting in Text + Audio mode\n\nInput limits:\n- Images: up to 2,048 files, ≤20 MB each, min 10×10 px, aspect ratio ≤200:1\n- Audio: up to 2,048 files, ≤2 GB each, up to 3 hrs\n- Video: up to 512 files, ≤2 GB each, up to 1 hr\n- Formats — Image: JPG, JPEG, PNG, WebP, BMP, TIFF, HEIC, GIF | Audio: AMR, WAV, 3GP, AAC, MP3, OGG, FLAC, M4A, WMA | Video: MP4, AVI, MKV, MOV, FLV, WMV\n- Audio Input: 92 languages, 21 dialects\n\nOutput:\n- Modalities: text only, or text + audio (audio-only not available)\n- 55 voice timbres (default: Tina)\n- Audio output: 29 languages, 7 dialects\n\nThis bot supports optional parameters for additional customization.",
+          "owned_by": "Empirio Labs AI",
+          "root": "qwen3.5-omni-plus",
+          "architecture": {
+            "input_modalities": [
+              "text",
+              "image",
+              "video",
+              "audio"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "modality": "text,image,video,audio->text"
+          },
+          "supported_features": [],
+          "supported_endpoints": [],
+          "pricing": null,
+          "context_window": null,
+          "context_length": null,
+          "metadata": {
+            "display_name": "Qwen3.5-Omni-Plus",
+            "image": {
+              "url": "https://qph.cf2.poecdn.net/main-thumb-pb-6913743-200-ilhmvtkwnojtqqeygzkmdpjapwgznkxe.jpeg",
+              "alt": "Qwen3.5-Omni-Plus model icon",
+              "width": 200,
+              "height": 200
+            },
+            "url": "https://poe.com/qwen3.5-omni-plus"
+          },
+          "reasoning": null,
+          "parameters": [
+            {
+              "name": "output_mode",
+              "schema": {
+                "enum": [
+                  "text",
+                  "text_audio"
+                ]
+              },
+              "default_value": "text",
+              "description": "Choose whether the model responds with text only, or text with synthesized audio"
+            },
+            {
+              "name": "voice",
+              "schema": {
+                "enum": [
+                  "Tina",
+                  "Cindy",
+                  "Liora Mira",
+                  "Sunnybobi",
+                  "Raymond",
+                  "Ethan",
+                  "Theo Calm",
+                  "Serena",
+                  "Harvey",
+                  "Maia",
+                  "Evan",
+                  "Qiao",
+                  "Momo",
+                  "Wil",
+                  "Angel",
+                  "Li Cassian",
+                  "Mia",
+                  "Joyner",
+                  "Gold",
+                  "Katerina",
+                  "Ryan",
+                  "Jennifer",
+                  "Aiden",
+                  "Mione",
+                  "Sunny",
+                  "Dylan",
+                  "Eric",
+                  "Peter",
+                  "Joseph Chen",
+                  "Marcus",
+                  "Li",
+                  "Rocky",
+                  "Sohee",
+                  "Lenn",
+                  "Ono Anna",
+                  "Sonrisa",
+                  "Bodega",
+                  "Emilien",
+                  "Andre",
+                  "Radio Gol",
+                  "Alek",
+                  "Rizky",
+                  "Roya",
+                  "Arda",
+                  "Hana",
+                  "Dolce",
+                  "Jakub",
+                  "Griet",
+                  "Eliška",
+                  "Marina",
+                  "Siiri",
+                  "Ingrid",
+                  "Sigga",
+                  "Bea",
+                  "Chloe"
+                ]
+              },
+              "default_value": "Tina",
+              "description": "Select the voice timbre for audio output (55 timbres available)"
+            },
+            {
+              "name": "enable_web_search",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": false,
+              "description": "Enable web search for real-time information (charged per request when enabled)"
+            },
+            {
+              "name": "video_fps",
+              "schema": {
+                "type": "number",
+                "minimum": 0.1,
+                "maximum": 10
+              },
+              "default_value": 2,
+              "description": "Frames per second to extract from video input (higher = more detail, more tokens)"
+            },
+            {
+              "name": "vl_high_resolution_images",
+              "schema": {
+                "type": "boolean"
+              },
+              "default_value": true,
+              "description": "Use maximum resolution for input images (more tokens, better detail)"
+            },
+            {
+              "name": "max_pixels",
+              "schema": {
+                "type": "string"
+              },
+              "default_value": "2621440",
+              "description": "Maximum pixel count per image (min 4096, default 2621440, max 16777216). Lower = fewer tokens."
+            }
+          ]
         }
       ]
     }

@@ -37,6 +37,22 @@ describe("models without prefix (chat completions)", () => {
     expect(toolCalls[0].toolName).toBe("getWeather");
   });
 
+  it("rejects tool calls with kimi-k2.5-fw", async () => {
+    await expect(
+      generateText({
+        model: poe("kimi-k2.5-fw"),
+        prompt: "What is the weather in San Francisco? Use the getWeather tool.",
+        tools: {
+          getWeather: tool({
+            description: "Get the current weather for a location",
+            inputSchema: z.object({
+              location: z.string().describe("The city to get weather for"),
+            }),
+          }),
+        },
+      }),
+    ).rejects.toThrow(/does not support tool calling/);
+  });
   it("generates structured output with xai/grok-4", async () => {
     const { output } = await generateText({
       model: poe("xai/grok-4"),
